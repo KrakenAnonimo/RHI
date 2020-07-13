@@ -1199,7 +1199,7 @@
                   <h2><span>RHI-</span>MAGNESITA</h2>
                 </div>
 
-                <p>Pero debo explicarle cómo nació toda esta idea equivocada de denunciar el placer y alabar el dolor, una descripción completa del sistema, y ​​exponer las enseñanzas reales del gran explorador de la verdad.</p>
+                <p>En RHI MAGNESITA gestionamos y controlamos el mantenimiento de equipos , herramientas , vehiculos e instalaciones electricas de nuestra empresa llevando a cabo los procesos de una forma ordenada y satisfactoria.</p>
                 <div class="footer-icons">
                   <ul>
                     <li>
@@ -1225,7 +1225,7 @@
               <div class="footer-head">
                 <h4>informacion</h4>
                 <p>
-                  Aqui va alguna informacion de la empresa o una informacion en si.
+                   Destinada a la conservacion de equipos , herramientas e instalaciones de la empresa
                 </p>
                 <div class="footer-contacts">
                   <p><span>Tel:</span> xxxxxxxxx</p>
