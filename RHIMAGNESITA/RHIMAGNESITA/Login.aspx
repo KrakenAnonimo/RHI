@@ -16,7 +16,7 @@
 
          <!-- Brand Box -->
          <div class="col-sm-6 brand">
-            <a href="#" class="logo">RHI <span>.</span></a>
+            <a href="index.aspx" class="logo">RHI <span>.</span></a>
 
             <div class="heading">
                <h2>Magnesita</h2>
