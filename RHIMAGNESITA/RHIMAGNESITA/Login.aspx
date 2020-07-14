@@ -51,7 +51,9 @@
                             </div>
 
                             <div class="CTA">
+                                <!--Boton ingresar -->
                                 <input type="submit" value="Ingresar">
+                                 <!--fin del cod boton -->
                                 <a href="#" class="switch">Soy nuevo</a>
                             </div>
                         </form>
@@ -93,7 +95,9 @@
                             </div>
 
                             <div class="CTA">
+                                <!--Boton ingresar -->
                                 <input type="submit" value="Registrar" id="submit">
+                                <!--fin del cod boton -->
                                 <a href="#" class="switch">Ya tengo una cuenta.</a>
                             </div>
                         </form>
