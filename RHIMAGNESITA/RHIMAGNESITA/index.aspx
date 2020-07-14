@@ -272,7 +272,7 @@
               <div class="services-details">
                 <div class="single-services">
                   <a class="services-icon" href="#">
-											<i class="fa fa-code"></i>
+											<i class="fa fa-line-chart"></i>
 										</a>
                   <h4>Programadores</h4>
                   <p>
@@ -288,7 +288,7 @@
               <div class="services-details">
                 <div class="single-services">
                   <a class="services-icon" href="#">
-											<i class="fa fa-camera-retro"></i>
+											<i class="fa fa-bell"></i>
 										</a>
                   <h4>Creadores de diseño</h4>
                   <p>
@@ -305,7 +305,7 @@
               <div class="services-details">
                 <div class="single-services">
                   <a class="services-icon" href="#">
-											<i class="fa fa-wordpress"></i>
+											<i class="fa fa-calendar"></i>
 										</a>
                   <h4>Wordpress Developer</h4>
                   <p>
@@ -322,7 +322,7 @@
               <div class="services-details">
                 <div class="single-services">
                   <a class="services-icon" href="#">
-											<i class="fa fa-camera-retro"></i>
+											<i class="fa fa-wrench"></i>
 										</a>
                   <h4>Social Marketer </h4>
                   <p>
@@ -358,7 +358,7 @@
               <div class="services-details">
                 <div class="single-services">
                   <a class="services-icon" href="#">
-											<i class="fa fa-ticket"></i>
+											<i class="fa fa-list"></i>
 										</a>
                   <h4>24/7 Support</h4>
                   <p>
