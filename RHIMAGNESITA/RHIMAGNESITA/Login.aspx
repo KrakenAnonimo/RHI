@@ -101,7 +101,7 @@
 
    <footer>
       <p>
-         Form made by: <a href="" target="_blank">Edited For Group 2</a>
+         Hecho por: <a href="" target="_blank"> Grupo 2</a>
       </p>
    </footer>
 
