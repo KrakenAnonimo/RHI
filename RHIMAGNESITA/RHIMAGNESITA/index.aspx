@@ -578,7 +578,7 @@
                             <div class="well-text text-center">
                                 <h2>Bienvenido a RHI-MAGNESITA</h2>
                                 <p>
-                                    Busuness Lorem ipsum dolor sit amet, consectetur adipiscing elit.luctus est eget congue.
+                                    Impulsar la industria del cemento a través de la innovadora tecnología de espinosfera.
                                 </p>
                                 <div class="subs-feilds">
                                     <div class="suscribe-input">
@@ -924,27 +924,27 @@
                                 <div class="single-testi">
                                     <div class="testi-text">
                                         <p>
-                                            Supongo que es una frase inspiradora 1
+                                            La fuerza impulsora de la industria refractaria.
                                         </p>
-                                        <h6>Persona 1</h6>
+                                        <h6>Industria</h6>
                                     </div>
                                 </div>
                                 <!-- End single item -->
                                 <div class="single-testi">
                                     <div class="testi-text">
                                         <p>
-                                            Supongo que es una frase inspiradora 2
+                                            Llevando la innovación a 1200 ° C y más allá.
                                         </p>
-                                        <h6>Persona 2</h6>
+                                        <h6>Innovación</h6>
                                     </div>
                                 </div>
                                 <!-- End single item -->
                                 <div class="single-testi">
                                     <div class="testi-text">
                                         <p>
-                                            Supongo que es una frase inspiradora 3
+                                            Presente para ajudá-lo quando você precisar
                                         </p>
-                                        <h6>Persona 3</h6>
+                                        <h6>Presente</h6>
                                     </div>
                                 </div>
                                 <!-- End single item -->
