@@ -8,31 +8,31 @@
     <meta content="" name="description">
 
     <!-- Favicons -->
-    <link href="img/favicon.png" rel="icon">
-    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="Vista/PgPrin/img/favicon.png" rel="icon">
+    <link href="Vista/PgPrin/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
 
     <!-- Bootstrap CSS File -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="Vista/PgPrin/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Libraries CSS Files -->
-    <link href="lib/nivo-slider/css/nivo-slider.css" rel="stylesheet">
-    <link href="lib/owlcarousel/owl.carousel.css" rel="stylesheet">
-    <link href="lib/owlcarousel/owl.transitions.css" rel="stylesheet">
-    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/venobox/venobox.css" rel="stylesheet">
+    <link href="Vista/PgPrin/lib/nivo-slider/css/nivo-slider.css" rel="stylesheet">
+    <link href="Vista/PgPrin/lib/owlcarousel/owl.carousel.css" rel="stylesheet">
+    <link href="Vista/PgPrin/lib/owlcarousel/owl.transitions.css" rel="stylesheet">
+    <link href="Vista/PgPrin/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="Vista/PgPrin/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="Vista/PgPrin/lib/venobox/venobox.css" rel="stylesheet">
 
     <!-- Nivo Slider Theme -->
-    <link href="css/nivo-slider-theme.css" rel="stylesheet">
+    <link href="Vista/PgPrin/css/nivo-slider-theme.css" rel="stylesheet">
 
     <!-- Main Stylesheet File -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="Vista/PgPrin/css/style.css" rel="stylesheet">
 
     <!-- Responsive Stylesheet File -->
-    <link href="css/responsive.css" rel="stylesheet">
+    <link href="Vista/PgPrin/css/responsive.css" rel="stylesheet">
 </head>
 
 <body data-spy="scroll" data-target="#navbar-example">
@@ -98,9 +98,9 @@
     <div id="home" class="slider-area">
         <div class="bend niceties preview-2">
             <div id="ensign-nivoslider" class="slides">
-                <img src="img/slider/slider1.jpg" alt="" title="#slider-direction-1" />
-                <img src="img/slider/slider2.jpg" alt="" title="#slider-direction-2" />
-                <img src="img/slider/slider3.jpg" alt="" title="#slider-direction-3" />
+                <img src="Vista/PgPrin/img/slider/slider1.jpg" alt="" title="#slider-direction-1" />
+                <img src="Vista/PgPrin/img/slider/slider2.jpg" alt="" title="#slider-direction-2" />
+                <img src="Vista/PgPrin/img/slider/slider3.jpg" alt="" title="#slider-direction-3" />
             </div>
 
             <!-- direction 1 -->
@@ -198,7 +198,7 @@
                     <div class="well-left">
                         <div class="single-well">
                             <a href="#">
-                                <img src="img/about/1.jpg" alt="">
+                                <img src="Vista/PgPrin/img/about/1.jpg" alt="">
                             </a>
                         </div>
                     </div>
@@ -612,7 +612,7 @@
                         <div class="single-team-member">
                             <div class="team-img">
                                 <a href="#">
-                                    <img src="img/team/1.jpg" alt="">
+                                    <img src="Vista/PgPrin/img/team/1.jpg" alt="">
                                 </a>
                                 <div class="team-social-icon text-center">
                                     <ul>
@@ -645,7 +645,7 @@
                         <div class="single-team-member">
                             <div class="team-img">
                                 <a href="#">
-                                    <img src="img/team/2.jpg" alt="">
+                                    <img src="Vista/PgPrin/img/team/2.jpg" alt="">
                                 </a>
                                 <div class="team-social-icon text-center">
                                     <ul>
@@ -678,7 +678,7 @@
                         <div class="single-team-member">
                             <div class="team-img">
                                 <a href="#">
-                                    <img src="img/team/3.jpg" alt="">
+                                    <img src="Vista/PgPrin/img/team/3.jpg" alt="">
                                 </a>
                                 <div class="team-social-icon text-center">
                                     <ul>
@@ -711,7 +711,7 @@
                         <div class="single-team-member">
                             <div class="team-img">
                                 <a href="#">
-                                    <img src="img/team/4.jpg" alt="">
+                                    <img src="Vista/PgPrin/img/team/4.jpg" alt="">
                                 </a>
                                 <div class="team-social-icon text-center">
                                     <ul>
@@ -751,7 +751,7 @@
         <div class="work-us">
             <div class="work-left-text">
                 <a href="#">
-                    <img src="img/about/2.jpg" alt="">
+                    <img src="Vista/PgPrin/img/about/2.jpg" alt="">
                 </a>
             </div>
             <div class="work-right-text text-center">
@@ -801,10 +801,10 @@
                         <div class="single-awesome-project">
                             <div class="awesome-img">
                                 <a href="#">
-                                    <img src="img/portfolio/1.jpg" alt="" /></a>
+                                    <img src="Vista/PgPrin/img/portfolio/1.jpg" alt="" /></a>
                                 <div class="add-actions text-center">
                                     <div class="project-dec">
-                                        <a class="venobox" data-gall="myGallery" href="img/portfolio/1.jpg">
+                                        <a class="venobox" data-gall="myGallery" href="Vista/PgPrin/img/portfolio/1.jpg">
                                             <h4>Business City</h4>
                                             <span>Web Development</span>
                                         </a>
@@ -819,10 +819,10 @@
                         <div class="single-awesome-project">
                             <div class="awesome-img">
                                 <a href="#">
-                                    <img src="img/portfolio/2.jpg" alt="" /></a>
+                                    <img src="Vista/PgPrin/img/portfolio/2.jpg" alt="" /></a>
                                 <div class="add-actions text-center">
                                     <div class="project-dec">
-                                        <a class="venobox" data-gall="myGallery" href="img/portfolio/2.jpg">
+                                        <a class="venobox" data-gall="myGallery" href="Vista/PgPrin/img/portfolio/2.jpg">
                                             <h4>Blue Sea</h4>
                                             <span>Photosho</span>
                                         </a>
@@ -837,10 +837,10 @@
                         <div class="single-awesome-project">
                             <div class="awesome-img">
                                 <a href="#">
-                                    <img src="img/portfolio/3.jpg" alt="" /></a>
+                                    <img src="Vista/PgPrin/img/portfolio/3.jpg" alt="" /></a>
                                 <div class="add-actions text-center">
                                     <div class="project-dec">
-                                        <a class="venobox" data-gall="myGallery" href="img/portfolio/3.jpg">
+                                        <a class="venobox" data-gall="myGallery" href="Vista/PgPrin/img/portfolio/3.jpg">
                                             <h4>Beautiful Nature</h4>
                                             <span>Web Design</span>
                                         </a>
@@ -855,10 +855,10 @@
                         <div class="single-awesome-project">
                             <div class="awesome-img">
                                 <a href="#">
-                                    <img src="img/portfolio/4.jpg" alt="" /></a>
+                                    <img src="Vista/PgPrin/img/portfolio/4.jpg" alt="" /></a>
                                 <div class="add-actions text-center">
                                     <div class="project-dec">
-                                        <a class="venobox" data-gall="myGallery" href="img/portfolio/4.jpg">
+                                        <a class="venobox" data-gall="myGallery" href="Vista/PgPrin/img/portfolio/4.jpg">
                                             <h4>Creative Team</h4>
                                             <span>Web design</span>
                                         </a>
@@ -873,10 +873,10 @@
                         <div class="single-awesome-project">
                             <div class="awesome-img">
                                 <a href="#">
-                                    <img src="img/portfolio/5.jpg" alt="" /></a>
+                                    <img src="Vista/PgPrin/img/portfolio/5.jpg" alt="" /></a>
                                 <div class="add-actions text-center text-center">
                                     <div class="project-dec">
-                                        <a class="venobox" data-gall="myGallery" href="img/portfolio/5.jpg">
+                                        <a class="venobox" data-gall="myGallery" href="Vista/PgPrin/img/portfolio/5.jpg">
                                             <h4>Beautiful Flower</h4>
                                             <span>Web Development</span>
                                         </a>
@@ -891,10 +891,10 @@
                         <div class="single-awesome-project">
                             <div class="awesome-img">
                                 <a href="#">
-                                    <img src="img/portfolio/6.jpg" alt="" /></a>
+                                    <img src="Vista/PgPrin/img/portfolio/6.jpg" alt="" /></a>
                                 <div class="add-actions text-center">
                                     <div class="project-dec">
-                                        <a class="venobox" data-gall="myGallery" href="img/portfolio/6.jpg">
+                                        <a class="venobox" data-gall="myGallery" href="Vista/PgPrin/img/portfolio/6.jpg">
                                             <h4>Night Hill</h4>
                                             <span>Photoshop</span>
                                         </a>
@@ -976,7 +976,7 @@
                         <div class="single-blog">
                             <div class="single-blog-img">
                                 <a href="blog.html">
-                                    <img src="img/blog/1.jpg" alt="">
+                                    <img src="Vista/PgPrin/img/blog/1.jpg" alt="">
                                 </a>
                             </div>
                             <div class="blog-meta">
@@ -1008,7 +1008,7 @@
                         <div class="single-blog">
                             <div class="single-blog-img">
                                 <a href="blog.html">
-                                    <img src="img/blog/2.jpg" alt="">
+                                    <img src="Vista/PgPrin/img/blog/2.jpg" alt="">
                                 </a>
                             </div>
                             <div class="blog-meta">
@@ -1040,7 +1040,7 @@
                         <div class="single-blog">
                             <div class="single-blog-img">
                                 <a href="blog.html">
-                                    <img src="img/blog/3.jpg" alt="">
+                                    <img src="Vista/PgPrin/img/blog/3.jpg" alt="">
                                 </a>
                             </div>
                             <div class="blog-meta">
@@ -1234,17 +1234,17 @@
                                 <h4>Instagram</h4>
                                 <div class="flicker-img">
                                     <a href="#">
-                                        <img src="img/portfolio/1.jpg" alt=""></a>
+                                        <img src="Vista/PgPrin/img/portfolio/1.jpg" alt=""></a>
                                     <a href="#">
-                                        <img src="img/portfolio/2.jpg" alt=""></a>
+                                        <img src="Vista/PgPrin/img/portfolio/2.jpg" alt=""></a>
                                     <a href="#">
-                                        <img src="img/portfolio/3.jpg" alt=""></a>
+                                        <img src="Vista/PgPrin/img/portfolio/3.jpg" alt=""></a>
                                     <a href="#">
-                                        <img src="img/portfolio/4.jpg" alt=""></a>
+                                        <img src="Vista/PgPrin/img/portfolio/4.jpg" alt=""></a>
                                     <a href="#">
-                                        <img src="img/portfolio/5.jpg" alt=""></a>
+                                        <img src="Vista/PgPrin/img/portfolio/5.jpg" alt=""></a>
                                     <a href="#">
-                                        <img src="img/portfolio/6.jpg" alt=""></a>
+                                        <img src="Vista/PgPrin/img/portfolio/6.jpg" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -1273,22 +1273,22 @@
     <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
     <!-- JavaScript Libraries -->
-    <script src="lib/jquery/jquery.min.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/venobox/venobox.min.js"></script>
-    <script src="lib/knob/jquery.knob.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/parallax/parallax.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/nivo-slider/js/jquery.nivo.slider.js" type="text/javascript"></script>
-    <script src="lib/appear/jquery.appear.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="Vista/PgPrin/lib/jquery/jquery.min.js"></script>
+    <script src="Vista/PgPrin/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="Vista/PgPrin/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="Vista/PgPrin/lib/venobox/venobox.min.js"></script>
+    <script src="Vista/PgPrin/lib/knob/jquery.knob.js"></script>
+    <script src="Vista/PgPrin/lib/wow/wow.min.js"></script>
+    <script src="Vista/PgPrin/lib/parallax/parallax.js"></script>
+    <script src="Vista/PgPrin/lib/easing/easing.min.js"></script>
+    <script src="Vista/PgPrin/lib/nivo-slider/js/jquery.nivo.slider.js" type="text/javascript"></script>
+    <script src="Vista/PgPrin/lib/appear/jquery.appear.js"></script>
+    <script src="Vista/PgPrin/lib/isotope/isotope.pkgd.min.js"></script>
 
     <!-- Contact Form JavaScript File -->
-    <script src="contactform/contactform.js"></script>
+    <script src="Vista/PgPrin/contactform/contactform.js"></script>
 
-    <script src="js/main.js"></script>
+    <script src="Vista/PgPrin/js/main.js"></script>
 </body>
 
 </html>
