@@ -211,7 +211,7 @@
                                 <h4 class="QUE HACEMOS</h4>
                             </a>
                             <p>
-                                Realizamos el mantenimiento preventivo y correctivo de los equipos o herramientas de la empresa con sus respectivos procesos logrando asi las mejoras de cada producto de una manera satisfactoria y eficiente.
+                                Realizamos el mantenimiento preventivo y correctivo de los equipos o herramientas de la empresa con sus respectivos procesos logrando asi las mejoras de cada producto de una manera satisfactoria y eficiente 
                             </p>
                             <ul>
                                 <li>
