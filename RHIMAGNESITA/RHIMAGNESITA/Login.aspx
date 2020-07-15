@@ -6,10 +6,10 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:300,600" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="Vista/Login/style.css">
       <!-- Favicons -->
-    <link href="img/favicon.png" rel="icon">
-    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="Vista/PgPrin/img/favicon.png" rel="icon">
+    <link href="Vista/PgPrin/img/apple-touch-icon.png" rel="apple-touch-icon">
 </head>
 <body>
     <!-- partial:index.partial.html -->
@@ -119,7 +119,7 @@
     <!-- partial -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-    <script src="./script.js"></script>
+    <script src="Vista/Login/script.js"></script>
 
 </body>
 </html>
