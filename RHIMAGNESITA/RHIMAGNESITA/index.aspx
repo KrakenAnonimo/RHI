@@ -578,7 +578,7 @@
                             <div class="well-text text-center">
                                 <h2>Bienvenido a RHI-MAGNESITA</h2>
                                 <p>
-                                    Busuness Lorem ipsum dolor sit amet, consectetur adipiscing elit.luctus est eget congue.
+                                    Impulsar la industria del cemento a través de la innovadora tecnología de espinosfera.
                                 </p>
                                 <div class="subs-feilds">
                                     <div class="suscribe-input">
@@ -755,9 +755,9 @@
                 </a>
             </div>
             <div class="work-right-text text-center">
-                <h2>working with us</h2>
-                <h5>Web Design, Ready Home, Construction and Co-operate Outstanding Buildings.</h5>
-                <a href="#contact" class="ready-btn">Contact us</a>
+                <h2>Trabajando con nosotros</h2>
+                <h5>Acero,Fundicion,Cemento,Energia y Quimica,No ferroso</h5>
+                <a href="#contact" class="ready-btn">Contacta con nosotros</a>
             </div>
         </div>
     </div>
@@ -924,27 +924,27 @@
                                 <div class="single-testi">
                                     <div class="testi-text">
                                         <p>
-                                            Supongo que es una frase inspiradora 1
+                                            La fuerza impulsora de la industria refractaria.
                                         </p>
-                                        <h6>Persona 1</h6>
+                                        <h6>Industria</h6>
                                     </div>
                                 </div>
                                 <!-- End single item -->
                                 <div class="single-testi">
                                     <div class="testi-text">
                                         <p>
-                                            Supongo que es una frase inspiradora 2
+                                            Llevando la innovación a 1200 ° C y más allá.
                                         </p>
-                                        <h6>Persona 2</h6>
+                                        <h6>Innovación</h6>
                                     </div>
                                 </div>
                                 <!-- End single item -->
                                 <div class="single-testi">
                                     <div class="testi-text">
                                         <p>
-                                            Supongo que es una frase inspiradora 3
+                                            Presente para ajudá-lo quando você precisar
                                         </p>
-                                        <h6>Persona 3</h6>
+                                        <h6>Presente</h6>
                                     </div>
                                 </div>
                                 <!-- End single item -->
@@ -1140,7 +1140,7 @@
                     <!-- Start Google Map -->
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <!-- Start Map -->
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22864.11283411948!2d-73.96468908098944!3d40.630720240038435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbg!4v1540447494452" width="100%" height="380" frameborder="0" style="border: 0" allowfullscreen></iframe>
+                        <iframe src="https://www.google.com/maps/@5.7700733,-72.8952483,15z?hl=en-US" width="100%" height="380" frameborder="0" style="border: 0" allowfullscreen></iframe>
                         <!-- End Map -->
                     </div>
                     <!-- End Google Map -->
