@@ -208,26 +208,26 @@
                     <div class="well-middle">
                         <div class="single-well">
                             <a href="#">
-                                <h4 class="QUE HACEMOS</h4>
+                                <h4 class="sec-head">Que hacemos</h4>
                             </a>
                             <p>
                                 Realizamos el mantenimiento preventivo y correctivo de los equipos o herramientas de la empresa con sus respectivos procesos logrando asi las mejoras de cada producto de una manera satisfactoria y eficiente 
                             </p>
                             <ul>
                                 <li>
-                                    <i class="fa fa-check"></i>Revision de Inventario
+                                    <i class="fa fa-check"></i> Revision de Inventario
                                 </li>
                                 <li>
-                                    <i class="fa fa-check"></i>Planificacion
+                                    <i class="fa fa-check"></i> Planificacion
                                 </li>
                                 <li>
-                                    <i class="fa fa-check"></i>Orden de Trabajo
+                                    <i class="fa fa-check"></i> Orden de Trabajo
                                 </li>
                                 <li>
-                                    <i class="fa fa-check"></i>Reporte de Aveia/Servicio
+                                    <i class="fa fa-check"></i> Reporte de Aveia/Servicio
                                 </li>
                                 <li>
-                                    <i class="fa fa-check"></i>Ejecucion y Control
+                                    <i class="fa fa-check"></i> Ejecucion y Control
                                 </li>
                             </ul>
                         </div>
