@@ -208,26 +208,26 @@
                     <div class="well-middle">
                         <div class="single-well">
                             <a href="#">
-                                <h4 class="sec-head">project Maintenance</h4>
+                                <h4 class="QUE HACEMOS</h4>
                             </a>
                             <p>
-                                Redug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure aspernatur sit adipisci quaerat unde at nequeRedug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure
+                                Realizamos el mantenimiento preventivo y correctivo de los equipos y herramientas de la empresa con sus respectivos procesos logrando asi las mejoras de cada producto de una manera satisfactoria y eficiente. 
                             </p>
                             <ul>
                                 <li>
-                                    <i class="fa fa-check"></i>Interior design Package
+                                    <i class="fa fa-check"></i>Revision de Inventario
                                 </li>
                                 <li>
-                                    <i class="fa fa-check"></i>Building House
+                                    <i class="fa fa-check"></i>Planificacion
                                 </li>
                                 <li>
-                                    <i class="fa fa-check"></i>Reparing of Residentail Roof
+                                    <i class="fa fa-check"></i>Orden de Trabajo
                                 </li>
                                 <li>
-                                    <i class="fa fa-check"></i>Renovaion of Commercial Office
+                                    <i class="fa fa-check"></i>Reporte de Aveia/Servicio
                                 </li>
                                 <li>
-                                    <i class="fa fa-check"></i>Make Quality Products
+                                    <i class="fa fa-check"></i>Ejecucion y Control
                                 </li>
                             </ul>
                         </div>
