@@ -1104,8 +1104,8 @@
                             <div class="single-icon">
                                 <i class="fa fa-mobile"></i>
                                 <p>
-                                    Call: xxxxxxxxx<br>
-                                    <span>Lunes-Viernes (7am-5pm)</span>
+                                    Call: 7701345<br>
+                                    <span>Lunes-Viernes (7am-6pm)</span>
                                 </p>
                             </div>
                         </div>
