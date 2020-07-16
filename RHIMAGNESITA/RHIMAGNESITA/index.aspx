@@ -1140,7 +1140,7 @@
                     <!-- Start Google Map -->
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <!-- Start Map -->
-                        <iframe src="https://www.google.com/maps/@5.7700733,-72.8952483,15z?hl=en-US" width="100%" height="380" frameborder="0" style="border: 0" allowfullscreen></iframe>
+                        <iframe src="https://goo.gl/maps/7GaNMDyHAiCzJtkF9" width="100%" height="380" frameborder="0" style="border: 0" allowfullscreen></iframe>
                         <!-- End Map -->
                     </div>
                     <!-- End Google Map -->
