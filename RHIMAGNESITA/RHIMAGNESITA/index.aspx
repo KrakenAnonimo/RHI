@@ -1017,7 +1017,7 @@
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="footer-content">
                             <div class="footer-head">
-                                <h4>Instagram</h4>
+                                <h4>RHI-MAGNESITA</h4>
                                 <div class="flicker-img">
                                     <a href="#">
                                         <img src="Vista/PgPrin/img/portfolio/1.jpg" alt=""></a>
