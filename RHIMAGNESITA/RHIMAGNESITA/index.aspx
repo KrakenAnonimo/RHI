@@ -869,8 +869,8 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs=12">
                     <div class="suscribe-text text-center">
-                        <h3>bienvenido a la empresa RHI-MAGNESITA</h3>
-                        <a class="sus-btn" href="#">Get A quate</a>
+                        <h3>Bienvenido a la empresa RHI-MAGNESITA</h3>
+                        <a class="sus-btn" href="#">Unirse</a>
                     </div>
                 </div>
             </div>
