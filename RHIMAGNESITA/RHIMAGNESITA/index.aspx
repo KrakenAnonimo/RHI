@@ -614,25 +614,6 @@
                                 <a href="#">
                                     <img src="Vista/PgPrin/img/team/1.jpg" alt="">
                                 </a>
-                                <div class="team-social-icon text-center">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-instagram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
                             </div>
                             <div class="team-content text-center">
                                 <h4>Jhon Mickel</h4>
@@ -647,25 +628,6 @@
                                 <a href="#">
                                     <img src="Vista/PgPrin/img/team/2.jpg" alt="">
                                 </a>
-                                <div class="team-social-icon text-center">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-instagram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
                             </div>
                             <div class="team-content text-center">
                                 <h4>Andrew Arnold</h4>
@@ -680,25 +642,6 @@
                                 <a href="#">
                                     <img src="Vista/PgPrin/img/team/3.jpg" alt="">
                                 </a>
-                                <div class="team-social-icon text-center">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-instagram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
                             </div>
                             <div class="team-content text-center">
                                 <h4>Lellien Linda</h4>
@@ -713,25 +656,6 @@
                                 <a href="#">
                                     <img src="Vista/PgPrin/img/team/4.jpg" alt="">
                                 </a>
-                                <div class="team-social-icon text-center">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-instagram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
                             </div>
                             <div class="team-content text-center">
                                 <h4>Jhon Powel</h4>
