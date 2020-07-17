@@ -302,7 +302,7 @@
                                     </a>
                                     <h4>Soporte</h4>
                                     <p>
-                                        will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.
+                                        Texto de relleno.
                                     </p>
                                 </div>
                             </div>
@@ -320,7 +320,7 @@
                                     </a>
                                     <h4>Control</h4>
                                     <p>
-                                        will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.
+                                        Texto de relleno.
                                     </p>
                                 </div>
                             </div>
@@ -336,9 +336,9 @@
                                     <a class="services-icon" href="#">
                                         <i class="fa fa-list"></i>
                                     </a>
-                                    <h4>Ni idea</h4>
+                                    <h4>Texto de relleno.</h4>
                                     <p>
-                                        will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.
+                                        Texto de relleno.
                                     </p>
                                 </div>
                             </div>
@@ -363,8 +363,10 @@
                         <div class="col-xs-12 col-sm-3 col-md-3 text-center">
                             <div class="single-skill">
                                 <div class="progress-circular">
-                                    <input type="text" class="knob" value="0" data-rel="95" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
-                                    <h3 class="progress-h4">Web Design</h3>
+                                    <!--Aqui se edita el diseño de porcentaje en las imagenes de circulo azul-->
+                                     <!--en data-rel-->
+                                    <input type="text" class="knob" value="0" data-rel="70" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
+                                    <h3 class="progress-h4">Texto 1</h3>
                                 </div>
                             </div>
                         </div>
@@ -374,7 +376,7 @@
                             <div class="single-skill">
                                 <div class="progress-circular">
                                     <input type="text" class="knob" value="0" data-rel="85" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
-                                    <h3 class="progress-h4">Graphics Design</h3>
+                                    <h3 class="progress-h4">Texto 2</h3>
                                 </div>
                             </div>
                         </div>
@@ -384,7 +386,7 @@
                             <div class="single-skill">
                                 <div class="progress-circular">
                                     <input type="text" class="knob" value="0" data-rel="75" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
-                                    <h3 class="progress-h4">Php Developer</h3>
+                                    <h3 class="progress-h4">Texto 3</h3>
                                 </div>
                             </div>
                         </div>
@@ -394,7 +396,7 @@
                             <div class="single-skill">
                                 <div class="progress-circular">
                                     <input type="text" class="knob" value="0" data-rel="65" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
-                                    <h3 class="progress-h4">Java Script</h3>
+                                    <h3 class="progress-h4">Texto 4</h3>
                                 </div>
                             </div>
                         </div>
@@ -412,7 +414,7 @@
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="section-headline text-center">
-                        <h2>Faq Question</h2>
+                        <h2>Algunas Preguntas</h2>
                     </div>
                 </div>
             </div>
@@ -425,14 +427,14 @@
                                 <div class="panel-heading">
                                     <h4 class="check-title">
                                         <a data-toggle="collapse" class="active" data-parent="#accordion" href="#check1">
-                                            <span class="acc-icons"></span>Consectetur adipisicing elit.
+                                            <span class="acc-icons"></span>Titulo de relleno 1.
                                         </a>
                                     </h4>
                                 </div>
                                 <div id="check1" class="panel-collapse collapse in">
                                     <div class="panel-body">
                                         <p>
-                                            Redug Lefes dolor sit amet, consectetur adipisicing elit. Aspernatur, tempore, commodi quas mollitia dolore magnam quidem repellat, culpa voluptates laboriosam maiores alias accusamus recusandae vero
+                                            Texto de relleno.
                                         </p>
                                     </div>
                                 </div>
@@ -443,14 +445,14 @@
                                 <div class="panel-heading">
                                     <h4 class="check-title">
                                         <a data-toggle="collapse" data-parent="#accordion" href="#check2">
-                                            <span class="acc-icons"></span>Dolore magnam quidem repellat.
+                                            <span class="acc-icons"></span>Titulo de relleno 2.
                                         </a>
                                     </h4>
                                 </div>
                                 <div id="check2" class="panel-collapse collapse">
                                     <div class="panel-body">
                                         <p>
-                                            Redug Lefes dolor sit amet, consectetur adipisicing elit. Aspernatur, tempore, commodi quas mollitia dolore magnam quidem repellat, culpa voluptates laboriosam maiores alias accusamus recusandae vero aperiam sint nulla beatae eos.
+                                            Texto de relleno.
                                         </p>
                                     </div>
                                 </div>
@@ -461,14 +463,14 @@
                                 <div class="panel-heading">
                                     <h4 class="check-title">
                                         <a data-toggle="collapse" data-parent="#accordion" href="#check3">
-                                            <span class="acc-icons"></span>Redug Lefes dolor sit.
+                                            <span class="acc-icons"></span>Titulo de relleno 3.
                                         </a>
                                     </h4>
                                 </div>
                                 <div id="check3" class="panel-collapse collapse ">
                                     <div class="panel-body">
                                         <p>
-                                            Redug Lefes dolor sit amet, consectetur adipisicing elit. Aspernatur, tempore, commodi quas mollitia dolore magnam quidem repellat, culpa voluptates laboriosam maiores alias accusamus recusandae vero aperiam sint nulla beatae eos.
+                                            Texto de relleno.
                                         </p>
                                     </div>
                                 </div>
@@ -479,14 +481,14 @@
                                 <div class="panel-heading">
                                     <h4 class="check-title">
                                         <a data-toggle="collapse" data-parent="#accordion" href="#check4">
-                                            <span class="acc-icons"></span>Maiores alias accusamus
+                                            <span class="acc-icons"></span>Titulo de relleno 4.
                                         </a>
                                     </h4>
                                 </div>
                                 <div id="check4" class="panel-collapse collapse">
                                     <div class="panel-body">
                                         <p>
-                                            Redug Lefes dolor sit amet, consectetur adipisicing elit. Aspernatur, tempore, commodi quas mollitia dolore magnam quidem repellat, culpa voluptates laboriosam maiores alias accusamus recusandae vero aperiam sint nulla beatae eos.
+                                            Texto de relleno.
                                         </p>
                                     </div>
                                 </div>
@@ -500,13 +502,13 @@
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs" role="tablist">
                             <li class="active">
-                                <a href="#p-view-1" role="tab" data-toggle="tab">Project</a>
+                                <a href="#p-view-1" role="tab" data-toggle="tab">Proyecto</a>
                             </li>
                             <li>
-                                <a href="#p-view-2" role="tab" data-toggle="tab">Planning</a>
+                                <a href="#p-view-2" role="tab" data-toggle="tab">Planificación</a>
                             </li>
                             <li>
-                                <a href="#p-view-3" role="tab" data-toggle="tab">Success</a>
+                                <a href="#p-view-3" role="tab" data-toggle="tab">Éxito</a>
                             </li>
                         </ul>
                     </div>
@@ -757,7 +759,7 @@
                                     <div class="project-dec">
                                         <a class="venobox" data-gall="myGallery" href="Vista/PgPrin/img/portfolio/3.jpg">
                                             <h4>Beautiful Nature</h4>
-                                            <span>Web Design</span>
+                                            <span>Texto 1</span>
                                         </a>
                                     </div>
                                 </div>
@@ -775,7 +777,7 @@
                                     <div class="project-dec">
                                         <a class="venobox" data-gall="myGallery" href="Vista/PgPrin/img/portfolio/4.jpg">
                                             <h4>Creative Team</h4>
-                                            <span>Web design</span>
+                                            <span>Texto 2</span>
                                         </a>
                                     </div>
                                 </div>
