@@ -72,15 +72,6 @@
                                     <li>
                                         <a class="page-scroll" href="Login.aspx">Login</a>
                                     </li>
-                                    <li>
-                                        <a class="page-scroll" href="#portfolio">Portfolio</a>
-                                    </li>
-                                    <li>
-                                        <a class="page-scroll" href="#blog">Blog</a>
-                                    </li>
-                                    <li>
-                                        <a class="page-scroll" href="#contacto">Contacto</a>
-                                    </li>
                                 </ul>
                             </div>
                             <!-- navbar-collapse -->
