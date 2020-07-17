@@ -593,7 +593,7 @@
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="section-headline text-center">
-                        <h2>Nuestro equipo especial</h2>
+                        <h2>Procesos</h2>
                     </div>
                 </div>
             </div>
@@ -670,7 +670,7 @@
                 </a>
             </div>
             <div class="work-right-text text-center">
-                <h2>Trabajando con nosotros</h2>
+                <h2>Trabajamos</h2>
                 <h5>Acero,Fundicion,Cemento,Energia y Quimica,No ferroso</h5>
                 <a href="#contact" class="ready-btn">Contacta con nosotros</a>
             </div>
