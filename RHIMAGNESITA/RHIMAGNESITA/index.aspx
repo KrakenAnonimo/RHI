@@ -607,8 +607,8 @@
                                 </a>
                             </div>
                             <div class="team-content text-center">
-                                <h4>Jhon Mickel</h4>
-                                <p>Seo</p>
+                                <h4>Fundicion</h4>
+                                <p>Fundicion</p>
                             </div>
                         </div>
                     </div>
@@ -621,8 +621,8 @@
                                 </a>
                             </div>
                             <div class="team-content text-center">
-                                <h4>Andrew Arnold</h4>
-                                <p>Web Developer</p>
+                                <h4>Cemento</h4>
+                                <p>Cemento</p>
                             </div>
                         </div>
                     </div>
@@ -635,8 +635,8 @@
                                 </a>
                             </div>
                             <div class="team-content text-center">
-                                <h4>Lellien Linda</h4>
-                                <p>Web Design</p>
+                                <h4>Refractorio</h4>
+                                <p>Refractorio</p>
                             </div>
                         </div>
                     </div>
@@ -649,8 +649,8 @@
                                 </a>
                             </div>
                             <div class="team-content text-center">
-                                <h4>Jhon Powel</h4>
-                                <p>Seo Expert</p>
+                                <h4>Materias-Primas</h4>
+                                <p>Materias-Primas</p>
                             </div>
                         </div>
                     </div>
