@@ -516,12 +516,12 @@
                         <div class="tab-pane active" id="p-view-1">
                             <div class="tab-inner">
                                 <div class="event-content head-team">
-                                    <h4>Project</h4>
+                                    <h4>Proyecto</h4>
                                     <p>
-                                        Redug Lares dolor sit amet, consectetur adipisicing elit. Animi vero excepturi magnam ducimus adipisci voluptas, praesentium maxime necessitatibus in dolor dolores unde ab, libero quo. Aut, laborum sequi.
+                                       Texto de relleno prt1.
                                     </p>
                                     <p>
-                                        voluptas, praesentium maxime cum fugiat,magnam ducimus adipisci voluptas, praesentium architecto ducimus, doloribus fuga itaque omnis placeat.
+                                        Texto de relleno prt2.
                                     </p>
                                 </div>
                             </div>
@@ -529,12 +529,12 @@
                         <div class="tab-pane" id="p-view-2">
                             <div class="tab-inner">
                                 <div class="event-content head-team">
-                                    <h4>Planning</h4>
+                                    <h4>Planificación</h4>
                                     <p>
-                                        voluptas, praesentium maxime cum fugiat,magnam ducimus adipisci voluptas, praesentium architecto ducimus, doloribus fuga itaque omnis.
+                                        Texto de relleno prt1.
                                     </p>
                                     <p>
-                                        Redug Lares dolor sit amet, consectetur adipisicing elit. Animi vero excepturi magnam ducimus adipisci voluptas, praesentium maxime necessitatibus in dolor dolores unde ab, libero quo. Aut.
+                                        Texto de relleno prt2.
                                     </p>
                                 </div>
                             </div>
@@ -542,12 +542,12 @@
                         <div class="tab-pane" id="p-view-3">
                             <div class="tab-inner">
                                 <div class="event-content head-team">
-                                    <h4>Success</h4>
+                                    <h4>Éxito</h4>
                                     <p>
-                                        voluptas, praesentium maxime cum fugiat,magnam ducimus adipisci voluptas, praesentium architecto ducimus, doloribus fuga itaque omnis placeat.
+                                        Texto de relleno prt1.
                                     </p>
                                     <p>
-                                        voluptas, praesentium maxime cum fugiat,magnam ducimus adipisci voluptas, praesentium architecto ducimus, doloribus fuga itaque omnis.
+                                        Texto de relleno prt2.
                                     </p>
                                 </div>
                             </div>
