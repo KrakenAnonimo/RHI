@@ -1007,9 +1007,9 @@
                                     Destinada a la conservacion de equipos, herramientas e instalaciones de la empresa.
                                 </p>
                                 <div class="footer-contacts">
-                                    <p><span>Tel:</span> xxxxxxxxx</p>
-                                    <p><span>Email:</span> ejemplo@example.com</p>
-                                    <p><span>Horas de Trabajo:</span> 6am-5pm</p>
+                                    <p><span>Tel:</span> 7701345</p>
+                                    <p><span>Email:</span> rhimagnesita@gmail.com</p>
+                                    <p><span>Horas de Trabajo:</span> 5am-6pm</p>
                                 </div>
                             </div>
                         </div>
