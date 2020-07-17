@@ -722,8 +722,6 @@
                                 <div class="add-actions text-center">
                                     <div class="project-dec">
                                         <a class="venobox" data-gall="myGallery" href="Vista/PgPrin/img/portfolio/1.jpg">
-                                            <h4>Business City</h4>
-                                            <span>Web Development</span>
                                         </a>
                                     </div>
                                 </div>
@@ -740,8 +738,6 @@
                                 <div class="add-actions text-center">
                                     <div class="project-dec">
                                         <a class="venobox" data-gall="myGallery" href="Vista/PgPrin/img/portfolio/2.jpg">
-                                            <h4>Blue Sea</h4>
-                                            <span>Photoshop</span>
                                         </a>
                                     </div>
                                 </div>
@@ -758,8 +754,6 @@
                                 <div class="add-actions text-center">
                                     <div class="project-dec">
                                         <a class="venobox" data-gall="myGallery" href="Vista/PgPrin/img/portfolio/3.jpg">
-                                            <h4>Beautiful Nature</h4>
-                                            <span>Texto 1</span>
                                         </a>
                                     </div>
                                 </div>
@@ -776,8 +770,6 @@
                                 <div class="add-actions text-center">
                                     <div class="project-dec">
                                         <a class="venobox" data-gall="myGallery" href="Vista/PgPrin/img/portfolio/4.jpg">
-                                            <h4>Creative Team</h4>
-                                            <span>Texto 2</span>
                                         </a>
                                     </div>
                                 </div>
@@ -794,8 +786,6 @@
                                 <div class="add-actions text-center text-center">
                                     <div class="project-dec">
                                         <a class="venobox" data-gall="myGallery" href="Vista/PgPrin/img/portfolio/5.jpg">
-                                            <h4>Beautiful Flower</h4>
-                                            <span>Web Development</span>
                                         </a>
                                     </div>
                                 </div>
@@ -812,8 +802,6 @@
                                 <div class="add-actions text-center">
                                     <div class="project-dec">
                                         <a class="venobox" data-gall="myGallery" href="Vista/PgPrin/img/portfolio/6.jpg">
-                                            <h4>Night Hill</h4>
-                                            <span>Photoshop</span>
                                         </a>
                                     </div>
                                 </div>
