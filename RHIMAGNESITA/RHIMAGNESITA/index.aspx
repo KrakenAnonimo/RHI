@@ -1116,22 +1116,6 @@
                                 </div>
 
                                 <p>En RHI MAGNESITA gestionamos y controlamos el mantenimiento de equipos, herramientas, vehiculos e instalaciones electricas de nuestra empresa llevando a cabo los procesos de una forma ordenada y satisfactoria.</p>
-                                <div class="footer-icons">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-google"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-pinterest"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
                             </div>
                         </div>
                     </div>
