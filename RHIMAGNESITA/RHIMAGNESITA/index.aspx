@@ -741,7 +741,7 @@
                                     <div class="project-dec">
                                         <a class="venobox" data-gall="myGallery" href="Vista/PgPrin/img/portfolio/2.jpg">
                                             <h4>Blue Sea</h4>
-                                            <span>Photosho</span>
+                                            <span>Photoshop</span>
                                         </a>
                                     </div>
                                 </div>
@@ -909,7 +909,7 @@
                                 <i class="fa fa-mobile"></i>
                                 <p>
                                     Call: 7701345<br>
-                                    <span>Lunes-Viernes (7am-6pm)</span>
+                                    <span>Lunes-Viernes (5am-6pm)</span>
                                 </p>
                             </div>
                         </div>
@@ -920,8 +920,7 @@
                             <div class="single-icon">
                                 <i class="fa fa-envelope-o"></i>
                                 <p>
-                                    Email: ejemplo@example.com<br>
-                                    <span>Web: www.example.com</span>
+                                    Email: rhimagnesita@gmail.com<br>
                                 </p>
                             </div>
                         </div>
