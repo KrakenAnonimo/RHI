@@ -67,7 +67,7 @@
                             <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
                                 <ul class="nav navbar-nav navbar-right">
                                     <li class="active">
-                                        <a class="page-scroll" href="#Inicio">Inicio</a>
+                                        <a class="page-scroll" href="index.aspx">Inicio</a>
                                     </li>
                                     <li>
                                         <a class="page-scroll" href="Login.aspx">Login</a>
