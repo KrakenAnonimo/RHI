@@ -700,13 +700,13 @@
                                     <a href="#" class="active" data-filter="*">Todo</a>
                                 </li>
                                 <li>
-                                    <a href="#" data-filter=".development">Desarrollo</a>
+                                    <a href="#" data-filter=".development">1</a>
                                 </li>
                                 <li>
-                                    <a href="#" data-filter=".design">Diseño</a>
+                                    <a href="#" data-filter=".design">2</a>
                                 </li>
                                 <li>
-                                    <a href="#" data-filter=".photo">Photoshop</a>
+                                    <a href="#" data-filter=".photo">3</a>
                                 </li>
                             </ul>
                         </div>
