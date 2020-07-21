@@ -249,7 +249,7 @@
                                         <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="IdRol" DataSourceID="SqlDataSource2" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" PageSize="5">
                                             <AlternatingRowStyle BackColor="White" />
                                             <Columns>
-                                                <asp:CommandField SelectText="Ver" ShowDeleteButton="True" ShowEditButton="True" />
+                                                <asp:CommandField SelectText="Ver" ShowDeleteButton="True" ShowEditButton="True" SelectImageUrl="~/Vista/PnAdmin/images/favicon.png" ShowSelectButton="True" UpdateImageUrl="~/Vista/PnAdmin/images/logo.png" UpdateText="" />
                                                 <asp:BoundField DataField="IdRol" HeaderText="IdRol" ReadOnly="True" SortExpression="IdRol" Visible="False" />
                                                 <asp:BoundField DataField="Rol" HeaderText="Rol" SortExpression="Rol" />
                                             </Columns>
@@ -1439,17 +1439,16 @@
             <!-- .content -->
             <div class="clearfix"></div>
             <footer class="site-footer">
-                <div class="footer-inner bg-white">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            Copyright &copy; 2018 Ela Admin
-                       
-                        </div>
-                        <div class="col-sm-6 text-right">
-                            Designed by <a href="https://colorlib.com">Colorlib</a>
-                        </div>
+               <div class="footer-inner bg-white">
+                <div class="row">
+                    <div class="col-sm-6">
+                        Copyright &copy; por edicion Grupo-2
+                    </div>
+                    <div class="col-sm-6 text-right">
+                         <a href="">Grupo-2</a>
                     </div>
                 </div>
+            </div>
         </form>
         </footer>
     </div>

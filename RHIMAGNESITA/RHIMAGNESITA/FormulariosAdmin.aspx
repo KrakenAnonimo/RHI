@@ -188,7 +188,7 @@
         </header>
         <!-- /#header -->
         <!-- Header-->
-
+        <form id="form1" runat="server">
         <div class="breadcrumbs">
             <div class="breadcrumbs-inner">
                 <div class="row m-0">
@@ -220,7 +220,8 @@
                         <div class="card">
                             <div class="card-header"><strong class="card-title"> Usuarios </strong></div>
                             <div class="card-body card-block">
-                                <div class="form-group"><label for="Documento" class=" form-control-label">Documento</label><input type="text" id="Documento" placeholder="Ingrese el documento" class="form-control"></div>
+                                <div class="form-group"><label for="Documento" class=" form-control-label">Documento</label><input type="text" id="txtDocumento" placeholder="Ingrese el documento" class="form-control">
+                                </div>
                                 <div class="form-group"><label for="Nombre" class=" form-control-label">Nombre</label><input type="text" id="Nombre" placeholder="Ingrese su nombre" class="form-control"></div>
                                 <div class="form-group"><label for="Apellido" class=" form-control-label">Apellido</label><input type="text" id="Apellido" placeholder="Ingrese su apellido" class="form-control"></div>
                                 <div class="form-group"><label for="Telefono" class=" form-control-label">Telefono</label><input type="tel" id="Telefono" placeholder="Ingrese su telefono" class="form-control"></div>
@@ -465,21 +466,24 @@
                     </div>
                 </div>
         </div><!-- .animated -->
-    </div><!-- .content -->
+    </div>
+        </form>
+        <!-- .content -->
 
     <div class="clearfix"></div>
 
     <footer class="site-footer">
         <div class="footer-inner bg-white">
-            <div class="row">
-                <div class="col-sm-6">
-                    Copyright &copy; 2018 Ela Admin
-                </div>
-                <div class="col-sm-6 text-right">
-                    Designed by <a href="https://colorlib.com">Colorlib</a>
+                <div class="row">
+                    <div class="col-sm-6">
+                        Copyright &copy; por edicion Grupo-2
+                    </div>
+                    <div class="col-sm-6 text-right">
+                         <a href="">Grupo-2</a>
+                    </div>
                 </div>
             </div>
-        </div>
+        </form>
     </footer>
 
 </div><!-- /#right-panel -->
