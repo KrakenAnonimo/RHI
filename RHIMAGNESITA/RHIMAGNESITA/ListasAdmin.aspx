@@ -246,7 +246,7 @@
                                 <div class="card-body">
                                     <div>
                                         <!--inicio de la tabla-->
-                                        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="IdRol" DataSourceID="SqlDataSource2" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" PageSize="4">
+                                        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="IdRol" DataSourceID="SqlDataSource2" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" PageSize="5">
                                             <AlternatingRowStyle BackColor="White" />
                                             <Columns>
                                                 <asp:CommandField SelectText="Ver" ShowDeleteButton="True" ShowEditButton="True" />
