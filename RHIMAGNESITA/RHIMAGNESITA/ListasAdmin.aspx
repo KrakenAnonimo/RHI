@@ -223,7 +223,10 @@
                                 <strong class="card-title">Supervisores</strong>
                             </div>
                             <div class="card-body">
-                       <div></div>
+                       <div>
+
+
+                       </div>
                         </div>
                     </div>
                 </div>
