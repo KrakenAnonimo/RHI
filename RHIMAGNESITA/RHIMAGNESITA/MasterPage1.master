@@ -150,11 +150,6 @@
             </footer>
         </div>
 
-        
-
-
-
-
         <!-- JavaScript Libraries -->
         <script src="Vista/PgPrin/lib/jquery/jquery.min.js"></script>
         <script src="Vista/PgPrin/lib/bootstrap/js/bootstrap.min.js"></script>
