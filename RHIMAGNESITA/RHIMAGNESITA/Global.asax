@@ -2,39 +2,41 @@
 
 <script runat="server">
 
-    void Application_Start(object sender, EventArgs e) 
+    void Application_Start(object sender, EventArgs e)
     {
         // Código que se ejecuta al iniciarse la aplicación
 
     }
-    
-    void Application_End(object sender, EventArgs e) 
+
+    void Application_End(object sender, EventArgs e)
     {
         //  Código que se ejecuta al cerrarse la aplicación
 
     }
-        
-    void Application_Error(object sender, EventArgs e) 
-    { 
+
+    void Application_Error(object sender, EventArgs e)
+    {
         // Código que se ejecuta cuando se produce un error sin procesar
 
     }
 
-    void Session_Start(object sender, EventArgs e) 
+    void Session_Start(object sender, EventArgs e)
     {
         // Código que se ejecuta al iniciarse una nueva sesión
 
-         Session["usuario"] = "NN";
+        Session["usuario"] = "NN";
+        //Session["idRol"] = ("Admin","Supervisor","Planificador");
         Session["idusuario"] = 0;
-        Session["idSupervisor"] = 1;
-        Session["idPlanificador"] = 2;
-        Session["idAsistenteMtto"] = 3;
-        Session["idSiso"] = 4;
-        Session["idSoldador"] = 5;
-        Session["idTecnico"] = 6;
+        Session["idAdmin"] = 1;
+        Session["idSupervisor"] = 2;
+        Session["idPlanificador"] = 3;
+        Session["idAsistenteMtto"] = 4;
+        Session["idSiso"] = 5;
+        Session["idSoldador"] = 6;
+        Session["idTecnico"] = 7;
     }
 
-    void Session_End(object sender, EventArgs e) 
+    void Session_End(object sender, EventArgs e)
     {
         // Código que se ejecuta cuando finaliza una sesión. 
         // Nota: el evento Session_End se produce solamente con el modo sessionstate
@@ -42,5 +44,5 @@
         // o SQLServer, el evento no se produce.
 
     }
-       
+
 </script>
