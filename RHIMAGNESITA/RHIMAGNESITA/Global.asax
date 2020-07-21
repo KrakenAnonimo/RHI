@@ -24,6 +24,14 @@
     {
         // Código que se ejecuta al iniciarse una nueva sesión
 
+         Session["usuario"] = "NN";
+        Session["idusuario"] = 0;
+        Session["idSupervisor"] = 1;
+        Session["idPlanificador"] = 2;
+        Session["idAsistenteMtto"] = 3;
+        Session["idSiso"] = 4;
+        Session["idSoldador"] = 5;
+        Session["idTecnico"] = 6;
     }
 
     void Session_End(object sender, EventArgs e) 
