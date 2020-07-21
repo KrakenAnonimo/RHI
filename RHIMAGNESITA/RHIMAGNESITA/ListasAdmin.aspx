@@ -2,7 +2,9 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,41 +30,50 @@
     <link href="https://cdn.jsdelivr.net/npm/weathericons@2.1.0/css/weather-icons.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" rel="stylesheet" />
 
-   <style>
-    #weatherWidget .currentDesc {
-        color: #ffffff!important;
-    }
+    <style>
+        #weatherWidget .currentDesc {
+            color: #ffffff !important;
+        }
+
         .traffic-chart {
             min-height: 335px;
         }
-        #flotPie1  {
+
+        #flotPie1 {
             height: 150px;
         }
-        #flotPie1 td {
-            padding:3px;
-        }
-        #flotPie1 table {
-            top: 20px!important;
-            right: -10px!important;
-        }
+
+            #flotPie1 td {
+                padding: 3px;
+            }
+
+            #flotPie1 table {
+                top: 20px !important;
+                right: -10px !important;
+            }
+
         .chart-container {
             display: table;
-            min-width: 270px ;
+            min-width: 270px;
             text-align: left;
             padding-top: 10px;
             padding-bottom: 10px;
         }
-        #flotLine5  {
-             height: 105px;
+
+        #flotLine5 {
+            height: 105px;
         }
 
         #flotBarChart {
             height: 150px;
         }
-        #cellPaiChart{
+
+        #cellPaiChart {
             height: 160px;
         }
-
+        .auto-style1 {
+            margin-right: 0px;
+        }
     </style>
 </head>
 
@@ -75,31 +86,35 @@
                     <li class="active">
                         <a href="PanelAdmin.aspx"><i class="menu-icon fa fa-laptop"></i>Inicio</a>
                     </li>
-                    <li class="menu-title">Elementos</li><!-- /.menu-title -->
+                    <li class="menu-title">Elementos</li>
+                    <!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i>Registros</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-th"></i>Registros</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon fa fa-th"></i><a href="FormulariosAdmin.aspx">Registro de datos</a></li>
                         </ul>
                     </li>
 
-                    <li class="menu-title">Reportes </li><!-- /.menu-title -->
+                    <li class="menu-title">Reportes </li>
+                    <!-- /.menu-title -->
 
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>Listas de datos</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-tasks"></i>Listas de datos</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon  fa fa-table"></i><a href="ListasAdmin.aspx">Tablas</a></li>
                         </ul>
                     </li>
-                    <li class="menu-title">Extras</li><!-- /.menu-title -->
+                    <li class="menu-title">Extras</li>
+                    <!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-glass"></i>Pages</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-glass"></i>Pages</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon fa fa-sign-in"></i><a href="page-login.html">Salir</a></li>
                         </ul>
                     </li>
                 </ul>
-            </div><!-- /.navbar-collapse -->
+            </div>
+            <!-- /.navbar-collapse -->
         </nav>
     </aside>
     <!-- /#left-panel -->
@@ -109,8 +124,10 @@
         <header id="header" class="header">
             <div class="top-left">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="./"><img src="Vista/PnAdmin/images/logo.png" alt="Logo"></a>
-                    <a class="navbar-brand hidden" href="./"><img src="Vista/PnAdmin/images/logo.png" alt="Logo"></a>
+                    <a class="navbar-brand" href="./">
+                        <img src="Vista/PnAdmin/images/logo.png" alt="Logo"></a>
+                    <a class="navbar-brand hidden" href="./">
+                        <img src="Vista/PnAdmin/images/logo.png" alt="Logo"></a>
                     <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                 </div>
             </div>
@@ -132,7 +149,8 @@
                             <div class="dropdown-menu" aria-labelledby="message">
                                 <p class="red">Tienes 4 emails</p>
                                 <a class="dropdown-item media" href="#">
-                                    <span class="photo media-left"><img alt="avatar" src="Vista/PnAdmin/images/avatar/1.jpg"></span>
+                                    <span class="photo media-left">
+                                        <img alt="avatar" src="Vista/PnAdmin/images/avatar/1.jpg"></span>
                                     <div class="message media-body">
                                         <span class="name float-left">Jonathan Smith</span>
                                         <span class="time float-right">Just now</span>
@@ -140,7 +158,8 @@
                                     </div>
                                 </a>
                                 <a class="dropdown-item media" href="#">
-                                    <span class="photo media-left"><img alt="avatar" src="Vista/PnAdmin/images/avatar/2.jpg"></span>
+                                    <span class="photo media-left">
+                                        <img alt="avatar" src="Vista/PnAdmin/images/avatar/2.jpg"></span>
                                     <div class="message media-body">
                                         <span class="name float-left">Jack Sanders</span>
                                         <span class="time float-right">5 minutes ago</span>
@@ -148,7 +167,8 @@
                                     </div>
                                 </a>
                                 <a class="dropdown-item media" href="#">
-                                    <span class="photo media-left"><img alt="avatar" src="Vista/PnAdmin/images/avatar/3.jpg"></span>
+                                    <span class="photo media-left">
+                                        <img alt="avatar" src="Vista/PnAdmin/images/avatar/3.jpg"></span>
                                     <div class="message media-body">
                                         <span class="name float-left">Cheryl Wheeler</span>
                                         <span class="time float-right">10 minutes ago</span>
@@ -156,7 +176,8 @@
                                     </div>
                                 </a>
                                 <a class="dropdown-item media" href="#">
-                                    <span class="photo media-left"><img alt="avatar" src="Vista/PnAdmin/images/avatar/4.jpg"></span>
+                                    <span class="photo media-left">
+                                        <img alt="avatar" src="Vista/PnAdmin/images/avatar/4.jpg"></span>
                                     <div class="message media-body">
                                         <span class="name float-left">Rachel Santos</span>
                                         <span class="time float-right">15 minutes ago</span>
@@ -188,147 +209,572 @@
         </header>
         <!-- /#header -->
         <!-- Header-->
-
-        <div class="breadcrumbs">
-            <div class="breadcrumbs-inner">
-                <div class="row m-0">
-                    <div class="col-sm-4">
-                        <div class="page-header float-left">
-                            <div class="page-title">
-                                <h1>Panel</h1>
+        <form id="form1" runat="server">
+            <div class="breadcrumbs">
+                <div class="breadcrumbs-inner">
+                    <div class="row m-0">
+                        <div class="col-sm-4">
+                            <div class="page-header float-left">
+                                <div class="page-title">
+                                    <h1>Panel</h1>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-8">
-                        <div class="page-header float-right">
-                            <div class="page-title">
-                                <ol class="breadcrumb text-right">
-                                    <li><a href="#">Panel</a></li>
-                                    <li><a href="#">Listas de Datos</a></li>
-                                    <li class="active">Tablas</li>
-                                </ol>
+                        <div class="col-sm-8">
+                            <div class="page-header float-right">
+                                <div class="page-title">
+                                    <ol class="breadcrumb text-right">
+                                        <li><a href="#">Panel</a></li>
+                                        <li><a href="#">Listas de Datos</a></li>
+                                        <li class="active">Tablas</li>
+                                    </ol>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="content">
-            <div class="animated fadeIn">
-                <div class="row">
-                     <div class="col-lg-6">
-                        <div class="card">
-                            <div class="card-header">
-                                <strong class="card-title">Supervisores</strong>
+            <div class="content">
+                <div class="animated fadeIn">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong class="card-title">Roles</strong>
+                                </div>
+                                <div class="card-body">
+                                    <div>
+                                        <!--inicio de la tabla-->
+                                        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="IdRol" DataSourceID="SqlDataSource2" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" PageSize="4">
+                                            <AlternatingRowStyle BackColor="White" />
+                                            <Columns>
+                                                <asp:CommandField SelectText="Ver" ShowDeleteButton="True" ShowEditButton="True" />
+                                                <asp:BoundField DataField="IdRol" HeaderText="IdRol" ReadOnly="True" SortExpression="IdRol" Visible="False" />
+                                                <asp:BoundField DataField="Rol" HeaderText="Rol" SortExpression="Rol" />
+                                            </Columns>
+                                            <FooterStyle BackColor="#CCCC99" />
+                                            <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                                            <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+                                            <RowStyle BackColor="#F7F7DE" />
+                                            <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+                                            <SortedAscendingCellStyle BackColor="#FBFBF2" />
+                                            <SortedAscendingHeaderStyle BackColor="#848384" />
+                                            <SortedDescendingCellStyle BackColor="#EAEAD3" />
+                                            <SortedDescendingHeaderStyle BackColor="#575357" />
+                                        </asp:GridView>
+                                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafayConnectionString1 %>" DeleteCommand="DELETE FROM [Rol] WHERE [IdRol] = @IdRol" InsertCommand="INSERT INTO [Rol] ([Rol]) VALUES (@Rol)" ProviderName="<%$ ConnectionStrings:dbSwafayConnectionString1.ProviderName %>" SelectCommand="SELECT [IdRol], [Rol] FROM [Rol]" UpdateCommand="UPDATE [Rol] SET [Rol] = @Rol WHERE [IdRol] = @IdRol">
+                                            <DeleteParameters>
+                                                <asp:Parameter Name="IdRol" Type="Int32" />
+                                            </DeleteParameters>
+                                            <InsertParameters>
+                                                <asp:Parameter Name="Rol" Type="String" />
+                                            </InsertParameters>
+                                            <UpdateParameters>
+                                                <asp:Parameter Name="Rol" Type="String" />
+                                                <asp:Parameter Name="IdRol" Type="Int32" />
+                                            </UpdateParameters>
+                                        </asp:SqlDataSource>
+                                        <!--Fin de la tabla-->
+                                    </div>
+                                </div>
                             </div>
-                            <div class="card-body">
-                       <div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong class="card-title">Supervisores</strong>
+                                </div>
+                                <div class="card-body">
+                                    <div>
+                                        <!--inicio de la tabla-->
+                                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="IdUsuario" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" PageSize="5">
+                                            <AlternatingRowStyle BackColor="White"/>
+                                            <Columns>
+                                                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" SelectText="Ver" UpdateText="Editar" />
+                                                <asp:BoundField DataField="IdUsuario" HeaderText="IdUsuario" ReadOnly="True" SortExpression="IdUsuario" Visible="False" />
+                                                <asp:BoundField DataField="Documento" HeaderText="Documento" SortExpression="Documento" />
+                                                <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                                                <asp:BoundField DataField="Apellido" HeaderText="Apellido" SortExpression="Apellido" />
+                                                <asp:BoundField DataField="Telefono" HeaderText="Telefono" SortExpression="Telefono" />
+                                                <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
+                                                <asp:BoundField DataField="Clave" HeaderText="Clave" SortExpression="Clave" Visible="False" />
+                                                <asp:BoundField DataField="Ciudad" HeaderText="Ciudad" SortExpression="Ciudad" />
+                                                <asp:BoundField DataField="Direccion" HeaderText="Direccion" SortExpression="Direccion" />
+                                                <asp:BoundField DataField="IdRol" HeaderText="IdRol" SortExpression="IdRol" Visible="False" />
+                                            </Columns>
+                                            <FooterStyle BackColor="#CCCC99" />
+                                            <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                                            <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+                                            <RowStyle BackColor="#F7F7DE" />
+                                            <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+                                            <SortedAscendingCellStyle BackColor="#FBFBF2" />
+                                            <SortedAscendingHeaderStyle BackColor="#848384" />
+                                            <SortedDescendingCellStyle BackColor="#EAEAD3" />
+                                            <SortedDescendingHeaderStyle BackColor="#575357" />
+                                        </asp:GridView>
+                                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafayConnectionString1 %>" DeleteCommand="DELETE FROM [Usuario] WHERE [IdUsuario] = @IdUsuario" InsertCommand="INSERT INTO [Usuario] ([Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol]) VALUES (@Documento, @Nombre, @Apellido, @Telefono, @Email, @Clave, @Ciudad, @Direccion, @IdRol)" ProviderName="<%$ ConnectionStrings:dbSwafayConnectionString1.ProviderName %>" SelectCommand="SELECT [IdUsuario], [Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol] FROM [Usuario]" UpdateCommand="UPDATE [Usuario] SET [Documento] = @Documento, [Nombre] = @Nombre, [Apellido] = @Apellido, [Telefono] = @Telefono, [Email] = @Email, [Clave] = @Clave, [Ciudad] = @Ciudad, [Direccion] = @Direccion, [IdRol] = @IdRol WHERE [IdUsuario] = @IdUsuario">
+                                            <DeleteParameters>
+                                                <asp:Parameter Name="IdUsuario" Type="Int32" />
+                                            </DeleteParameters>
+                                            <InsertParameters>
+                                                <asp:Parameter Name="Documento" Type="String" />
+                                                <asp:Parameter Name="Nombre" Type="String" />
+                                                <asp:Parameter Name="Apellido" Type="String" />
+                                                <asp:Parameter Name="Telefono" Type="String" />
+                                                <asp:Parameter Name="Email" Type="String" />
+                                                <asp:Parameter Name="Clave" Type="String" />
+                                                <asp:Parameter Name="Ciudad" Type="String" />
+                                                <asp:Parameter Name="Direccion" Type="String" />
+                                                <asp:Parameter Name="IdRol" Type="Int32" />
+                                            </InsertParameters>
+                                            <UpdateParameters>
+                                                <asp:Parameter Name="Documento" Type="String" />
+                                                <asp:Parameter Name="Nombre" Type="String" />
+                                                <asp:Parameter Name="Apellido" Type="String" />
+                                                <asp:Parameter Name="Telefono" Type="String" />
+                                                <asp:Parameter Name="Email" Type="String" />
+                                                <asp:Parameter Name="Clave" Type="String" />
+                                                <asp:Parameter Name="Ciudad" Type="String" />
+                                                <asp:Parameter Name="Direccion" Type="String" />
+                                                <asp:Parameter Name="IdRol" Type="Int32" />
+                                                <asp:Parameter Name="IdUsuario" Type="Int32" />
+                                            </UpdateParameters>
+                                        </asp:SqlDataSource>
+                                        <!--Fin de la tabla-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong class="card-title">Planificadores</strong>
+                                </div>
+                                <div class="card-body">
+                                    <div>
+                                        <!--inicio de la tabla-->
+                                        <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" DataKeyNames="IdUsuario" DataSourceID="SqlDataSource3" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" CssClass="auto-style1" ForeColor="Black" GridLines="Vertical" PageSize="5">
+                                            <AlternatingRowStyle BackColor="White" />
+                                            <Columns>
+                                                <asp:CommandField SelectText="Ver" ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" UpdateText="Editar" />
+                                                <asp:BoundField DataField="IdUsuario" HeaderText="IdUsuario" ReadOnly="True" SortExpression="IdUsuario" Visible="False" />
+                                                <asp:BoundField DataField="Documento" HeaderText="Documento" SortExpression="Documento" />
+                                                <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                                                <asp:BoundField DataField="Apellido" HeaderText="Apellido" SortExpression="Apellido" />
+                                                <asp:BoundField DataField="Telefono" HeaderText="Telefono" SortExpression="Telefono" />
+                                                <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
+                                                <asp:BoundField DataField="Clave" HeaderText="Clave" SortExpression="Clave" Visible="False" />
+                                                <asp:BoundField DataField="Ciudad" HeaderText="Ciudad" SortExpression="Ciudad" />
+                                                <asp:BoundField DataField="Direccion" HeaderText="Direccion" SortExpression="Direccion" />
+                                                <asp:BoundField DataField="IdRol" HeaderText="IdRol" SortExpression="IdRol" Visible="False" />
+                                            </Columns>
+                                            <FooterStyle BackColor="#CCCC99" />
+                                            <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                                            <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+                                            <RowStyle BackColor="#F7F7DE" />
+                                            <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+                                            <SortedAscendingCellStyle BackColor="#FBFBF2" />
+                                            <SortedAscendingHeaderStyle BackColor="#848384" />
+                                            <SortedDescendingCellStyle BackColor="#EAEAD3" />
+                                            <SortedDescendingHeaderStyle BackColor="#575357" />
+                                        </asp:GridView>
+                                        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafayConnectionString1 %>" DeleteCommand="DELETE FROM [Usuario] WHERE [IdUsuario] = @IdUsuario" InsertCommand="INSERT INTO [Usuario] ([Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol]) VALUES (@Documento, @Nombre, @Apellido, @Telefono, @Email, @Clave, @Ciudad, @Direccion, @IdRol)" ProviderName="<%$ ConnectionStrings:dbSwafayConnectionString1.ProviderName %>" SelectCommand="SELECT [IdUsuario], [Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol] FROM [Usuario]" UpdateCommand="UPDATE [Usuario] SET [Documento] = @Documento, [Nombre] = @Nombre, [Apellido] = @Apellido, [Telefono] = @Telefono, [Email] = @Email, [Clave] = @Clave, [Ciudad] = @Ciudad, [Direccion] = @Direccion, [IdRol] = @IdRol WHERE [IdUsuario] = @IdUsuario">
+                                            <DeleteParameters>
+                                                <asp:Parameter Name="IdUsuario" Type="Int32" />
+                                            </DeleteParameters>
+                                            <InsertParameters>
+                                                <asp:Parameter Name="Documento" Type="String" />
+                                                <asp:Parameter Name="Nombre" Type="String" />
+                                                <asp:Parameter Name="Apellido" Type="String" />
+                                                <asp:Parameter Name="Telefono" Type="String" />
+                                                <asp:Parameter Name="Email" Type="String" />
+                                                <asp:Parameter Name="Clave" Type="String" />
+                                                <asp:Parameter Name="Ciudad" Type="String" />
+                                                <asp:Parameter Name="Direccion" Type="String" />
+                                                <asp:Parameter Name="IdRol" Type="Int32" />
+                                            </InsertParameters>
+                                            <UpdateParameters>
+                                                <asp:Parameter Name="Documento" Type="String" />
+                                                <asp:Parameter Name="Nombre" Type="String" />
+                                                <asp:Parameter Name="Apellido" Type="String" />
+                                                <asp:Parameter Name="Telefono" Type="String" />
+                                                <asp:Parameter Name="Email" Type="String" />
+                                                <asp:Parameter Name="Clave" Type="String" />
+                                                <asp:Parameter Name="Ciudad" Type="String" />
+                                                <asp:Parameter Name="Direccion" Type="String" />
+                                                <asp:Parameter Name="IdRol" Type="Int32" />
+                                                <asp:Parameter Name="IdUsuario" Type="Int32" />
+                                            </UpdateParameters>
+                                        </asp:SqlDataSource>
+                                        <!--Fin de la tabla-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong class="card-title">Tecnicos</strong>
+                                </div>
+                                <div class="card-body">
+                                    <div>
+                                        <!--inicio de la tabla-->
+                                        <asp:GridView ID="GridView4" runat="server" AutoGenerateColumns="False" DataKeyNames="IdUsuario" DataSourceID="SqlDataSource3" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" CssClass="auto-style1" ForeColor="Black" GridLines="Vertical" PageSize="5">
+                                            <AlternatingRowStyle BackColor="White" />
+                                            <Columns>
+                                                <asp:CommandField SelectText="Ver" ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" UpdateText="Editar" />
+                                                <asp:BoundField DataField="IdUsuario" HeaderText="IdUsuario" ReadOnly="True" SortExpression="IdUsuario" Visible="False" />
+                                                <asp:BoundField DataField="Documento" HeaderText="Documento" SortExpression="Documento" />
+                                                <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                                                <asp:BoundField DataField="Apellido" HeaderText="Apellido" SortExpression="Apellido" />
+                                                <asp:BoundField DataField="Telefono" HeaderText="Telefono" SortExpression="Telefono" />
+                                                <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
+                                                <asp:BoundField DataField="Clave" HeaderText="Clave" SortExpression="Clave" Visible="False" />
+                                                <asp:BoundField DataField="Ciudad" HeaderText="Ciudad" SortExpression="Ciudad" />
+                                                <asp:BoundField DataField="Direccion" HeaderText="Direccion" SortExpression="Direccion" />
+                                                <asp:BoundField DataField="IdRol" HeaderText="IdRol" SortExpression="IdRol" Visible="False" />
+                                            </Columns>
+                                            <FooterStyle BackColor="#CCCC99" />
+                                            <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                                            <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+                                            <RowStyle BackColor="#F7F7DE" />
+                                            <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+                                            <SortedAscendingCellStyle BackColor="#FBFBF2" />
+                                            <SortedAscendingHeaderStyle BackColor="#848384" />
+                                            <SortedDescendingCellStyle BackColor="#EAEAD3" />
+                                            <SortedDescendingHeaderStyle BackColor="#575357" />
+                                        </asp:GridView>
+                                        <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafayConnectionString1 %>" DeleteCommand="DELETE FROM [Usuario] WHERE [IdUsuario] = @IdUsuario" InsertCommand="INSERT INTO [Usuario] ([Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol]) VALUES (@Documento, @Nombre, @Apellido, @Telefono, @Email, @Clave, @Ciudad, @Direccion, @IdRol)" ProviderName="<%$ ConnectionStrings:dbSwafayConnectionString1.ProviderName %>" SelectCommand="SELECT [IdUsuario], [Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol] FROM [Usuario]" UpdateCommand="UPDATE [Usuario] SET [Documento] = @Documento, [Nombre] = @Nombre, [Apellido] = @Apellido, [Telefono] = @Telefono, [Email] = @Email, [Clave] = @Clave, [Ciudad] = @Ciudad, [Direccion] = @Direccion, [IdRol] = @IdRol WHERE [IdUsuario] = @IdUsuario">
+                                            <DeleteParameters>
+                                                <asp:Parameter Name="IdUsuario" Type="Int32" />
+                                            </DeleteParameters>
+                                            <InsertParameters>
+                                                <asp:Parameter Name="Documento" Type="String" />
+                                                <asp:Parameter Name="Nombre" Type="String" />
+                                                <asp:Parameter Name="Apellido" Type="String" />
+                                                <asp:Parameter Name="Telefono" Type="String" />
+                                                <asp:Parameter Name="Email" Type="String" />
+                                                <asp:Parameter Name="Clave" Type="String" />
+                                                <asp:Parameter Name="Ciudad" Type="String" />
+                                                <asp:Parameter Name="Direccion" Type="String" />
+                                                <asp:Parameter Name="IdRol" Type="Int32" />
+                                            </InsertParameters>
+                                            <UpdateParameters>
+                                                <asp:Parameter Name="Documento" Type="String" />
+                                                <asp:Parameter Name="Nombre" Type="String" />
+                                                <asp:Parameter Name="Apellido" Type="String" />
+                                                <asp:Parameter Name="Telefono" Type="String" />
+                                                <asp:Parameter Name="Email" Type="String" />
+                                                <asp:Parameter Name="Clave" Type="String" />
+                                                <asp:Parameter Name="Ciudad" Type="String" />
+                                                <asp:Parameter Name="Direccion" Type="String" />
+                                                <asp:Parameter Name="IdRol" Type="Int32" />
+                                                <asp:Parameter Name="IdUsuario" Type="Int32" />
+                                            </UpdateParameters>
+                                        </asp:SqlDataSource>
+                                        <!--Fin de la tabla-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                       </div>
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong class="card-title">Soldadores</strong>
+                                </div>
+                                <div class="card-body">
+                                    <div>
+                                        <!--inicio de la tabla-->
+                                        <asp:GridView ID="GridView5" runat="server" AutoGenerateColumns="False" DataKeyNames="IdUsuario" DataSourceID="SqlDataSource5" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" PageSize="5">
+                                            <AlternatingRowStyle BackColor="White" />
+                                            <Columns>
+                                                <asp:CommandField SelectText="Ver" ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" UpdateText="Editar" />
+                                                <asp:BoundField DataField="IdUsuario" HeaderText="IdUsuario" ReadOnly="True" SortExpression="IdUsuario" Visible="False" />
+                                                <asp:BoundField DataField="Documento" HeaderText="Documento" SortExpression="Documento" />
+                                                <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                                                <asp:BoundField DataField="Apellido" HeaderText="Apellido" SortExpression="Apellido" />
+                                                <asp:BoundField DataField="Telefono" HeaderText="Telefono" SortExpression="Telefono" />
+                                                <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
+                                                <asp:BoundField DataField="Clave" HeaderText="Clave" SortExpression="Clave" Visible="False" />
+                                                <asp:BoundField DataField="Ciudad" HeaderText="Ciudad" SortExpression="Ciudad" />
+                                                <asp:BoundField DataField="Direccion" HeaderText="Direccion" SortExpression="Direccion" />
+                                                <asp:BoundField DataField="IdRol" HeaderText="IdRol" SortExpression="IdRol" Visible="False" />
+                                            </Columns>
+                                            <FooterStyle BackColor="#CCCC99" />
+                                            <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                                            <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+                                            <RowStyle BackColor="#F7F7DE" />
+                                            <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+                                            <SortedAscendingCellStyle BackColor="#FBFBF2" />
+                                            <SortedAscendingHeaderStyle BackColor="#848384" />
+                                            <SortedDescendingCellStyle BackColor="#EAEAD3" />
+                                            <SortedDescendingHeaderStyle BackColor="#575357" />
+                                        </asp:GridView>
+                                        <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafayConnectionString1 %>" DeleteCommand="DELETE FROM [Usuario] WHERE [IdUsuario] = @IdUsuario" InsertCommand="INSERT INTO [Usuario] ([Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol]) VALUES (@Documento, @Nombre, @Apellido, @Telefono, @Email, @Clave, @Ciudad, @Direccion, @IdRol)" ProviderName="<%$ ConnectionStrings:dbSwafayConnectionString1.ProviderName %>" SelectCommand="SELECT [IdUsuario], [Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol] FROM [Usuario]" UpdateCommand="UPDATE [Usuario] SET [Documento] = @Documento, [Nombre] = @Nombre, [Apellido] = @Apellido, [Telefono] = @Telefono, [Email] = @Email, [Clave] = @Clave, [Ciudad] = @Ciudad, [Direccion] = @Direccion, [IdRol] = @IdRol WHERE [IdUsuario] = @IdUsuario">
+                                            <DeleteParameters>
+                                                <asp:Parameter Name="IdUsuario" Type="Int32" />
+                                            </DeleteParameters>
+                                            <InsertParameters>
+                                                <asp:Parameter Name="Documento" Type="String" />
+                                                <asp:Parameter Name="Nombre" Type="String" />
+                                                <asp:Parameter Name="Apellido" Type="String" />
+                                                <asp:Parameter Name="Telefono" Type="String" />
+                                                <asp:Parameter Name="Email" Type="String" />
+                                                <asp:Parameter Name="Clave" Type="String" />
+                                                <asp:Parameter Name="Ciudad" Type="String" />
+                                                <asp:Parameter Name="Direccion" Type="String" />
+                                                <asp:Parameter Name="IdRol" Type="Int32" />
+                                            </InsertParameters>
+                                            <UpdateParameters>
+                                                <asp:Parameter Name="Documento" Type="String" />
+                                                <asp:Parameter Name="Nombre" Type="String" />
+                                                <asp:Parameter Name="Apellido" Type="String" />
+                                                <asp:Parameter Name="Telefono" Type="String" />
+                                                <asp:Parameter Name="Email" Type="String" />
+                                                <asp:Parameter Name="Clave" Type="String" />
+                                                <asp:Parameter Name="Ciudad" Type="String" />
+                                                <asp:Parameter Name="Direccion" Type="String" />
+                                                <asp:Parameter Name="IdRol" Type="Int32" />
+                                                <asp:Parameter Name="IdUsuario" Type="Int32" />
+                                            </UpdateParameters>
+                                        </asp:SqlDataSource>
+                                        <!--Fin de la tabla-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong class="card-title">Sisos</strong>
+                                </div>
+                                <div class="card-body">
+                                    <div>
+                                        <!--inicio de la tabla-->
+                                        <asp:GridView ID="GridView6" runat="server" AutoGenerateColumns="False" DataKeyNames="IdUsuario" DataSourceID="SqlDataSource6" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" PageSize="5">
+                                            <AlternatingRowStyle BackColor="White" />
+                                            <Columns>
+                                                <asp:CommandField SelectText="Ver" ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" UpdateText="Editar" />
+                                                <asp:BoundField DataField="IdUsuario" HeaderText="IdUsuario" ReadOnly="True" SortExpression="IdUsuario" Visible="False" />
+                                                <asp:BoundField DataField="Documento" HeaderText="Documento" SortExpression="Documento" />
+                                                <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                                                <asp:BoundField DataField="Apellido" HeaderText="Apellido" SortExpression="Apellido" />
+                                                <asp:BoundField DataField="Telefono" HeaderText="Telefono" SortExpression="Telefono" />
+                                                <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
+                                                <asp:BoundField DataField="Clave" HeaderText="Clave" SortExpression="Clave" Visible="False" />
+                                                <asp:BoundField DataField="Ciudad" HeaderText="Ciudad" SortExpression="Ciudad" />
+                                                <asp:BoundField DataField="Direccion" HeaderText="Direccion" SortExpression="Direccion" />
+                                                <asp:BoundField DataField="IdRol" HeaderText="IdRol" SortExpression="IdRol" Visible="False" />
+                                            </Columns>
+                                            <FooterStyle BackColor="#CCCC99" />
+                                            <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                                            <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+                                            <RowStyle BackColor="#F7F7DE" />
+                                            <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+                                            <SortedAscendingCellStyle BackColor="#FBFBF2" />
+                                            <SortedAscendingHeaderStyle BackColor="#848384" />
+                                            <SortedDescendingCellStyle BackColor="#EAEAD3" />
+                                            <SortedDescendingHeaderStyle BackColor="#575357" />
+                                        </asp:GridView>
+                                        <asp:SqlDataSource ID="SqlDataSource6" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafayConnectionString1 %>" DeleteCommand="DELETE FROM [Usuario] WHERE [IdUsuario] = @IdUsuario" InsertCommand="INSERT INTO [Usuario] ([Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol]) VALUES (@Documento, @Nombre, @Apellido, @Telefono, @Email, @Clave, @Ciudad, @Direccion, @IdRol)" ProviderName="<%$ ConnectionStrings:dbSwafayConnectionString1.ProviderName %>" SelectCommand="SELECT [IdUsuario], [Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol] FROM [Usuario]" UpdateCommand="UPDATE [Usuario] SET [Documento] = @Documento, [Nombre] = @Nombre, [Apellido] = @Apellido, [Telefono] = @Telefono, [Email] = @Email, [Clave] = @Clave, [Ciudad] = @Ciudad, [Direccion] = @Direccion, [IdRol] = @IdRol WHERE [IdUsuario] = @IdUsuario">
+                                            <DeleteParameters>
+                                                <asp:Parameter Name="IdUsuario" Type="Int32" />
+                                            </DeleteParameters>
+                                            <InsertParameters>
+                                                <asp:Parameter Name="Documento" Type="String" />
+                                                <asp:Parameter Name="Nombre" Type="String" />
+                                                <asp:Parameter Name="Apellido" Type="String" />
+                                                <asp:Parameter Name="Telefono" Type="String" />
+                                                <asp:Parameter Name="Email" Type="String" />
+                                                <asp:Parameter Name="Clave" Type="String" />
+                                                <asp:Parameter Name="Ciudad" Type="String" />
+                                                <asp:Parameter Name="Direccion" Type="String" />
+                                                <asp:Parameter Name="IdRol" Type="Int32" />
+                                            </InsertParameters>
+                                            <UpdateParameters>
+                                                <asp:Parameter Name="Documento" Type="String" />
+                                                <asp:Parameter Name="Nombre" Type="String" />
+                                                <asp:Parameter Name="Apellido" Type="String" />
+                                                <asp:Parameter Name="Telefono" Type="String" />
+                                                <asp:Parameter Name="Email" Type="String" />
+                                                <asp:Parameter Name="Clave" Type="String" />
+                                                <asp:Parameter Name="Ciudad" Type="String" />
+                                                <asp:Parameter Name="Direccion" Type="String" />
+                                                <asp:Parameter Name="IdRol" Type="Int32" />
+                                                <asp:Parameter Name="IdUsuario" Type="Int32" />
+                                            </UpdateParameters>
+                                        </asp:SqlDataSource>
+                                        <!--Fin de la tabla-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong class="card-title">Asistentes de Mtto</strong>
+                                </div>
+                                <div class="card-body">
+                                    <!--inicio de la tabla-->
+                                    <asp:GridView ID="GridView7" runat="server" AutoGenerateColumns="False" DataKeyNames="IdUsuario" DataSourceID="SqlDataSource6" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" PageSize="5">
+                                        <AlternatingRowStyle BackColor="White" />
+                                        <Columns>
+                                            <asp:CommandField SelectText="Ver" ShowDeleteButton="True" ShowEditButton="True" UpdateText="Editar" />
+                                            <asp:BoundField DataField="IdUsuario" HeaderText="IdUsuario" ReadOnly="True" SortExpression="IdUsuario" Visible="False" />
+                                            <asp:BoundField DataField="Documento" HeaderText="Documento" SortExpression="Documento" />
+                                            <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                                            <asp:BoundField DataField="Apellido" HeaderText="Apellido" SortExpression="Apellido" />
+                                            <asp:BoundField DataField="Telefono" HeaderText="Telefono" SortExpression="Telefono" />
+                                            <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
+                                            <asp:BoundField DataField="Clave" HeaderText="Clave" SortExpression="Clave" Visible="False" />
+                                            <asp:BoundField DataField="Ciudad" HeaderText="Ciudad" SortExpression="Ciudad" />
+                                            <asp:BoundField DataField="Direccion" HeaderText="Direccion" SortExpression="Direccion" />
+                                            <asp:BoundField DataField="IdRol" HeaderText="IdRol" SortExpression="IdRol" Visible="False" />
+                                        </Columns>
+                                        <FooterStyle BackColor="#CCCC99" />
+                                        <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                                        <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+                                        <RowStyle BackColor="#F7F7DE" />
+                                        <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+                                        <SortedAscendingCellStyle BackColor="#FBFBF2" />
+                                        <SortedAscendingHeaderStyle BackColor="#848384" />
+                                        <SortedDescendingCellStyle BackColor="#EAEAD3" />
+                                        <SortedDescendingHeaderStyle BackColor="#575357" />
+                                    </asp:GridView>
+                                    <asp:SqlDataSource ID="SqlDataSource7" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafayConnectionString1 %>" DeleteCommand="DELETE FROM [Usuario] WHERE [IdUsuario] = @IdUsuario" InsertCommand="INSERT INTO [Usuario] ([Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol]) VALUES (@Documento, @Nombre, @Apellido, @Telefono, @Email, @Clave, @Ciudad, @Direccion, @IdRol)" ProviderName="<%$ ConnectionStrings:dbSwafayConnectionString1.ProviderName %>" SelectCommand="SELECT [IdUsuario], [Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol] FROM [Usuario]" UpdateCommand="UPDATE [Usuario] SET [Documento] = @Documento, [Nombre] = @Nombre, [Apellido] = @Apellido, [Telefono] = @Telefono, [Email] = @Email, [Clave] = @Clave, [Ciudad] = @Ciudad, [Direccion] = @Direccion, [IdRol] = @IdRol WHERE [IdUsuario] = @IdUsuario">
+                                        <DeleteParameters>
+                                            <asp:Parameter Name="IdUsuario" Type="Int32" />
+                                        </DeleteParameters>
+                                        <InsertParameters>
+                                            <asp:Parameter Name="Documento" Type="String" />
+                                            <asp:Parameter Name="Nombre" Type="String" />
+                                            <asp:Parameter Name="Apellido" Type="String" />
+                                            <asp:Parameter Name="Telefono" Type="String" />
+                                            <asp:Parameter Name="Email" Type="String" />
+                                            <asp:Parameter Name="Clave" Type="String" />
+                                            <asp:Parameter Name="Ciudad" Type="String" />
+                                            <asp:Parameter Name="Direccion" Type="String" />
+                                            <asp:Parameter Name="IdRol" Type="Int32" />
+                                        </InsertParameters>
+                                        <UpdateParameters>
+                                            <asp:Parameter Name="Documento" Type="String" />
+                                            <asp:Parameter Name="Nombre" Type="String" />
+                                            <asp:Parameter Name="Apellido" Type="String" />
+                                            <asp:Parameter Name="Telefono" Type="String" />
+                                            <asp:Parameter Name="Email" Type="String" />
+                                            <asp:Parameter Name="Clave" Type="String" />
+                                            <asp:Parameter Name="Ciudad" Type="String" />
+                                            <asp:Parameter Name="Direccion" Type="String" />
+                                            <asp:Parameter Name="IdRol" Type="Int32" />
+                                            <asp:Parameter Name="IdUsuario" Type="Int32" />
+                                        </UpdateParameters>
+                                    </asp:SqlDataSource>
+                                    <!--Fin de la tabla-->
+                                    <div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong class="card-title">Usuarios</strong>
+                                </div>
+                                <div class="card-body">
+                                    <!--inicio de la tabla-->
+                                    <asp:GridView ID="GridView8" runat="server" AutoGenerateColumns="False" DataKeyNames="IdUsuario" DataSourceID="SqlDataSource6" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" PageSize="5">
+                                        <AlternatingRowStyle BackColor="White" />
+                                        <Columns>
+                                            <asp:CommandField SelectText="Ver" ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" UpdateText="Editar" />
+                                            <asp:BoundField DataField="IdUsuario" HeaderText="IdUsuario" ReadOnly="True" SortExpression="IdUsuario" Visible="False" />
+                                            <asp:BoundField DataField="Documento" HeaderText="Documento" SortExpression="Documento" />
+                                            <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                                            <asp:BoundField DataField="Apellido" HeaderText="Apellido" SortExpression="Apellido" />
+                                            <asp:BoundField DataField="Telefono" HeaderText="Telefono" SortExpression="Telefono" />
+                                            <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
+                                            <asp:BoundField DataField="Clave" HeaderText="Clave" SortExpression="Clave" Visible="False" />
+                                            <asp:BoundField DataField="Ciudad" HeaderText="Ciudad" SortExpression="Ciudad" />
+                                            <asp:BoundField DataField="Direccion" HeaderText="Direccion" SortExpression="Direccion" />
+                                            <asp:BoundField DataField="IdRol" HeaderText="IdRol" SortExpression="IdRol" Visible="False" />
+                                        </Columns>
+                                        <FooterStyle BackColor="#CCCC99" />
+                                        <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                                        <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+                                        <RowStyle BackColor="#F7F7DE" />
+                                        <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+                                        <SortedAscendingCellStyle BackColor="#FBFBF2" />
+                                        <SortedAscendingHeaderStyle BackColor="#848384" />
+                                        <SortedDescendingCellStyle BackColor="#EAEAD3" />
+                                        <SortedDescendingHeaderStyle BackColor="#575357" />
+                                    </asp:GridView>
+                                    <asp:SqlDataSource ID="SqlDataSource8" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafayConnectionString1 %>" DeleteCommand="DELETE FROM [Usuario] WHERE [IdUsuario] = @IdUsuario" InsertCommand="INSERT INTO [Usuario] ([Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol]) VALUES (@Documento, @Nombre, @Apellido, @Telefono, @Email, @Clave, @Ciudad, @Direccion, @IdRol)" ProviderName="<%$ ConnectionStrings:dbSwafayConnectionString1.ProviderName %>" SelectCommand="SELECT [IdUsuario], [Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol] FROM [Usuario]" UpdateCommand="UPDATE [Usuario] SET [Documento] = @Documento, [Nombre] = @Nombre, [Apellido] = @Apellido, [Telefono] = @Telefono, [Email] = @Email, [Clave] = @Clave, [Ciudad] = @Ciudad, [Direccion] = @Direccion, [IdRol] = @IdRol WHERE [IdUsuario] = @IdUsuario">
+                                        <DeleteParameters>
+                                            <asp:Parameter Name="IdUsuario" Type="Int32" />
+                                        </DeleteParameters>
+                                        <InsertParameters>
+                                            <asp:Parameter Name="Documento" Type="String" />
+                                            <asp:Parameter Name="Nombre" Type="String" />
+                                            <asp:Parameter Name="Apellido" Type="String" />
+                                            <asp:Parameter Name="Telefono" Type="String" />
+                                            <asp:Parameter Name="Email" Type="String" />
+                                            <asp:Parameter Name="Clave" Type="String" />
+                                            <asp:Parameter Name="Ciudad" Type="String" />
+                                            <asp:Parameter Name="Direccion" Type="String" />
+                                            <asp:Parameter Name="IdRol" Type="Int32" />
+                                        </InsertParameters>
+                                        <UpdateParameters>
+                                            <asp:Parameter Name="Documento" Type="String" />
+                                            <asp:Parameter Name="Nombre" Type="String" />
+                                            <asp:Parameter Name="Apellido" Type="String" />
+                                            <asp:Parameter Name="Telefono" Type="String" />
+                                            <asp:Parameter Name="Email" Type="String" />
+                                            <asp:Parameter Name="Clave" Type="String" />
+                                            <asp:Parameter Name="Ciudad" Type="String" />
+                                            <asp:Parameter Name="Direccion" Type="String" />
+                                            <asp:Parameter Name="IdRol" Type="Int32" />
+                                            <asp:Parameter Name="IdUsuario" Type="Int32" />
+                                        </UpdateParameters>
+                                    </asp:SqlDataSource>
+                                    <!--Fin de la tabla-->
+                                    <div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                    <div class="col-lg-6">
-                        <div class="card">
-                            <div class="card-header">
-                                <strong class="card-title">Planificadores</strong>
-                            </div>
-                            <div class="card-body">
+                <!-- .animated -->
+            </div>
+            <!-- .content -->
+            <div class="clearfix"></div>
+            <footer class="site-footer">
+                <div class="footer-inner bg-white">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            Copyright &copy; 2018 Ela Admin
                        
                         </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="card">
-                        <div class="card-header">
-                            <strong class="card-title">Tecnicos</strong>
-                        </div>
-                        <div class="card-body">
-                         
+                        <div class="col-sm-6 text-right">
+                            Designed by <a href="https://colorlib.com">Colorlib</a>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-6">
-                    <div class="card">
-                        <div class="card-header">
-                            <strong class="card-title">Soldadores</strong>
-                        </div>
-                        <div class="card-body">
-                           
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="card">
-                        <div class="card-header">
-                            <strong class="card-title">Sisos</strong>
-                        </div>
-                        <div class="card-body">
-                         
-
-                    </div>
-                </div>
-            </div>
-
-
-
-
-            <div class="col-lg-6">
-                <div class="card">
-                    <div class="card-header">
-                        <strong class="card-title">Asistentes de Mtto</strong>
-                    </div>
-                    <div class="card-body">
-                     
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-6">
-                <div class="card">
-                    <div class="card-header">
-                        <strong class="card-title">Usuarios</strong>
-                    </div>
-                    <div class="card-body">
-                        
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div><!-- .animated -->
-</div><!-- .content -->
-
-<div class="clearfix"></div>
-
-<footer class="site-footer">
-    <div class="footer-inner bg-white">
-        <div class="row">
-            <div class="col-sm-6">
-                Copyright &copy; 2018 Ela Admin
-            </div>
-            <div class="col-sm-6 text-right">
-                Designed by <a href="https://colorlib.com">Colorlib</a>
-            </div>
-        </div>
+        </form>
+        </footer>
     </div>
-</footer>
+    <!-- /#right-panel -->
 
-</div><!-- /#right-panel -->
+    <!-- Right Panel -->
 
-<!-- Right Panel -->
-
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
-<script src="Vista/PnAdmin/assets/js/main.js"></script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
+    <script src="Vista/PnAdmin/assets/js/main.js"></script>
 
 
 </body>

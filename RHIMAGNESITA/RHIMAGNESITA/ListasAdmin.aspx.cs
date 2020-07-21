@@ -11,4 +11,10 @@ public partial class ListasAdmin :  System.Web.UI.Page
     {
 
     }
+    public override void VerifyRenderingInServerForm(Control control)
+    {
+        /* Confirms that an HtmlForm control is rendered for the specified ASP.NET
+           server control at run time. */
+    }
+
 }
