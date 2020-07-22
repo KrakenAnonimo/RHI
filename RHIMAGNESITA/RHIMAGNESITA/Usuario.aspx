@@ -41,6 +41,8 @@
             <div class="auto-style4">
                 <div class="card"">
                     <div class="card-header"><strong class="card-title">REGISTRO DE USUARIOS </strong></div>
+                    <br />
+                    <br />
                     <div class="card-body card-block">
                         <div class="auto-style3">
                             <label for="Documento" class=" form-control-label">Documento</label><input type="text" id="txtDocumento" placeholder="Ingrese el documento" class="form-control">
