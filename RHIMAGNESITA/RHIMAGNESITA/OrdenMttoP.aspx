@@ -53,7 +53,7 @@
                             <label for="HoraI" class=" form-control-label">Hora Inicial</label><input type="time" id="HoraI" placeholder="Duracion" class="form-control">
                         </div>
                         <div class="auto-style3">
-                            <label for="FechaOF" class=" form-control-label">Fecha Final</label><input type="date" id="FechaOF" placeholder="Fecha final del reporte" class="form-control">
+                            <label for="FechaOF" class=" form-control-label">Fecha Final</label><input type="date" id="FechaOF" placeholder="Fecha Final del reporte" class="form-control">
                         </div>
                         <div class="auto-style3">
                             <label for="HoraF" class=" form-control-label">Hora Final</label><input type="time" id="HoraF" placeholder="Duracion" class="form-control">
@@ -108,7 +108,7 @@
                         <!-- Campo para el combo box-->
                         <!-- Campo para el combo box-->
                         <button type="button" class="btn btn-success btn-sm">Guardar</button>
-                        <button type="button" class="btn btn-danger btn-sm">Borrar Todo</button>
+                        <button type="button" class="btn btn-danger btn-sm">Limpiar Todo</button>
                     </div>
                 </div>
             </div>

@@ -257,7 +257,7 @@
                                         <label for="Direccion" class=" form-control-label">Direccion</label><input type="text" id="Direccion" placeholder="Direccion" class="form-control"></div>
                                     <!-- Campo para el combo box-->
                                     <button type="button" class="btn btn-success btn-sm">Guardar</button>
-                                    <button type="button" class="btn btn-danger btn-sm">Borrar Todo</button>
+                                    <button type="button" class="btn btn-danger btn-sm">Limpiar Todo</button>
                                 </div>
                             </div>
                             <!-- .card -->
@@ -274,7 +274,7 @@
                                     <div class="form-group">
                                         <label for="Ubicacion" class=" form-control-label">Ubicacion</label><input type="text" id="UbicacionA" placeholder="Ubicacion" class="form-control"></div>
                                     <button type="button" class="btn btn-success btn-sm">Guardar</button>
-                                    <button type="button" class="btn btn-danger btn-sm">Borrar Todo</button>
+                                    <button type="button" class="btn btn-danger btn-sm">Limpiar Todo</button>
                                 </div>
                             </div>
                         </div>
@@ -296,7 +296,7 @@
                                     <div class="form-group">
                                         <label for="vat" class=" form-control-label">Unidad</label><input type="text" id="UnidadM" placeholder="Unidad de material" class="form-control"></div>
                                     <button type="button" class="btn btn-success btn-sm">Guardar</button>
-                                    <button type="button" class="btn btn-danger btn-sm">Borrar Todo</button>
+                                    <button type="button" class="btn btn-danger btn-sm">Limpiar Todo</button>
                                 </div>
                             </div>
                         </div>
@@ -319,7 +319,7 @@
                                         <label for="EstadoE" class=" form-control-label">Estado</label><input type="text" id="EstadoE" placeholder="Estado del elemento" class="form-control"></div>
                                     <!-- Campo para el combo box-->
                                     <button type="button" class="btn btn-success btn-sm">Guardar</button>
-                                    <button type="button" class="btn btn-danger btn-sm">Borrar Todo</button>
+                                    <button type="button" class="btn btn-danger btn-sm">Limpiar Todo</button>
                                 </div>
                             </div>
                         </div>
@@ -338,7 +338,7 @@
                                     </div>
                                     <!-- Campo para el combo box-->
                                     <button type="button" class="btn btn-success btn-sm">Guardar</button>
-                                    <button type="button" class="btn btn-danger btn-sm">Borrar Todo</button>
+                                    <button type="button" class="btn btn-danger btn-sm">Limpiar Todo</button>
                                 </div>
                             </div>
                         </div>
@@ -359,7 +359,7 @@
                                     </div>
                                     <!-- Campo para el combo box-->
                                     <button type="button" class="btn btn-success btn-sm">Guardar</button>
-                                    <button type="button" class="btn btn-danger btn-sm">Borrar Todo</button>
+                                    <button type="button" class="btn btn-danger btn-sm">Limpiar Todo</button>
                                 </div>
                             </div>
                         </div>
@@ -382,7 +382,7 @@
                                     <!-- Campo para el combo box-->
                                     <!-- Campo para el combo box-->
                                     <button type="button" class="btn btn-success btn-sm">Guardar</button>
-                                    <button type="button" class="btn btn-danger btn-sm">Borrar Todo</button>
+                                    <button type="button" class="btn btn-danger btn-sm">Limpiar Todo</button>
                                 </div>
                             </div>
                         </div>
@@ -448,7 +448,7 @@
                                     <!-- Campo para el combo box-->
                                     <!-- Campo para el combo box-->
                                     <button type="button" class="btn btn-success btn-sm">Guardar</button>
-                                    <button type="button" class="btn btn-danger btn-sm">Borrar Todo</button>
+                                    <button type="button" class="btn btn-danger btn-sm">Limpiar Todo</button>
                                 </div>
                             </div>
                         </div>
@@ -483,7 +483,7 @@
                                     <!-- Campo para el combo box-->
                                     <!-- Campo para el combo box-->
                                     <button type="button" class="btn btn-success btn-sm">Guardar</button>
-                                    <button type="button" class="btn btn-danger btn-sm">Borrar Todo</button>
+                                    <button type="button" class="btn btn-danger btn-sm">Limpiar Todo</button>
                                 </div>
                             </div>
                         </div>
@@ -548,7 +548,7 @@
                                     <!-- Campo para el combo box-->
                                     <!-- Campo para el combo box-->
                                     <button type="button" class="btn btn-success btn-sm">Guardar</button>
-                                    <button type="button" class="btn btn-danger btn-sm">Borrar Todo</button>
+                                    <button type="button" class="btn btn-danger btn-sm">Limpiar Todo</button>
                                 </div>
                             </div>
                         </div>
