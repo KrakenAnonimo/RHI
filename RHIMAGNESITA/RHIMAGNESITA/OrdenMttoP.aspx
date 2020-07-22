@@ -108,7 +108,7 @@
                         <!-- Campo para el combo box-->
                         <!-- Campo para el combo box-->
                         <button type="button" class="btn btn-success btn-sm">Guardar</button>
-                        <button type="button" class="btn btn-danger btn-sm">Borrar Todo</button>
+                        <button type="button" class="btn btn-danger btn-sm">Limpiar Todo</button>
                     </div>
                 </div>
             </div>
