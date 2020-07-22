@@ -41,7 +41,7 @@
                     <br />
                     <div class="card-body card-block">
                         <div class="auto-style3">
-                            <label for="NombreO" class=" form-control-label">Nombre de la orden</label><input type="text" id="NombreO" placeholder="Nombre de la Orden de Mtto Preventivo" class="form-control">
+                            <label for="NombreO" class=" form-control-label">Nombre de la Orden</label><input type="text" id="NombreO" placeholder="Nombre de la Orden de Mtto Preventivo" class="form-control">
                         </div>
                         <div class="auto-style3">
                             <label for="Disciplina" class=" form-control-label">Disciplina</label><input type="text" id="Disciplina" placeholder="Diciplina" class="form-control">
