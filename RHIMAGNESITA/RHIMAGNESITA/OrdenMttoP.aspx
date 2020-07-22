@@ -98,7 +98,7 @@
                             </div>
                             <div class="col-12 col-md-9">
                                 <select name="Revisado" id="Revisado" class="form-control-sm form-control">
-                                    <option value="0">Elija una opcion</option>
+                                    <option value="0">Elegir opcion</option>
                                     <option value="1">Revisado</option>
                                     <option value="2">No Revisado</option>
                                 </select>
