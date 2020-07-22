@@ -350,6 +350,9 @@
                                     <div class="form-group">
                                         <label for="NombreTM" class=" form-control-label">Nombre</label><input type="text" id="NombreTM" placeholder="Nombre de la TareaMtto" class="form-control"></div>
                                     <div class="form-group">
+                                        <!--timepicker-->
+                                        <input data-role="timepicker">
+                                        <!--timepicker-->
                                         <label for="Duracion" class=" form-control-label">Duracion</label><input type="time" id="Duracion" placeholder="Duracion" class="form-control"></div>
                                     <div class="row form-group">
                                         <div class="col col-md-3">
