@@ -101,7 +101,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <!-- Campo para el combo box-->
+                            <!-- Campo para el combo boxx-->
                             <!-- Campo para el combo box-->
                             <button type="button" class="btn btn-success btn-sm">Guardar</button>
                             <button type="button" class="btn btn-danger btn-sm">Borrar Todo</button>
