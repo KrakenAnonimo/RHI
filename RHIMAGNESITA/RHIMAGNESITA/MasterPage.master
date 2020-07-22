@@ -13,6 +13,21 @@
     <meta content="" name="description">
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style5 {
+            height: 20px;
+            color: rgb(0, 0, 0);
+            background: #1F0E0B;
+            text-align: center;
+        }
+
+        .auto-style6 {
+            height: 20px;
+            color: rgb(0, 0, 0);
+            background: #999999;
+            text-align: center;
+        }
+    </style>
 
     <!-- Favicons -->
     <link href="Vista/PgPrin/img/favicon.png" rel="icon">
@@ -40,20 +55,11 @@
 
     <!-- Responsive Stylesheet File -->
     <link href="Vista/PgPrin/css/responsive.css" rel="stylesheet">
-    <style type="text/css">
-        .auto-style1 {
-            z-index: 100000;
-            height: 185px;
-        }
-        .auto-style2 {
-            height: 170px;
-            width: 1282px;
-            margin-right: 0px;
-        }
-    </style>
 </head>
+<!--Inicio Var-->
 <body data-spy="scroll" data-target="#navbar-example">
     <form id="form1" runat="server">
+
         <div>
 
             <div id="preloader"></div>
@@ -101,18 +107,20 @@
                         </div>
                     </div>
                 </div>
-                <div >
-                   <img src="Vista/PgPrin/img/xddx.jpg" width="100%"/>
+                <div>
+                    <img src="Vista/PgPrin/img/xddx.jpg" width="100%" />
                 </div>
+                <p class="auto-style5"></p>
                 <!-- header-area end -->
             </header>
             <!-- header end -->
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-
+        <!--fin Var-->
+        <!--Pie-->
     </form>
-
+    <p class="auto-style5"></p>
     <div>
         <footer>
             <div class="footer-area-bottom">
