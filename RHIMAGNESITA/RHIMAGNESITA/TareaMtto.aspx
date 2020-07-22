@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Planificacion.aspx.cs" Inherits="Planificacion" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="TareaMtto.aspx.cs" Inherits="TareaMtto" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <style type="text/css">
@@ -12,11 +12,6 @@
             padding-right: 15px;
             left: 360px;
             top: -75px;
-        }
-
-        .auto-style8 {
-            margin-bottom: 15px;
-            text-align: center;
         }
     </style>
 </asp:Content>
@@ -33,19 +28,22 @@
             <div class="row">
                 <div class="auto-style7">
                     <div class="card">
-                        <div class="card-header"><strong>REGISTRAR PLANIFICACION</strong></div>
+                        <div class="card-header"><strong>REGISTRAR TAREA MANTENIMIENTO</strong></div>
                         <br />
                         <br />
                         <div class="card-body card-block">
-                            <div class="auto-style8">
-                                <label for="FechaP" class=" form-control-label">Fecha Planificacion</label><input type="date" id="FechaP" placeholder="" class="form-control">
+                            <div class="form-group">
+                                <label for="NombreTM" class=" form-control-label">Nombre</label><input type="text" id="NombreTM" placeholder="Nombre de la TareaMtto" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="Duracion" class=" form-control-label">Duracion</label><input type="time" id="Duracion" placeholder="Duracion" class="form-control">
                             </div>
                             <div class="row form-group">
                                 <div class="col col-md-3">
-                                    <label for="textarea-input" class=" form-control-label">Observaciones</label>
+                                    <label for="textarea-input" class=" form-control-label">Descripcion</label>
                                 </div>
-                                <div class="text-center">
-                                    <textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Observaciones..." class="form-control"></textarea>
+                                <div class="col-12 col-md-9">
+                                    <textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Descripcion..." class="form-control"></textarea>
                                 </div>
                             </div>
                             <!-- Campo para el combo box-->
