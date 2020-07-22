@@ -363,7 +363,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="col-lg-6">
                             <div class="card">
                                 <div class="card-header"><strong>Reporte Averia o Servicio</strong></div>
