@@ -58,8 +58,8 @@
                                     <div class="text-center">
                                         <select name="Estado" id="Estado" class="form-control-sm form-control" style="width: 97%; position: relative; left: 9px; top: 0px">
                                             <option value="0">Elija una opcion</option>
-                                            <option value="1">Interno</option>
-                                            <option value="2">Externo</option>
+                                            <option value="1">Funcional</option>
+                                            <option value="2">No Funcional</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
