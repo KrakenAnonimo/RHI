@@ -110,7 +110,7 @@
                                 <label for="selectSm" class="form-control-label">Planificacion</label>
                             </div>
                             <div class="text-center">
-                                <asp:DropDownList ID="ComboPlanificacion" runat="server" CssClass="auto-style8" Height="33px" Width="660px">
+                                <asp:DropDownList ID="cmbPlanificacion" runat="server" CssClass="auto-style8" Height="33px" Width="660px">
                                 </asp:DropDownList>
                             </div>
                         </div>
@@ -120,7 +120,7 @@
                                 <label for="selectSm" class="form-control-label">Reporte Averia o Servicio</label>
                             </div>
                             <div class="text-center">
-                                <asp:DropDownList ID="ComboAveriaServicio" runat="server" CssClass="auto-style8" Height="33px" Width="659px">
+                                <asp:DropDownList ID="cmbReporteAveriaServicio" runat="server" CssClass="auto-style8" Height="33px" Width="659px">
                                 </asp:DropDownList>
                             </div>
                         </div>
@@ -130,7 +130,7 @@
                                 <label for="selectSm" class="form-control-label">Usuario</label>
                             </div>
                             <div class="text-center">
-                                <asp:DropDownList ID="CombUsuario" runat="server" CssClass="auto-style8" Height="33px" Width="655px">
+                                <asp:DropDownList ID="cmbUsuario" runat="server" CssClass="auto-style8" Height="33px" Width="655px">
                                 </asp:DropDownList>
                             </div>
                         </div>
