@@ -108,7 +108,6 @@
                                     </select>
                                 </div>
                             </div>
-                            <!-- Campo para el combo box-->
                             <div class="row form-group">
                                 <div class="text-center">
                                     <label for="selectSm" class="form-control-label">Orden de Mtto Preventivo</label>
@@ -127,7 +126,6 @@
                                     </asp:DropDownList>
                                 </div>
                             </div>
-                            <!-- Campo para el combo box-->
                             <button type="button" class="btn btn-success btn-sm">Guardar</button>
                             <button type="button" class="btn btn-danger btn-sm">Limpiar Todo</button>
                         </div>
