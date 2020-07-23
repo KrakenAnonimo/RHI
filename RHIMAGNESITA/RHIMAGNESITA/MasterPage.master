@@ -82,7 +82,7 @@
                                             <span class="icon-bar"></span>
                                         </button>
                                         <!-- Brand -->
-                                        <a class="navbar-brand page-scroll sticky-logo" href="index.html">
+                                        <a class="navbar-brand page-scroll sticky-logo" href="Default1.aspx">
                                             <h1><span>RHI-</span>MAGNESITA</h1>
                                             <!-- Uncomment below if you prefer to use an image logo -->
                                             <!-- <img src="img/logo.png" alt="" title=""> -->
@@ -117,7 +117,7 @@
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a class="page-scroll" href="Inicio.aspx">Salir</a>
+                                                <a class="page-scroll" href="index.aspx" id="btnsalir">Salir</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -130,7 +130,7 @@
                     </div>
                 </div>
                 <div>
-                    <img src="Vista/PgPrin/img/xddx.jpg" width="100%" />
+                    <img src="Vista/PgPrin/img/xddx.jpg" width="100%" class="img-fluid" alt="Responsive image" />
                 </div>
                 <p class="auto-style5"></p>
                 <!-- header-area end -->
@@ -139,12 +139,12 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-        <!--fin Var-->
-        <!--Pie-->
     </form>
-    <p class="auto-style5"></p>
+     <!--fin Var-->
+    <!--Pie-->
     <div>
         <footer>
+            <p class="auto-style5"></p>
             <div class="footer-area-bottom">
                 <div class="container">
                     <div class="row">
