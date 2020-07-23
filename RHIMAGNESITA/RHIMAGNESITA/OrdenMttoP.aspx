@@ -105,8 +105,35 @@
                             </div>
                         </div>
                         <!-- Campo para el combo box-->
+                        <div class="row form-group">
+                            <div class="text-center">
+                                <label for="selectSm" class="form-control-label">Planificacion</label>
+                            </div>
+                            <div class="text-center">
+                                <asp:DropDownList ID="ComboPlanificacion" runat="server" CssClass="auto-style8" Height="33px" Width="660px">
+                                </asp:DropDownList>
+                            </div>
+                        </div>
                         <!-- Campo para el combo box-->
+                        <div class="row form-group">
+                            <div class="text-center">
+                                <label for="selectSm" class="form-control-label">Reporte Averia o Servicio</label>
+                            </div>
+                            <div class="text-center">
+                                <asp:DropDownList ID="ComboAveriaServicio" runat="server" CssClass="auto-style8" Height="33px" Width="659px">
+                                </asp:DropDownList>
+                            </div>
+                        </div>
                         <!-- Campo para el combo box-->
+                        <div class="row form-group">
+                            <div class="text-center">
+                                <label for="selectSm" class="form-control-label">Usuario</label>
+                            </div>
+                            <div class="text-center">
+                                <asp:DropDownList ID="CombUsuario" runat="server" CssClass="auto-style8" Height="33px" Width="655px">
+                                </asp:DropDownList>
+                            </div>
+                        </div>
                         <button type="button" class="btn btn-success btn-sm">Guardar</button>
                         <button type="button" class="btn btn-danger btn-sm">Limpiar Todo</button>
                     </div>
