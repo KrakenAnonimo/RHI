@@ -39,7 +39,7 @@
                     <br />
                     <br />
                     <div class="row form-group">
-                        <div class="text-center">
+                        <div class="auto-style3">
                             <label for="Revisado" class=" form-control-label">Estado</label>
                         </div>
                         <div class="text-center">

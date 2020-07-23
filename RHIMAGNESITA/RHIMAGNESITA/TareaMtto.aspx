@@ -13,6 +13,12 @@
             left: 360px;
             top: -75px;
         }
+         .auto-style8 {
+            width: 97%;
+            position: relative;
+            left: 0px;
+            top: 1px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">

@@ -17,7 +17,8 @@
             padding-right: 15px;
             height: 837px;
         }
-          .auto-style7 {
+
+        .auto-style7 {
             position: relative;
             min-height: 1px;
             float: left;
@@ -35,7 +36,8 @@
             background: #999999;
             text-align: center;
         }
-         .auto-style8 {
+
+        .auto-style8 {
             width: 95%;
             position: relative;
             left: 0px;
@@ -53,6 +55,7 @@
     <!--Resto del codigo-->
     <div class="animated fadeIn">
         <div class="row">
+            
             <div class="auto-style7">
                 <div class="card"">
                     <div class="card-header"><strong class="card-title">REGISTRO DE USUARIOS </strong></div>
