@@ -35,7 +35,7 @@
                             <div class="form-group">
                                 <label for="NumeroR" class=" form-control-label">Nombre Averia Servicio</label><input type="text" id="NumeroR" placeholder="Ingrese un nombre de la averia o el servicio" class="form-control"></div>
                              <div class="form-group">
-                                <label for="Duracion" class=" form-control-label">Duracion</label><input type="time" id="Duracion" placeholder="Duracion" class="form-control">
+                                <label for="Duracion" class=" form-control-label">Duracion</label><input type="number" id="Duracion" placeholder="Duracion" class="form-control">
                             </div>
                              <div class="auto-style8">
                                 <label for="FechaP" class=" form-control-label">Fecha de Ejecucion</label><input type="date" id="FechaP" placeholder="" class="form-control">
