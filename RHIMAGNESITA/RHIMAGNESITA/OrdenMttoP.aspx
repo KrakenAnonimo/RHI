@@ -34,7 +34,6 @@
     <div class="animated fadeIn">
         <div class="row">
             <div class="auto-style4">
-
                 <div class="card">
                     <div class="card-header"><strong>ORDEN DE MTTO PREVENTIVO</strong></div>
                     <br />
@@ -104,7 +103,6 @@
                                 </select>
                             </div>
                         </div>
-                        <!-- Campo para el combo box-->
                         <div class="row form-group">
                             <div class="text-center">
                                 <label for="selectSm" class="form-control-label">Planificacion</label>
@@ -114,7 +112,6 @@
                                 </asp:DropDownList>
                             </div>
                         </div>
-                        <!-- Campo para el combo box-->
                         <div class="row form-group">
                             <div class="text-center">
                                 <label for="selectSm" class="form-control-label">Reporte Averia o Servicio</label>
@@ -124,7 +121,6 @@
                                 </asp:DropDownList>
                             </div>
                         </div>
-                        <!-- Campo para el combo box-->
                         <div class="row form-group">
                             <div class="text-center">
                                 <label for="selectSm" class="form-control-label">Usuario</label>
