@@ -47,7 +47,7 @@
                                         <label for="selectSm" class="form-control-label">Orden de Mtto Preventivo</label>
                                     </div>
                                     <div class="text-center">
-                                        <asp:DropDownList ID="cmbOrdenMttoPreventivo" runat="server" CssClass="auto-style8" Height="33px" Width="735px" >
+                                        <asp:DropDownList ID="cmbOrdenMttoPreventivo" runat="server" CssClass="auto-style8" Height="33px" Width="655px">
                                         </asp:DropDownList>
                                     </div>
                                 </div>

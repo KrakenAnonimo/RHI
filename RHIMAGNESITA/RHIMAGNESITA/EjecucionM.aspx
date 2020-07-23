@@ -72,7 +72,7 @@
                                 <label for="selectSm" class="form-control-label">Tarea de Mantenimiento</label>
                             </div>
                             <div class="text-center">
-                                <asp:DropDownList ID="cmbTareaMantenimiento" runat="server" CssClass="auto-style8" Height="27px" Width="736px" >
+                                <asp:DropDownList ID="cmbTareaMantenimiento" runat="server" CssClass="auto-style8" Height="33px" Width="659px">
                                 </asp:DropDownList>
                             </div>
                         </div>
@@ -81,7 +81,7 @@
                                 <label for="selectSm" class="form-control-label">Orden de Mantenimiento</label>
                             </div>
                             <div class="text-center">
-                                <asp:DropDownList ID="cmbOdenMtto" runat="server" CssClass="auto-style8" Height="27px" Width="736px">
+                                <asp:DropDownList ID="cmbOdenMtto" runat="server" CssClass="auto-style8" Height="33px" Width="655px">
                                 </asp:DropDownList>
                             </div>
                         </div>
