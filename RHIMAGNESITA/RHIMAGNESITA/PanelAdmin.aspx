@@ -2,7 +2,9 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,41 +30,47 @@
     <link href="https://cdn.jsdelivr.net/npm/weathericons@2.1.0/css/weather-icons.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" rel="stylesheet" />
 
-   <style>
-    #weatherWidget .currentDesc {
-        color: #ffffff!important;
-    }
+    <style>
+        #weatherWidget .currentDesc {
+            color: #ffffff !important;
+        }
+
         .traffic-chart {
             min-height: 335px;
         }
-        #flotPie1  {
+
+        #flotPie1 {
             height: 150px;
         }
-        #flotPie1 td {
-            padding:3px;
-        }
-        #flotPie1 table {
-            top: 20px!important;
-            right: -10px!important;
-        }
+
+            #flotPie1 td {
+                padding: 3px;
+            }
+
+            #flotPie1 table {
+                top: 20px !important;
+                right: -10px !important;
+            }
+
         .chart-container {
             display: table;
-            min-width: 270px ;
+            min-width: 270px;
             text-align: left;
             padding-top: 10px;
             padding-bottom: 10px;
         }
-        #flotLine5  {
-             height: 105px;
+
+        #flotLine5 {
+            height: 105px;
         }
 
         #flotBarChart {
             height: 150px;
         }
-        #cellPaiChart{
+
+        #cellPaiChart {
             height: 160px;
         }
-
     </style>
 </head>
 
@@ -75,31 +83,35 @@
                     <li class="active">
                         <a href="PanelAdmin.aspx"><i class="menu-icon fa fa-laptop"></i>Inicio</a>
                     </li>
-                    <li class="menu-title">Elementos</li><!-- /.menu-title -->
+                    <li class="menu-title">Elementos</li>
+                    <!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i>Registros</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-th"></i>Registros</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon fa fa-th"></i><a href="FormulariosAdmin.aspx">Registro de datos</a></li>
                         </ul>
                     </li>
 
-                    <li class="menu-title">Reportes </li><!-- /.menu-title -->
+                    <li class="menu-title">Reportes </li>
+                    <!-- /.menu-title -->
 
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>Listas de datos</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-tasks"></i>Listas de datos</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon  fa fa-table"></i><a href="ListasAdmin.aspx">Tablas</a></li>
                         </ul>
                     </li>
-                    <li class="menu-title">Extras</li><!-- /.menu-title -->
+                    <li class="menu-title">Extras</li>
+                    <!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-glass"></i>Pages</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-glass"></i>Pages</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon fa fa-sign-in"></i><a href="page-login.html">Salir</a></li>
                         </ul>
                     </li>
                 </ul>
-            </div><!-- /.navbar-collapse -->
+            </div>
+            <!-- /.navbar-collapse -->
         </nav>
     </aside>
     <!-- /#left-panel -->
@@ -109,8 +121,10 @@
         <header id="header" class="header">
             <div class="top-left">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="./"><img src="Vista/PnAdmin/images/logo.png" alt="Logo"></a>
-                    <a class="navbar-brand hidden" href="./"><img src="Vista/PnAdmin/images/logo.png" alt="Logo"></a>
+                    <a class="navbar-brand" href="./">
+                        <img src="Vista/PnAdmin/images/logo.png" alt="Logo"></a>
+                    <a class="navbar-brand hidden" href="./">
+                        <img src="Vista/PnAdmin/images/logo.png" alt="Logo"></a>
                     <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                 </div>
             </div>
@@ -132,7 +146,8 @@
                             <div class="dropdown-menu" aria-labelledby="message">
                                 <p class="red">Tienes 4 emails</p>
                                 <a class="dropdown-item media" href="#">
-                                    <span class="photo media-left"><img alt="avatar" src="Vista/PnAdmin/images/avatar/1.jpg"></span>
+                                    <span class="photo media-left">
+                                        <img alt="avatar" src="Vista/PnAdmin/images/avatar/1.jpg"></span>
                                     <div class="message media-body">
                                         <span class="name float-left">Jonathan Smith</span>
                                         <span class="time float-right">Just now</span>
@@ -140,7 +155,8 @@
                                     </div>
                                 </a>
                                 <a class="dropdown-item media" href="#">
-                                    <span class="photo media-left"><img alt="avatar" src="Vista/PnAdmin/images/avatar/2.jpg"></span>
+                                    <span class="photo media-left">
+                                        <img alt="avatar" src="Vista/PnAdmin/images/avatar/2.jpg"></span>
                                     <div class="message media-body">
                                         <span class="name float-left">Jack Sanders</span>
                                         <span class="time float-right">5 minutes ago</span>
@@ -148,7 +164,8 @@
                                     </div>
                                 </a>
                                 <a class="dropdown-item media" href="#">
-                                    <span class="photo media-left"><img alt="avatar" src="Vista/PnAdmin/images/avatar/3.jpg"></span>
+                                    <span class="photo media-left">
+                                        <img alt="avatar" src="Vista/PnAdmin/images/avatar/3.jpg"></span>
                                     <div class="message media-body">
                                         <span class="name float-left">Cheryl Wheeler</span>
                                         <span class="time float-right">10 minutes ago</span>
@@ -156,7 +173,8 @@
                                     </div>
                                 </a>
                                 <a class="dropdown-item media" href="#">
-                                    <span class="photo media-left"><img alt="avatar" src="Vista/PnAdmin/images/avatar/4.jpg"></span>
+                                    <span class="photo media-left">
+                                        <img alt="avatar" src="Vista/PnAdmin/images/avatar/4.jpg"></span>
                                     <div class="message media-body">
                                         <span class="name float-left">Rachel Santos</span>
                                         <span class="time float-right">15 minutes ago</span>
@@ -210,16 +228,9 @@
                             <div class="card-body">
                                 <h4 class="box-title">General </h4>
                             </div>
-                            <div class="row">
-                                <div class="col-lg-8">
-                                    <div class="card-body">
-                                        <h3>Texto largo tal vez con imagenes</h3>
-                                        <p>Es posible que esto sea modificado en un futuro, no lo se, al fin y al cavo, esto es un experimento.</p>
-                                </div>
-                            </div> <!-- /.row -->
-                            <div class="card-body"></div>
                         </div>
-                    </div><!-- /# column -->
+                    </div>
+                    <!-- /# column -->
                 </div>
                 <!-- Calender Chart Weather  -->
                 <div class="row">
@@ -231,20 +242,28 @@
                                     <div id="calendar"></div>
                                 </div>
                             </div>
-                        </div><!-- /.card -->
+                        </div>
+                        <!-- /.card -->
                     </div>
                     <!--Separador de calendario y extra -->
-                    <div class="col-lg-2 col-md-6">
+                    <div class="col-lg-1 col-md-6">
                         <div class="card ov-h"></div>
                         <!-- /.card -->
                     </div>
-                    <div class="col-md-12 col-lg-5">
+                    <div class="col-md-12 col-lg-6">
                         <div class="card weather-box">
-                            <h4 class="weather-title box-title">Extra</h4>
+                            <h4 class="weather-title box-title">Informacion</h4>
                             <div class="card-body">
                             </div>
-                            
-                        </div><!-- /.card -->
+                            <div class="card">
+                                <img class="card-img-top" src="Vista/PgPrin/img/slider/slider1.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title mb-3">RHI-MARGNESITA</h4>
+                                    <p class="card-text">Realizamos el mantenimiento preventivo y correctivo de los equipos o herramientas de la empresa con sus respectivos procesos logrando asi las mejoras de cada producto de una manera satisfactoria y eficiente.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card -->
                     </div>
                 </div>
                 <!-- /Calender Chart Weather -->
@@ -279,7 +298,7 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <label class="control-label">Categorias</label>
-                                            <input class="form-control form-white" placeholder="Enter name" type="text" name="category-name"/>
+                                            <input class="form-control form-white" placeholder="Enter name" type="text" name="category-name" />
                                         </div>
                                         <div class="col-md-6">
                                             <label class="control-label">Elige una categoria</label>
@@ -302,7 +321,7 @@
                         </div>
                     </div>
                 </div>
-            <!-- /#add-category -->
+                <!-- /#add-category -->
             </div>
             <!-- .animated -->
         </div>
@@ -316,7 +335,7 @@
                         Copyright &copy; por edicion Grupo-2
                     </div>
                     <div class="col-sm-6 text-right">
-                         <a href="">Grupo-2</a>
+                        <a href="">Grupo-2</a>
                     </div>
                 </div>
             </div>
@@ -352,7 +371,7 @@
 
     <!--Local Stuff-->
     <script>
-        jQuery(document).ready(function($) {
+        jQuery(document).ready(function ($) {
             "use strict";
         });
     </script>

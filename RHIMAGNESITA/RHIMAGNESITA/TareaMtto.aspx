@@ -46,7 +46,15 @@
                                     <textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Descripcion..." class="form-control"></textarea>
                                 </div>
                             </div>
-                            <!-- Campo para el combo box-->
+                              <div class="row form-group">
+                                <div class="text-center">
+                                    <label for="selectSm" class="form-control-label">Elemento</label>
+                                </div>
+                                <div class="text-center">
+                                    <asp:DropDownList ID="cmbElemento" runat="server" CssClass="auto-style8">
+                                    </asp:DropDownList>
+                                </div>
+                            </div>
                             <button type="button" class="btn btn-success btn-sm">Guardar</button>
                             <button type="button" class="btn btn-danger btn-sm">Limpiar Todo</button>
                         </div>
