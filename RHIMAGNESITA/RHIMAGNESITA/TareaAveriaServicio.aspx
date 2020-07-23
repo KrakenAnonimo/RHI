@@ -13,12 +13,6 @@
             left: 360px;
             top: -75px;
         }
-        .auto-style8 {
-            width: 97%;
-            position: relative;
-            left: 0px;
-            top: 1px;
-        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -39,31 +33,31 @@
                         <br />
                         <div class="card-body card-block">
                             <div class="form-group">
+<<<<<<< HEAD
+                                <label for="NumeroR" class=" form-control-label">Nombre Averia Servicio</label><input type="text" id="NumeroR" placeholder="Ingrese un nombre de la averia o el servicio" class="form-control">
+=======
                                 <label for="NumeroR" class=" form-control-label">Nombre Averia Servicio</label><input type="text" id="NumeroR" placeholder="Ingrese un nombre de la averia o el servicio" class="form-control"></div>
                              <div class="form-group">
                                 <label for="Duracion" class=" form-control-label">Duracion</label><input type="number" id="Duracion" placeholder="Duracion" class="form-control">
+>>>>>>> 18b26d70169a83e861e08bffa3f84a8ad9af1c97
                             </div>
-                             <div class="form-group">
+                            <div class="form-group">
+                                <label for="Horas" class=" form-control-label">Duracion</label><input type="number" id="Duracion" placeholder="Duracion" class="form-control">
+                            </div>
+                            <div class="auto-style8">
                                 <label for="FechaP" class=" form-control-label">Fecha de Ejecucion</label><input type="date" id="FechaP" placeholder="" class="form-control">
                             </div>
-                            <div class="row form-group">
+                            <!-- Campo para el combo box-->
+                             <div class="row form-group">
                                 <div class="text-center">
-                                    <label for="selectSm" class="form-control-label">Oden de Mtto Preventivo</label>
+                                    <label for="selectSm" class="form-control-label">Orden de Mtto Preventivo</label>
                                 </div>
                                 <div class="text-center">
-                                    <asp:DropDownList ID="cmbOrdenMttoP" runat="server" CssClass="auto-style8">
+                                    <asp:DropDownList ID="CombOrdenMttoP" runat="server" CssClass="auto-style8" Height="33px" Width="655px">
                                     </asp:DropDownList>
                                 </div>
                             </div>
-                            <div class="row form-group">
-                                <div class="text-center">
-                                    <label for="selectSm" class="form-control-label">Oden de Mtto Correctivo</label>
-                                </div>
-                                <div class="text-center">
-                                    <asp:DropDownList ID="cmbOrdenMttoC" runat="server" CssClass="auto-style8">
-                                    </asp:DropDownList>
-                                </div>
-                            </div>
+                            <!-- Campo para el combo box-->
                             <button type="button" class="btn btn-success btn-sm">Guardar</button>
                             <button type="button" class="btn btn-danger btn-sm">Limpiar Todo</button>
                         </div>
