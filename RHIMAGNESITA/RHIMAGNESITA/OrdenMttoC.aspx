@@ -13,23 +13,18 @@
             float: left;
             width: 50%;
             text-align: center;
-            left: 391px;
-            top: -69px;
             padding-left: 15px;
             padding-right: 15px;
+            left: 360px;
+            top: -75px;
         }
+
         .auto-style8 {
             width: 97%;
             position: relative;
             left: 0px;
             top: 1px;
         }
-    .auto-style9 {
-        width: 97%;
-        position: relative;
-        left: -1px;
-        top: -1px;
-    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -50,10 +45,10 @@
                         <br />
                         <div class="card-body card-block">
                             <div class="auto-style3">
-                                <label for="NombreO" class=" form-control-label">Nombre de la orden</label><input type="text" id="NombreO" placeholder="Nombre de la Orden de Mtto Preventivo" class="form-control">
+                                <label for="NumOrdenC" class=" form-control-label">Numero de la orden</label><input type="text" id="NumOrdenC" placeholder="Numero de la Orden del Mtto Correctivo" class="form-control">
                             </div>
                             <div class="auto-style3">
-                                <label for="Disciplina" class=" form-control-label">Disciplina</label><input type="text" id="Disciplina" placeholder="Diciplina" class="form-control">
+                                <label for="Disciplina" class=" form-control-label">Disciplina</label><input type="text" id="Disciplina" placeholder="Disciplina" class="form-control">
                             </div>
                             <div class="auto-style3">
                                 <label for="FechaOI" class=" form-control-label">Fecha Inicial</label><input type="date" id="FechaOI" placeholder="Fecha inicial del reporte" class="form-control">
@@ -113,21 +108,22 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="row form-group">
-                                <div class="text-center">
-                                    <label for="selectSm" class="form-control-label">Usuario</label>
-                                </div>
-                                <div class="text-center">
-                                    <asp:DropDownList ID="ComboUsuario" runat="server" CssClass="auto-style8">
-                                    </asp:DropDownList>
-                                </div>
-                            </div>
+                            <!-- Campo para el combo box-->
                             <div class="row form-group">
                                 <div class="text-center">
                                     <label for="selectSm" class="form-control-label">Orden de Mtto Preventivo</label>
                                 </div>
                                 <div class="text-center">
-                                    <asp:DropDownList ID="DropDownList1" runat="server" CssClass="auto-style9">
+                                    <asp:DropDownList ID="cmbOrdenMttoP" runat="server" CssClass="auto-style8">
+                                    </asp:DropDownList>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="text-center">
+                                    <label for="selectSm" class="form-control-label">Usuario</label>
+                                </div>
+                                <div class="text-center">
+                                    <asp:DropDownList ID="cmbUsuario" runat="server" CssClass="auto-style8">
                                     </asp:DropDownList>
                                 </div>
                             </div>
