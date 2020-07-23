@@ -13,6 +13,12 @@
             left: 360px;
             top: -75px;
         }
+        .auto-style8 {
+            width: 97%;
+            position: relative;
+            left: 0px;
+            top: 1px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -37,11 +43,27 @@
                              <div class="form-group">
                                 <label for="Duracion" class=" form-control-label">Duracion</label><input type="number" id="Duracion" placeholder="Duracion" class="form-control">
                             </div>
-                             <div class="auto-style8">
+                             <div class="form-group">
                                 <label for="FechaP" class=" form-control-label">Fecha de Ejecucion</label><input type="date" id="FechaP" placeholder="" class="form-control">
                             </div>
-                            <!-- Campo para el combo box-->
-                            <!-- Campo para el combo box-->
+                            <div class="row form-group">
+                                <div class="text-center">
+                                    <label for="selectSm" class="form-control-label">Oden de Mtto Preventivo</label>
+                                </div>
+                                <div class="text-center">
+                                    <asp:DropDownList ID="cmbOrdenMttoP" runat="server" CssClass="auto-style8">
+                                    </asp:DropDownList>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="text-center">
+                                    <label for="selectSm" class="form-control-label">Oden de Mtto Correctivo</label>
+                                </div>
+                                <div class="text-center">
+                                    <asp:DropDownList ID="cmbOrdenMttoC" runat="server" CssClass="auto-style8">
+                                    </asp:DropDownList>
+                                </div>
+                            </div>
                             <button type="button" class="btn btn-success btn-sm">Guardar</button>
                             <button type="button" class="btn btn-danger btn-sm">Limpiar Todo</button>
                         </div>

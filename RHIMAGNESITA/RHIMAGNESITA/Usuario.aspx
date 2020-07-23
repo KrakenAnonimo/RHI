@@ -79,7 +79,7 @@
                                     <label for="selectSm" class="form-control-label">Roles</label>
                                 </div>
                                 <div class="text-center">
-                                    <asp:DropDownList ID="ComboRoles" runat="server" CssClass="auto-style8">
+                                    <asp:DropDownList ID="cmbRol" runat="server" CssClass="auto-style8">
                                     </asp:DropDownList>
                                 </div>
                             </div>

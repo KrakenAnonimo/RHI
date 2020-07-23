@@ -114,7 +114,7 @@
                                     <label for="selectSm" class="form-control-label">Orden de Mtto Preventivo</label>
                                 </div>
                                 <div class="text-center">
-                                    <asp:DropDownList ID="ComboOrdenMttoPreventivo" runat="server" CssClass="auto-style8">
+                                    <asp:DropDownList ID="cmbOrdenMttoP" runat="server" CssClass="auto-style8">
                                     </asp:DropDownList>
                                 </div>
                             </div>
@@ -123,7 +123,7 @@
                                     <label for="selectSm" class="form-control-label">Usuario</label>
                                 </div>
                                 <div class="text-center">
-                                    <asp:DropDownList ID="ComboUsuario" runat="server" CssClass="auto-style8">
+                                    <asp:DropDownList ID="cmbUsuario" runat="server" CssClass="auto-style8">
                                     </asp:DropDownList>
                                 </div>
                             </div>

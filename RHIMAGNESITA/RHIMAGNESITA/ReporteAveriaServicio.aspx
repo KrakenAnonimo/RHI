@@ -55,13 +55,12 @@
                             <div class="form-group">
                                 <label for="FechaReporte" class=" form-control-label">Fecha Reporte</label><input type="date" id="FechaReporte" placeholder="Fecha del Reporte" class="form-control">
                             </div>
-                            <!-- Campo para el combo box-->
                             <div class="row form-group">
                                 <div class="text-center">
                                     <label for="selectSm" class="form-control-label">Usuario</label>
                                 </div>
                                 <div class="text-center">
-                                    <asp:DropDownList ID="ComboUsuario" runat="server" CssClass="auto-style8">
+                                    <asp:DropDownList ID="cmbUsuario" runat="server" CssClass="auto-style8">
                                     </asp:DropDownList>
                                 </div>
                             </div>
@@ -70,11 +69,10 @@
                                     <label for="selectSm" class="form-control-label">Elemento</label>
                                 </div>
                                 <div class="text-center">
-                                    <asp:DropDownList ID="ComboElemento" runat="server" CssClass="auto-style8">
+                                    <asp:DropDownList ID="cmbElemento" runat="server" CssClass="auto-style8">
                                     </asp:DropDownList>
                                 </div>
                             </div>
-                            <!-- Campo para el combo box-->
                             <button type="button" class="btn btn-success btn-sm">Guardar</button>
                             <button type="button" class="btn btn-danger btn-sm">Limpiar Todo</button>
                         </div>
