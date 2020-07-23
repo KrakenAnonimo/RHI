@@ -20,13 +20,6 @@
             left: 0px;
             top: 1px;
         }
-    .auto-style9 {
-        width: 97%;
-        position: relative;
-        left: 0px;
-        top: 1px;
-        text-align: center;
-    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -46,10 +39,10 @@
                         <br />
                         <br />
                         <div class="card-body card-block">
-                            <div class="auto-style9">
+                            <div class="form-group">
                                 <label for="FechaP" class=" form-control-label">Fecha Planificacion</label><input type="date" id="FechaP" placeholder="" class="form-control">
                             </div>
-                            <div class="row form-group">
+                            <div class="form-group">
                                 <div class="text-center">
                                     <label for="textarea-input" class=" form-control-label">Observaciones</label>
                                 </div>
@@ -62,7 +55,7 @@
                                     <label for="selectSm" class="form-control-label">Elemento</label>
                                 </div>
                                 <div class="text-center">
-                                    <asp:DropDownList ID="ComboUsuario" runat="server" CssClass="auto-style8">
+                                    <asp:DropDownList ID="cmbElemento" runat="server" CssClass="auto-style8">
                                     </asp:DropDownList>
                                 </div>
                             </div>

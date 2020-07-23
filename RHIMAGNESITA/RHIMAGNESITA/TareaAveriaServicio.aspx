@@ -39,9 +39,6 @@
                                 <div class="form-group">
                                     <label for="Duracion" class=" form-control-label">Duracion</label><input type="number" id="Duracion" placeholder="Duracion" class="form-control">
                                 </div>
-                                <div class="form-group">
-                                    <label for="Horas" class=" form-control-label">Duracion</label><input type="number" id="Duracion" placeholder="Duracion" class="form-control">
-                                </div>
                                 <div class="auto-style8">
                                     <label for="FechaP" class=" form-control-label">Fecha de Ejecucion</label><input type="date" id="FechaP" placeholder="" class="form-control">
                                 </div>
@@ -50,7 +47,7 @@
                                         <label for="selectSm" class="form-control-label">Orden de Mtto Preventivo</label>
                                     </div>
                                     <div class="text-center">
-                                        <asp:DropDownList ID="CombOrdenMttoP" runat="server" CssClass="auto-style8" Height="33px" Width="655px">
+                                        <asp:DropDownList ID="cmbOrdenMttoPreventivo" runat="server" CssClass="auto-style8" Height="33px" Width="735px" >
                                         </asp:DropDownList>
                                     </div>
                                 </div>

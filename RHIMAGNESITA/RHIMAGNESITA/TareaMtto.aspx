@@ -38,11 +38,11 @@
                             <div class="form-group">
                                 <label for="Duracion" class=" form-control-label">Duracion</label><input type="number" id="Duracion" placeholder="Duracion" class="form-control">
                             </div>
-                            <div class="row form-group">
-                                <div class="col col-md-3">
+                            <div class="form-group">
+                                <div class="text-center">
                                     <label for="textarea-input" class=" form-control-label">Descripcion</label>
                                 </div>
-                                <div class="col-12 col-md-9">
+                                <div class="text-center">
                                     <textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Descripcion..." class="form-control"></textarea>
                                 </div>
                             </div>
