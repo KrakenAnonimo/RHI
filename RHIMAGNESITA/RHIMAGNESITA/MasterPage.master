@@ -94,20 +94,26 @@
                                             <li>
                                                 <a class="page-scroll" href="Usuario.aspx">Usuario</a>
                                             </li>
-                                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Odenes de Mtto<span class="caret"></span></a>
+                                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Ordenes de Mtto<span class="caret"></span></a>
                                                 <ul class="dropdown-menu" role="menu">
                                                     <li><a href="OrdenMttoC.aspx">Orden Mtt Correctivo</a></li>
                                                     <li><a href="OrdenMttoP.aspx">Orden Mtt Preventivo</a></li>
                                                 </ul>
                                             </li>
-                                            <li>
-                                                <a class="page-scroll" href="Planificacion.aspx">Planificacion</a>
+                                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Programacion<span class="caret"></span></a>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="Planificacion.aspx">Planificacion</a></li>
+                                                    <li><a href="Elemento.aspx">Elemento</a></li>
+                                                    <li><a href="Material.aspx">Material</a></li>
+                                                    <li><a href="Area.aspx">Area</a></li>
+                                                </ul>
                                             </li>
                                             <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Tareas y Reportes<span class="caret"></span></a>
                                                 <ul class="dropdown-menu" role="menu">
                                                     <li><a href="TareaMtto.aspx">Tarea Mtt </a></li>
                                                     <li><a href="TareaAveriaServicio.aspx">Tarea Averia Servicio</a></li>
                                                     <li><a href="ReporteAveriaServicio.aspx">Reporte Averia Servicio</a></li>
+                                                    <li><a href="EjecucionM.aspx">Ejecucion Mantenimiento</a></li>
                                                 </ul>
                                             </li>
                                             <li>
