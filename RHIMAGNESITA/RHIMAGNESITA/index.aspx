@@ -302,7 +302,7 @@
                                     </a>
                                     <h4>Soporte</h4>
                                     <p>
-                                        Texto de relleno.
+                                        Como líderes mundiales en el sector, impulsamos cambios positivos en nuestra industria y en las industrias que forman parte de nuestra cadena.
                                     </p>
                                 </div>
                             </div>
@@ -320,7 +320,7 @@
                                     </a>
                                     <h4>Control</h4>
                                     <p>
-                                        Texto de relleno.
+                                        Los productos refractarios se utilizan en todos los procesos industriales de alta temperatura del mundo.
                                     </p>
                                 </div>
                             </div>
@@ -336,9 +336,9 @@
                                     <a class="services-icon" href="#">
                                         <i class="fa fa-list"></i>
                                     </a>
-                                    <h4>Texto de relleno.</h4>
+                                    <h4>Fuerza Impulsora</h4>
                                     <p>
-                                        Texto de relleno.
+                                        RHI Magnesita es el líder mundial en la industria refractaria. Tenemos el mayor número de unidades en todo el mundo y los productos y servicios más innovadores y confiables.
                                     </p>
                                 </div>
                             </div>
@@ -365,8 +365,8 @@
                                 <div class="progress-circular">
                                     <!--Aqui se edita el diseño de porcentaje en las imagenes de circulo azul-->
                                      <!--en data-rel-->
-                                    <input type="text" class="knob" value="0" data-rel="70" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
-                                    <h3 class="progress-h4">Texto 1</h3>
+                                    <input type="text" class="knob" value="0" data-rel="99" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
+                                    <h3 class="progress-h4">Sistema de manejo integrado</h3>
                                 </div>
                             </div>
                         </div>
@@ -375,8 +375,8 @@
                         <div class="col-xs-12 col-sm-3 col-md-3 text-center">
                             <div class="single-skill">
                                 <div class="progress-circular">
-                                    <input type="text" class="knob" value="0" data-rel="85" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
-                                    <h3 class="progress-h4">Texto 2</h3>
+                                    <input type="text" class="knob" value="0" data-rel="99" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
+                                    <h3 class="progress-h4">Reciclaje</h3>
                                 </div>
                             </div>
                         </div>
@@ -385,8 +385,8 @@
                         <div class="col-xs-12 col-sm-3 col-md-3 text-center">
                             <div class="single-skill">
                                 <div class="progress-circular">
-                                    <input type="text" class="knob" value="0" data-rel="75" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
-                                    <h3 class="progress-h4">Texto 3</h3>
+                                    <input type="text" class="knob" value="0" data-rel="100" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
+                                    <h3 class="progress-h4">Seguridad</h3>
                                 </div>
                             </div>
                         </div>
@@ -395,8 +395,8 @@
                         <div class="col-xs-12 col-sm-3 col-md-3 text-center">
                             <div class="single-skill">
                                 <div class="progress-circular">
-                                    <input type="text" class="knob" value="0" data-rel="65" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
-                                    <h3 class="progress-h4">Texto 4</h3>
+                                    <input type="text" class="knob" value="0" data-rel="99" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
+                                    <h3 class="progress-h4">Etica y Cumplimiento</h3>
                                 </div>
                             </div>
                         </div>
