@@ -17,7 +17,7 @@
         .auto-style5 {
             height: 20px;
             color: rgb(0, 0, 0);
-            background: #3EC1D5;
+            background: #000000;
             text-align: center;
         }
 

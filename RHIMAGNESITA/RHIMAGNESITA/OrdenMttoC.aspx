@@ -24,12 +24,12 @@
             left: 0px;
             top: 1px;
         }
-        .auto-style9 {
-            width: 97%;
-            position: relative;
-            left: -1px;
-            top: -1px;
-        }
+    .auto-style9 {
+        width: 97%;
+        position: relative;
+        left: -1px;
+        top: -1px;
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
