@@ -17,6 +17,10 @@
                left: 360px;
                top: -75px;
            }
+           .auto-style8 {
+               margin-bottom: 15px;
+               text-align: left;
+           }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -52,34 +56,32 @@
                         <div class="auto-style3">
                             <label for="FechaOF" class=" form-control-label">Fecha Ejecucion</label><input type="date" id="FechaEj" placeholder="Fecha de Ejecucion" class="form-control">
                         </div>
-                          <div class="form-group">
+                          <div class="auto-style3">
                                 <label for="Horas" class=" form-control-label">Duracion</label><input type="number" id="Duracion" placeholder="Horas" class="form-control">
                             </div>
-                        <div class="row form-group">
-                            <div class="col col-md-3">
+                        <div class="form-group">
+                            <div class="text-center">
                                 <label for="textarea-input" class=" form-control-label">Observaciones</label>
                             </div>
                             <div class="text-center">
                                 <textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Observaciones..." class="form-control"></textarea>
                             </div>
                         </div>
-                        <!-- Campo para el combo box-->
-                        <div class="row form-group">
+                        <div class="form-group">
                             <div class="text-center">
                                 <label for="selectSm" class="form-control-label">Tarea de Mantenimiento</label>
                             </div>
                             <div class="text-center">
-                                <asp:DropDownList ID="ComboTareaMtto" runat="server" CssClass="auto-style8" Height="33px" Width="659px">
+                                <asp:DropDownList ID="cmbTareaMantenimiento" runat="server" CssClass="auto-style8" Height="27px" Width="736px" >
                                 </asp:DropDownList>
                             </div>
                         </div>
-                        <!-- Campo para el combo box-->
-                        <div class="row form-group">
+                        <div class="form-group">
                             <div class="text-center">
                                 <label for="selectSm" class="form-control-label">Orden de Mantenimiento</label>
                             </div>
                             <div class="text-center">
-                                <asp:DropDownList ID="CombOrdenMtto" runat="server" CssClass="auto-style8" Height="33px" Width="655px">
+                                <asp:DropDownList ID="cmbOdenMtto" runat="server" CssClass="auto-style8" Height="27px" Width="736px">
                                 </asp:DropDownList>
                             </div>
                         </div>
