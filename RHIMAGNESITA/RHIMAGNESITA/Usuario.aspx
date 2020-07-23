@@ -26,6 +26,12 @@
             background: #999999;
             text-align: center;
         }
+         .auto-style8 {
+            width: 95%;
+            position: relative;
+            left: 0px;
+            top: 1px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -68,7 +74,15 @@
                         <div class="auto-style3">
                             <label for="Direccion" class=" form-control-label">Direccion</label><input type="text" id="Direccion" placeholder="Direccion" class="form-control">
                         </div>
-                        <!-- Campo para el combo box-->
+                        <div class="row form-group">
+                                <div class="text-center">
+                                    <label for="selectSm" class="form-control-label">Roles</label>
+                                </div>
+                                <div class="text-center">
+                                    <asp:DropDownList ID="ComboRoles" runat="server" CssClass="auto-style8">
+                                    </asp:DropDownList>
+                                </div>
+                            </div>
                         <button type="button" class="btn btn-success btn-sm">Guardar</button>
                         <button type="button" class="btn btn-danger btn-sm">Limpiar Todo</button>
                     </div>
