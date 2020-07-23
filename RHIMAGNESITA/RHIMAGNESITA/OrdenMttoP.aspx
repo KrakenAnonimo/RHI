@@ -59,10 +59,10 @@
                             <label for="HoraF" class=" form-control-label">Hora Final</label><input type="time" id="HoraF" placeholder="Duracion" class="form-control">
                         </div>
                         <div class="row form-group">
-                            <div class="col col-md-3">
+                            <div class="text-center">
                                 <label for="selectSm" class=" form-control-label">Ejecucion de la Orden</label>
                             </div>
-                            <div class="col-12 col-md-9">
+                            <div class="text-center">
                                 <select name="SeleccionEjecucion" id="SeleccionEjecucion" class="form-control-sm form-control">
                                     <option value="0">Elija una opcion</option>
                                     <option value="1">Sin ejecutar</option>
@@ -73,10 +73,10 @@
                             </div>
                         </div>
                         <div class="row form-group">
-                            <div class="col col-md-3">
+                            <div class="text-center">
                                 <label for="TrabajoIE" class=" form-control-label">Trabajo IE</label>
                             </div>
-                            <div class="col-12 col-md-9">
+                            <div class="text-center">
                                 <select name="TrabajoIE" id="TrabajoIE" class="form-control-sm form-control">
                                     <option value="0">Elija una opcion</option>
                                     <option value="1">Interno</option>
@@ -85,7 +85,7 @@
                             </div>
                         </div>
                         <div class="row form-group">
-                            <div class="col col-md-3">
+                            <div class="text-center">
                                 <label for="textarea-input" class=" form-control-label">Observaciones</label>
                             </div>
                             <div class="text-center">
@@ -93,10 +93,10 @@
                             </div>
                         </div>
                         <div class="row form-group">
-                            <div class="col col-md-3">
+                            <div class="text-center">
                                 <label for="Revisado" class=" form-control-label">Revisado</label>
                             </div>
-                            <div class="col-12 col-md-9">
+                            <div class="text-center">
                                 <select name="Revisado" id="Revisado" class="form-control-sm form-control">
                                     <option value="0">Elegir opcion</option>
                                     <option value="1">Revisado</option>

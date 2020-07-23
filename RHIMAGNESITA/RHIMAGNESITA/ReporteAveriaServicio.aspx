@@ -13,6 +13,10 @@
             left:360px;
             top:-75px;
         }
+        .auto-style8 {
+            margin-bottom: 15px;
+            text-align: center;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -35,14 +39,14 @@
                             <div class="form-group">
                                 <label for="NumReporte" class=" form-control-label">Numero Reporte</label><input type="text" id="NumReporte" placeholder="Numero del Reporte" class="form-control">
                             </div>
-                            <div class="form-group">
+                            <div class="auto-style8">
                                 <label for="Titulo" class=" form-control-label">Titulo</label><input type="text" id="Titulo" placeholder="Titulo" class="form-control">
                             </div>
                             <div class="row form-group">
-                                <div class="col col-md-3">
+                                <div class="text-center">
                                     <label for="textarea-input" class=" form-control-label">Descripcion</label>
                                 </div>
-                                <div class="col-12 col-md-9">
+                                <div class="text-center">
                                     <textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Descripcion..." class="form-control"></textarea>
                                 </div>
                             </div>
