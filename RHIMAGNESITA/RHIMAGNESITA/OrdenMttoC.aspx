@@ -25,6 +25,13 @@
             left: 0px;
             top: 1px;
         }
+        .auto-style9 {
+            width: 97%;
+            position: relative;
+            left: 0px;
+            top: 1px;
+            height: 16px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -117,10 +124,10 @@
                                 </div>
                                 <div class="row form-group">
                                     <div class="text-center">
-                                        <label for="selectSm" class="form-control-label">Usuario</label>
-                                    </div>
+                                        <label for="selectSm" class="form-control-label">Asignar a:</label>
+                                    &nbsp;</div>
                                     <div class="text-center">
-                                        <asp:DropDownList ID="cmbUsuario" runat="server" CssClass="auto-style8">
+                                        <asp:DropDownList ID="cmbUsuario" runat="server" CssClass="auto-style9">
                                         </asp:DropDownList>
                                     </div>
                                 </div>
