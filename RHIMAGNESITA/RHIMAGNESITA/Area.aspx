@@ -37,8 +37,6 @@
                                 <div class="form-group">
                                     <label for="Ubicacion" class=" form-control-label">Ubicacion</label><input type="text" id="Ubicacion" placeholder="Ingrese la Ubicacion" class="form-control">
                                 </div>
-
-
                                 <button type="button" class="btn btn-success btn-sm">Guardar</button>
                                 <button type="button" class="btn btn-danger btn-sm">Limpiar Todo</button>
                             </div>
