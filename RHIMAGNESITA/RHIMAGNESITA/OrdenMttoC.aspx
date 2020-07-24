@@ -44,23 +44,8 @@
 
         .auto-style12 {
             position: relative;
-            left: 127px;
+            left: 130px;
             top: 11px;
-        }
-
-        .auto-style13 {
-            width: 50%;
-            position: relative;
-            left: -160px;
-            top: 7px;
-            height: 20px;
-        }
-
-        .auto-style14 {
-            position: relative;
-            left: 432px;
-            top: -18px;
-            height: 147px;
         }
     </style>
 </asp:Content>
@@ -160,7 +145,7 @@
                                         </asp:CheckBoxList>
                                     </div>
                                     <div>
-                                        <asp:GridView ID="gvUsuarios" runat="server" AutoGenerateColumns="False" DataKeyNames="IdUsuario" DataSourceID="SqldsUsuarios" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" PageSize="5" CssClass="auto-style12">
+                                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="IdUsuario" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" CssClass="auto-style12" PageSize="5">
                                             <Columns>
                                                 <asp:BoundField DataField="IdUsuario" HeaderText="IdUsuario" ReadOnly="True" SortExpression="IdUsuario" Visible="False" />
                                                 <asp:BoundField DataField="Documento" HeaderText="Documento" SortExpression="Documento" Visible="False" />
@@ -172,10 +157,10 @@
                                                 <asp:BoundField DataField="Ciudad" HeaderText="Ciudad" SortExpression="Ciudad" Visible="False" />
                                                 <asp:BoundField DataField="Direccion" HeaderText="Direccion" SortExpression="Direccion" Visible="False" />
                                                 <asp:BoundField DataField="IdRol" HeaderText="IdRol" SortExpression="IdRol" Visible="False" />
-                                                <asp:CommandField SelectText="Agregar" ShowSelectButton="True" />
+                                                <asp:CommandField ShowSelectButton="True" />
                                             </Columns>
                                         </asp:GridView>
-                                        <asp:SqlDataSource ID="SqldsUsuarios" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafayConnectionString1 %>" DeleteCommand="DELETE FROM [Usuario] WHERE [IdUsuario] = @IdUsuario" InsertCommand="INSERT INTO [Usuario] ([Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol]) VALUES (@Documento, @Nombre, @Apellido, @Telefono, @Email, @Clave, @Ciudad, @Direccion, @IdRol)" ProviderName="<%$ ConnectionStrings:dbSwafayConnectionString1.ProviderName %>" SelectCommand="SELECT IdUsuario, Nombre, Apellido, IdRol FROM Usuario" UpdateCommand="UPDATE [Usuario] SET [Documento] = @Documento, [Nombre] = @Nombre, [Apellido] = @Apellido, [Telefono] = @Telefono, [Email] = @Email, [Clave] = @Clave, [Ciudad] = @Ciudad, [Direccion] = @Direccion, [IdRol] = @IdRol WHERE [IdUsuario] = @IdUsuario">
+                                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DatabaseConnectionString1 %>" DeleteCommand="DELETE FROM [Usuario] WHERE [IdUsuario] = @IdUsuario" InsertCommand="INSERT INTO [Usuario] ([Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol]) VALUES (@Documento, @Nombre, @Apellido, @Telefono, @Email, @Clave, @Ciudad, @Direccion, @IdRol)" ProviderName="<%$ ConnectionStrings:DatabaseConnectionString1.ProviderName %>" SelectCommand="SELECT [IdUsuario], [Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol] FROM [Usuario]" UpdateCommand="UPDATE [Usuario] SET [Documento] = @Documento, [Nombre] = @Nombre, [Apellido] = @Apellido, [Telefono] = @Telefono, [Email] = @Email, [Clave] = @Clave, [Ciudad] = @Ciudad, [Direccion] = @Direccion, [IdRol] = @IdRol WHERE [IdUsuario] = @IdUsuario">
                                             <DeleteParameters>
                                                 <asp:Parameter Name="IdUsuario" Type="Int32" />
                                             </DeleteParameters>
@@ -203,6 +188,7 @@
                                                 <asp:Parameter Name="IdUsuario" Type="Int32" />
                                             </UpdateParameters>
                                         </asp:SqlDataSource>
+
                                     </div>
                                     <div class="text-center">
                                         <asp:GridView ID="gvListaElegidos" runat="server" CssClass="auto-style10"></asp:GridView>
