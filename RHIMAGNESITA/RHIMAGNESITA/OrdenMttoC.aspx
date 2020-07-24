@@ -25,6 +25,7 @@
             left: 0px;
             top: 1px;
         }
+
         .auto-style9 {
             width: 97%;
             position: relative;
@@ -73,11 +74,7 @@
                                     </div>
                                     <div class="text-center">
                                         <select name="SeleccionEjecucion" id="SeleccionEjecucion" class="form-control-sm form-control" style="width: 97%; position: relative; left: 9px; top: 0px">
-                                            <option value="0">Elija una opcion</option>
                                             <option value="1">Sin ejecutar</option>
-                                            <option value="2">En Ejecucion</option>
-                                            <option value="3">Finalizada</option>
-                                            <option value="4">Cancelada</option>
                                         </select>
                                     </div>
                                 </div>
@@ -101,15 +98,14 @@
                                         <textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Observaciones..." class="form-control"></textarea>
                                     </div>
                                 </div>
-                                <div class="row form-group">
+                                 <div class="row form-group">
                                     <div class="text-center">
-                                        <label for="Revisado" class=" form-control-label">Revisado</label>
+                                        <label for="Revisado" class=" form-control-label">Revisado por:</label>
                                     </div>
                                     <div class="text-center">
-                                        <select name="Revisado" id="Revisado" class="form-control-sm form-control" style="width: 97%; position: relative; left: 9px; top: 0px">
-                                            <option value="0">Elija una opcion</option>
-                                            <option value="1">Revisado</option>
-                                            <option value="2">No Revisado</option>
+                                        <select name="Revisado" id="cmbRevisado" class="form-control-sm form-control" style="width: 97%; position: relative; left: 9px; top: 0px">
+                                            <option value="1">Supervisor</option>
+                                            <option value="2">Planificador</option>
                                         </select>
                                     </div>
                                 </div>
@@ -125,11 +121,15 @@
                                 <div class="row form-group">
                                     <div class="text-center">
                                         <label for="selectSm" class="form-control-label">Asignar a:</label>
-                                    &nbsp;</div>
-                                    <div class="text-center">
-                                        <asp:DropDownList ID="cmbUsuario" runat="server" CssClass="auto-style9">
-                                        </asp:DropDownList>
+                                        &nbsp;
                                     </div>
+                                   <div>
+                                       <asp:CheckBoxList ID="chxblRoles" runat="server" AutoPostBack="True" RepeatDirection="Horizontal">
+                                           <asp:ListItem>Tecnico</asp:ListItem>
+                                           <asp:ListItem>Soldador</asp:ListItem>
+                                       </asp:CheckBoxList>
+                                       <asp:Panel ID="Panel1" runat="server"></asp:Panel>
+                                   </div>   
                                 </div>
                                 <button type="button" class="btn btn-success btn-sm">Guardar</button>
                                 <button type="button" class="btn btn-danger btn-sm">Limpiar Todo</button>

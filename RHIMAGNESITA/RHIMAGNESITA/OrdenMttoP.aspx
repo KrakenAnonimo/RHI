@@ -25,6 +25,38 @@
             left: 0px;
             top: 1px;
         }
+        .auto-style9 {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .auto-style10 {
+            position: relative;
+            left: 347px;
+            top: -175px;
+        }
+        .auto-style11 {
+            position: relative;
+            left: 259px;
+            top: 8px;
+        }
+        .auto-style12 {
+            position: relative;
+            left: 127px;
+            top: 11px;
+        }
+        .auto-style13 {
+            width: 50%;
+            position: relative;
+            left: -160px;
+            top: 7px;
+            height: 20px;
+        }
+        .auto-style14 {
+            position: relative;
+            left: 432px;
+            top: -18px;
+            height: 147px;
+        }
     </style>
 </asp:Content>
 
@@ -68,11 +100,7 @@
                                     </div>
                                     <div class="text-center">
                                         <select name="SeleccionEjecucion" id="SeleccionEjecucion" class="form-control-sm form-control" style="width: 97%; position: relative; left: 9px; top: 0px">
-                                            <option value="0">Elija una opcion</option>
                                             <option value="1">Sin ejecutar</option>
-                                            <option value="2">En Ejecucion</option>
-                                            <option value="3">Finalizada</option>
-                                            <option value="4">Cancelada</option>
                                         </select>
                                     </div>
                                 </div>
@@ -98,24 +126,50 @@
                                 </div>
                                 <div class="row form-group">
                                     <div class="text-center">
-                                        <label for="Revisado" class=" form-control-label">Revisado</label>
+                                        <label for="Revisado" class=" form-control-label">Revisado por:</label>
                                     </div>
                                     <div class="text-center">
-                                        <select name="Revisado" id="Revisado" class="form-control-sm form-control" style="width: 97%; position: relative; left: 9px; top: 0px">
-                                            <option value="0">Elegir opcion</option>
-                                            <option value="1">Revisado</option>
-                                            <option value="2">No Revisado</option>
+                                        <select name="Revisado" id="cmbRevisado" class="form-control-sm form-control" style="width: 97%; position: relative; left: 9px; top: 0px">
+                                            <option value="1">Supervisor</option>
+                                            <option value="2">Planificador</option>
                                         </select>
                                     </div>
                                 </div>
-                                <!-- Campo para el combo box-->
                                 <div class="row form-group">
                                     <div class="text-center">
                                         <label for="selectSm" class="form-control-label">Planificacion</label>
                                     </div>
                                     <div class="text-center">
-                                        <asp:DropDownList ID="cmbPlanificacion" runat="server" CssClass="auto-style8">
+                                        <asp:DropDownList ID="cmbPlanificacion" runat="server" CssClass="auto-style13">
                                         </asp:DropDownList>
+                                    </div>
+                                    <div>
+                                        <asp:GridView ID="gvPlanificaciones" runat="server" AutoGenerateColumns="False" DataKeyNames="IdPlanificacion" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" CssClass="auto-style14" PageSize="4">
+                                            <Columns>
+                                                <asp:BoundField DataField="IdPlanificacion" HeaderText="IdPlanificacion" ReadOnly="True" SortExpression="IdPlanificacion" Visible="False" />
+                                                <asp:BoundField DataField="FechaPlanificacion" HeaderText="FechaPlanificacion" SortExpression="FechaPlanificacion" />
+                                                <asp:BoundField DataField="Observaciones" HeaderText="Observaciones" SortExpression="Observaciones" Visible="False" />
+                                                <asp:BoundField DataField="IdElemento" HeaderText="IdElemento" SortExpression="IdElemento" Visible="False" />
+                                                <asp:CommandField SelectText="Ver" ShowSelectButton="True" />
+                                            </Columns>
+                                        </asp:GridView>
+                                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafayConnectionString1 %>" DeleteCommand="DELETE FROM [Planificacion] WHERE [IdPlanificacion] = @IdPlanificacion" InsertCommand="INSERT INTO [Planificacion] ([FechaPlanificacion], [Observaciones], [IdElemento]) VALUES (@FechaPlanificacion, @Observaciones, @IdElemento)" ProviderName="<%$ ConnectionStrings:dbSwafayConnectionString1.ProviderName %>" SelectCommand="SELECT [IdPlanificacion], [FechaPlanificacion], [Observaciones], [IdElemento] FROM [Planificacion]" UpdateCommand="UPDATE [Planificacion] SET [FechaPlanificacion] = @FechaPlanificacion, [Observaciones] = @Observaciones, [IdElemento] = @IdElemento WHERE [IdPlanificacion] = @IdPlanificacion">
+                                            <DeleteParameters>
+                                                <asp:Parameter Name="IdPlanificacion" Type="Int32" />
+                                            </DeleteParameters>
+                                            <InsertParameters>
+                                                <asp:Parameter Name="FechaPlanificacion" Type="String" />
+                                                <asp:Parameter Name="Observaciones" Type="String" />
+                                                <asp:Parameter Name="IdElemento" Type="Int32" />
+                                            </InsertParameters>
+                                            <UpdateParameters>
+                                                <asp:Parameter Name="FechaPlanificacion" Type="String" />
+                                                <asp:Parameter Name="Observaciones" Type="String" />
+                                                <asp:Parameter Name="IdElemento" Type="Int32" />
+                                                <asp:Parameter Name="IdPlanificacion" Type="Int32" />
+                                            </UpdateParameters>
+                                        </asp:SqlDataSource>
+
                                     </div>
                                 </div>
                                 <div class="row form-group">
@@ -129,14 +183,64 @@
                                 </div>
                                 <div class="row form-group">
                                     <div class="text-center">
-                                        <label for="selectSm" class="form-control-label">Usuario</label>
+                                        <label for="selectSm" class="form-control-label">Asignar a:</label>
+                                        &nbsp;
+                                    </div>
+                                    <div class="auto-style9">
+                                        <asp:CheckBoxList ID="chxblRoles" runat="server" AutoPostBack="True" RepeatDirection="Horizontal" CssClass="auto-style11">
+                                            <asp:ListItem>Tecnico</asp:ListItem>
+                                            <asp:ListItem>Soldador</asp:ListItem>
+                                        </asp:CheckBoxList>
+                                    </div>
+                                    <div>
+                                        <asp:GridView ID="gvUsuarios" runat="server" AutoGenerateColumns="False" DataKeyNames="IdUsuario" DataSourceID="SqldsUsuarios" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" PageSize="5" CssClass="auto-style12">
+                                            <Columns>
+                                                <asp:BoundField DataField="IdUsuario" HeaderText="IdUsuario" ReadOnly="True" SortExpression="IdUsuario" Visible="False" />
+                                                <asp:BoundField DataField="Documento" HeaderText="Documento" SortExpression="Documento" Visible="False" />
+                                                <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                                                <asp:BoundField DataField="Apellido" HeaderText="Apellido" SortExpression="Apellido" />
+                                                <asp:BoundField DataField="Telefono" HeaderText="Telefono" SortExpression="Telefono" Visible="False" />
+                                                <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" Visible="False" />
+                                                <asp:BoundField DataField="Clave" HeaderText="Clave" SortExpression="Clave" Visible="False" />
+                                                <asp:BoundField DataField="Ciudad" HeaderText="Ciudad" SortExpression="Ciudad" Visible="False" />
+                                                <asp:BoundField DataField="Direccion" HeaderText="Direccion" SortExpression="Direccion" Visible="False" />
+                                                <asp:BoundField DataField="IdRol" HeaderText="IdRol" SortExpression="IdRol" Visible="False" />
+                                                <asp:CommandField SelectText="Agregar" ShowSelectButton="True" />
+                                            </Columns>
+                                        </asp:GridView>
+                                        <asp:SqlDataSource ID="SqldsUsuarios" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafayConnectionString1 %>" DeleteCommand="DELETE FROM [Usuario] WHERE [IdUsuario] = @IdUsuario" InsertCommand="INSERT INTO [Usuario] ([Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol]) VALUES (@Documento, @Nombre, @Apellido, @Telefono, @Email, @Clave, @Ciudad, @Direccion, @IdRol)" ProviderName="<%$ ConnectionStrings:dbSwafayConnectionString1.ProviderName %>" SelectCommand="SELECT IdUsuario, Nombre, Apellido, IdRol FROM Usuario" UpdateCommand="UPDATE [Usuario] SET [Documento] = @Documento, [Nombre] = @Nombre, [Apellido] = @Apellido, [Telefono] = @Telefono, [Email] = @Email, [Clave] = @Clave, [Ciudad] = @Ciudad, [Direccion] = @Direccion, [IdRol] = @IdRol WHERE [IdUsuario] = @IdUsuario">
+                                            <DeleteParameters>
+                                                <asp:Parameter Name="IdUsuario" Type="Int32" />
+                                            </DeleteParameters>
+                                            <InsertParameters>
+                                                <asp:Parameter Name="Documento" Type="String" />
+                                                <asp:Parameter Name="Nombre" Type="String" />
+                                                <asp:Parameter Name="Apellido" Type="String" />
+                                                <asp:Parameter Name="Telefono" Type="String" />
+                                                <asp:Parameter Name="Email" Type="String" />
+                                                <asp:Parameter Name="Clave" Type="String" />
+                                                <asp:Parameter Name="Ciudad" Type="String" />
+                                                <asp:Parameter Name="Direccion" Type="String" />
+                                                <asp:Parameter Name="IdRol" Type="Int32" />
+                                            </InsertParameters>
+                                            <UpdateParameters>
+                                                <asp:Parameter Name="Documento" Type="String" />
+                                                <asp:Parameter Name="Nombre" Type="String" />
+                                                <asp:Parameter Name="Apellido" Type="String" />
+                                                <asp:Parameter Name="Telefono" Type="String" />
+                                                <asp:Parameter Name="Email" Type="String" />
+                                                <asp:Parameter Name="Clave" Type="String" />
+                                                <asp:Parameter Name="Ciudad" Type="String" />
+                                                <asp:Parameter Name="Direccion" Type="String" />
+                                                <asp:Parameter Name="IdRol" Type="Int32" />
+                                                <asp:Parameter Name="IdUsuario" Type="Int32" />
+                                            </UpdateParameters>
+                                        </asp:SqlDataSource>
                                     </div>
                                     <div class="text-center">
-                                        <asp:DropDownList ID="cmbUsuario" runat="server" CssClass="auto-style8">
-                                        </asp:DropDownList>
+                                        <asp:GridView ID="gvListaElegidos" runat="server" CssClass="auto-style10"></asp:GridView>
                                     </div>
                                 </div>
-                                <!-- Campo para el combo box-->
                                 <button type="button" class="btn btn-success btn-sm">Guardar</button>
                                 <button type="button" class="btn btn-danger btn-sm">Limpiar Todo</button>
                             </div>
