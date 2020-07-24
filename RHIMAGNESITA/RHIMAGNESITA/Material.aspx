@@ -49,7 +49,7 @@
                                 </div>
                             </div>
                             <div class="auto-style3">
-                                <label for="UnidadM" class=" form-control-label">Unidad</label><input type="number" id="UnidadM" placeholder="Ingrese la unidad" class="form-control">
+                                <label for="UnidadM" class=" form-control-label">Unidad de Medida</label><input type="text" id="UnidadM" placeholder="Ingrese la unidad" class="form-control">
                             </div>
                             <button type="button" class="btn btn-success btn-sm">Guardar</button>
                             <button type="button" class="btn btn-danger btn-sm">Limpiar Todo</button>

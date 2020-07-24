@@ -49,6 +49,15 @@
                                             </asp:DropDownList>
                                         </div>
                                     </div>
+                                    <div class="row form-group">
+                                        <div class="text-center">
+                                            <label for="selectSm" class="form-control-label">Orden de Mtto Correctivo</label>
+                                        </div>
+                                        <div class="text-center">
+                                            <asp:DropDownList ID="cmbOrdenMttoCorrectivo" runat="server" CssClass="auto-style8" Height="33px" Width="655px">
+                                            </asp:DropDownList>
+                                        </div>
+                                    </div>
                                     <button type="button" class="btn btn-success btn-sm">Guardar</button>
                                     <button type="button" class="btn btn-danger btn-sm">Limpiar Todo</button>
                                 </div>

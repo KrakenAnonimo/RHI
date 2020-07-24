@@ -80,7 +80,7 @@
                                     <label for="NumOrdenP" class=" form-control-label">Numero de la orden</label><input type="text" id="NumOrdenP" placeholder="Numero de la Orden del Mtto Preventivo" class="form-control">
                                 </div>
                                 <div class="auto-style3">
-                                    <label for="Disciplina" class=" form-control-label">Disciplina</label><input type="text" id="Disciplina" placeholder="Diciplina" class="form-control">
+                                    <label for="Disciplina" class=" form-control-label">Disciplina</label><input type="text" id="Disciplina" placeholder="Disciplina" class="form-control">
                                 </div>
                                 <div class="auto-style3">
                                     <label for="FechaOI" class=" form-control-label">Fecha Inicial</label><input type="date" id="FechaOI" placeholder="Fecha inicial del reporte" class="form-control">
