@@ -92,6 +92,9 @@
                                     <asp:DropDownList ID="cmbRol" runat="server" CssClass="auto-style8">
                                     </asp:DropDownList>
                                 </div>
+                                <div>
+                                    <asp:SqlDataSource ID="SqldsRoles" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafayConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafayConnectionString1.ProviderName %>"></asp:SqlDataSource>
+                                </div>
                             </div>
                             <button type="button" class="btn btn-success btn-sm">Guardar</button>
                             <button type="button" class="btn btn-danger btn-sm">Limpiar Todo</button>
