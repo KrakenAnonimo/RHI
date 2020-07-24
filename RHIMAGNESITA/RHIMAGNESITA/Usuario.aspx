@@ -89,11 +89,11 @@
                                     <label for="selectSm" class="form-control-label">Roles</label>
                                 </div>
                                 <div class="text-center">
-                                    <asp:DropDownList ID="cmbRol" runat="server" CssClass="auto-style8" DataSourceID="SqldsRoles">
+                                    <asp:DropDownList ID="cmbRol" runat="server" CssClass="auto-style8" DataSourceID="SqldsRoles" DataTextField="Rol" DataValueField="IdRol">
                                     </asp:DropDownList>
                                 </div>
                                 <div>
-                                    <asp:SqlDataSource ID="SqldsRoles" runat="server" ConnectionString="<%$ ConnectionStrings:DatabaseConnectionString1 %>" ProviderName="<%$ ConnectionStrings:DatabaseConnectionString1.ProviderName %>"></asp:SqlDataSource>
+                                    <asp:SqlDataSource ID="SqldsRoles" runat="server" ConnectionString="<%$ ConnectionStrings:DatabaseConnectionString1 %>" ProviderName="<%$ ConnectionStrings:DatabaseConnectionString1.ProviderName %>" SelectCommand="SELECT IdRol, Rol FROM Rol"></asp:SqlDataSource>
                                 </div>
                             </div>
                             <button type="button" class="btn btn-success btn-sm">Guardar</button>
