@@ -20,7 +20,7 @@
     <!--no mover estos espacios-->
     <br />
     <!--no mover estos espacios-->
-    <!--resto del codigo-->
+    <!--resto del codigo.-->
     <div class="jumbotron">
         <div class="content">
             <div class="animated fadeIn">
