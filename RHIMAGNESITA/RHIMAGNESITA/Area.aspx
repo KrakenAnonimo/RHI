@@ -32,13 +32,17 @@
                             <br />
                             <div class="card-body card-block">
                                 <div class="form-group">
-                                    <label for="NombreA" class=" form-control-label">Nombre del Area</label><input type="text" id="NombreA" placeholder="Nombre del Area" class="form-control">
+                                    <label for="NombreA" class=" form-control-label">Nombre del Area</label>
+                                    <asp:TextBox ID="txtNombreA" runat="server" placeholder="Nombre del Area" class="form-control"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Ubicacion" class=" form-control-label">Ubicacion</label><input type="text" id="Ubicacion" placeholder="Ingrese la Ubicacion" class="form-control">
+                                    <label for="Ubicacion" class=" form-control-label">Ubicacion</label>
+                                    <asp:TextBox ID="txtUbicacion" runat="server" placeholder="Ingrese la Ubicacion" class="form-control"></asp:TextBox>
                                 </div>
-                                <button type="button" class="btn btn-success btn-sm">Guardar</button>
-                                <button type="button" class="btn btn-danger btn-sm">Limpiar Todo</button>
+                                <div>
+                                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm"/>
+                                    <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar Todo" class="btn btn-danger btn-sm"/>
+                                </div>
                             </div>
                         </div>
                     </div>

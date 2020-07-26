@@ -63,17 +63,19 @@
                             <br />
                             <div class="card-body card-block">
                                 <div class="form-group">
-                                    <label for="NombreTM" class=" form-control-label">Nombre</label><input type="text" id="NombreTM" placeholder="Nombre de la TareaMtto" class="form-control">
+                                    <label for="NombreTM" class=" form-control-label">Nombre</label>
+                                    <asp:TextBox ID="txtNombreTM" runat="server" placeholder="Nombre de la TareaMtto" class="form-control"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Duracion" class=" form-control-label">Duracion</label><input type="number" id="Duracion" placeholder="Duracion" class="form-control">
+                                    <label for="Duracion" class=" form-control-label">Duracion</label>
+                                    <asp:TextBox ID="txtDuracion" runat="server" placeholder="Duracion" class="form-control"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
                                     <div class="text-center">
                                         <label for="textarea-input" class=" form-control-label">Descripcion</label>
                                     </div>
                                     <div class="text-center">
-                                        <textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Descripcion..." class="form-control"></textarea>
+                                        <asp:TextBox ID="txtDescripcion" runat="server" rows="9" placeholder="Descripcion..." class="form-control"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="row form-group">
@@ -81,10 +83,10 @@
                                         <label for="selectSm" class="form-control-label">Elemento</label>
                                     </div>
                                     <div class="auto-style9">
-                                        <input type="text" id="lblBuscarE" placeholder="Buscar..." class="auto-style10">
+                                        <asp:TextBox ID="txtBuscarE" runat="server" placeholder="Buscar..." class="auto-style10"></asp:TextBox>
                                     </div>
                                     <div>
-                                        <button type="button" class="btn btn-primary btn-sm" id="btnBuscarE" style="position: relative; left: 111px; top: -58px">Buscar</button>
+                                        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-primary btn-sm" style="position: relative; left: 111px; top: -58px"/>
                                     </div>
                                     <div class="text-center">
                                         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="IdElemento" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" CssClass="auto-style11" PageSize="5">
@@ -121,8 +123,10 @@
 
                                     </div>
                                 </div>
-                                <button type="button" class="btn btn-success btn-sm">Guardar</button>
-                                <button type="button" class="btn btn-danger btn-sm">Limpiar Todo</button>
+                               <div>
+                                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm"/>
+                                    <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar Todo" class="btn btn-danger btn-sm"/>
+                                </div>
                             </div>
                         </div>
                     </div>
