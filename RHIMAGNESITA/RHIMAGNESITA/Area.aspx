@@ -33,11 +33,11 @@
                             <div class="card-body card-block">
                                 <div class="form-group">
                                     <label for="NombreA" class=" form-control-label">Nombre del Area</label>
-                                    <asp:TextBox ID="txtNombreA" runat="server" placeholder="Nombre del Area" class="form-control"></asp:TextBox>
+                                    <asp:TextBox ID="txtNombreA" runat="server" placeholder="Nombre del Area" class="form-control" TextMode="SingleLine"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
                                     <label for="Ubicacion" class=" form-control-label">Ubicacion</label>
-                                    <asp:TextBox ID="txtUbicacion" runat="server" placeholder="Ingrese la Ubicacion" class="form-control"></asp:TextBox>
+                                    <asp:TextBox ID="txtUbicacion" runat="server" placeholder="Ingrese la Ubicacion" class="form-control" TextMode="SingleLine"></asp:TextBox>
                                 </div>
                                 <div>
                                     <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm"/>

@@ -38,17 +38,19 @@
                             <br />
                             <div class="card-body card-block">
                                 <div class="form-group">
-                                    <label for="Codigo" class=" form-control-label">Codigo</label><input type="number" id="Codigo" placeholder="Codigo del elemento" class="form-control">
+                                    <label for="Codigo" class=" form-control-label">Codigo</label>
+                                    <asp:TextBox ID="txtCodigo" runat="server" placeholder="Codigo del elemento" class="form-control"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Nombre" class=" form-control-label">Nombre</label><input type="text" id="Nombre" placeholder="Nombre del elemento" class="form-control">
+                                    <label for="Nombre" class=" form-control-label">Nombre</label>
+                                    <asp:TextBox ID="txtNombre" runat="server" placeholder="Nombre del elemento" class="form-control"></asp:TextBox>
                                 </div>
                                 <div class="row form-group">
                                     <div class="text-center">
                                         <label for="textarea-input" class=" form-control-label">Descripcion</label>
                                     </div>
                                     <div class="text-center" style="width: 97%; position: relative; left: 9px; top: 0px">
-                                        <textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Descripcion..." class="form-control"></textarea>
+                                        <asp:TextBox ID="txtDescripcion" runat="server" Rows="9" placeholder="Descripcion..." class="form-control"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="row form-group">
@@ -56,12 +58,7 @@
                                         <label for="Estado" class=" form-control-label">Estado</label>
                                     </div>
                                     <div class="text-center">
-                                        <select name="Estado" id="Estado" class="form-control-sm form-control" style="width: 97%; position: relative; left: 9px; top: 0px">
-                                            <option value="0">Elija una opcion</option>
-                                            <option value="1">Bueno</option>
-                                            <option value="2">Dañado</option>
-                                            <option value="2">En Reparacion</option>
-                                        </select>
+                                        <asp:DropDownList ID="cmbEstado" runat="server" class="form-control-sm form-control" Style="width: 97%; position: relative; left: 9px; top: 0px"></asp:DropDownList>
                                     </div>
                                     <div class="form-group">
                                         <div class="text-center">
@@ -72,8 +69,10 @@
                                             </asp:DropDownList>
                                         </div>
                                     </div>
-                                    <button type="button" class="btn btn-success btn-sm">Guardar</button>
-                                    <button type="button" class="btn btn-danger btn-sm">Limpiar Todo</button>
+                                    <div>
+                                        <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" />
+                                        <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar Todo" class="btn btn-danger btn-sm" />
+                                    </div>
                                 </div>
                             </div>
                         </div>

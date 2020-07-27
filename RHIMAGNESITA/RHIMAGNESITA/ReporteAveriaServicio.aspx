@@ -38,21 +38,25 @@
                             <br />
                             <div class="card-body card-block">
                                 <div class="form-group">
-                                    <label for="NumReporte" class=" form-control-label">Numero Reporte</label><input type="text" id="NumReporte" placeholder="Numero del Reporte" class="form-control">
+                                    <label for="NumReporte" class=" form-control-label">Numero Reporte</label>
+                                    <asp:TextBox ID="txtNumReporte" runat="server" placeholder="Numero del Reporte" class="form-control" TextMode="Number"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Titulo" class=" form-control-label">Titulo</label><input type="text" id="Titulo" placeholder="Titulo" class="form-control">
+                                    <label for="Titulo" class=" form-control-label">Titulo</label>
+                                    <asp:TextBox ID="txtTitulo" runat="server" placeholder="Titulo" class="form-control" TextMode="SingleLine"></asp:TextBox>
+                                    <input type="text" id="Titulo" placeholder="Titulo" class="form-control">
                                 </div>
                                 <div class="row form-group">
                                     <div class="text-center">
                                         <label for="textarea-input" class=" form-control-label">Descripcion</label>
                                     </div>
                                     <div class="text-center" style="width: 97%; position: relative; left: 9px; top: 0px">
-                                        <textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Descripcion..." class="form-control"></textarea>
+                                        <asp:TextBox ID="txtDescripcion" runat="server" Rows="9" placeholder="Descripcion..." class="form-control" TextMode="MultiLine"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="FechaReporte" class=" form-control-label">Fecha Reporte</label><input type="date" id="FechaReporte" placeholder="Fecha del Reporte" class="form-control">
+                                    <label for="FechaReporte" class=" form-control-label">Fecha Reporte</label>
+                                    <asp:TextBox ID="txtFechaReporte" runat="server" placeholder="Fecha del Reporte" class="form-control" TextMode="Date"></asp:TextBox>
                                 </div>
                                 <div class="row form-group">
                                     <div class="text-center">
@@ -72,8 +76,10 @@
                                         </asp:DropDownList>
                                     </div>
                                 </div>
-                                <button type="button" class="btn btn-success btn-sm">Guardar</button>
-                                <button type="button" class="btn btn-danger btn-sm">Limpiar Todo</button>
+                                <div>
+                                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" />
+                                    <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar Todo" class="btn btn-danger btn-sm" />
+                                </div>
                             </div>
                         </div>
                     </div>

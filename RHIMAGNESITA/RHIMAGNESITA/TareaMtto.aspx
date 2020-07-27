@@ -19,6 +19,7 @@
             width: 262px;
             height: 54px;
         }
+
         .auto-style10 {
             display: block;
             width: 74%;
@@ -40,6 +41,7 @@
             left: 204px;
             top: 15px;
         }
+
         .auto-style11 {
             position: relative;
             left: 214px;
@@ -64,18 +66,18 @@
                             <div class="card-body card-block">
                                 <div class="form-group">
                                     <label for="NombreTM" class=" form-control-label">Nombre</label>
-                                    <asp:TextBox ID="txtNombreTM" runat="server" placeholder="Nombre de la TareaMtto" class="form-control"></asp:TextBox>
+                                    <asp:TextBox ID="txtNombreTM" runat="server" placeholder="Nombre de la TareaMtto" class="form-control" TextMode="SingleLine"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
                                     <label for="Duracion" class=" form-control-label">Duracion</label>
-                                    <asp:TextBox ID="txtDuracion" runat="server" placeholder="Duracion" class="form-control"></asp:TextBox>
+                                    <asp:TextBox ID="txtDuracion" runat="server" placeholder="Duracion" class="form-control" TextMode="Number"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
                                     <div class="text-center">
                                         <label for="textarea-input" class=" form-control-label">Descripcion</label>
                                     </div>
                                     <div class="text-center">
-                                        <asp:TextBox ID="txtDescripcion" runat="server" rows="9" placeholder="Descripcion..." class="form-control"></asp:TextBox>
+                                        <asp:TextBox ID="txtDescripcion" runat="server" Rows="9" placeholder="Descripcion..." class="form-control" TextMode="MultiLine"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="row form-group">
@@ -86,46 +88,46 @@
                                         <asp:TextBox ID="txtBuscarE" runat="server" placeholder="Buscar..." class="auto-style10"></asp:TextBox>
                                     </div>
                                     <div>
-                                        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-primary btn-sm" style="position: relative; left: 111px; top: -58px"/>
+                                        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-primary btn-sm" Style="position: relative; left: 111px; top: -58px" />
                                     </div>
                                     <div class="text-center">
-                                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="IdElemento" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" CssClass="auto-style11" PageSize="5">
+                                        <asp:GridView runat="server" AutoGenerateColumns="False" DataKeyNames="IdElemento" DataSourceID="SqlDataSource2" EmptyDataText="No hay registros de datos para mostrar." class="auto-style11" AllowPaging="True" AllowSorting="True" PageSize="5">
                                             <Columns>
-                                                <asp:BoundField DataField="IdElemento" HeaderText="IdElemento" ReadOnly="True" SortExpression="IdElemento" Visible="False" />
-                                                <asp:BoundField DataField="Codigo" HeaderText="Codigo" SortExpression="Codigo" />
-                                                <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
-                                                <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
-                                                <asp:BoundField DataField="Estado" HeaderText="Estado" SortExpression="Estado" Visible="False" />
-                                                <asp:BoundField DataField="IdArea" HeaderText="IdArea" SortExpression="IdArea" Visible="False" />
+                                                <asp:BoundField DataField="IdElemento" HeaderText="IdElemento" ReadOnly="True" SortExpression="IdElemento" Visible="False"></asp:BoundField>
+                                                <asp:BoundField DataField="Codigo" HeaderText="Codigo" SortExpression="Codigo"></asp:BoundField>
+                                                <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre"></asp:BoundField>
+                                                <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion"></asp:BoundField>
+                                                <asp:BoundField DataField="Estado" HeaderText="Estado" SortExpression="Estado" Visible="False"></asp:BoundField>
+                                                <asp:BoundField DataField="IdArea" HeaderText="IdArea" SortExpression="IdArea" Visible="False"></asp:BoundField>
                                                 <asp:CommandField ShowSelectButton="True" />
                                             </Columns>
                                         </asp:GridView>
-                                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DatabaseConnectionString1 %>" DeleteCommand="DELETE FROM [Elemento] WHERE [IdElemento] = @IdElemento" InsertCommand="INSERT INTO [Elemento] ([Codigo], [Nombre], [Descripcion], [Estado], [IdArea]) VALUES (@Codigo, @Nombre, @Descripcion, @Estado, @IdArea)" ProviderName="<%$ ConnectionStrings:DatabaseConnectionString1.ProviderName %>" SelectCommand="SELECT [IdElemento], [Codigo], [Nombre], [Descripcion], [Estado], [IdArea] FROM [Elemento]" UpdateCommand="UPDATE [Elemento] SET [Codigo] = @Codigo, [Nombre] = @Nombre, [Descripcion] = @Descripcion, [Estado] = @Estado, [IdArea] = @IdArea WHERE [IdElemento] = @IdElemento">
+                                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" DeleteCommand="DELETE FROM [Elemento] WHERE [IdElemento] = @IdElemento" InsertCommand="INSERT INTO [Elemento] ([Codigo], [Nombre], [Descripcion], [Estado], [IdArea]) VALUES (@Codigo, @Nombre, @Descripcion, @Estado, @IdArea)" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT [IdElemento], [Codigo], [Nombre], [Descripcion], [Estado], [IdArea] FROM [Elemento]" UpdateCommand="UPDATE [Elemento] SET [Codigo] = @Codigo, [Nombre] = @Nombre, [Descripcion] = @Descripcion, [Estado] = @Estado, [IdArea] = @IdArea WHERE [IdElemento] = @IdElemento">
                                             <DeleteParameters>
-                                                <asp:Parameter Name="IdElemento" Type="Int32" />
+                                                <asp:Parameter Name="IdElemento" Type="Int32"></asp:Parameter>
                                             </DeleteParameters>
                                             <InsertParameters>
-                                                <asp:Parameter Name="Codigo" Type="String" />
-                                                <asp:Parameter Name="Nombre" Type="String" />
-                                                <asp:Parameter Name="Descripcion" Type="String" />
-                                                <asp:Parameter Name="Estado" Type="String" />
-                                                <asp:Parameter Name="IdArea" Type="Int32" />
+                                                <asp:Parameter Name="Codigo" Type="String"></asp:Parameter>
+                                                <asp:Parameter Name="Nombre" Type="String"></asp:Parameter>
+                                                <asp:Parameter Name="Descripcion" Type="String"></asp:Parameter>
+                                                <asp:Parameter Name="Estado" Type="String"></asp:Parameter>
+                                                <asp:Parameter Name="IdArea" Type="Int32"></asp:Parameter>
                                             </InsertParameters>
                                             <UpdateParameters>
-                                                <asp:Parameter Name="Codigo" Type="String" />
-                                                <asp:Parameter Name="Nombre" Type="String" />
-                                                <asp:Parameter Name="Descripcion" Type="String" />
-                                                <asp:Parameter Name="Estado" Type="String" />
-                                                <asp:Parameter Name="IdArea" Type="Int32" />
-                                                <asp:Parameter Name="IdElemento" Type="Int32" />
+                                                <asp:Parameter Name="Codigo" Type="String"></asp:Parameter>
+                                                <asp:Parameter Name="Nombre" Type="String"></asp:Parameter>
+                                                <asp:Parameter Name="Descripcion" Type="String"></asp:Parameter>
+                                                <asp:Parameter Name="Estado" Type="String"></asp:Parameter>
+                                                <asp:Parameter Name="IdArea" Type="Int32"></asp:Parameter>
+                                                <asp:Parameter Name="IdElemento" Type="Int32"></asp:Parameter>
                                             </UpdateParameters>
                                         </asp:SqlDataSource>
 
                                     </div>
                                 </div>
-                               <div>
-                                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm"/>
-                                    <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar Todo" class="btn btn-danger btn-sm"/>
+                                <div>
+                                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" />
+                                    <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar Todo" class="btn btn-danger btn-sm" />
                                 </div>
                             </div>
                         </div>

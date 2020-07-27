@@ -38,14 +38,15 @@
                             <br />
                             <div class="card-body card-block">
                                 <div class="form-group">
-                                    <label for="FechaP" class=" form-control-label">Fecha Planificacion</label><input type="date" id="FechaP" placeholder="" class="form-control">
+                                    <label for="FechaP" class=" form-control-label">Fecha Planificacion</label>
+                                    <asp:TextBox ID="txtFechaP" runat="server" placeholder="Elija una fecha de planificacion" class="form-control" TextMode="Date"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
                                     <div class="text-center">
                                         <label for="textarea-input" class=" form-control-label">Observaciones</label>
                                     </div>
                                     <div class="text-center">
-                                        <textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Observaciones..." class="form-control"></textarea>
+                                        <asp:TextBox ID="txtObservaciones" runat="server" Rows="9" placeholder="Observaciones..." class="form-control" TextMode="MultiLine"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="row form-group">
@@ -57,8 +58,10 @@
                                         </asp:DropDownList>
                                     </div>
                                 </div>
-                                <button type="button" class="btn btn-success btn-sm">Guardar</button>
-                                <button type="button" class="btn btn-danger btn-sm">Limpiar Todo</button>
+                                <div>
+                                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" />
+                                    <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar Todo" class="btn btn-danger btn-sm" />
+                                </div>
                             </div>
                         </div>
                     </div>
