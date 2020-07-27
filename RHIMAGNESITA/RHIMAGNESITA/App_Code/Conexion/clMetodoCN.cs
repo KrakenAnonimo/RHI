@@ -28,6 +28,8 @@ public class clMetodoCN
 
     public DataTable mtdDesconectado(string consulta)
     {
+        clConexion objConexion = new clConexion();
+        objConex = objConexion.mtdConexion();
         objConex.Open();
         SqlDataAdapter adaptador = new SqlDataAdapter(consulta, objConex);
         DataTable tblDatos = new DataTable();
