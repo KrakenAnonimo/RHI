@@ -40,5 +40,5 @@ public class clTareaMttoL
         int Actualizar = objTareaMttoD.mtdActualizarTareaMtto(objDatos);
         return Actualizar;
     }
-    }
+    
 }
