@@ -25,7 +25,6 @@ public class clRol
     public int mtdEliminarRol(clRolE objDatos)
     {
         string consulta = "Delete from Rol where Rol = '" + objDatos.Rol + "')";
-        clConexion objConexion = new clConexion();
         clMetodoCN objMtdCN = new clMetodoCN();
         int result = objMtdCN.mtdConectado(consulta);
 
