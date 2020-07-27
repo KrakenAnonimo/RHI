@@ -17,7 +17,7 @@ public class clRolL
     }
 
     //Metodo Listar Rol
-    public List<clRolE> mtdListarAprendiz()
+    public List<clRolE> mtdListarRol()
     {
         clRol objRolD = new clRol();
         List<clRolE> ListaRol = new List<clRolE>();

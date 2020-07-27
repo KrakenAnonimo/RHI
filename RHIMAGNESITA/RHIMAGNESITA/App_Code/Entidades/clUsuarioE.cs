@@ -8,6 +8,7 @@ using System.Web;
 /// </summary>
 public class clUsuarioE
 {
+    //Atributos Tabla Usuarios
     public int IdUsuario { get; set; }
     public string Documento { get; set; }
     public string Nombre { get; set; }

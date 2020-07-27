@@ -9,6 +9,6 @@ using System.Web;
 public class clRolE
 {
     //Atributos Tabla Rol
-       public int IdRol { get; set; }
-       public string Rol { get; set; }
+    public int IdRol { get; set; }
+    public string Rol { get; set; }
 }
