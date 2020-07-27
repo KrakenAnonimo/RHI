@@ -9,6 +9,7 @@ using System.Web;
 /// </summary>
 public class clRol
 {
+    //Metodo registrar rol
     public int mtdRegistrarRol(clRolE objDatos)
     {
         string sqlInsert = "insert into Rol(Rol)" +
@@ -20,7 +21,7 @@ public class clRol
         return result;
     }
 
-
+    //Metodo Eliminar Rol
     public int mtdEliminarRol(clRolE objDatos)
     {
         string consulta = "Delete from Rol where Rol = '" + objDatos.Rol + "')";
@@ -31,7 +32,7 @@ public class clRol
         return result;
     }
 
-
+    //Metodo Listar Rol
     public List<clRolE> mtdListarRol()
     {
         string consulta = "select * from Rol";
@@ -50,6 +51,7 @@ public class clRol
         return ListaRol;
     }
 
+    //Metodo Actualizar Rol
     public int mtdActualizarRol(clRolE objDatos)
     {
         string consulta = "Update Rol set Rol = '" + objDatos.Rol + "')";
