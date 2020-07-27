@@ -15,7 +15,7 @@ public class clPlanificacion
     {
         string sqlInsert = "insert into Planificacion(FechaPlanificacion,Observaciones,IdElemento)" +
             "Values('" + objPlanificacionE.FechaPlanificacion + "','" + objPlanificacionE.Observaciones + "','" + objPlanificacionE.
-            IdElemento+ "')";
+            IdElemento + "')";
 
 
         clMetodoCN objMtdCN = new clMetodoCN();
@@ -59,9 +59,10 @@ public class clPlanificacion
     //Metodo Actualizar Planificacion
     public int mtdActualizarPlanificacion(clPlanificacionE objDatos)
     {
-        string consulta = "Update Planificacion set FechaPlanificacion = '" + objUsuaE.FechaPlanificacion + "','" + objUsuaE.Observaciones + "','" + objUsuaE.
+        string consulta = "Update Planificacion set FechaPlanificacion = '" + objDatos.FechaPlanificacion + "','" + objDatos.Observaciones + "','" + objDatos.
             IdElemento + "')";
         clMetodoCN objMtdCN = new clMetodoCN();
         int regis = objMtdCN.mtdConectado(consulta);
         return regis;
     }
+}
