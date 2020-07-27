@@ -10,7 +10,7 @@ using System.Web;
 public class clConexion
 {
     SqlConnection objConexBd = null;
-    public SqlConnection MtdConexion()
+    public SqlConnection mtdConexion()
     {
         string cadena = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\dbSwafay-RIH.mdf;Integrated Security=True";
         try

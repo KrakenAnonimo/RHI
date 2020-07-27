@@ -14,6 +14,22 @@ public partial class Usuario :  System.Web.UI.Page
 
     }
 
+    List<clRolE> listaarea = new List<clRolE>();
+
+
+    private void mtdCargarGrid()
+    {
+
+        clRolL objAreaL = new clRolL();
+
+        listaarea = objAreaL.mtdListarArea();
+
+
+        cmbArea.DataSource = listaarea;
+        cmbArea.DisplayMember = "NombreArea";
+        cmbArea.ValueMember = "IdArea";
+
+    }
     protected void btnGuardar_Click(object sender, EventArgs e)
     {
         clUsuarioE objUsuarioE = new clUsuarioE();

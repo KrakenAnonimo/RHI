@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -15,7 +16,7 @@ public class clMetodoCN
     {
 
         clConexion objConexion = new clConexion();
-        objConex = objConexion.MtdConexion();
+        objConex = objConexion.mtdConexion();
         objConex.Open();
         SqlCommand cmdSql = new SqlCommand(sql, objConex);
         int resultado = cmdSql.ExecuteNonQuery();
@@ -24,8 +25,16 @@ public class clMetodoCN
 
     }
 
-    public void mtdDesconectado()
+
+    public DataTable mtdDesconectado(string consulta)
     {
+        objConex.Open();
+        SqlDataAdapter adaptador = new SqlDataAdapter(consulta, objConex);
+        DataTable tblDatos = new DataTable();
+        adaptador.Fill(tblDatos);
+        objConex.Close();
+        return tblDatos;
 
     }
+
 }
