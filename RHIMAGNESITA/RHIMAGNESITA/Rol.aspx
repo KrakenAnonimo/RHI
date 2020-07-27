@@ -35,8 +35,11 @@
                                     <asp:TextBox ID="txtNombreR" runat="server" placeholder="Nombre del Rol" class="form-control" TextMode="SingleLine"></asp:TextBox>
                                 </div>
                                 <div>
-                                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" />
-                                    <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar Todo" class="btn btn-danger btn-sm" />
+
+                                </div>
+                                <div>
+                                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" OnClick="btnGuardar_Click" />
+                                    <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar Todo" class="btn btn-danger btn-sm" OnClick="btnLimpiar_Click" />
                                 </div>
                             </div>
                         </div>

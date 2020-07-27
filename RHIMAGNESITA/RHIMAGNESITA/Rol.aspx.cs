@@ -11,4 +11,24 @@ public partial class Rol : System.Web.UI.Page
     {
 
     }
+
+    protected void btnGuardar_Click(object sender, EventArgs e)
+    {
+        clRolE objRolE = new clRolE();
+        objRolE.Rol = txtNombreR.Text;
+
+        clRolL objRolL = new clRolL();
+        int result = objRolL.mtdRegistrarRol(objRolE);
+        if (result > 0)
+        {
+            //enviar mensaje 
+            Response.Write("<script>alert('Se Registro Correctamente');</script>");
+            txtNombreR.Text = "";
+        }
+    }
+
+    protected void btnLimpiar_Click(object sender, EventArgs e)
+    {
+        txtNombreR.Text = "";
+    }
 }
