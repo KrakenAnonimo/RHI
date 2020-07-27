@@ -13,21 +13,19 @@ public partial class Usuario :  System.Web.UI.Page
 
 
     }
-
-    List<clRolE> listaarea = new List<clRolE>();
-
+    //Lista del Rol
+    List<clRolE> listaRol = new List<clRolE>();
 
     private void mtdCargarGrid()
     {
+        //Clase Rol junto con el metodo listar
+        clRolL objRolL = new clRolL();
+        listaRol = objRolL.mtdListarRol();
 
-        clRolL objAreaL = new clRolL();
-
-        listaarea = objAreaL.mtdListarArea();
-
-
-        cmbArea.DataSource = listaarea;
-        cmbArea.DisplayMember = "NombreArea";
-        cmbArea.ValueMember = "IdArea";
+        //Carga de combo con datos rol
+        cmbRol.DataSource = listaRol;
+        cmbRol.DataTextField = "NombreArea";
+        cmbRol.DataValueField = "IdArea";
 
     }
     protected void btnGuardar_Click(object sender, EventArgs e)
@@ -41,10 +39,22 @@ public partial class Usuario :  System.Web.UI.Page
         objUsuarioE.Clave = txtDocumento.Text;
         objUsuarioE.Ciudad = txtDocumento.Text;
         objUsuarioE.Direccion = txtDocumento.Text;
-        objUsuarioE.IdRol = 1;
+        objUsuarioE.IdRol = int.Parse(cmbRol.Text);
 
         clUsuario objUsuario = new clUsuario();
         int resultsql = objUsuario.mtdRegistrarUsuario(objUsuarioE);
 
+    }
+
+    protected void btnLimpiar_Click(object sender, EventArgs e)
+    {
+        txtDocumento.Text = "";
+        txtNombre.Text = "";
+        txtApellido.Text = "";
+        txtTelefono.Text = "";
+        txtEmail.Text = "";
+        txtClave.Text = "";
+        txtCiudad.Text = "";
+        txtDireccion.Text = "";
     }
 }

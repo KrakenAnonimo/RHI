@@ -7,17 +7,6 @@
             text-align: center;
         }
 
-        .auto-style4 {
-            min-height: 1px;
-            float: left;
-            width: 50%;
-            text-align: center;
-            font-size: medium;
-            padding-left: 15px;
-            padding-right: 15px;
-            height: 837px;
-        }
-
         .auto-style7 {
             position: relative;
             min-height: 1px;
@@ -97,16 +86,15 @@
                                     <label for="selectSm" class="form-control-label">Roles</label>
                                 </div>
                                 <div class="text-center">
-                                    <asp:DropDownList ID="cmbRol" runat="server" CssClass="auto-style8" DataSourceID="SqldsRoles" DataTextField="Rol" DataValueField="IdRol">
+                                    <asp:DropDownList ID="cmbRol" runat="server" CssClass="auto-style8">
                                     </asp:DropDownList>
                                 </div>
                                 <div>
-                                    <asp:SqlDataSource ID="SqldsRoles" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" SelectCommand="SELECT [IdRol], [Rol] FROM [Rol]"></asp:SqlDataSource>
                                 </div>
                             </div>
                             <div>
                                 <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" OnClick="btnGuardar_Click" />
-                                <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar Todo" class="btn btn-danger btn-sm" />
+                                <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar Todo" class="btn btn-danger btn-sm" OnClick="btnLimpiar_Click" />
                             </div>
                         </div>
                     </div>
