@@ -33,10 +33,10 @@ public class clOrdenMttoP
         return result;
     }
 
-    //Metodo Listar UsuOrdenMttoPario
+    //Metodo Listar OrdenMttoP
     public List<clOrdenMttoPE> mtdListarOrdenMttoP()
     {
-        string consulta = "select * from Usuario";
+        string consulta = "select * from OrdenMttoP";
         clMetodoCN objMtdCN = new clMetodoCN();
         DataTable tblDatos = new DataTable();
         tblDatos = objMtdCN.mtdDesconectado(consulta);
@@ -67,7 +67,7 @@ public class clOrdenMttoP
     //Metodo Actualizar OrdenMttoP
     public int mtdActualizarOrdenMttoP(clOrdenMttoPE objOrdenMttoPE)
     {
-        string consulta = "Update Usuario set Documento = '" + objOrdenMttoPE.NumOrden + "','" + objOrdenMttoPE.Disciplina + "','" + objOrdenMttoPE.FechaInicio + "','" + objOrdenMttoPE.HoraInicio + "','" + objOrdenMttoPE.FechaFinal + "','" + objOrdenMttoPE.HoraFinal + "','" + objOrdenMttoPE.Ejecutado + "','" + objOrdenMttoPE.TrabajoIE + "'," + objOrdenMttoPE.Observaciones + "','" + objOrdenMttoPE.Revisado + "','" + objOrdenMttoPE.IdPlanificacion + "','" + objOrdenMttoPE.IdReporteAS + "','" + objOrdenMttoPE.IdUsuario + "')";
+        string consulta = "Update OrdenMttoP set NumOrden = '" + objOrdenMttoPE.NumOrden + "','" + objOrdenMttoPE.Disciplina + "','" + objOrdenMttoPE.FechaInicio + "','" + objOrdenMttoPE.HoraInicio + "','" + objOrdenMttoPE.FechaFinal + "','" + objOrdenMttoPE.HoraFinal + "','" + objOrdenMttoPE.Ejecutado + "','" + objOrdenMttoPE.TrabajoIE + "'," + objOrdenMttoPE.Observaciones + "','" + objOrdenMttoPE.Revisado + "','" + objOrdenMttoPE.IdPlanificacion + "','" + objOrdenMttoPE.IdReporteAS + "','" + objOrdenMttoPE.IdUsuario + "')";
         clMetodoCN objMtdCN = new clMetodoCN();
         int regis = objMtdCN.mtdConectado(consulta);
         return regis;
