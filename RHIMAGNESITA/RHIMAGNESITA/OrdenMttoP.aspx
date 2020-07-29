@@ -139,7 +139,7 @@
                                         <label for="Revisado" class=" form-control-label">Revisado por:</label>
                                     </div>
                                     <div class="text-center">
-                                        <asp:DropDownList ID="DropDownList1" runat="server" class="form-control-sm form-control" Style="width: 97%; position: relative; left: 9px; top: 0px">
+                                        <asp:DropDownList ID="cmbRevisado" runat="server" class="form-control-sm form-control" Style="width: 97%; position: relative; left: 9px; top: 0px">
                                             <asp:ListItem>Supervisor</asp:ListItem>
                                             <asp:ListItem>Planificador</asp:ListItem>
                                         </asp:DropDownList>
@@ -253,8 +253,8 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" />
-                                    <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar Todo" class="btn btn-danger btn-sm" />
+                                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" OnClick="btnGuardar_Click" />
+                                    <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar Todo" class="btn btn-danger btn-sm" OnClick="btnLimpiar_Click" />
                                 </div>
                             </div>
                         </div>
