@@ -9,7 +9,7 @@ public partial class Usuario :  System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-      
+       
     }
     protected void Page_Init(object sender, EventArgs e)
     {
@@ -47,8 +47,9 @@ public partial class Usuario :  System.Web.UI.Page
         if (resultsql > 0)
         {
             //enviar mensaje 
+            Response.Write("<script>alert('Se Registro Correctamente')</script>");
+
             //Limpiar Campos de texto
-            Response.Write("<script>alert('Se Registro Correctamente');</script>");
             txtDocumento.Text = "";
             txtNombre.Text = "";
             txtApellido.Text = "";
@@ -57,6 +58,9 @@ public partial class Usuario :  System.Web.UI.Page
             txtClave.Text = "";
             txtCiudad.Text = "";
             txtDireccion.Text = "";
+
+            //Redirecionamiento Pagina Usuario
+            Response.Redirect("~/Usuario.aspx");
         }
     
     }
