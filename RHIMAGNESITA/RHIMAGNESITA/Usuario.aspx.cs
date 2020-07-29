@@ -48,7 +48,7 @@ public partial class Usuario :  System.Web.UI.Page
         {
             //enviar mensaje 
             //Limpiar Campos de texto
-            Response.Write("<script>alert('Se Registro Correctamente');</script>");
+            Response.Write("<script>alert('Se Registro Correctamente')</script>");
             txtDocumento.Text = "";
             txtNombre.Text = "";
             txtApellido.Text = "";
@@ -57,6 +57,7 @@ public partial class Usuario :  System.Web.UI.Page
             txtClave.Text = "";
             txtCiudad.Text = "";
             txtDireccion.Text = "";
+            Response.Redirect("~/Usuario.aspx");
         }
     
     }
