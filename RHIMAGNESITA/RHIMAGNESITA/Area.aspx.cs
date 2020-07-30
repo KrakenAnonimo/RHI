@@ -24,10 +24,14 @@ public partial class Area :  System.Web.UI.Page
         if(resultsql > 0)
         {
             //enviar mensaje
-            Response.Write("<script>alert('Se Registro Correctamente');</script>");
+            Response.Write("<script>alert('Se Registro Correctamente')</script>");
+
             //Limpiar Campos de texto
             txtNombreA.Text = "";
             txtUbicacion.Text = "";
+
+            //Redirecionar la pagina
+            Response.Redirect("~/Area.aspx");
         }
     }
 

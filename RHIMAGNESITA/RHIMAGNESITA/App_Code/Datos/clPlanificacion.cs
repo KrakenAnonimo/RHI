@@ -17,10 +17,8 @@ public class clPlanificacion
             "Values('" + objPlanificacionE.FechaPlanificacion + "','" + objPlanificacionE.Observaciones + "','" + objPlanificacionE.
             IdElemento + "')";
 
-
         clMetodoCN objMtdCN = new clMetodoCN();
         int result = objMtdCN.mtdConectado(sqlInsert);
-
         return result;
 
     }
@@ -31,14 +29,13 @@ public class clPlanificacion
         string consulta = "Delete from Planificacion where FechaPlanificacion = '" + objDatos.FechaPlanificacion + "')";
         clMetodoCN objMtdCN = new clMetodoCN();
         int result = objMtdCN.mtdConectado(consulta);
-
         return result;
     }
 
     //Metodo Listar Planificacion
     public List<clPlanificacionE> mtdListarPlanificacion()
     {
-        string consulta = "select * from Usuario";
+        string consulta = "select * from Planificacion";
         clMetodoCN objMtdCN = new clMetodoCN();
         DataTable tblDatos = new DataTable();
         tblDatos = objMtdCN.mtdDesconectado(consulta);

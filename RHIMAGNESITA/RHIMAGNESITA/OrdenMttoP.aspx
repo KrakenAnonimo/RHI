@@ -81,6 +81,15 @@
                             <br />
                             <br />
                             <div class="card-body card-block">
+                                <div class="row form-group">
+                                    <div class="text-center">
+                                        <label for="selectSm" class="form-control-label">Reporte Averia Servicio</label>
+                                    </div>
+                                    <div class="text-center">
+                                        <asp:DropDownList ID="cmbAveriaServicio" runat="server" CssClass="auto-style8">
+                                        </asp:DropDownList>
+                                    </div>
+                                </div>
                                 <div class="auto-style3">
                                     <label for="NumOrdenP" class=" form-control-label">Numero de la orden</label>
                                     <asp:TextBox ID="txtNumOrdenP" runat="server" placeholder="Numero de la Orden del Mtto Preventivo" class="form-control" TextMode="Number"></asp:TextBox>
@@ -181,16 +190,7 @@
                                         </asp:SqlDataSource>
 
                                     </div>
-                                </div>
-                                <div class="row form-group">
-                                    <div class="text-center">
-                                        <label for="selectSm" class="form-control-label">Reporte Averia Servicio</label>
-                                    </div>
-                                    <div class="text-center">
-                                        <asp:DropDownList ID="cmbAveriaServicio" runat="server" CssClass="auto-style8">
-                                        </asp:DropDownList>
-                                    </div>
-                                </div>
+                                </div>                                
                                 <div class="row form-group">
                                     <div class="text-center">
                                         <label for="selectSm" class="form-control-label">Asignar a:</label>

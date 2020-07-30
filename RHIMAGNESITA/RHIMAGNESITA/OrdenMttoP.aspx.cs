@@ -31,7 +31,7 @@ public partial class OrdenMttoP : System.Web.UI.Page
         cmbPlanificacion.DataBind();
 
         cmbAveriaServicio.DataSource = listaReporteAveriaServicio;
-        cmbAveriaServicio.DataTextField = "NumReporte";
+        cmbAveriaServicio.DataTextField = "Titulo";
         cmbAveriaServicio.DataValueField = "IdReporteAS";
         cmbAveriaServicio.DataBind();
     }
@@ -75,6 +75,9 @@ public partial class OrdenMttoP : System.Web.UI.Page
             cmbPlanificacion.Text = "";
             cmbAveriaServicio.Text = "";
             chxblRoles.SelectedValue = "";
+
+            //Redirecionar la pagina
+            Response.Redirect("~/OrdenMttoP.aspx");
         }
 
     }
