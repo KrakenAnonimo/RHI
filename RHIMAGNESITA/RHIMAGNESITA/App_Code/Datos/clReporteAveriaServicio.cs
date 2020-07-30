@@ -51,7 +51,7 @@ public class clReporteAveriaServicio
             objPasDatos.Descripcion = tblDatos.Rows[i][3].ToString();
             objPasDatos.FechaReporte = tblDatos.Rows[i][4].ToString();
             objPasDatos.IdElemento = int.Parse(tblDatos.Rows[i][5].ToString());
-            objPasDatos.IdUsuario = int.Parse(tblDatos.Rows[i][16].ToString());
+            objPasDatos.IdUsuario = int.Parse(tblDatos.Rows[i][6].ToString());
             ListaReporteAS.Add(objPasDatos);
         }
         return ListaReporteAS;

@@ -31,7 +31,7 @@ public partial class OrdenMttoP : System.Web.UI.Page
         cmbPlanificacion.DataBind();
 
         cmbAveriaServicio.DataSource = listaReporteAveriaServicio;
-        cmbAveriaServicio.DataTextField = "NumReporte";
+        cmbAveriaServicio.DataTextField = "Titulo";
         cmbAveriaServicio.DataValueField = "IdReporteAS";
         cmbAveriaServicio.DataBind();
     }
@@ -68,7 +68,16 @@ public partial class OrdenMttoP : System.Web.UI.Page
             txtHoraI.Text = "";
             txtFechaOF.Text = "";
             txtHoraF.Text = "";
+            cmbEjecucionOr.Text = "";
+            cmbTrabajoIE.Text = "";
             txtObservaciones.Text = "";
+            cmbRevisado.Text = "";
+            cmbPlanificacion.Text = "";
+            cmbAveriaServicio.Text = "";
+            chxblRoles.SelectedValue = "";
+
+            //Redirecionar la pagina
+            Response.Redirect("~/OrdenMttoP.aspx");
         }
 
     }
@@ -81,7 +90,12 @@ public partial class OrdenMttoP : System.Web.UI.Page
         txtHoraI.Text = "";
         txtFechaOF.Text = "";
         txtHoraF.Text = "";
+        cmbEjecucionOr.Text = "";
+        cmbTrabajoIE.Text = "";
         txtObservaciones.Text = "";
-       
+        cmbRevisado.Text = "";
+        cmbPlanificacion.Text = "";
+        cmbAveriaServicio.Text = "";
+        chxblRoles.SelectedValue = "";
     }
 }
