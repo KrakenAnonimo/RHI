@@ -46,10 +46,9 @@ public partial class Usuario :  System.Web.UI.Page
 
         if (resultsql > 0)
         {
-            //enviar mensaje            
-            Response.Write("<script>alert('Se Registro Correctamente')</script>");
-
+            //enviar mensaje 
             //Limpiar Campos de texto
+            Response.Write("<script>alert('Se Registro Correctamente')</script>");
             txtDocumento.Text = "";
             txtNombre.Text = "";
             txtApellido.Text = "";
@@ -58,8 +57,6 @@ public partial class Usuario :  System.Web.UI.Page
             txtClave.Text = "";
             txtCiudad.Text = "";
             txtDireccion.Text = "";
-
-            //Redirecionar la pagina
             Response.Redirect("~/Usuario.aspx");
         }
     
