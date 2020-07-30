@@ -68,13 +68,7 @@ public partial class OrdenMttoP : System.Web.UI.Page
             txtHoraI.Text = "";
             txtFechaOF.Text = "";
             txtHoraF.Text = "";
-            cmbEjecucionOr.Text = "";
-            cmbTrabajoIE.Text = "";
             txtObservaciones.Text = "";
-            cmbRevisado.Text = "";
-            cmbPlanificacion.Text = "";
-            cmbAveriaServicio.Text = "";
-            chxblRoles.SelectedValue = "";
         }
 
     }
@@ -87,12 +81,7 @@ public partial class OrdenMttoP : System.Web.UI.Page
         txtHoraI.Text = "";
         txtFechaOF.Text = "";
         txtHoraF.Text = "";
-        cmbEjecucionOr.Text = "";
-        cmbTrabajoIE.Text = "";
         txtObservaciones.Text = "";
-        cmbRevisado.Text = "";
-        cmbPlanificacion.Text = "";
-        cmbAveriaServicio.Text = "";
-        chxblRoles.SelectedValue = "";
+       
     }
 }

@@ -29,12 +29,16 @@
         .auto-style9 {
             margin-bottom: 15px;
             text-align: left;
+            position: relative;
+            top: 3px;
+            left: 244px;
+            width: 234px;
         }
 
         .auto-style10 {
             position: relative;
-            left: 378px;
-            top: -175px;
+            left: 371px;
+            top: -182px;
         }
 
         .auto-style11 {
@@ -45,8 +49,9 @@
 
         .auto-style12 {
             position: relative;
-            left: 130px;
-            top: 11px;
+            left: 99px;
+            top: 6px;
+            height: 163px;
         }
     </style>
 </asp:Content>
@@ -69,66 +74,6 @@
                                     <label for="NumOrdenC" class=" form-control-label">Numero de la orden</label>
                                     <asp:TextBox ID="txtNumOrdenC" runat="server" placeholder="Numero de la Orden del Mtto Correctivo" class="form-control" TextMode="Number"></asp:TextBox>
                                 </div>
-                                <div class="auto-style3">
-                                    <label for="Disciplina" class=" form-control-label">Disciplina</label>
-                                    <asp:TextBox ID="txtDisciplina" runat="server" placeholder="Disciplina" class="form-control" TextMode="SingleLine"></asp:TextBox>
-                                </div>
-                                <div class="auto-style3">
-                                    <label for="FechaOI" class=" form-control-label">Fecha Inicial</label>
-                                    <asp:TextBox ID="txtFechaOI" runat="server" placeholder="Fecha inicial del reporte" class="form-control" TextMode="Date"></asp:TextBox>
-                                </div>
-                                <div class="auto-style3">
-                                    <label for="HoraI" class=" form-control-label">Hora Inicial</label>
-                                    <asp:TextBox ID="txtHoraI" runat="server" placeholder="Duracion" class="form-control" TextMode="Time"></asp:TextBox>
-                                </div>
-                                <div class="auto-style3">
-                                    <label for="FechaOF" class=" form-control-label">Fecha Final</label>
-                                    <asp:TextBox ID="txtFechaOF" runat="server" placeholder="Fecha final del reporte" class="form-control" TextMode="Date"></asp:TextBox>
-                                </div>
-                                <div class="auto-style3">
-                                    <label for="HoraF" class=" form-control-label">Hora Final</label>
-                                    <asp:TextBox ID="txtHoraF" runat="server" placeholder="Duracion" class="form-control" TextMode="Time"></asp:TextBox>
-                                </div>
-                                <div class="row form-group">
-                                    <div class="text-center">
-                                        <label for="selectSm" class=" form-control-label">Ejecucion de la Orden</label>
-                                    </div>
-                                    <div class="text-center">
-                                        <asp:DropDownList ID="cmbEjecucionOr" runat="server" class="form-control-sm form-control" Style="width: 97%; position: relative; left: 9px; top: 0px">
-                                            <asp:ListItem>Sin Ejecutar</asp:ListItem>
-                                        </asp:DropDownList>
-                                    </div>
-                                </div>
-                                <div class="row form-group">
-                                    <div class="text-center">
-                                        <label for="TrabajoIE" class=" form-control-label">Trabajo IE</label>
-                                    </div>
-                                    <div class="text-center">
-                                        <asp:DropDownList ID="cmbTrabajoIE" runat="server" class="form-control-sm form-control" Style="width: 97%; position: relative; left: 9px; top: 0px">
-                                            <asp:ListItem>Interno</asp:ListItem>
-                                            <asp:ListItem>Externo</asp:ListItem>
-                                        </asp:DropDownList>
-                                    </div>
-                                </div>
-                                <div class="row form-group">
-                                    <div class="text-center">
-                                        <label for="textarea-input" class=" form-control-label">Observaciones</label>
-                                    </div>
-                                    <div class="text-center" style="width: 97%; position: relative; left: 9px; top: 0px">
-                                        <asp:TextBox ID="txtObservaciones" runat="server" Rows="9" placeholder="Observaciones..." class="form-control" TextMode="MultiLine"></asp:TextBox>
-                                    </div>
-                                </div>
-                                <div class="row form-group">
-                                    <div class="text-center">
-                                        <label for="Revisado" class=" form-control-label">Revisado por:</label>
-                                    </div>
-                                    <div class="text-center">
-                                        <asp:DropDownList ID="cmbRevision" runat="server" class="form-control-sm form-control" Style="width: 97%; position: relative; left: 9px; top: 0px">
-                                            <asp:ListItem>Supervisor</asp:ListItem>
-                                            <asp:ListItem>Planificador</asp:ListItem>
-                                        </asp:DropDownList>
-                                    </div>
-                                </div>
                                 <div class="row form-group">
                                     <div class="text-center">
                                         <label for="selectSm" class="form-control-label">Orden de Mtto Preventivo</label>
@@ -142,16 +87,13 @@
                                 <div class="row form-group">
                                     <div class="text-center">
                                         <label for="selectSm" class="form-control-label">Asignar a:</label>
-                                        &nbsp;
                                     </div>
                                     <div class="auto-style9">
-                                        <asp:CheckBoxList ID="chxblRoles" runat="server" AutoPostBack="True" RepeatDirection="Horizontal" CssClass="auto-style11">
-                                            <asp:ListItem>Tecnico</asp:ListItem>
-                                            <asp:ListItem>Soldador</asp:ListItem>
-                                        </asp:CheckBoxList>
+                                        <asp:RadioButton ID="rdbTecnico" runat="server" CssClass="auto-style11" OnSelectedIndexChanged="rblRoles_SelectedIndexChanged" OnCheckedChanged="rdbTecnico_CheckedChanged" Text="Tecnico" />
+                                        <asp:RadioButton ID="rdbSoldador" runat="server" CssClass="auto-style11" OnCheckedChanged="rdbSoldador_CheckedChanged" Text="Soldador" />
                                     </div>
                                     <div>
-                                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="IdUsuario" DataSourceID="SqlDataSource2" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" CssClass="auto-style12" PageSize="5">
+                                        <asp:GridView ID="gvUsuarios" runat="server" AutoGenerateColumns="False" DataKeyNames="IdUsuario" DataSourceID="SqlDataSource2" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" CssClass="auto-style12" PageSize="5" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                                             <Columns>
                                                 <asp:BoundField DataField="IdUsuario" HeaderText="IdUsuario" ReadOnly="True" SortExpression="IdUsuario" Visible="False" />
                                                 <asp:BoundField DataField="Documento" HeaderText="Documento" SortExpression="Documento" />
@@ -166,7 +108,7 @@
                                                 <asp:CommandField ShowSelectButton="True" />
                                             </Columns>
                                         </asp:GridView>
-                                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" DeleteCommand="DELETE FROM [Usuario] WHERE [IdUsuario] = @IdUsuario" InsertCommand="INSERT INTO [Usuario] ([Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol]) VALUES (@Documento, @Nombre, @Apellido, @Telefono, @Email, @Clave, @Ciudad, @Direccion, @IdRol)" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT [IdUsuario], [Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol] FROM [Usuario]" UpdateCommand="UPDATE [Usuario] SET [Documento] = @Documento, [Nombre] = @Nombre, [Apellido] = @Apellido, [Telefono] = @Telefono, [Email] = @Email, [Clave] = @Clave, [Ciudad] = @Ciudad, [Direccion] = @Direccion, [IdRol] = @IdRol WHERE [IdUsuario] = @IdUsuario">
+                                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" DeleteCommand="DELETE FROM [Usuario] WHERE [IdUsuario] = @IdUsuario" InsertCommand="INSERT INTO [Usuario] ([Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol]) VALUES (@Documento, @Nombre, @Apellido, @Telefono, @Email, @Clave, @Ciudad, @Direccion, @IdRol)" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT [IdUsuario], [Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol] FROM [Usuario]" UpdateCommand="UPDATE [Usuario] SET [Documento] = @Documento, [Nombre] = @Nombre, [Apellido] = @Apellido, [Telefono] = @Telefono, [Email] = @Email, [Clave] = @Clave, [Ciudad] = @Ciudad, [Direccion] = @Direccion, [IdRol] = @IdRol WHERE [IdUsuario] = @IdUsuario">
                                             <DeleteParameters>
                                                 <asp:Parameter Name="IdUsuario" Type="Int32" />
                                             </DeleteParameters>
@@ -200,8 +142,70 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" />
-                                    <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar Todo" class="btn btn-danger btn-sm" />
+                                    <div class="auto-style3">
+                                        <label for="Disciplina" class=" form-control-label">Disciplina</label>
+                                        <asp:TextBox ID="txtDisciplina" runat="server" placeholder="Disciplina" class="form-control" TextMode="SingleLine"></asp:TextBox>
+                                    </div>
+                                    <div class="auto-style3">
+                                        <label for="FechaOI" class=" form-control-label">Fecha Inicial</label>
+                                        <asp:TextBox ID="txtFechaOI" runat="server" placeholder="Fecha inicial del reporte" class="form-control" TextMode="Date"></asp:TextBox>
+                                    </div>
+                                    <div class="auto-style3">
+                                        <label for="HoraI" class=" form-control-label">Hora Inicial</label>
+                                        <asp:TextBox ID="txtHoraI" runat="server" placeholder="Duracion" class="form-control" TextMode="Time"></asp:TextBox>
+                                    </div>
+                                    <div class="auto-style3">
+                                        <label for="FechaOF" class=" form-control-label">Fecha Final</label>
+                                        <asp:TextBox ID="txtFechaOF" runat="server" placeholder="Fecha final del reporte" class="form-control" TextMode="Date"></asp:TextBox>
+                                    </div>
+                                    <div class="auto-style3">
+                                        <label for="HoraF" class=" form-control-label">Hora Final</label>
+                                        <asp:TextBox ID="txtHoraF" runat="server" placeholder="Duracion" class="form-control" TextMode="Time"></asp:TextBox>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="text-center">
+                                            <label for="selectSm" class=" form-control-label">Ejecucion de la Orden</label>
+                                        </div>
+                                        <div class="text-center">
+                                            <asp:DropDownList ID="cmbEjecucionOr" runat="server" class="form-control-sm form-control" Style="width: 97%; position: relative; left: 9px; top: 0px">
+                                                <asp:ListItem>Sin Ejecutar</asp:ListItem>
+                                            </asp:DropDownList>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="text-center">
+                                            <label for="TrabajoIE" class=" form-control-label">Trabajo IE</label>
+                                        </div>
+                                        <div class="text-center">
+                                            <asp:DropDownList ID="cmbTrabajoIE" runat="server" class="form-control-sm form-control" Style="width: 97%; position: relative; left: 9px; top: 0px">
+                                                <asp:ListItem>Interno</asp:ListItem>
+                                                <asp:ListItem>Externo</asp:ListItem>
+                                            </asp:DropDownList>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="text-center">
+                                            <label for="textarea-input" class=" form-control-label">Observaciones</label>
+                                        </div>
+                                        <div class="text-center" style="width: 97%; position: relative; left: 9px; top: 0px">
+                                            <asp:TextBox ID="txtObservaciones" runat="server" Rows="9" placeholder="Observaciones..." class="form-control" TextMode="MultiLine"></asp:TextBox>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="text-center">
+                                            <label for="Revisado" class=" form-control-label">Revisado por:</label>
+                                        </div>
+                                        <div class="text-center">
+                                            <asp:DropDownList ID="cmbRevision" runat="server" class="form-control-sm form-control" Style="width: 97%; position: relative; left: 9px; top: 0px">
+                                                <asp:ListItem>Supervisor</asp:ListItem>
+                                                <asp:ListItem>Planificador</asp:ListItem>
+                                            </asp:DropDownList>
+                                        </div>
+                                    </div>
+
+
+                                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" OnClick="btnGuardar_Click" />
+                                    <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar Todo" class="btn btn-danger btn-sm" OnClick="btnLimpiar_Click" />
                                 </div>
                             </div>
                         </div>
