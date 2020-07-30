@@ -35,24 +35,27 @@
                         <br />
                         <div class="card-body card-block">
                             <div class="auto-style3">
-                                <label for="CodigoM" class=" form-control-label">Codigo</label><input type="text" id="CodigoM" placeholder="Ingrese un codigo" class="form-control">
+                                 <label for="Codigo" class=" form-control-label">Codigo</label>
+                                <asp:TextBox ID="txtCodigo" runat="server" placeholder="Ingrese el Codigo" class="form-control" TextMode="Number"></asp:TextBox>
                             </div>
                             <div class="auto-style3">
-                                <label for="NombreM" class=" form-control-label">Nombre</label><input type="text" id="NombreM" placeholder="Nombre del material" class="form-control">
+                                <label for="Nombre" class=" form-control-label">Nombre</label>
+                                <asp:TextBox ID="txtNombre" runat="server" placeholder="Ingrese su nombre" class="form-control" TextMode="SingleLine"></asp:TextBox>
                             </div>
                             <div class="row form-group">
                                 <div class="text-center">
                                     <label for="textarea-input" class=" form-control-label">Descripcion</label>
                                 </div>
                                 <div class="text-center" style="width: 97%; position: relative; left: 9px; top: 0px">
-                                    <textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Descripcion..." class="form-control"></textarea>
+                                   <asp:TextBox ID="txtDescripcion" runat="server" Rows="9" placeholder="Descripcion..." class="form-control" TextMode="MultiLine"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="auto-style3">
-                                <label for="UnidadM" class=" form-control-label">Unidad de Medida</label><input type="text" id="UnidadM" placeholder="Ingrese la unidad" class="form-control">
+                                <label for="UnidadM" class=" form-control-label">Unidad de Medida</label>
+                                <asp:TextBox ID="txtUnidadM" runat="server" placeholder="Ingrese la unidad" class="form-control" TextMode="SingleLine"></asp:TextBox>
                             </div>
-                            <button type="button" class="btn btn-success btn-sm">Guardar</button>
-                            <button type="button" class="btn btn-danger btn-sm">Limpiar Todo</button>
+                           <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" OnClick="btnGuardar_Click" />
+                                <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar Todo" class="btn btn-danger btn-sm" OnClick="btnLimpiar_Click" />
                         </div>
                     </div>
                 </div>
