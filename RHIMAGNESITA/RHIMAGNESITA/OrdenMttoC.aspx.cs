@@ -42,12 +42,26 @@ public partial class OrdenMttoC : System.Web.UI.Page
         objOrdenMttoCE.TrabajoIE = cmbTrabajoIE.SelectedValue.ToString();
         objOrdenMttoCE.Observaciones = txtObservaciones.Text;
         objOrdenMttoCE.Revisado = cmbRevision.SelectedValue.ToString();
-        objOrdenMttoCE.IdOrdenMttoP = int.Parse(cmbOrdenMttoP.SelectedValue.ToString());
+
+        // Guardar Usuarios
+        // Ciclo por cada registro de usuarios en la orden
+        for (int i = 0; i < gvListaElegidos.Rows.Count; i++)
+        {
+            //Campos R
+            int IdUsuario = int.Parse(gvListaElegidos.Rows[i].Cells[0].Text);
+
+            //Campos NR
+            int Documento = int.Parse(gvListaElegidos.Rows[i].Cells[1].Text);
+            string Nombre = gvListaElegidos.Rows[i].Cells[2].Text;
+
+            string sqlInsertUO = "INSERT INTO OrdenMttoCorrectivo (IdUsuario)" +
+                "VALUES('" + IdUsuario + "')";
+            SqlDataSource1.InsertCommand = sqlInsertUO;
+            int result = SqlDataSource1.Insert();
+        }
 
         clOrdenMttoC objOrdenMttoC = new clOrdenMttoC();
         int resultsql = objOrdenMttoC.mtdRegistrarOrdenMttoC(objOrdenMttoCE);
-
-
 
         if (resultsql > 0)
         {
@@ -77,27 +91,43 @@ public partial class OrdenMttoC : System.Web.UI.Page
         txtObservaciones.Text = "";
     }
 
-    //cadena de conexion
-    SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\dbSwafay-RIH.mdf;Integrated Security=True");
-
     //radio butons filtrados a roles
-    protected void rdbTecnico_CheckedChanged(object sender, EventArgs e)
-    {
-        con.Open();
-        SqlDataAdapter dato = new SqlDataAdapter("Select * from Usuario Where IdRol='4'", con);
-        DataTable dt = new DataTable();
-        dato.Fill(dt);
-        gvUsuarios.DataSource = dt;
-        con.Close();
-    }
 
-    protected void rdbSoldador_CheckedChanged(object sender, EventArgs e)
+
+
+    protected void RadioButtonList1_SelectedIndexChanged(object sender, EventArgs e)
     {
-        con.Open();
-        SqlDataAdapter dato = new SqlDataAdapter("Select * from Usuario Where IdRol='5'", con);
-        DataTable dt = new DataTable();
-        dato.Fill(dt);
-        gvUsuarios.DataSource = dt;
-        con.Close();
+        int idRol = int.Parse(RadioButtonList1.SelectedValue.ToString());
+        string consulta = "select * from Usuario where IdRol=" + idRol;
+        SqlDataSource2.SelectCommand = consulta;
+        gvUsuarios.DataSourceID = "SqlDataSource2";
+        gvUsuarios.DataBind();
     }
+    int fila = 0;
+
+    static List<clUsuario> lista = new List<clUsuario>();
+
+    protected void gvUsuarios_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        lblUsuario.Text = gvUsuarios.SelectedRow.Cells[1].Text + " " + gvUsuarios.SelectedRow.Cells[2].Text;
+        fila = gvUsuarios.SelectedRow.RowIndex;
+
+        //clase usuario
+        clUsuario objUsuario = new clUsuario();
+
+        objUsuario.IdUsuario = int.Parse(gvUsuarios.DataKeys[fila].Value.ToString());
+        objUsuario.Documento = gvUsuarios.SelectedRow.Cells[1].Text;
+        objUsuario.Nombre = gvUsuarios.SelectedRow.Cells[2].Text;
+
+        lista.Add(objUsuario);
+        gvListaElegidos.DataSource = lista;
+        gvListaElegidos.DataBind();
+    }
+}
+public class clUsuario
+{
+    //Atributos Tabla Usuarios
+    public int IdUsuario { get; set; }
+    public string Documento { get; set; }
+    public string Nombre { get; set; }
 }
