@@ -59,9 +59,9 @@
                                     </div>
                                     <div class="text-center">
                                         <asp:DropDownList ID="cmbEstado" runat="server" class="form-control-sm form-control" Style="width: 97%; position: relative; left: 9px; top: 0px">
-                                            <asp:ListItem>Bueno</asp:ListItem>
-                                            <asp:ListItem>Dañado</asp:ListItem>
-                                            <asp:ListItem>En Mantenimiento</asp:ListItem>
+                                            <asp:ListItem>Disponible</asp:ListItem>
+                                            <asp:ListItem>Mantenimiento</asp:ListItem>
+                                            <asp:ListItem>Fuera de servicio</asp:ListItem>
                                         </asp:DropDownList>
                                     </div>
                                     <div class="form-group">
