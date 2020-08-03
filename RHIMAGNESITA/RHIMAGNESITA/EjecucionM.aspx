@@ -43,28 +43,27 @@
                                 <label for="Revisado" class=" form-control-label">Estado</label>
                             </div>
                             <div class="text-center">
-                                <select name="Revisado" id="Estado" class="form-control-sm form-control" style="width: 97%; position: relative; left: 9px; top: 0px">
-                                    <option value="0">Elija una opcion</option>
-                                    <option value="1">Ejecutada</option>
-                                    <option value="1">No Ejecutada</option>
-                                    <option value="1">En Ejecucion</option>
-                                    <option value="2">Cancelada</option>
-                                </select>
+                                <asp:DropDownList runat="server" id="cmbEstado" class="form-control-sm form-control" style="width: 97%; position: relative; left: 9px; top: 0px">
+                                    <asp:ListItem>Ejecutada</asp:ListItem>
+                                    <asp:ListItem>No Ejecutada</asp:ListItem>
+                                </asp:DropDownList>
                             </div>
                         </div>
                         <div class="card-body card-block">
                             <div class="auto-style3">
-                                <label for="FechaOF" class=" form-control-label">Fecha Ejecucion</label><input type="date" id="FechaEj" placeholder="Fecha de Ejecucion" class="form-control">
+                                <label for="FechaOF" class=" form-control-label">Fecha Ejecucion</label>
+                                <asp:TextBox runat="server" placeholder="Fecha de Ejecucion" class="form-control" id="txtFechaEj" TextMode="Date" ></asp:TextBox>
                             </div>
                             <div class="auto-style3">
-                                <label for="Horas" class=" form-control-label">Duracion</label><input type="number" id="Duracion" placeholder="Horas" class="form-control">
+                                <label for="Horas" class=" form-control-label">Duracion</label>
+                                <asp:TextBox runat="server" id="txtDuracion" placeholder="Horas" class="form-control" TextMode="Number"></asp:TextBox>
                             </div>
                             <div class="form-group">
                                 <div class="text-center">
                                     <label for="textarea-input" class=" form-control-label">Observaciones</label>
                                 </div>
                                 <div class="text-center">
-                                    <textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Observaciones..." class="form-control"></textarea>
+                                    <asp:TextBox runat="server" rows="9" placeholder="Observaciones..." class="form-control" id="txtObservaciones" TextMode="MultiLine"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -78,15 +77,15 @@
                             </div>
                             <div class="form-group">
                                 <div class="text-center">
-                                    <label for="selectSm" class="form-control-label">Orden de Mantenimiento</label>
+                                    <label for="selectSm" class="form-control-label">Orden de Mantenimiento Preventiva</label>
                                 </div>
                                 <div class="text-center">
-                                    <asp:DropDownList ID="cmbOdenMtto" runat="server" CssClass="auto-style8" Height="33px" Width="655px">
+                                    <asp:DropDownList ID="cmbOrdenMttoP" runat="server" CssClass="auto-style8" Height="33px" Width="655px">
                                     </asp:DropDownList>
                                 </div>
                             </div>
-                            <button type="button" class="btn btn-success btn-sm">Guardar</button>
-                            <button type="button" class="btn btn-danger btn-sm">Limpiar Todo</button>
+                            <asp:Button runat="server" Text="Guardar" class="btn btn-success btn-sm" id="btnGuardar" OnClick="btnGuardar_Click"/>
+                            <asp:Button runat="server" Text="Limpiar Todo" class="btn btn-danger btn-sm" id="btnLimpiar"/>
                         </div>
                     </div>
                 </div>
