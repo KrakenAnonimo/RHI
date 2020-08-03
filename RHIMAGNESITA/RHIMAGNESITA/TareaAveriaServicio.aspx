@@ -33,7 +33,7 @@
                                 <div class="form-group">
                                     <div class="form-group">
                                         <label for="NumeroR" class=" form-control-label">Nombre Averia Servicio</label>
-                                        <asp:TextBox ID="txtNumeroR" runat="server" placeholder="Ingrese un nombre de la averia o el servicio" class="form-control" TextMode="Number"></asp:TextBox>
+                                        <asp:TextBox ID="txtNombreAV" runat="server" placeholder="Ingrese un nombre de la averia o el servicio" class="form-control" TextMode="Number"></asp:TextBox>
                                     </div>
                                     <div class="form-group">
                                         <label for="Duracion" class=" form-control-label">Duracion</label>
@@ -62,7 +62,7 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" />
+                                        <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" OnClick="btnGuardar_Click" />
                                         <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar Todo" class="btn btn-danger btn-sm" />
                                     </div>
                                 </div>
