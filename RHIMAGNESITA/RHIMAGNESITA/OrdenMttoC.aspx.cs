@@ -15,18 +15,19 @@ public partial class OrdenMttoC : System.Web.UI.Page
     }
     protected void Page_Init(object sender, EventArgs e)
     {
-        //Lista del combo
-        List<clOrdenMttoPE> ListaOrdenMttoP = new List<clOrdenMttoPE>();
+        //Lista del OrdenMttoP
+        List<clOrdenMttoPE> listaOrdenMttoP = new List<clOrdenMttoPE>();
 
-        //Clase con su metodo
+        //Clase OrdenMttoP junto con el metodo listar
         clOrdenMttoPL objOrdenMttoPL = new clOrdenMttoPL();
-        ListaOrdenMttoP = objOrdenMttoPL.mtdListarOrdenMttoP();
+        listaOrdenMttoP = objOrdenMttoPL.mtdListarOrdenMttoP();
 
-        //Carga de combo con sus datos
-        cmbOrdenMttoP.DataSource = ListaOrdenMttoP;
+        //Carga de combo con datos rol
+        cmbOrdenMttoP.DataSource = listaOrdenMttoP;
         cmbOrdenMttoP.DataTextField = "NumOrden";
         cmbOrdenMttoP.DataValueField = "IdOrdenMttoP";
         cmbOrdenMttoP.DataBind();
+
     }
 
     //radio butons filtrados a roles
@@ -75,8 +76,6 @@ public partial class OrdenMttoC : System.Web.UI.Page
         objOrdenMttoCE.Observaciones = txtObservaciones.Text;
         objOrdenMttoCE.IdOrdenMttoP = int.Parse(cmbOrdenMttoP.SelectedValue.ToString());
 
-      
-
         // Guardar Usuarios
         // Ciclo por cada registro de usuarios en la orden
         for (int i = 0; i < gvListaElegidos.Rows.Count; i++)
@@ -114,7 +113,6 @@ public partial class OrdenMttoC : System.Web.UI.Page
             Response.Redirect("~/OrdenMttoC.aspx");
         }
     }
-
     protected void btnLimpiar_Click(object sender, EventArgs e)
     {
         //Limpiar Campos de texto
@@ -127,11 +125,6 @@ public partial class OrdenMttoC : System.Web.UI.Page
         txtObservaciones.Text = "";
         Response.Redirect("~/OrdenMttoC.aspx");
     }
-
-    
-
-   
-  
 }
 public class clUsuarios
 {
