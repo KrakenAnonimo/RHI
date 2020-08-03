@@ -20,6 +20,11 @@
             left: 0px;
             top: 1px;
         }
+        .auto-style9 {
+            position: absolute;
+            left: 150px;
+            top: 101px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -41,14 +46,14 @@
                                     <div class="text-center">
                                         <label for="selectSm" class="form-control-label">Elemento</label>
                                     </div>
-                                    <div class="text-center">
+                                    <!-- <div class="text-center">
                                         <asp:DropDownList ID="cmbElemento" runat="server" CssClass="auto-style8">
                                         </asp:DropDownList>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <br />
                                 <div class="text-left">
-                                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="IdElemento" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar.">
+                                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="IdElemento" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." CssClass="auto-style9">
                                         <columns>
                                              <asp:CommandField ShowSelectButton="True" />
                                              <asp:BoundField DataField="IdElemento" HeaderText="IdElemento" ReadOnly="True" SortExpression="IdElemento" Visible="False" />
@@ -91,6 +96,8 @@
                                      </updateparameters>
                                 </asp:SqlDataSource>
                                 <br />
+                                <br />
+                                <br />
                                 <div class="form-group">
                                     <label for="FechaP" class=" form-control-label">Fecha Planificacion</label>
                                     <asp:TextBox ID="txtFechaP" runat="server" placeholder="Elija una fecha de planificacion" class="form-control" TextMode="Date"></asp:TextBox>
@@ -115,28 +122,30 @@
                                         </asp:DropDownList>
                                     </div>
                                 </div>
-                                  <div class="row form-group">
+                                <div class="row form-group">
                                     <div class="text-center">
                                         <label for="selectSm" class="form-control-label">Revisado por:</label>
                                         &nbsp;
                                     </div>
-                                    <div class="text-center">
-                                        <asp:CheckBoxList ID="chxblRoles" runat="server" AutoPostBack="True" RepeatDirection="Horizontal" CssClass="auto-style11">
+                                    <div class="text-left">
+                                        <asp:CheckBoxList ID="chxblRoles" runat="server" AutoPostBack="True" RepeatDirection="Horizontal" CssClass="auto-style11" Height="16px" style="margin-left: 210px" Width="321px">
                                             <asp:ListItem>Supervisor</asp:ListItem>
                                             <asp:ListItem>Planificador</asp:ListItem>
                                         </asp:CheckBoxList>
                                     </div>
                                     <div>
-                                <div>
-                                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" OnClick="btnGuardar_Click" />
-                                    <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar Todo" class="btn btn-danger btn-sm" OnClick="btnLimpiar_Click" />
+                                        <br />
+                                        <br />
+                                        <div>
+                                            <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" OnClick="btnGuardar_Click" />
+                                            <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar Todo" class="btn btn-danger btn-sm" OnClick="btnLimpiar_Click" />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 </asp:Content>
 
