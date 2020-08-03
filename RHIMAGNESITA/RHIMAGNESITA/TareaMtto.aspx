@@ -44,8 +44,8 @@
 
         .auto-style11 {
             position: relative;
-            left: 214px;
-            top: -28px;
+            left: 84px;
+            top: -24px;
         }
     </style>
 </asp:Content>
@@ -126,8 +126,8 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" />
-                                    <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar Todo" class="btn btn-danger btn-sm" />
+                                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" OnClick="btnGuardar_Click" />
+                                    <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar Todo" class="btn btn-danger btn-sm" OnClick="btnLimpiar_Click" />
                                 </div>
                             </div>
                         </div>
