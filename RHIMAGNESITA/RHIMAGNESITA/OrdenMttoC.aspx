@@ -31,7 +31,7 @@
             text-align: left;
             position: relative;
             top: 6px;
-            left: -4px;
+            left: -16px;
             width: 234px;
         }
 
@@ -43,6 +43,9 @@
 
         .auto-style11 {
             position: relative;
+            text-align: center;
+            width: 20000px;
+            display: block;
             left: 114px;
             top: 9px;
         }
@@ -93,7 +96,7 @@
                                     </div>
                                     <div>
                                         <asp:GridView ID="gvUsuarios" runat="server" AutoGenerateColumns="False" DataKeyNames="IdUsuario" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" CssClass="auto-style12" PageSize="5" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
-                                            <Columns>
+                                            <columns>
                                                 <asp:BoundField DataField="IdUsuario" HeaderText="IdUsuario" ReadOnly="True" SortExpression="IdUsuario" Visible="False" />
                                                 <asp:BoundField DataField="Documento" HeaderText="Documento" SortExpression="Documento" />
                                                 <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
@@ -105,13 +108,13 @@
                                                 <asp:BoundField DataField="Direccion" HeaderText="Direccion" SortExpression="Direccion" Visible="False" />
                                                 <asp:BoundField DataField="IdRol" HeaderText="IdRol" SortExpression="IdRol" Visible="False" />
                                                 <asp:CommandField ShowSelectButton="True" />
-                                            </Columns>
+                                            </columns>
                                         </asp:GridView>
                                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" DeleteCommand="DELETE FROM [Usuario] WHERE [IdUsuario] = @IdUsuario" InsertCommand="INSERT INTO [Usuario] ([Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol]) VALUES (@Documento, @Nombre, @Apellido, @Telefono, @Email, @Clave, @Ciudad, @Direccion, @IdRol)" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT [IdUsuario], [Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol] FROM [Usuario]" UpdateCommand="UPDATE [Usuario] SET [Documento] = @Documento, [Nombre] = @Nombre, [Apellido] = @Apellido, [Telefono] = @Telefono, [Email] = @Email, [Clave] = @Clave, [Ciudad] = @Ciudad, [Direccion] = @Direccion, [IdRol] = @IdRol WHERE [IdUsuario] = @IdUsuario">
-                                            <DeleteParameters>
+                                            <deleteparameters>
                                                 <asp:Parameter Name="IdUsuario" Type="Int32" />
-                                            </DeleteParameters>
-                                            <InsertParameters>
+                                            </deleteparameters>
+                                            <insertparameters>
                                                 <asp:Parameter Name="Documento" Type="String" />
                                                 <asp:Parameter Name="Nombre" Type="String" />
                                                 <asp:Parameter Name="Apellido" Type="String" />
@@ -121,8 +124,8 @@
                                                 <asp:Parameter Name="Ciudad" Type="String" />
                                                 <asp:Parameter Name="Direccion" Type="String" />
                                                 <asp:Parameter Name="IdRol" Type="Int32" />
-                                            </InsertParameters>
-                                            <UpdateParameters>
+                                            </insertparameters>
+                                            <updateparameters>
                                                 <asp:Parameter Name="Documento" Type="String" />
                                                 <asp:Parameter Name="Nombre" Type="String" />
                                                 <asp:Parameter Name="Apellido" Type="String" />
@@ -133,7 +136,7 @@
                                                 <asp:Parameter Name="Direccion" Type="String" />
                                                 <asp:Parameter Name="IdRol" Type="Int32" />
                                                 <asp:Parameter Name="IdUsuario" Type="Int32" />
-                                            </UpdateParameters>
+                                            </updateparameters>
                                         </asp:SqlDataSource>
 
                                         <asp:SqlDataSource ID="SqldsRoles" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT Rol.* FROM Rol"></asp:SqlDataSource>

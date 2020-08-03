@@ -184,7 +184,9 @@ optgroup {
 
 table {
     border-spacing: 0;
-    border-collapse: collapse
+    border-collapse: collapse;
+    height: 20px;
+    width: 372px;
 }
 
 td, th {
