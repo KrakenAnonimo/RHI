@@ -47,18 +47,18 @@ public partial class OrdenMttoC : System.Web.UI.Page
         fila = gvUsuarios.SelectedRow.RowIndex;
 
         //clase usuario
-        clUsuario objUsuario = new clUsuario();
+        clUsuarios objUsuarios = new clUsuarios();
 
-        objUsuario.IdUsuario = int.Parse(gvUsuarios.DataKeys[fila].Value.ToString());
-        objUsuario.Documento = gvUsuarios.SelectedRow.Cells[1].Text;
-        objUsuario.Nombre = gvUsuarios.SelectedRow.Cells[2].Text;
+        objUsuarios.IdUsuario = int.Parse(gvUsuarios.DataKeys[fila].Value.ToString());
+        objUsuarios.Documento = gvUsuarios.SelectedRow.Cells[1].Text;
+        objUsuarios.Nombre = gvUsuarios.SelectedRow.Cells[2].Text;
 
-        lista.Add(objUsuario);
+        lista.Add(objUsuarios);
         gvListaElegidos.DataSource = lista;
         gvListaElegidos.DataBind();
     }
 
-    static List<clUsuario> lista = new List<clUsuario>();
+    static List<clUsuarios> lista = new List<clUsuarios>();
 
     protected void btnGuardar_Click(object sender, EventArgs e)
     {
@@ -71,21 +71,24 @@ public partial class OrdenMttoC : System.Web.UI.Page
         objOrdenMttoCE.HoraFinal = txtHoraF.Text;
         objOrdenMttoCE.Ejecutado = cmbEjecucionOr.SelectedValue.ToString();
         objOrdenMttoCE.TrabajoIE = cmbTrabajoIE.SelectedValue.ToString();
+        objOrdenMttoCE.Revisado = cmbRevision.SelectedValue.ToString();
         objOrdenMttoCE.Observaciones = txtObservaciones.Text;
-        objOrdenMttoCE.IdOrdenMttoP = int.Parse(cmbOrdenMttoP.SelectedValue.ToString());
+        //objOrdenMttoCE.IdOrdenMttoP = int.Parse(cmbOrdenMttoP.SelectedValue.ToString());
 
+      
 
         // Guardar Usuarios
         // Ciclo por cada registro de usuarios en la orden
         for (int i = 0; i < gvListaElegidos.Rows.Count; i++)
         {
-            //Campos R
+            //Campos Registra
             int IdUsuario = int.Parse(gvListaElegidos.Rows[i].Cells[0].Text);
 
-            //Campos NR
+            //Campos No Registra
             int Documento = int.Parse(gvListaElegidos.Rows[i].Cells[1].Text);
             string Nombre = gvListaElegidos.Rows[i].Cells[2].Text;
 
+            //Consulta
             string sqlInsertUO = "INSERT INTO OrdenMttoCorrectivo (IdUsuario)" +
                 "VALUES('" + IdUsuario + "')";
             SqldsElegidos.InsertCommand = sqlInsertUO;
@@ -108,6 +111,7 @@ public partial class OrdenMttoC : System.Web.UI.Page
             txtFechaOF.Text = "";
             txtHoraF.Text = "";
             txtObservaciones.Text = "";
+            Response.Redirect("~/OrdenMttoC.aspx");
         }
     }
 
@@ -121,6 +125,7 @@ public partial class OrdenMttoC : System.Web.UI.Page
         txtFechaOF.Text = "";
         txtHoraF.Text = "";
         txtObservaciones.Text = "";
+        Response.Redirect("~/OrdenMttoC.aspx");
     }
 
     
@@ -128,7 +133,7 @@ public partial class OrdenMttoC : System.Web.UI.Page
    
   
 }
-public class clUsuario
+public class clUsuarios
 {
     //Atributos Tabla Usuarios
     public int IdUsuario { get; set; }

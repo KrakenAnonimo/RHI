@@ -43,8 +43,8 @@
 
         .auto-style11 {
             position: relative;
-            left: 259px;
-            top: 8px;
+            left: 114px;
+            top: 9px;
         }
 
         .auto-style12 {

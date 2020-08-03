@@ -8,11 +8,12 @@ using System.Web;
 /// Descripción breve de clOrdenMttoC
 /// </summary>
 public class clOrdenMttoC
-{//Metodo registrar OrdenMttoC
+{
+    //Metodo registrar OrdenMttoC
     public int mtdRegistrarOrdenMttoC(clOrdenMttoCE objOrdenMttoCE)
     {
-        string sqlInsert = "insert into OrdenMttoC(NumOrden,Disciplina,FechaInicio,HoraInicio,FechaFinal,HoraFianl,Ejecutado,TrabajoIE,Observaciones,Revisado,IdOrdenMttoP,IdUsuario)" +
-            "Values('" + objOrdenMttoCE.NumOrden + "','" + objOrdenMttoCE.Disciplina + "','" + objOrdenMttoCE.FechaInicio + "','" + objOrdenMttoCE.HoraInicio + "','" + objOrdenMttoCE.FechaFinal + "','" + objOrdenMttoCE.HoraFinal + "','" + objOrdenMttoCE.Ejecutado + "','" + objOrdenMttoCE.TrabajoIE + "'," + objOrdenMttoCE.Observaciones + "','" + objOrdenMttoCE.Revisado + "','" + objOrdenMttoCE.IdOrdenMttoP + "','" + objOrdenMttoCE.IdUsuario + "')";
+        string sqlInsert = "insert into OrdenMttoC(NumOrden,Disciplina,FechaInicio,HoraInicio,FechaFinal,HoraFinal,Ejecutado,TrabajoIE,Observaciones,Revisado,IdOrdenMttoP,IdUsuario)" +
+            "Values('" + objOrdenMttoCE.NumOrden + "','" + objOrdenMttoCE.Disciplina + "','" + objOrdenMttoCE.FechaInicio + "','" + objOrdenMttoCE.HoraInicio + "','" + objOrdenMttoCE.FechaFinal + "','" + objOrdenMttoCE.HoraFinal + "','" + objOrdenMttoCE.Ejecutado + "','" + objOrdenMttoCE.TrabajoIE + "','" + objOrdenMttoCE.Observaciones + "','" + objOrdenMttoCE.Revisado + "','" + objOrdenMttoCE.IdOrdenMttoP + "','" + objOrdenMttoCE.IdUsuario + "')";
 
 
         clMetodoCN objMtdCN = new clMetodoCN();
