@@ -16,11 +16,11 @@ public partial class Elemento : System.Web.UI.Page
         //Lista del Area
         List<clAreaE> listaArea = new List<clAreaE>();
 
-        //Clase Rol junto con el metodo listar
+        //Clase Area junto con el metodo listar
         clAreaL objAreaL = new clAreaL();
         listaArea = objAreaL.mtdListarArea();
 
-        //Carga de combo con datos rol
+        //Carga de combo con datos Area
         cmbArea.DataSource = listaArea;
         cmbArea.DataTextField = "Nombre";
         cmbArea.DataValueField = "IdArea";
@@ -35,8 +35,8 @@ public partial class Elemento : System.Web.UI.Page
         objElementoE.Estado = cmbEstado.Text;
         objElementoE.IdArea = int.Parse(cmbArea.SelectedValue.ToString());
 
-        clUsuario objUsuario = new clUsuario();
-        int resultsql = objUsuario.mtdRegistrarUsuario(objElementoE);
+        clElemento objElemento = new clElemento();
+        int resultsql = objElemento.mtdRegistrarElemento(objElementoE);
 
         if (resultsql > 0)
         {
