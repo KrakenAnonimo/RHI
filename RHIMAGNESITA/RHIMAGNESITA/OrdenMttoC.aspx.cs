@@ -29,6 +29,37 @@ public partial class OrdenMttoC : System.Web.UI.Page
         cmbOrdenMttoP.DataBind();
     }
 
+    //radio butons filtrados a roles
+    protected void RadioButtonList1_SelectedIndexChanged1(object sender, EventArgs e)
+    {
+        int idRol = int.Parse(RadioButtonList1.SelectedValue.ToString());
+        string consulta = "select * from Usuario where IdRol=" + idRol;
+        SqlDataSource1.SelectCommand = consulta;
+        gvUsuarios.DataSourceID = "SqlDataSource1";
+        gvUsuarios.DataBind();
+    }
+
+    int fila = 0;
+
+    protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        lblUsuario.Text = gvUsuarios.SelectedRow.Cells[1].Text + " " + gvUsuarios.SelectedRow.Cells[2].Text;
+        fila = gvUsuarios.SelectedRow.RowIndex;
+
+        //clase usuario
+        clUsuario objUsuario = new clUsuario();
+
+        objUsuario.IdUsuario = int.Parse(gvUsuarios.DataKeys[fila].Value.ToString());
+        objUsuario.Documento = gvUsuarios.SelectedRow.Cells[1].Text;
+        objUsuario.Nombre = gvUsuarios.SelectedRow.Cells[2].Text;
+
+        lista.Add(objUsuario);
+        gvListaElegidos.DataSource = lista;
+        gvListaElegidos.DataBind();
+    }
+
+    static List<clUsuario> lista = new List<clUsuario>();
+
     protected void btnGuardar_Click(object sender, EventArgs e)
     {
         clOrdenMttoCE objOrdenMttoCE = new clOrdenMttoCE();
@@ -41,7 +72,8 @@ public partial class OrdenMttoC : System.Web.UI.Page
         objOrdenMttoCE.Ejecutado = cmbEjecucionOr.SelectedValue.ToString();
         objOrdenMttoCE.TrabajoIE = cmbTrabajoIE.SelectedValue.ToString();
         objOrdenMttoCE.Observaciones = txtObservaciones.Text;
-        objOrdenMttoCE.Revisado = cmbRevision.SelectedValue.ToString();
+        objOrdenMttoCE.IdOrdenMttoP = int.Parse(cmbOrdenMttoP.SelectedValue.ToString());
+
 
         // Guardar Usuarios
         // Ciclo por cada registro de usuarios en la orden
@@ -56,8 +88,8 @@ public partial class OrdenMttoC : System.Web.UI.Page
 
             string sqlInsertUO = "INSERT INTO OrdenMttoCorrectivo (IdUsuario)" +
                 "VALUES('" + IdUsuario + "')";
-            SqlDataSource1.InsertCommand = sqlInsertUO;
-            int result = SqlDataSource1.Insert();
+            SqldsElegidos.InsertCommand = sqlInsertUO;
+            int result = SqldsElegidos.Insert();
         }
 
         clOrdenMttoC objOrdenMttoC = new clOrdenMttoC();
@@ -91,38 +123,10 @@ public partial class OrdenMttoC : System.Web.UI.Page
         txtObservaciones.Text = "";
     }
 
-    //radio butons filtrados a roles
+    
 
-
-
-    protected void RadioButtonList1_SelectedIndexChanged(object sender, EventArgs e)
-    {
-        int idRol = int.Parse(RadioButtonList1.SelectedValue.ToString());
-        string consulta = "select * from Usuario where IdRol=" + idRol;
-        SqlDataSource2.SelectCommand = consulta;
-        gvUsuarios.DataSourceID = "SqlDataSource2";
-        gvUsuarios.DataBind();
-    }
-    int fila = 0;
-
-    static List<clUsuario> lista = new List<clUsuario>();
-
-    protected void gvUsuarios_SelectedIndexChanged(object sender, EventArgs e)
-    {
-        lblUsuario.Text = gvUsuarios.SelectedRow.Cells[1].Text + " " + gvUsuarios.SelectedRow.Cells[2].Text;
-        fila = gvUsuarios.SelectedRow.RowIndex;
-
-        //clase usuario
-        clUsuario objUsuario = new clUsuario();
-
-        objUsuario.IdUsuario = int.Parse(gvUsuarios.DataKeys[fila].Value.ToString());
-        objUsuario.Documento = gvUsuarios.SelectedRow.Cells[1].Text;
-        objUsuario.Nombre = gvUsuarios.SelectedRow.Cells[2].Text;
-
-        lista.Add(objUsuario);
-        gvListaElegidos.DataSource = lista;
-        gvListaElegidos.DataBind();
-    }
+   
+  
 }
 public class clUsuario
 {

@@ -30,15 +30,15 @@
             margin-bottom: 15px;
             text-align: left;
             position: relative;
-            top: 3px;
-            left: 244px;
+            top: 6px;
+            left: -4px;
             width: 234px;
         }
 
         .auto-style10 {
             position: relative;
-            left: 371px;
-            top: -182px;
+            left: 458px;
+            top: -172px;
         }
 
         .auto-style11 {
@@ -49,8 +49,8 @@
 
         .auto-style12 {
             position: relative;
-            left: 99px;
-            top: 6px;
+            left: 36px;
+            top: 16px;
             height: 163px;
         }
     </style>
@@ -89,11 +89,10 @@
                                         <label for="selectSm" class="form-control-label">Asignar a:</label>
                                     </div>
                                     <div class="auto-style9">
-                                        <asp:RadioButton ID="rdbTecnico" runat="server" CssClass="auto-style11" OnSelectedIndexChanged="rblRoles_SelectedIndexChanged" OnCheckedChanged="rdbTecnico_CheckedChanged" Text="Tecnico" />
-                                        <asp:RadioButton ID="rdbSoldador" runat="server" CssClass="auto-style11" OnCheckedChanged="rdbSoldador_CheckedChanged" Text="Soldador" />
+                                        <asp:RadioButtonList ID="RadioButtonList1" runat="server" CssClass="auto-style11" DataSourceID="SqldsRoles" DataTextField="Rol" DataValueField="IdRol" AutoPostBack="True" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged1" RepeatDirection="Horizontal"></asp:RadioButtonList>
                                     </div>
                                     <div>
-                                        <asp:GridView ID="gvUsuarios" runat="server" AutoGenerateColumns="False" DataKeyNames="IdUsuario" DataSourceID="SqlDataSource2" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" CssClass="auto-style12" PageSize="5" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                                        <asp:GridView ID="gvUsuarios" runat="server" AutoGenerateColumns="False" DataKeyNames="IdUsuario" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" CssClass="auto-style12" PageSize="5" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                                             <Columns>
                                                 <asp:BoundField DataField="IdUsuario" HeaderText="IdUsuario" ReadOnly="True" SortExpression="IdUsuario" Visible="False" />
                                                 <asp:BoundField DataField="Documento" HeaderText="Documento" SortExpression="Documento" />
@@ -136,6 +135,14 @@
                                                 <asp:Parameter Name="IdUsuario" Type="Int32" />
                                             </UpdateParameters>
                                         </asp:SqlDataSource>
+
+                                        <asp:SqlDataSource ID="SqldsRoles" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT Rol.* FROM Rol"></asp:SqlDataSource>
+                                        <asp:SqlDataSource ID="SqldsElegidos" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>"></asp:SqlDataSource>
+                                    </div>
+                                    <div style="position: relative; top: -125px; left: 270px; width: 188px">
+                                        <asp:Label ID="lblQuien" runat="server" Text="Usuario Seleccionado: "></asp:Label>
+                                        <br />
+                                        <asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
                                     </div>
                                     <div class="text-center">
                                         <asp:GridView ID="gvListaElegidos" runat="server" CssClass="auto-style10"></asp:GridView>
