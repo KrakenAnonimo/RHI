@@ -15,7 +15,7 @@ public partial class OrdenMttoC : System.Web.UI.Page
     }
     protected void Page_Init(object sender, EventArgs e)
     {
-        //Listados del combo
+        //Lista del combo
         List<clOrdenMttoPE> ListaOrdenMttoP = new List<clOrdenMttoPE>();
 
         //Clase con su metodo
@@ -25,7 +25,7 @@ public partial class OrdenMttoC : System.Web.UI.Page
         //Carga de combo con sus datos
         cmbOrdenMttoP.DataSource = ListaOrdenMttoP;
         cmbOrdenMttoP.DataTextField = "NumOrden";
-        cmbOrdenMttoP.DataValueField = "IdOrdenMttoC";
+        cmbOrdenMttoP.DataValueField = "IdOrdenMttoP";
         cmbOrdenMttoP.DataBind();
     }
 
@@ -73,7 +73,7 @@ public partial class OrdenMttoC : System.Web.UI.Page
         objOrdenMttoCE.TrabajoIE = cmbTrabajoIE.SelectedValue.ToString();
         objOrdenMttoCE.Revisado = cmbRevision.SelectedValue.ToString();
         objOrdenMttoCE.Observaciones = txtObservaciones.Text;
-        //objOrdenMttoCE.IdOrdenMttoP = int.Parse(cmbOrdenMttoP.SelectedValue.ToString());
+        objOrdenMttoCE.IdOrdenMttoP = int.Parse(cmbOrdenMttoP.SelectedValue.ToString());
 
       
 

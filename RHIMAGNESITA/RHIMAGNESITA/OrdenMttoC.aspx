@@ -82,8 +82,7 @@
                                         <label for="selectSm" class="form-control-label">Orden de Mtto Preventivo</label>
                                     </div>
                                     <div class="text-center">
-                                        <asp:DropDownList ID="cmbOrdenMttoP" runat="server" CssClass="auto-style8">
-                                            <asp:ListItem>No Aplica</asp:ListItem>
+                                        <asp:DropDownList ID="cmbOrdenMttoP" runat="server" CssClass="auto-style8" >
                                         </asp:DropDownList>
                                     </div>
                                 </div>
@@ -140,7 +139,9 @@
                                         </asp:SqlDataSource>
 
                                         <asp:SqlDataSource ID="SqldsRoles" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT Rol.* FROM Rol"></asp:SqlDataSource>
+
                                         <asp:SqlDataSource ID="SqldsElegidos" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>"></asp:SqlDataSource>
+
                                     </div>
                                     <div style="position: relative; top: -125px; left: 270px; width: 188px">
                                         <asp:Label ID="lblQuien" runat="server" Text="Usuario Seleccionado: "></asp:Label>
