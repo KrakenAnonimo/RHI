@@ -12,8 +12,8 @@ public class clOrdenMttoP
     //Metodo registrar OrdenMttoP
     public int mtdRegistrarOrdenMttoP(clOrdenMttoPE objOrdenMttoPE)
     {
-        string sqlInsert = "insert into OrdenMttoP(NumOrden,Disciplina,FechaInicio,HoraInicio,FechaFinal,HoraFianl,Ejecutado,TrabajoIE,Observaciones,Revisado,IdPlanificacion,IdReporteAS,IdUsuario)" +
-            "Values('" + objOrdenMttoPE.NumOrden + "','" + objOrdenMttoPE.Disciplina + "','" + objOrdenMttoPE.FechaInicio + "','" + objOrdenMttoPE.HoraInicio + "','" + objOrdenMttoPE.FechaFinal + "','" + objOrdenMttoPE.HoraFinal + "','" + objOrdenMttoPE.Ejecutado + "','" + objOrdenMttoPE.TrabajoIE + "'," + objOrdenMttoPE.Observaciones + "','" + objOrdenMttoPE.Revisado + "','" + objOrdenMttoPE.IdPlanificacion + "','" + objOrdenMttoPE.IdReporteAS + "','" + objOrdenMttoPE.IdUsuario + "')";
+        string sqlInsert = "insert into OrdenMttoPreventivo(NumOrden,Disciplina,FechaInicio,HoraInicio,FechaFinal,HoraFianl,Ejecutado,TrabajoIE,Observaciones,Revisado,IdPlanificacion,IdReporteAS,IdUsuario)" +
+            "Values('" + objOrdenMttoPE.NumOrden + "','" + objOrdenMttoPE.Disciplina + "','" + objOrdenMttoPE.FechaInicio + "','" + objOrdenMttoPE.HoraInicio + "','" + objOrdenMttoPE.FechaFinal + "','" + objOrdenMttoPE.HoraFinal + "','" + objOrdenMttoPE.Ejecutado + "','" + objOrdenMttoPE.TrabajoIE + "','" + objOrdenMttoPE.Observaciones + "','" + objOrdenMttoPE.Revisado + "','" + objOrdenMttoPE.IdPlanificacion + "','" + objOrdenMttoPE.IdReporteAS + "','" + objOrdenMttoPE.IdUsuario + "')";
 
 
         clMetodoCN objMtdCN = new clMetodoCN();
@@ -26,7 +26,7 @@ public class clOrdenMttoP
     //Metodo Eliminar OrdenMttoP
     public int mtdEliminarOrdenMttoP(clOrdenMttoPE objDatos)
     {
-        string consulta = "Delete from OrdenMttoP where NumOrden = '" + objDatos.NumOrden + "')";
+        string consulta = "Delete from OrdenMttoPreventivo where NumOrden = '" + objDatos.NumOrden + "')";
         clMetodoCN objMtdCN = new clMetodoCN();
         int result = objMtdCN.mtdConectado(consulta);
 
@@ -36,7 +36,7 @@ public class clOrdenMttoP
     //Metodo Listar OrdenMttoP
     public List<clOrdenMttoPE> mtdListarOrdenMttoP()
     {
-        string consulta = "select * from OrdenMttoP";
+        string consulta = "select * from OrdenMttoPreventivo";
         clMetodoCN objMtdCN = new clMetodoCN();
         DataTable tblDatos = new DataTable();
         tblDatos = objMtdCN.mtdDesconectado(consulta);
@@ -45,7 +45,7 @@ public class clOrdenMttoP
         for (int i = 0; i < tblDatos.Rows.Count; i++)
         {
             clOrdenMttoPE objPasDatos = new clOrdenMttoPE();
-            objPasDatos.IdUsuario = int.Parse(tblDatos.Rows[i][0].ToString());
+            objPasDatos.IdOrdenMttoP = int.Parse(tblDatos.Rows[i][0].ToString());
             objPasDatos.NumOrden = tblDatos.Rows[i][1].ToString();
             objPasDatos.Disciplina = tblDatos.Rows[i][2].ToString();
             objPasDatos.FechaInicio = tblDatos.Rows[i][3].ToString();
@@ -67,7 +67,7 @@ public class clOrdenMttoP
     //Metodo Actualizar OrdenMttoP
     public int mtdActualizarOrdenMttoP(clOrdenMttoPE objOrdenMttoPE)
     {
-        string consulta = "Update OrdenMttoP set NumOrden = '" + objOrdenMttoPE.NumOrden + "','" + objOrdenMttoPE.Disciplina + "','" + objOrdenMttoPE.FechaInicio + "','" + objOrdenMttoPE.HoraInicio + "','" + objOrdenMttoPE.FechaFinal + "','" + objOrdenMttoPE.HoraFinal + "','" + objOrdenMttoPE.Ejecutado + "','" + objOrdenMttoPE.TrabajoIE + "'," + objOrdenMttoPE.Observaciones + "','" + objOrdenMttoPE.Revisado + "','" + objOrdenMttoPE.IdPlanificacion + "','" + objOrdenMttoPE.IdReporteAS + "','" + objOrdenMttoPE.IdUsuario + "')";
+        string consulta = "Update OrdenMttoPreventivo set NumOrden = '" + objOrdenMttoPE.NumOrden + "','" + objOrdenMttoPE.Disciplina + "','" + objOrdenMttoPE.FechaInicio + "','" + objOrdenMttoPE.HoraInicio + "','" + objOrdenMttoPE.FechaFinal + "','" + objOrdenMttoPE.HoraFinal + "','" + objOrdenMttoPE.Ejecutado + "','" + objOrdenMttoPE.TrabajoIE + "'," + objOrdenMttoPE.Observaciones + "','" + objOrdenMttoPE.Revisado + "','" + objOrdenMttoPE.IdPlanificacion + "','" + objOrdenMttoPE.IdReporteAS + "','" + objOrdenMttoPE.IdUsuario + "')";
         clMetodoCN objMtdCN = new clMetodoCN();
         int regis = objMtdCN.mtdConectado(consulta);
         return regis;
