@@ -37,8 +37,8 @@
 
         .auto-style10 {
             position: relative;
-            left: 458px;
-            top: -172px;
+            left: 427px;
+            top: -136px;
         }
 
         .auto-style11 {
@@ -55,6 +55,12 @@
             left: 36px;
             top: 16px;
             height: 163px;
+        }
+        .auto-style13 {
+            position: relative;
+            top: -152px;
+            left: 429px;
+            width: 188px;
         }
     </style>
 </asp:Content>
@@ -143,7 +149,7 @@
                                         <asp:SqlDataSource ID="SqldsElegidos" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>"></asp:SqlDataSource>
 
                                     </div>
-                                    <div style="position: relative; top: -125px; left: 270px; width: 188px">
+                                    <div class="auto-style13">
                                         <asp:Label ID="lblQuien" runat="server" Text="Usuario Seleccionado: "></asp:Label>
                                         <br />
                                         <asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
