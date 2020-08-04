@@ -143,7 +143,7 @@
                                         <asp:SqlDataSource ID="SqldsElegidos" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>"></asp:SqlDataSource>
 
                                     </div>
-                                    <div style="position: relative; top: -136px; left: 219px; width: 188px">
+                                    <div style="position: relative; top: -136px; left: 233px; width: 188px">
                                         <asp:Label ID="lblQuien" runat="server" Text="Usuario Seleccionado: "></asp:Label>
                                         <br />
                                         <asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
