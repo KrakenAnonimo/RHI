@@ -13,8 +13,8 @@ public class clPlanificacion
     //Metodo registrar Planificacion
     public int mtdRegistrarPlanificacion(clPlanificacionE objPlanificacionE)
     {
-        string sqlInsert = "insert into Planificacion(FechaPlanificacion,Observaciones,IdElemento)" +
-            "Values('" + objPlanificacionE.FechaPlanificacion + "','" + objPlanificacionE.Observaciones + "','" + objPlanificacionE.
+        string sqlInsert = "insert into Planificacion(FechaPlanificacion,Observaciones,Estado,IdElemento)" +
+            "Values('" + objPlanificacionE.FechaPlanificacion + "','" + objPlanificacionE.Observaciones + "','" + objPlanificacionE.Estado + "','" + objPlanificacionE.
             IdElemento + "')";
 
         clMetodoCN objMtdCN = new clMetodoCN();
@@ -47,7 +47,8 @@ public class clPlanificacion
             objPasDatos.IdPlanificacion = int.Parse(tblDatos.Rows[i][0].ToString());
             objPasDatos.FechaPlanificacion = tblDatos.Rows[i][1].ToString();
             objPasDatos.Observaciones = tblDatos.Rows[i][2].ToString();
-            objPasDatos.IdElemento = int.Parse(tblDatos.Rows[i][3].ToString());
+            objPasDatos.Estado = tblDatos.Rows[i][3].ToString();
+            objPasDatos.IdElemento = int.Parse(tblDatos.Rows[i][4].ToString());
             ListaPlanificacion.Add(objPasDatos);
         }
         return ListaPlanificacion;
@@ -56,10 +57,12 @@ public class clPlanificacion
     //Metodo Actualizar Planificacion
     public int mtdActualizarPlanificacion(clPlanificacionE objDatos)
     {
-        string consulta = "Update Planificacion set FechaPlanificacion = '" + objDatos.FechaPlanificacion + "','" + objDatos.Observaciones + "','" + objDatos.
+        string consulta = "Update Planificacion set FechaPlanificacion = '" + objDatos.FechaPlanificacion + "','" + objDatos.Observaciones + "','"+ objDatos.Estado +"','" + objDatos.
             IdElemento + "')";
         clMetodoCN objMtdCN = new clMetodoCN();
         int regis = objMtdCN.mtdConectado(consulta);
         return regis;
     }
+
+
 }

@@ -33,7 +33,7 @@ public class clMetodoCN
         objConex.Open();
         SqlDataAdapter adaptador = new SqlDataAdapter(consulta, objConex);
         DataTable tblDatos = new DataTable();
-        //adaptador.Fill(tblDatos);
+        adaptador.Fill(tblDatos);
         objConex.Close();
         return tblDatos;
 
