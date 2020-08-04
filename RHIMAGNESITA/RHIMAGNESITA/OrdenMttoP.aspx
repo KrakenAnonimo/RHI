@@ -90,70 +90,6 @@
                                         </asp:DropDownList>
                                     </div>
                                 </div>
-                                <div class="auto-style3">
-                                    <label for="NumOrdenP" class=" form-control-label">Numero de la orden</label>
-                                    <asp:TextBox ID="txtNumOrdenP" runat="server" placeholder="Numero de la Orden del Mtto Preventivo" class="form-control" TextMode="Number"></asp:TextBox>
-                                </div>
-                                <div class="auto-style3">
-                                    <label for="Disciplina" class=" form-control-label">Disciplina</label>
-                                    <asp:TextBox ID="txtDisciplina" runat="server" placeholder="Disciplina" class="form-control" TextMode="SingleLine"></asp:TextBox>
-                                </div>
-                                <div class="auto-style3">
-                                    <label for="FechaOI" class=" form-control-label">Fecha Inicial</label>
-                                    <asp:TextBox ID="txtFechaOI" runat="server" placeholder="Fecha inicial del reporte" class="form-control" TextMode="Date"></asp:TextBox>
-                                </div>
-                                <div class="auto-style3">
-                                    <label for="HoraI" class=" form-control-label">Hora Inicial</label>
-                                    <asp:TextBox ID="txtHoraI" runat="server" placeholder="Duracion" class="form-control" TextMode="Time"></asp:TextBox>
-                                </div>
-                                <div class="auto-style3">
-                                    <label for="FechaOF" class=" form-control-label">Fecha Final</label>
-                                    <asp:TextBox ID="txtFechaOF" runat="server" placeholder="Fecha Final del reporte" class="form-control" TextMode="Date"></asp:TextBox>
-                                </div>
-                                <div class="auto-style3">
-                                    <label for="HoraF" class=" form-control-label">Hora Final</label>
-                                    <asp:TextBox ID="txtHoraF" runat="server" placeholder="Duracion" class="form-control" TextMode="Time"></asp:TextBox>
-                                </div>
-                                <div class="row form-group">
-                                    <div class="text-center">
-                                        <label for="selectSm" class=" form-control-label">Ejecucion de la Orden</label>
-                                    </div>
-                                    <div class="text-center">
-                                        <asp:DropDownList ID="cmbEjecucionOr" runat="server" class="form-control-sm form-control" Style="width: 97%; position: relative; left: 9px; top: 0px">
-                                            <asp:ListItem>Sin Ejecutar</asp:ListItem>
-                                        </asp:DropDownList>
-                                    </div>
-                                </div>
-                                <div class="row form-group">
-                                    <div class="text-center">
-                                        <label for="TrabajoIE" class=" form-control-label">Trabajo IE</label>
-                                    </div>
-                                    <div class="text-center">
-                                        <asp:DropDownList ID="cmbTrabajoIE" runat="server" class="form-control-sm form-control" Style="width: 97%; position: relative; left: 9px; top: 0px">
-                                            <asp:ListItem>Interno</asp:ListItem>
-                                            <asp:ListItem>Externo</asp:ListItem>
-                                        </asp:DropDownList>
-                                    </div>
-                                </div>
-                                <div class="row form-group">
-                                    <div class="text-center">
-                                        <label for="textarea-input" class=" form-control-label">Observaciones</label>
-                                    </div>
-                                    <div class="text-center" style="width: 97%; position: relative; left: 9px; top: 0px">
-                                        <asp:TextBox ID="txtObservaciones" runat="server" Rows="9" placeholder="Observaciones..." class="form-control" TextMode="MultiLine"></asp:TextBox>
-                                    </div>
-                                </div>
-                                <div class="row form-group">
-                                    <div class="text-center">
-                                        <label for="Revisado" class=" form-control-label">Revisado por:</label>
-                                    </div>
-                                    <div class="text-center">
-                                        <asp:DropDownList ID="cmbRevisado" runat="server" class="form-control-sm form-control" Style="width: 97%; position: relative; left: 9px; top: 0px">
-                                            <asp:ListItem>Supervisor</asp:ListItem>
-                                            <asp:ListItem>Planificador</asp:ListItem>
-                                        </asp:DropDownList>
-                                    </div>
-                                </div>
                                 <div class="row form-group">
                                     <div class="text-center">
                                         <label for="selectSm" class="form-control-label">Planificacion</label>
@@ -252,6 +188,70 @@
                                         <asp:GridView ID="gvListaElegidos" runat="server" CssClass="auto-style10"></asp:GridView>
                                     </div>
                                 </div>
+                                <div class="auto-style3">
+                                    <label for="NumOrdenP" class=" form-control-label">Numero de la orden</label>
+                                    <asp:TextBox ID="txtNumOrdenP" runat="server" placeholder="Numero de la Orden del Mtto Preventivo" class="form-control" TextMode="Number"></asp:TextBox>
+                                </div>
+                                <div class="auto-style3">
+                                    <label for="Disciplina" class=" form-control-label">Disciplina</label>
+                                    <asp:TextBox ID="txtDisciplina" runat="server" placeholder="Disciplina" class="form-control" TextMode="SingleLine"></asp:TextBox>
+                                </div>
+                                <div class="auto-style3">
+                                    <label for="FechaOI" class=" form-control-label">Fecha Inicial</label>
+                                    <asp:TextBox ID="txtFechaOI" runat="server" placeholder="Fecha inicial del reporte" class="form-control" TextMode="Date"></asp:TextBox>
+                                </div>
+                                <div class="auto-style3">
+                                    <label for="HoraI" class=" form-control-label">Hora Inicial</label>
+                                    <asp:TextBox ID="txtHoraI" runat="server" placeholder="Duracion" class="form-control" TextMode="Time"></asp:TextBox>
+                                </div>
+                                <div class="auto-style3">
+                                    <label for="FechaOF" class=" form-control-label">Fecha Final</label>
+                                    <asp:TextBox ID="txtFechaOF" runat="server" placeholder="Fecha Final del reporte" class="form-control" TextMode="Date"></asp:TextBox>
+                                </div>
+                                <div class="auto-style3">
+                                    <label for="HoraF" class=" form-control-label">Hora Final</label>
+                                    <asp:TextBox ID="txtHoraF" runat="server" placeholder="Duracion" class="form-control" TextMode="Time"></asp:TextBox>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="text-center">
+                                        <label for="selectSm" class=" form-control-label">Ejecucion de la Orden</label>
+                                    </div>
+                                    <div class="text-center">
+                                        <asp:DropDownList ID="cmbEjecucionOr" runat="server" class="form-control-sm form-control" Style="width: 97%; position: relative; left: 9px; top: 0px">
+                                            <asp:ListItem>Sin Ejecutar</asp:ListItem>
+                                        </asp:DropDownList>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="text-center">
+                                        <label for="TrabajoIE" class=" form-control-label">Trabajo IE</label>
+                                    </div>
+                                    <div class="text-center">
+                                        <asp:DropDownList ID="cmbTrabajoIE" runat="server" class="form-control-sm form-control" Style="width: 97%; position: relative; left: 9px; top: 0px">
+                                            <asp:ListItem>Interno</asp:ListItem>
+                                            <asp:ListItem>Externo</asp:ListItem>
+                                        </asp:DropDownList>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="text-center">
+                                        <label for="textarea-input" class=" form-control-label">Observaciones</label>
+                                    </div>
+                                    <div class="text-center" style="width: 97%; position: relative; left: 9px; top: 0px">
+                                        <asp:TextBox ID="txtObservaciones" runat="server" Rows="9" placeholder="Observaciones..." class="form-control" TextMode="MultiLine"></asp:TextBox>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="text-center">
+                                        <label for="Revisado" class=" form-control-label">Revisado por:</label>
+                                    </div>
+                                    <div class="text-center">
+                                        <asp:DropDownList ID="cmbRevisado" runat="server" class="form-control-sm form-control" Style="width: 97%; position: relative; left: 9px; top: 0px">
+                                            <asp:ListItem>Supervisor</asp:ListItem>
+                                            <asp:ListItem>Planificador</asp:ListItem>
+                                        </asp:DropDownList>
+                                    </div>
+                                </div>                                
                                 <div>
                                     <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" OnClick="btnGuardar_Click" />
                                     <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar Todo" class="btn btn-danger btn-sm" OnClick="btnLimpiar_Click" />

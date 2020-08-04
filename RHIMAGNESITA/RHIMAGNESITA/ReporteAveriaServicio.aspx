@@ -37,14 +37,31 @@
                             <br />
                             <br />
                             <div class="card-body card-block">
+                                <div class="row form-group">
+                                    <div class="text-center">
+                                        <label for="selectSm" class="form-control-label">Elemento</label>
+                                    </div>
+                                    <div class="text-center">
+                                        <asp:DropDownList ID="cmbElemento" runat="server" CssClass="auto-style8">
+                                        </asp:DropDownList>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="text-center">
+                                        <label for="selectSm" class="form-control-label">Usuario</label>
+                                    </div>
+                                    <div class="text-center">
+                                        <asp:DropDownList ID="cmbUsuario" runat="server" CssClass="auto-style8">
+                                        </asp:DropDownList>
+                                    </div>
+                                </div> 
                                 <div class="form-group">
                                     <label for="NumReporte" class=" form-control-label">Numero Reporte</label>
                                     <asp:TextBox ID="txtNumReporte" runat="server" placeholder="Numero del Reporte" class="form-control" TextMode="Number"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
                                     <label for="Titulo" class=" form-control-label">Titulo</label>
-                                    <asp:TextBox ID="txtTitulo" runat="server" placeholder="Titulo" class="form-control" TextMode="SingleLine"></asp:TextBox>
-                                    <input type="text" id="Titulo" placeholder="Titulo" class="form-control">
+                                    <asp:TextBox ID="txtTitulo" runat="server" placeholder="Titulo" class="form-control" TextMode="SingleLine"></asp:TextBox>                                    
                                 </div>
                                 <div class="row form-group">
                                     <div class="text-center">
@@ -57,28 +74,10 @@
                                 <div class="form-group">
                                     <label for="FechaReporte" class=" form-control-label">Fecha Reporte</label>
                                     <asp:TextBox ID="txtFechaReporte" runat="server" placeholder="Fecha del Reporte" class="form-control" TextMode="Date"></asp:TextBox>
-                                </div>
-                                <div class="row form-group">
-                                    <div class="text-center">
-                                        <label for="selectSm" class="form-control-label">Usuario</label>
-                                    </div>
-                                    <div class="text-center">
-                                        <asp:DropDownList ID="cmbUsuario" runat="server" CssClass="auto-style8">
-                                        </asp:DropDownList>
-                                    </div>
-                                </div>
-                                <div class="row form-group">
-                                    <div class="text-center">
-                                        <label for="selectSm" class="form-control-label">Elemento</label>
-                                    </div>
-                                    <div class="text-center">
-                                        <asp:DropDownList ID="cmbElemento" runat="server" CssClass="auto-style8">
-                                        </asp:DropDownList>
-                                    </div>
-                                </div>
+                                </div>                                                              
                                 <div>
-                                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" />
-                                    <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar Todo" class="btn btn-danger btn-sm" />
+                                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" OnClick="btnGuardar_Click" />
+                                    <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar Todo" class="btn btn-danger btn-sm" OnClick="btnLimpiar_Click" />
                                 </div>
                             </div>
                         </div>
