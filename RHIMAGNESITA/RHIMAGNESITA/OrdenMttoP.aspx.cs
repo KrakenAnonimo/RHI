@@ -42,7 +42,7 @@ public partial class OrdenMttoP : System.Web.UI.Page
         objOrdenMttoPE.NumOrden = txtNumOrdenP.Text;
         objOrdenMttoPE.Disciplina = txtDisciplina.Text;
         objOrdenMttoPE.FechaInicio = txtFechaOI.Text;
-        objOrdenMttoPE.HoraInicio = txtHoraI.Text;  
+        objOrdenMttoPE.HoraInicio = txtHoraI.Text;
         objOrdenMttoPE.FechaFinal = txtFechaOF.Text;
         objOrdenMttoPE.HoraFinal = txtHoraF.Text;
         objOrdenMttoPE.Ejecutado = cmbEjecucionOr.SelectedValue.ToString();

@@ -33,14 +33,14 @@
 
         .auto-style10 {
             position: relative;
-            left: 382px;
-            top: -172px;
+            left: 410px;
+            top: -160px;
         }
 
         .auto-style11 {
             position: relative;
-            left: 259px;
-            top: 8px;
+            left: 214px;
+            top: 9px;
         }
 
         .auto-style13 {
@@ -53,8 +53,8 @@
 
         .auto-style15 {
             position: relative;
-            left: 135px;
-            top: 14px;
+            left: 53px;
+            top: 4px;
         }
 
         .auto-style16 {
