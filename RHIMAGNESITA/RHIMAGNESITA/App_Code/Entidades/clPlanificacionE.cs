@@ -12,5 +12,6 @@ public class clPlanificacionE
     public int IdPlanificacion { get; set; }
     public string FechaPlanificacion { get; set; }
     public string Observaciones { get; set; }
+    public string Estado { get; set; }
     public int IdElemento { get; set; }
 }

@@ -21,9 +21,7 @@
             top: 1px;
         }
         .auto-style9 {
-            position: absolute;
-            left: 150px;
-            top: 101px;
+            margin-left: 131px;
         }
     </style>
 </asp:Content>
@@ -46,55 +44,8 @@
                                     <div class="text-center">
                                         <label for="selectSm" class="form-control-label">Elemento</label>
                                     </div>
-                                    <!-- <div class="text-center">
-                                        <asp:DropDownList ID="cmbElemento" runat="server" CssClass="auto-style8">
-                                        </asp:DropDownList>
-                                    </div> -->
                                 </div>
                                 <br />
-                                <div class="text-left">
-                                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="IdElemento" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." CssClass="auto-style9">
-                                        <columns>
-                                             <asp:CommandField ShowSelectButton="True" />
-                                             <asp:BoundField DataField="IdElemento" HeaderText="IdElemento" ReadOnly="True" SortExpression="IdElemento" Visible="False" />
-                                             <asp:BoundField DataField="Codigo" HeaderText="Codigo" SortExpression="Codigo" />
-                                             <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
-                                             <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" Visible="False" />
-                                             <asp:BoundField DataField="Estado" HeaderText="Estado" SortExpression="Estado" />
-                                             <asp:BoundField DataField="IdArea" HeaderText="IdArea" SortExpression="IdArea" />
-                                         </columns>
-                                        <footerstyle backcolor="White" forecolor="#000066" />
-                                        <headerstyle backcolor="#006699" font-bold="True" forecolor="White" />
-                                        <pagerstyle backcolor="White" forecolor="#000066" horizontalalign="Left" />
-                                        <rowstyle forecolor="#000066" />
-                                        <selectedrowstyle backcolor="#669999" font-bold="True" forecolor="White" />
-                                        <sortedascendingcellstyle backcolor="#F1F1F1" />
-                                        <sortedascendingheaderstyle backcolor="#007DBB" />
-                                        <sorteddescendingcellstyle backcolor="#CAC9C9" />
-                                        <sorteddescendingheaderstyle backcolor="#00547E" />
-                                    </asp:GridView>
-                                </div>
-                                <br />
-                                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" DeleteCommand="DELETE FROM [Elemento] WHERE [IdElemento] = @IdElemento" InsertCommand="INSERT INTO [Elemento] ([Codigo], [Nombre], [Descripcion], [Estado], [IdArea]) VALUES (@Codigo, @Nombre, @Descripcion, @Estado, @IdArea)" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT [IdElemento], [Codigo], [Nombre], [Descripcion], [Estado], [IdArea] FROM [Elemento]" UpdateCommand="UPDATE [Elemento] SET [Codigo] = @Codigo, [Nombre] = @Nombre, [Descripcion] = @Descripcion, [Estado] = @Estado, [IdArea] = @IdArea WHERE [IdElemento] = @IdElemento">
-                                    <deleteparameters>
-                                         <asp:Parameter Name="IdElemento" Type="Int32" />
-                                     </deleteparameters>
-                                    <insertparameters>
-                                         <asp:Parameter Name="Codigo" Type="String" />
-                                         <asp:Parameter Name="Nombre" Type="String" />
-                                         <asp:Parameter Name="Descripcion" Type="String" />
-                                         <asp:Parameter Name="Estado" Type="String" />
-                                         <asp:Parameter Name="IdArea" Type="Int32" />
-                                     </insertparameters>
-                                    <updateparameters>
-                                         <asp:Parameter Name="Codigo" Type="String" />
-                                         <asp:Parameter Name="Nombre" Type="String" />
-                                         <asp:Parameter Name="Descripcion" Type="String" />
-                                         <asp:Parameter Name="Estado" Type="String" />
-                                         <asp:Parameter Name="IdArea" Type="Int32" />
-                                         <asp:Parameter Name="IdElemento" Type="Int32" />
-                                     </updateparameters>
-                                </asp:SqlDataSource>
                                 <br />
                                 <br />
                                 <br />
@@ -122,19 +73,9 @@
                                         </asp:DropDownList>
                                     </div>
                                 </div>
+                                <br />
                                 <div class="row form-group">
-                                    <div class="text-center">
-                                        <label for="selectSm" class="form-control-label">Revisado por:</label>
-                                        &nbsp;
-                                    </div>
-                                    <div class="text-left">
-                                        <asp:CheckBoxList ID="chxblRoles" runat="server" AutoPostBack="True" RepeatDirection="Horizontal" CssClass="auto-style11" Height="16px" style="margin-left: 210px" Width="321px">
-                                            <asp:ListItem>Supervisor</asp:ListItem>
-                                            <asp:ListItem>Planificador</asp:ListItem>
-                                        </asp:CheckBoxList>
-                                    </div>
                                     <div>
-                                        <br />
                                         <br />
                                         <div>
                                             <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" OnClick="btnGuardar_Click" />

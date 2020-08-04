@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -13,29 +14,40 @@ public partial class Planificacion : System.Web.UI.Page
     }
     protected void Page_Init(object sender, EventArgs e)
     {
-        //Lista del Rol
-        List<clElementoE> listaElemento = new List<clElementoE>();
+        //Listado de Elemento
+        //List<clElementoE> listaElemento = new List<clElementoE>();
+      
+       
 
         //Clase Rol junto con el metodo listar
-        clElementoL objElementoL = new clElementoL();
-        listaElemento = objElementoL.mtdListarElemento();
+        //clElementoL objElementoL = new clElementoL();
+        //listaElemento = objElementoL.mtdListarElemento();
 
-        //Carga de combo con datos rol
-        cmbElemento.DataSource = listaElemento;
-        cmbElemento.DataTextField = "Nombre";
-        cmbElemento.DataValueField = "IdElemento";
-        cmbElemento.DataBind();
+   
+
+
+        //Carga de combo con datos 
+        //cmbElemento.DataSource = listaElemento;
+        //cmbElemento.DataTextField = "Nombre";
+        //cmbElemento.DataValueField = "IdElemento";
+        //cmbElemento.DataBind();
+
     }
 
     protected void btnGuardar_Click(object sender, EventArgs e)
     {
+
+       
+
         clPlanificacionE objPlanificacionE = new clPlanificacionE();
         objPlanificacionE.FechaPlanificacion = txtFechaP.Text;
         objPlanificacionE.Observaciones = txtObservaciones.Text;
+        objPlanificacionE.Estado = cmbEstado.SelectedValue.ToString();
         objPlanificacionE.IdElemento = int.Parse(cmbElemento.SelectedValue.ToString());
 
         clPlanificacion objPlanificacion = new clPlanificacion();
         int resultsql = objPlanificacion.mtdRegistrarPlanificacion(objPlanificacionE);
+
 
         if (resultsql > 0)
         {
@@ -56,4 +68,5 @@ public partial class Planificacion : System.Web.UI.Page
         txtFechaP.Text = "";
         txtObservaciones.Text = "";
     }
+
 }
