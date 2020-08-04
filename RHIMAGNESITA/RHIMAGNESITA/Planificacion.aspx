@@ -20,8 +20,8 @@
             left: 0px;
             top: 1px;
         }
-        .auto-style9 {
-            margin-left: 131px;
+        .auto-style10 {
+            margin-left: 156px;
         }
     </style>
 </asp:Content>
@@ -46,6 +46,46 @@
                                     </div>
                                 </div>
                                 <br />
+                                <asp:GridView ID="gvElement" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" CssClass="auto-style10" DataKeyNames="IdElemento" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." OnSelectedIndexChanged="gvElement_SelectedIndexChanged">
+                                    <Columns>
+                                        <asp:CommandField ShowSelectButton="True" />
+                                        <asp:BoundField DataField="IdElemento" HeaderText="IdElemento" ReadOnly="True" SortExpression="IdElemento" Visible="False" />
+                                        <asp:BoundField DataField="Codigo" HeaderText="Codigo" SortExpression="Codigo" />
+                                        <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                                        <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" Visible="False" />
+                                        <asp:BoundField DataField="Estado" HeaderText="Estado" SortExpression="Estado" />
+                                        <asp:BoundField DataField="IdArea" HeaderText="IdArea" SortExpression="IdArea" />
+                                    </Columns>
+                                    <FooterStyle BackColor="White" ForeColor="#000066" />
+                                    <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
+                                    <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
+                                    <RowStyle ForeColor="#000066" />
+                                    <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+                                    <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                                    <SortedAscendingHeaderStyle BackColor="#007DBB" />
+                                    <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                                    <SortedDescendingHeaderStyle BackColor="#00547E" />
+                                </asp:GridView>
+                                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" DeleteCommand="DELETE FROM [Elemento] WHERE [IdElemento] = @IdElemento" InsertCommand="INSERT INTO [Elemento] ([Codigo], [Nombre], [Descripcion], [Estado], [IdArea]) VALUES (@Codigo, @Nombre, @Descripcion, @Estado, @IdArea)" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT [IdElemento], [Codigo], [Nombre], [Descripcion], [Estado], [IdArea] FROM [Elemento]" UpdateCommand="UPDATE [Elemento] SET [Codigo] = @Codigo, [Nombre] = @Nombre, [Descripcion] = @Descripcion, [Estado] = @Estado, [IdArea] = @IdArea WHERE [IdElemento] = @IdElemento">
+                                    <DeleteParameters>
+                                        <asp:Parameter Name="IdElemento" Type="Int32" />
+                                    </DeleteParameters>
+                                    <InsertParameters>
+                                        <asp:Parameter Name="Codigo" Type="String" />
+                                        <asp:Parameter Name="Nombre" Type="String" />
+                                        <asp:Parameter Name="Descripcion" Type="String" />
+                                        <asp:Parameter Name="Estado" Type="String" />
+                                        <asp:Parameter Name="IdArea" Type="Int32" />
+                                    </InsertParameters>
+                                    <UpdateParameters>
+                                        <asp:Parameter Name="Codigo" Type="String" />
+                                        <asp:Parameter Name="Nombre" Type="String" />
+                                        <asp:Parameter Name="Descripcion" Type="String" />
+                                        <asp:Parameter Name="Estado" Type="String" />
+                                        <asp:Parameter Name="IdArea" Type="Int32" />
+                                        <asp:Parameter Name="IdElemento" Type="Int32" />
+                                    </UpdateParameters>
+                                </asp:SqlDataSource>
                                 <br />
                                 <br />
                                 <br />
@@ -69,7 +109,6 @@
                                         <asp:DropDownList ID="cmbEstado" runat="server" CssClass="auto-style8">
                                             <asp:ListItem>Por Ejecutar</asp:ListItem>
                                             <asp:ListItem>Ejecutada</asp:ListItem>
-                                            <asp:ListItem>Nueva</asp:ListItem>
                                         </asp:DropDownList>
                                     </div>
                                 </div>

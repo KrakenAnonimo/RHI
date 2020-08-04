@@ -33,17 +33,18 @@ public partial class Planificacion : System.Web.UI.Page
         //cmbElemento.DataBind();
 
     }
-
+    int fila = 0;
     protected void btnGuardar_Click(object sender, EventArgs e)
     {
+        fila = gvElement.SelectedRow.RowIndex;
 
-       
+
 
         clPlanificacionE objPlanificacionE = new clPlanificacionE();
         objPlanificacionE.FechaPlanificacion = txtFechaP.Text;
         objPlanificacionE.Observaciones = txtObservaciones.Text;
         objPlanificacionE.Estado = cmbEstado.SelectedValue.ToString();
-        objPlanificacionE.IdElemento = int.Parse(cmbElemento.SelectedValue.ToString());
+        objPlanificacionE.IdElemento = int.Parse(gvElement.DataKeys[fila].Value.ToString());
 
         clPlanificacion objPlanificacion = new clPlanificacion();
         int resultsql = objPlanificacion.mtdRegistrarPlanificacion(objPlanificacionE);
@@ -68,5 +69,4 @@ public partial class Planificacion : System.Web.UI.Page
         txtFechaP.Text = "";
         txtObservaciones.Text = "";
     }
-
 }
