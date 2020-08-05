@@ -20,9 +20,6 @@
             left: 0px;
             top: 1px;
         }
-        .auto-style10 {
-            margin-left: 156px;
-        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -45,50 +42,8 @@
                                         <label for="selectSm" class="form-control-label">Elemento</label>
                                     </div>
                                 </div>
-                                <br />
-                                <asp:GridView ID="gvElement" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" CssClass="auto-style10" DataKeyNames="IdElemento" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." OnSelectedIndexChanged="gvElement_SelectedIndexChanged">
-                                    <Columns>
-                                        <asp:CommandField ShowSelectButton="True" />
-                                        <asp:BoundField DataField="IdElemento" HeaderText="IdElemento" ReadOnly="True" SortExpression="IdElemento" Visible="False" />
-                                        <asp:BoundField DataField="Codigo" HeaderText="Codigo" SortExpression="Codigo" />
-                                        <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
-                                        <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" Visible="False" />
-                                        <asp:BoundField DataField="Estado" HeaderText="Estado" SortExpression="Estado" />
-                                        <asp:BoundField DataField="IdArea" HeaderText="IdArea" SortExpression="IdArea" />
-                                    </Columns>
-                                    <FooterStyle BackColor="White" ForeColor="#000066" />
-                                    <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
-                                    <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
-                                    <RowStyle ForeColor="#000066" />
-                                    <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
-                                    <SortedAscendingCellStyle BackColor="#F1F1F1" />
-                                    <SortedAscendingHeaderStyle BackColor="#007DBB" />
-                                    <SortedDescendingCellStyle BackColor="#CAC9C9" />
-                                    <SortedDescendingHeaderStyle BackColor="#00547E" />
-                                </asp:GridView>
-                                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" DeleteCommand="DELETE FROM [Elemento] WHERE [IdElemento] = @IdElemento" InsertCommand="INSERT INTO [Elemento] ([Codigo], [Nombre], [Descripcion], [Estado], [IdArea]) VALUES (@Codigo, @Nombre, @Descripcion, @Estado, @IdArea)" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT [IdElemento], [Codigo], [Nombre], [Descripcion], [Estado], [IdArea] FROM [Elemento]" UpdateCommand="UPDATE [Elemento] SET [Codigo] = @Codigo, [Nombre] = @Nombre, [Descripcion] = @Descripcion, [Estado] = @Estado, [IdArea] = @IdArea WHERE [IdElemento] = @IdElemento">
-                                    <DeleteParameters>
-                                        <asp:Parameter Name="IdElemento" Type="Int32" />
-                                    </DeleteParameters>
-                                    <InsertParameters>
-                                        <asp:Parameter Name="Codigo" Type="String" />
-                                        <asp:Parameter Name="Nombre" Type="String" />
-                                        <asp:Parameter Name="Descripcion" Type="String" />
-                                        <asp:Parameter Name="Estado" Type="String" />
-                                        <asp:Parameter Name="IdArea" Type="Int32" />
-                                    </InsertParameters>
-                                    <UpdateParameters>
-                                        <asp:Parameter Name="Codigo" Type="String" />
-                                        <asp:Parameter Name="Nombre" Type="String" />
-                                        <asp:Parameter Name="Descripcion" Type="String" />
-                                        <asp:Parameter Name="Estado" Type="String" />
-                                        <asp:Parameter Name="IdArea" Type="Int32" />
-                                        <asp:Parameter Name="IdElemento" Type="Int32" />
-                                    </UpdateParameters>
-                                </asp:SqlDataSource>
-                                <br />
-                                <br />
-                                <br />
+                                <div style="width: 320px; position: relative; top: -2px; left: -299px">
+                                </div>
                                 <div class="form-group">
                                     <label for="FechaP" class=" form-control-label">Fecha Planificacion</label>
                                     <asp:TextBox ID="txtFechaP" runat="server" placeholder="Elija una fecha de planificacion" class="form-control" TextMode="Date"></asp:TextBox>
@@ -112,6 +67,80 @@
                                         </asp:DropDownList>
                                     </div>
                                 </div>
+                                <div class="text-center">
+                                    <label for="selectSm" class="form-control-label">Asignar a:</label>
+                                </div>
+
+                               <div>
+                                   <asp:DropDownList runat="server" AutoPostBack="True" ID="cmbRoles" DataSourceID="SqldsRol" DataTextField="Rol" DataValueField="IdRol" OnSelectedIndexChanged="cmbRoles_SelectedIndexChanged"></asp:DropDownList>
+
+                                    <asp:SqlDataSource runat="server" ID="SqldsRol" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT Rol.* FROM Rol"></asp:SqlDataSource>
+                               </div>
+
+                                <div style="width: 225px; position: relative; top: 27px; left: -71px">
+                                    <asp:GridView ID="gvUsuario" runat="server" AutoGenerateColumns="False" DataKeyNames="IdUsuario" DataSourceID="SqlDataSource2" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" PageSize="5" OnSelectedIndexChanged="gvUsuario_SelectedIndexChanged">
+                                        <alternatingrowstyle backcolor="White" />
+                                        <columns>
+                                            <asp:BoundField DataField="IdUsuario" HeaderText="IdUsuario" ReadOnly="True" SortExpression="IdUsuario" Visible="False" />
+                                            <asp:BoundField DataField="Documento" HeaderText="Documento" SortExpression="Documento" />
+                                            <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                                            <asp:BoundField DataField="Apellido" HeaderText="Apellido" SortExpression="Apellido" Visible="False" />
+                                            <asp:BoundField DataField="Telefono" HeaderText="Telefono" SortExpression="Telefono" Visible="False" />
+                                            <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" Visible="False" />
+                                            <asp:BoundField DataField="Clave" HeaderText="Clave" SortExpression="Clave" Visible="False" />
+                                            <asp:BoundField DataField="Ciudad" HeaderText="Ciudad" SortExpression="Ciudad" Visible="False" />
+                                            <asp:BoundField DataField="Direccion" HeaderText="Direccion" SortExpression="Direccion" Visible="False" />
+                                            <asp:BoundField DataField="IdRol" HeaderText="IdRol" SortExpression="IdRol" Visible="False" />
+                                            <asp:CommandField ShowSelectButton="True" />
+                                        </columns>
+                                        <footerstyle backcolor="#CCCC99" />
+                                        <headerstyle backcolor="#6B696B" font-bold="True" forecolor="White" />
+                                        <pagerstyle backcolor="#F7F7DE" forecolor="Black" horizontalalign="Right" />
+                                        <rowstyle backcolor="#F7F7DE" />
+                                        <selectedrowstyle backcolor="#CE5D5A" font-bold="True" forecolor="White" />
+                                        <sortedascendingcellstyle backcolor="#FBFBF2" />
+                                        <sortedascendingheaderstyle backcolor="#848384" />
+                                        <sorteddescendingcellstyle backcolor="#EAEAD3" />
+                                        <sorteddescendingheaderstyle backcolor="#575357" />
+                                    </asp:GridView>
+                                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" DeleteCommand="DELETE FROM [Usuario] WHERE [IdUsuario] = @IdUsuario" InsertCommand="INSERT INTO [Usuario] ([Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol]) VALUES (@Documento, @Nombre, @Apellido, @Telefono, @Email, @Clave, @Ciudad, @Direccion, @IdRol)" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT [IdUsuario], [Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol] FROM [Usuario]" UpdateCommand="UPDATE [Usuario] SET [Documento] = @Documento, [Nombre] = @Nombre, [Apellido] = @Apellido, [Telefono] = @Telefono, [Email] = @Email, [Clave] = @Clave, [Ciudad] = @Ciudad, [Direccion] = @Direccion, [IdRol] = @IdRol WHERE [IdUsuario] = @IdUsuario">
+                                        <deleteparameters>
+                                            <asp:Parameter Name="IdUsuario" Type="Int32" />
+                                        </deleteparameters>
+                                        <insertparameters>
+                                            <asp:Parameter Name="Documento" Type="String" />
+                                            <asp:Parameter Name="Nombre" Type="String" />
+                                            <asp:Parameter Name="Apellido" Type="String" />
+                                            <asp:Parameter Name="Telefono" Type="String" />
+                                            <asp:Parameter Name="Email" Type="String" />
+                                            <asp:Parameter Name="Clave" Type="String" />
+                                            <asp:Parameter Name="Ciudad" Type="String" />
+                                            <asp:Parameter Name="Direccion" Type="String" />
+                                            <asp:Parameter Name="IdRol" Type="Int32" />
+                                        </insertparameters>
+                                        <updateparameters>
+                                            <asp:Parameter Name="Documento" Type="String" />
+                                            <asp:Parameter Name="Nombre" Type="String" />
+                                            <asp:Parameter Name="Apellido" Type="String" />
+                                            <asp:Parameter Name="Telefono" Type="String" />
+                                            <asp:Parameter Name="Email" Type="String" />
+                                            <asp:Parameter Name="Clave" Type="String" />
+                                            <asp:Parameter Name="Ciudad" Type="String" />
+                                            <asp:Parameter Name="Direccion" Type="String" />
+                                            <asp:Parameter Name="IdRol" Type="Int32" />
+                                            <asp:Parameter Name="IdUsuario" Type="Int32" />
+                                        </updateparameters>
+                                    </asp:SqlDataSource>
+
+                                </div>
+                                <div style="width: 152px; position: relative; top: -80px; left: 262px">
+                                    <asp:Label ID="lblTexto" runat="server" Text="Usuario Elegido: "></asp:Label>
+                                    <br />
+                                    <asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
+                                </div>
+                                <div style="width: 228px; position: relative; top: -84px; left: 506px">
+                                    <asp:GridView ID="gvElegidos" runat="server"></asp:GridView>
+                                </div>
                                 <br />
                                 <div class="row form-group">
                                     <div>
@@ -127,5 +156,7 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 </asp:Content>
 
