@@ -37,12 +37,6 @@
             top: -160px;
         }
 
-        .auto-style11 {
-            position: relative;
-            left: 214px;
-            top: 9px;
-        }
-
         .auto-style13 {
             width: 50%;
             position: relative;
@@ -61,6 +55,11 @@
             position: relative;
             left: 383px;
             top: -14px;
+        }
+        .auto-style17 {
+            position: relative;
+            left: 181px;
+            top: 9px;
         }
     </style>
 </asp:Content>
@@ -133,13 +132,11 @@
                                         &nbsp;
                                     </div>
                                     <div class="auto-style9">
-                                        <asp:CheckBoxList ID="chxblRoles" runat="server" AutoPostBack="True" RepeatDirection="Horizontal" CssClass="auto-style11">
-                                            <asp:ListItem>Tecnico</asp:ListItem>
-                                            <asp:ListItem>Soldador</asp:ListItem>
-                                        </asp:CheckBoxList>
+                                        <asp:RadioButtonList ID="RadioButtonList1" runat="server" AutoPostBack="True" CssClass="auto-style17" DataSourceID="SqlDataSource4" DataTextField="IdRol" DataValueField="Rol" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged">
+                                        </asp:RadioButtonList>
                                     </div>
                                     <div>
-                                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="IdUsuario" DataSourceID="SqlDataSource3" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" CssClass="auto-style15" PageSize="5">
+                                        <asp:GridView ID="gvUsuarios" runat="server" AutoGenerateColumns="False" DataKeyNames="IdUsuario" DataSourceID="SqlDataSource3" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" CssClass="auto-style15" PageSize="5" OnSelectedIndexChanged="gvUsuario_SelectedIndexChanged">
                                             <Columns>
                                                 <asp:BoundField DataField="IdUsuario" HeaderText="IdUsuario" ReadOnly="True" SortExpression="IdUsuario" Visible="False" />
                                                 <asp:BoundField DataField="Documento" HeaderText="Documento" SortExpression="Documento" />
@@ -154,7 +151,7 @@
                                                 <asp:CommandField ShowSelectButton="True" />
                                             </Columns>
                                         </asp:GridView>
-                                        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" DeleteCommand="DELETE FROM [Usuario] WHERE [IdUsuario] = @IdUsuario" InsertCommand="INSERT INTO [Usuario] ([Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol]) VALUES (@Documento, @Nombre, @Apellido, @Telefono, @Email, @Clave, @Ciudad, @Direccion, @IdRol)" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT [IdUsuario], [Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol] FROM [Usuario]" UpdateCommand="UPDATE [Usuario] SET [Documento] = @Documento, [Nombre] = @Nombre, [Apellido] = @Apellido, [Telefono] = @Telefono, [Email] = @Email, [Clave] = @Clave, [Ciudad] = @Ciudad, [Direccion] = @Direccion, [IdRol] = @IdRol WHERE [IdUsuario] = @IdUsuario">
+                                        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" DeleteCommand="DELETE FROM [Usuario] WHERE [IdUsuario] = @IdUsuario" InsertCommand="INSERT INTO [Usuario] ([Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol]) VALUES (@Documento, @Nombre, @Apellido, @Telefono, @Email, @Clave, @Ciudad, @Direccion, @IdRol)" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT [IdUsuario], [Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol] FROM [Usuario]" UpdateCommand="UPDATE [Usuario] SET [Documento] = @Documento, [Nombre] = @Nombre, [Apellido] = @Apellido, [Telefono] = @Telefono, [Email] = @Email, [Clave] = @Clave, [Ciudad] = @Ciudad, [Direccion] = @Direccion, [IdRol] = @IdRol WHERE [IdUsuario] = @IdUsuario" OnSelecting="SqlDataSource3_Selecting">
                                             <DeleteParameters>
                                                 <asp:Parameter Name="IdUsuario" Type="Int32" />
                                             </DeleteParameters>
@@ -186,6 +183,8 @@
                                     </div>
                                     <div class="text-center">
                                         <asp:GridView ID="gvListaElegidos" runat="server" CssClass="auto-style10"></asp:GridView>
+                                        <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>"></asp:SqlDataSource>
+                                        <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT Rol.* FROM Rol"></asp:SqlDataSource>
                                     </div>
                                 </div>
                                 <div class="auto-style3">
