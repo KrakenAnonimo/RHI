@@ -36,6 +36,35 @@ public partial class OrdenMttoP : System.Web.UI.Page
         cmbAveriaServicio.DataBind();
     }
 
+    //radio butons filtrados a roles
+    protected void RadioButtonList1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        int idRol = int.Parse(RadioButtonList1.SelectedValue.ToString());
+        string consulta = "select * from Usuario where IdRol=" + idRol;
+        SqlDataSource4.SelectCommand = consulta;
+        gvUsuarios.DataSourceID = "SqlDataSource4";
+        gvUsuarios.DataBind();
+    }
+
+    int fila = 0;
+
+    protected void gvUsuario_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        fila = gvUsuarios.SelectedRow.RowIndex;
+
+        //clase usuario
+        clUsuarioq objUsuarios = new clUsuarioq();
+
+        objUsuarios.IdUsuario = int.Parse(gvUsuarios.DataKeys[fila].Value.ToString());
+        objUsuarios.Documento = gvUsuarios.SelectedRow.Cells[1].Text;
+        objUsuarios.Nombre = gvUsuarios.SelectedRow.Cells[2].Text;
+
+        lista.Add(objUsuarios);
+        gvListaElegidos.DataSource = lista;
+        gvListaElegidos.DataBind();
+    }
+
+    static List<clUsuarioq> lista = new List<clUsuarioq>();
     protected void btnGuardar_Click(object sender, EventArgs e)
     {
         clOrdenMttoPE objOrdenMttoPE = new clOrdenMttoPE();
@@ -50,7 +79,7 @@ public partial class OrdenMttoP : System.Web.UI.Page
         objOrdenMttoPE.Observaciones = txtObservaciones.Text;
         objOrdenMttoPE.Revisado = cmbRevisado.SelectedValue.ToString();
         objOrdenMttoPE.IdPlanificacion = int.Parse(cmbPlanificacion.SelectedValue.ToString());
-        objOrdenMttoPE.IdReporteAS = int.Parse(cmbAveriaServicio.SelectedValue.ToString());        
+        objOrdenMttoPE.IdReporteAS = int.Parse(cmbAveriaServicio.SelectedValue.ToString());
 
         clOrdenMttoP objOrdenMttoP = new clOrdenMttoP();
         int resultsql = objOrdenMttoP.mtdRegistrarOrdenMttoP(objOrdenMttoPE);
@@ -72,7 +101,6 @@ public partial class OrdenMttoP : System.Web.UI.Page
             //Redirecionar la pagina
             Response.Redirect("~/OrdenMttoP.aspx");
         }
-
     }
 
     protected void btnLimpiar_Click(object sender, EventArgs e)
@@ -84,38 +112,7 @@ public partial class OrdenMttoP : System.Web.UI.Page
         txtFechaOF.Text = "";
         txtHoraF.Text = "";
         txtObservaciones.Text = "";
-
     }
-
-    //radio butons filtrados a roles
-    protected void RadioButtonList1_SelectedIndexChanged(object sender, EventArgs e)
-    {
-        int idRol = int.Parse(RadioButtonList1.SelectedValue.ToString());
-        string consulta = "select * from Usuario where IdRol=" + idRol;
-        SqlDataSource4.SelectCommand = consulta;
-        gvUsuarios.DataSourceID = "SqlDataSource4";
-        gvUsuarios.DataBind();
-    }
-    int fila = 0;
-
-
-    protected void gvUsuario_SelectedIndexChanged(object sender, EventArgs e)
-    {
-        fila = gvUsuarios.SelectedRow.RowIndex;
-
-        //clase usuario
-        clUsuarioq objUsuarios = new clUsuarioq();
-
-        objUsuarios.IdUsuario = int.Parse(gvUsuarios.DataKeys[fila].Value.ToString());
-        objUsuarios.Documento = gvUsuarios.SelectedRow.Cells[1].Text;
-        objUsuarios.Nombre = gvUsuarios.SelectedRow.Cells[2].Text;
-
-        lista.Add(objUsuarios);
-        gvListaElegidos.DataSource = lista;
-        gvListaElegidos.DataBind();
-    }
-
-    static List<clUsuarioq> lista = new List<clUsuarioq>();
 
     public class clUsuarioq
     {
