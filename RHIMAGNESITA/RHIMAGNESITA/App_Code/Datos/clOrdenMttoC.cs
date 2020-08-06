@@ -26,7 +26,7 @@ public class clOrdenMttoC
     //Metodo Eliminar OrdenMttoC
     public int mtdEliminarOrdenMttoC(clOrdenMttoCE objDatos)
     {
-        string consulta = "Delete from OrdenMttoC where NumOrden = '" + objDatos.NumOrden + "')";
+        string consulta = "Delete from OrdenMttoCorrectivo where NumOrden = '" + objDatos.NumOrden + "')";
         clMetodoCN objMtdCN = new clMetodoCN();
         int result = objMtdCN.mtdConectado(consulta);
 
@@ -36,7 +36,7 @@ public class clOrdenMttoC
     //Metodo Listar OrdenMttoC
     public List<clOrdenMttoCE> mtdListarOrdenMttoC()
     {
-        string consulta = "select * from OrdenMttoC";
+        string consulta = "select * from OrdenMttoCorrectivo";
         clMetodoCN objMtdCN = new clMetodoCN();
         DataTable tblDatos = new DataTable();
         tblDatos = objMtdCN.mtdDesconectado(consulta);
@@ -66,7 +66,7 @@ public class clOrdenMttoC
     //Metodo Actualizar OrdenMttoC
     public int mtdActualizarOrdenMttoC(clOrdenMttoCE objOrdenMttoCE)
     {
-        string consulta = "Update OrdenMttoC set NumOrden = '" + objOrdenMttoCE.NumOrden + "','" + objOrdenMttoCE.Disciplina + "','" + objOrdenMttoCE.FechaInicio + "','" + objOrdenMttoCE.HoraInicio + "','" + objOrdenMttoCE.FechaFinal + "','" + objOrdenMttoCE.HoraFinal + "','" + objOrdenMttoCE.Ejecutado + "','" + objOrdenMttoCE.TrabajoIE + "'," + objOrdenMttoCE.Observaciones + "','" + objOrdenMttoCE.Revisado + "','" + objOrdenMttoCE.IdOrdenMttoP + "','" + objOrdenMttoCE.IdUsuario + "')";
+        string consulta = "Update OrdenMttoCorrectivo set NumOrden = '" + objOrdenMttoCE.NumOrden + "','" + objOrdenMttoCE.Disciplina + "','" + objOrdenMttoCE.FechaInicio + "','" + objOrdenMttoCE.HoraInicio + "','" + objOrdenMttoCE.FechaFinal + "','" + objOrdenMttoCE.HoraFinal + "','" + objOrdenMttoCE.Ejecutado + "','" + objOrdenMttoCE.TrabajoIE + "'," + objOrdenMttoCE.Observaciones + "','" + objOrdenMttoCE.Revisado + "','" + objOrdenMttoCE.IdOrdenMttoP + "','" + objOrdenMttoCE.IdUsuario + "')";
         clMetodoCN objMtdCN = new clMetodoCN();
         int regis = objMtdCN.mtdConectado(consulta);
         return regis;

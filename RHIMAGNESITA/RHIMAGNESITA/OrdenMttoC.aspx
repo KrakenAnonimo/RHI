@@ -44,7 +44,7 @@
         .auto-style11 {
             position: relative;
             text-align: center;
-            width: 20000px;
+            width: 20px;
             display: block;
             left: 114px;
             top: 9px;

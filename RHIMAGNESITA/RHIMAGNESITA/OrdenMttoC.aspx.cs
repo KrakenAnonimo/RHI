@@ -27,8 +27,6 @@ public partial class OrdenMttoC : System.Web.UI.Page
         cmbOrdenMttoP.DataTextField = "NumOrden";
         cmbOrdenMttoP.DataValueField = "IdOrdenMttoP";
         cmbOrdenMttoP.DataBind();
-
-
     }
 
     //radio butons filtrados a roles
@@ -76,6 +74,7 @@ public partial class OrdenMttoC : System.Web.UI.Page
         objOrdenMttoCE.Revisado = cmbRevision.SelectedValue.ToString();
         objOrdenMttoCE.Observaciones = txtObservaciones.Text;
         objOrdenMttoCE.IdOrdenMttoP = int.Parse(cmbOrdenMttoP.SelectedValue.ToString());
+        objOrdenMttoCE.IdUsuario=
 
         // Guardar Usuarios
         // Ciclo por cada registro de usuarios en la orden

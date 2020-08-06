@@ -98,8 +98,8 @@ public partial class Planificacion : System.Web.UI.Page
     {
         int idRol = int.Parse(cmbRoles.SelectedValue.ToString());
         string consulta = "select * from Usuario where IdRol=" + idRol;
-        SqldsRol.SelectCommand = consulta;
-        gvUsuario.DataSourceID = "SqldsRol";
+        SqldsGrid.SelectCommand = consulta;
+        gvUsuario.DataSourceID = "SqldsGrid";
         gvUsuario.DataBind();
     }
 
