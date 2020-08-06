@@ -49,7 +49,7 @@ public partial class OrdenMttoC : System.Web.UI.Page
         fila = gvUsuarios.SelectedRow.RowIndex;
 
         //clase usuario
-        clUsuarios objUsuarios = new clUsuarios();
+        clUsuariox objUsuarios = new clUsuariox();
 
         objUsuarios.IdUsuario = int.Parse(gvUsuarios.DataKeys[fila].Value.ToString());
         objUsuarios.Documento = gvUsuarios.SelectedRow.Cells[1].Text;
@@ -60,7 +60,7 @@ public partial class OrdenMttoC : System.Web.UI.Page
         gvListaElegidos.DataBind();
     }
 
-    static List<clUsuarios> lista = new List<clUsuarios>();
+    static List<clUsuariox> lista = new List<clUsuariox>();
 
     protected void btnGuardar_Click(object sender, EventArgs e)
     {
@@ -89,10 +89,10 @@ public partial class OrdenMttoC : System.Web.UI.Page
             string Nombre = gvListaElegidos.Rows[i].Cells[2].Text;
 
             //Consulta
-            string sqlInsertUO = "INSERT INTO OrdenMttoCorrectivo (IdUsuario)" +
+            /*string sqlInsertUO = "INSERT INTO OrdenMttoCorrectivo (IdUsuario)" +
                 "VALUES('" + IdUsuario + "')";
             SqldsElegidos.InsertCommand = sqlInsertUO;
-            int result = SqldsElegidos.Insert();
+            int result = SqldsElegidos.Insert();*/
         }
 
         clOrdenMttoC objOrdenMttoC = new clOrdenMttoC();
@@ -127,7 +127,7 @@ public partial class OrdenMttoC : System.Web.UI.Page
         Response.Redirect("~/OrdenMttoC.aspx");
     }
 }
-public class clUsuarios
+public class clUsuariox
 {
     //Atributos Tabla Usuarios
     public int IdUsuario { get; set; }

@@ -20,6 +20,18 @@
             left: 0px;
             top: 1px;
         }
+        .auto-style9 {
+            width: 225px;
+            position: relative;
+            top: 28px;
+            left: -4px;
+        }
+        .auto-style10 {
+            width: 228px;
+            position: relative;
+            top: -166px;
+            left: 435px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -77,7 +89,7 @@
                                     <asp:SqlDataSource runat="server" ID="SqldsRol" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT Rol.* FROM Rol"></asp:SqlDataSource>
                                </div>
 
-                                <div style="width: 225px; position: relative; top: 27px; left: -71px">
+                                <div class="auto-style9">
                                     <asp:GridView ID="gvUsuario" runat="server" AutoGenerateColumns="False" DataKeyNames="IdUsuario" DataSourceID="SqlDataSource2" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" PageSize="5" OnSelectedIndexChanged="gvUsuario_SelectedIndexChanged">
                                         <alternatingrowstyle backcolor="White" />
                                         <columns>
@@ -138,7 +150,7 @@
                                     <br />
                                     <asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
                                 </div>
-                                <div style="width: 228px; position: relative; top: -84px; left: 506px">
+                                <div class="auto-style10">
                                     <asp:GridView ID="gvElegidos" runat="server"></asp:GridView>
                                 </div>
                                 <br />
