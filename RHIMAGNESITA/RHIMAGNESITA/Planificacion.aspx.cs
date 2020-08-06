@@ -24,7 +24,7 @@ public partial class Planificacion : System.Web.UI.Page
         objPlanificacionE.FechaPlanificacion = txtFechaP.Text;
         objPlanificacionE.Observaciones = txtObservaciones.Text;
         objPlanificacionE.Estado = cmbEstado.SelectedValue.ToString();
-        //objPlanificacionE.IdElemento = int.Parse(gvElement.DataKeys[fila].Value.ToString());
+        objPlanificacionE.IdElemento = int.Parse(gvElemento.DataKeys[fila].Value.ToString());
 
         clPlanificacion objPlanificacion = new clPlanificacion();
         int resultsql = objPlanificacion.mtdRegistrarPlanificacion(objPlanificacionE);
@@ -41,6 +41,24 @@ public partial class Planificacion : System.Web.UI.Page
             Response.Redirect("~/Planificacion.aspx");
         }
 
+        string sqlIplan = "select IdPlanificacion from Planifiacion where FechaPlanficacion = '" + txtFechaP + "'";
+        SqlDataSource3.SelectCommand = sqlIplan;
+
+        DataTable tblDatos = new DataTable();
+        tblDatos = ((DataView)SqlDataSource3.Select(DataSourceSelectArguments.Empty)).Table;
+        int idplanificacion = int.Parse(tblDatos.Rows[0][0].ToString());
+
+        for (int i = 0; i < gvElegidos.Rows.Count; i++)
+        {
+            int idusuario = int.Parse(gvElegidos.Rows[i].Cells[0].Text);
+     
+            string sqlInsUP = "insert into UsuaPlanificacion(IdPlanificacion,IdUsuario)" +
+                "values(" + idplanificacion + "," + idusuario + ")";
+
+            SqlDataSource3.InsertCommand = sqlInsUP;
+            int result = SqlDataSource3.Insert();
+
+        }
     }
 
     protected void btnLimpiar_Click(object sender, EventArgs e)
@@ -84,6 +102,8 @@ public partial class Planificacion : System.Web.UI.Page
         gvUsuario.DataSourceID = "SqldsRol";
         gvUsuario.DataBind();
     }
+
+
 }
 public class clUsuarios
 {
