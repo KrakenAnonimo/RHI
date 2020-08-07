@@ -9,7 +9,7 @@ using System.Web;
 public class clOrdenMttoCE
 {
     //Atributos Tabla OrdenMttoE
-    public int IdOrdenMttoE { get; set; }
+    public int IdOrdenMttoC { get; set; }
     public string NumOrden { get; set; }
     public string Disciplina { get; set; }
     public string FechaInicio { get; set; }
