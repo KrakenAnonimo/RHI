@@ -74,7 +74,6 @@ public partial class OrdenMttoC : System.Web.UI.Page
         objOrdenMttoCE.Revisado = cmbRevision.SelectedValue.ToString();
         objOrdenMttoCE.Observaciones = txtObservaciones.Text;
         objOrdenMttoCE.IdOrdenMttoP = int.Parse(cmbOrdenMttoP.SelectedValue.ToString());
-        objOrdenMttoCE.IdUsuario=
 
         // Guardar Usuarios
         // Ciclo por cada registro de usuarios en la orden
@@ -87,11 +86,8 @@ public partial class OrdenMttoC : System.Web.UI.Page
             int Documento = int.Parse(gvListaElegidos.Rows[i].Cells[1].Text);
             string Nombre = gvListaElegidos.Rows[i].Cells[2].Text;
 
-            //Consulta
-            /*string sqlInsertUO = "INSERT INTO OrdenMttoCorrectivo (IdUsuario)" +
-                "VALUES('" + IdUsuario + "')";
-            SqldsElegidos.InsertCommand = sqlInsertUO;
-            int result = SqldsElegidos.Insert();*/
+            //Registro de id
+            objOrdenMttoCE.IdUsuario = IdUsuario;
         }
 
         clOrdenMttoC objOrdenMttoC = new clOrdenMttoC();
