@@ -64,7 +64,7 @@
 
                             <div class="CTA">
                                 <!--Boton ingresar -->
-                                <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" />
+                                <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" OnClick="btnIngresar_Click" />
                                 <!--fin del cod boton -->
                                 <a href="#" class="switch">Soy nuevo</a>
                             </div>
@@ -133,5 +133,6 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <script src="Vista/Login/script.js"></script>
     </form>
+    <asp:SqlDataSource ID="sqldsLogin" runat="server"></asp:SqlDataSource>
 </body>
 </html>
