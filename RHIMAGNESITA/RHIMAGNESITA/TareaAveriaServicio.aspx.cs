@@ -16,12 +16,14 @@ public partial class TareaAveriaServicio : System.Web.UI.Page
     {
         //Lista del OrdenMttoP
         List<clOrdenMttoPE> listaOrdenMttoP = new List<clOrdenMttoPE>();
+
         //Lista del OrdenMttoC
         List<clOrdenMttoCE> listaOrdenMttoC = new List<clOrdenMttoCE>();
 
         //Clase OrdenMttoP junto con el metodo listar
         clOrdenMttoPL objOrdenMttoPL = new clOrdenMttoPL();
         listaOrdenMttoP = objOrdenMttoPL.mtdListarOrdenMttoP();
+
         //Clase OrdenMttoC junto con el metodo listar
         clOrdenMttoCL objOrdenMttoCL = new clOrdenMttoCL();
         listaOrdenMttoC = objOrdenMttoCL.mtdListarOrdenMttoC();
@@ -31,6 +33,7 @@ public partial class TareaAveriaServicio : System.Web.UI.Page
         cmbOrdenMttoPreventivo.DataTextField = "NumOrden";
         cmbOrdenMttoPreventivo.DataValueField = "IdOrdenMttoP";
         cmbOrdenMttoPreventivo.DataBind();
+
         //Carga de combo con datos OrdenMttoC
         cmbOrdenMttoCorrectivo.DataSource = listaOrdenMttoC;
         cmbOrdenMttoCorrectivo.DataTextField = "NumOrden";

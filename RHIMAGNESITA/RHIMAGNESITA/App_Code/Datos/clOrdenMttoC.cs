@@ -45,7 +45,7 @@ public class clOrdenMttoC
         for (int i = 0; i < tblDatos.Rows.Count; i++)
         {
             clOrdenMttoCE objPasDatos = new clOrdenMttoCE();
-            objPasDatos.IdUsuario = int.Parse(tblDatos.Rows[i][0].ToString());
+            objPasDatos.IdOrdenMttoC = int.Parse(tblDatos.Rows[i][0].ToString());
             objPasDatos.NumOrden = tblDatos.Rows[i][1].ToString();
             objPasDatos.Disciplina = tblDatos.Rows[i][2].ToString();
             objPasDatos.FechaInicio = tblDatos.Rows[i][3].ToString();
