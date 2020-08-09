@@ -18,7 +18,7 @@ public partial class Login : System.Web.UI.Page
         // Consultar en la BD por medio del sqlDatasource
         // Pasar datos del sqldataSource al dataTable
 
-        DataTable tblDatos = new DataTable();
+        /*DataTable tblDatos = new DataTable();
         tblDatos = ((DataView)sqldsLogin.Select(DataSourceSelectArguments.Empty)).Table;
 
         if (tblDatos.Rows.Count > 0)
@@ -33,7 +33,7 @@ public partial class Login : System.Web.UI.Page
             txtEmailLog.Text = "";
             txtClave.Text = "";
             Response.Write("<script>alert('Los datos no son los correstos');</script>");
-            Response.Redirect("~/Inicio.aspx");
+            Response.Redirect("~/Inicio.aspx");*/
         }
 
     }

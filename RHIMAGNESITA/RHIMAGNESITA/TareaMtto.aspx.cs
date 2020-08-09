@@ -19,6 +19,21 @@ public partial class TareaMtto : System.Web.UI.Page
         objTareaMttoE.Duracion = txtDuracion.Text;
         objTareaMttoE.Descripcion = txtDescripcion.Text;
 
+        // Guardar Elemento
+        // Ciclo por cada registro del elemeto en la orden
+        for (int i = 0; i < GridView1.Rows.Count; i++)
+        {
+            //Campos Registra
+            int IdElemento = int.Parse(GridView1.Rows[i].Cells[0].Text);
+
+            //No Registra
+            string Nombre = GridView1.Rows[i].Cells[1].Text;
+
+
+            //Registro de id
+            objTareaMttoE.IdElemento = IdElemento;
+        }
+
         clTareaMtto objTareaMtto = new clTareaMtto();
         int resultsql = objTareaMtto.mtdRegistrarTareaMtto(objTareaMttoE);
 
@@ -42,4 +57,39 @@ public partial class TareaMtto : System.Web.UI.Page
         txtDescripcion.Text = "";
 
     }
+
+    protected void btnBuscar_Click(object sender, EventArgs e)
+    {
+        //Busqueda por nombre en la consulta
+        SqlDataSource2.SelectCommand = "SELECT [IdElemento], [Codigo], [Nombre], [Descripcion], [Estado], [IdArea] FROM [Elemento] WHERE Nombre Like '%" + txtBuscarE.Text + "%'";
+        //Ejecucion
+        SqlDataSource2.DataBind();
+    }
+
+    int fila = 0;
+
+    protected void Unnamed1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        fila = gvElementos.SelectedRow.RowIndex;
+
+        //clase Elemento
+        clElementox objElemento = new clElementox();
+
+        objElemento.IdElemento = int.Parse(gvElementos.DataKeys[fila].Value.ToString());
+        objElemento.Nombre = gvElementos.SelectedRow.Cells[1].Text;
+
+        lista.Add(objElemento);
+        GridView1.DataSource = lista;
+        GridView1.DataBind();
+    }
+    static List<clElementox> lista = new List<clElementox>();
+}
+public class clElementox
+{
+    //Atributos Tabla Elementos
+    public int IdElemento { get; set; }
+
+    public string Nombre { get; set; }
+
+    
 }

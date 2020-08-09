@@ -64,7 +64,7 @@
 
                             <div class="CTA">
                                 <!--Boton ingresar -->
-                                <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" OnClick="btnIngresar_Click" />
+                                <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" />
                                 <!--fin del cod boton -->
                                 <a href="#" class="switch">Soy nuevo</a>
                             </div>

@@ -88,10 +88,10 @@
                                         <asp:TextBox ID="txtBuscarE" runat="server" placeholder="Buscar..." class="auto-style10"></asp:TextBox>
                                     </div>
                                     <div>
-                                        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-primary btn-sm" Style="position: relative; left: 111px; top: -58px" />
+                                        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-primary btn-sm" Style="position: relative; left: 111px; top: -58px" OnClick="btnBuscar_Click" />
                                     </div>
                                     <div class="text-center">
-                                        <asp:GridView runat="server" AutoGenerateColumns="False" DataKeyNames="IdElemento" DataSourceID="SqlDataSource2" EmptyDataText="No hay registros de datos para mostrar." class="auto-style11" AllowPaging="True" AllowSorting="True" PageSize="5">
+                                        <asp:GridView runat="server" AutoGenerateColumns="False" DataKeyNames="IdElemento" DataSourceID="SqlDataSource2" EmptyDataText="No hay registros de datos para mostrar." class="auto-style11" AllowPaging="True" AllowSorting="True" PageSize="5" ID="gvElementos" OnSelectedIndexChanged="Unnamed1_SelectedIndexChanged">
                                             <Columns>
                                                 <asp:BoundField DataField="IdElemento" HeaderText="IdElemento" ReadOnly="True" SortExpression="IdElemento" Visible="False"></asp:BoundField>
                                                 <asp:BoundField DataField="Codigo" HeaderText="Codigo" SortExpression="Codigo"></asp:BoundField>
@@ -122,7 +122,14 @@
                                                 <asp:Parameter Name="IdElemento" Type="Int32"></asp:Parameter>
                                             </UpdateParameters>
                                         </asp:SqlDataSource>
-
+                                    </div>
+                                    <div style="width: 168px; position: absolute; top: 566px; left: 402px; z-index: 1; height: 44px">
+                                        <asp:Label ID="lblQueElemento" runat="server" Text="Elemento Seleccionado: "></asp:Label>
+                                        <br />
+                                        <asp:Label ID="lblElemento" runat="server" Text=""></asp:Label>
+                                    </div>
+                                    <div style="width: 234px; position: absolute; top: 625px; left: 403px; z-index: 2; height: 139px">
+                                        <asp:GridView ID="GridView1" runat="server"></asp:GridView>
                                     </div>
                                 </div>
                                 <div>
