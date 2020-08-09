@@ -38,17 +38,17 @@
         }
 
         .auto-style11 {
-            width: 549px;
+            width: 321px;
             position: relative;
+            left: -95px;
             top: -71px;
-            left: -94px;
         }
 
         .auto-style12 {
             width: 321px;
             position: relative;
-            left: 486px;
-            top: -21px;
+            left: 485px;
+            top: 23px;
         }
 
         .auto-style13 {
@@ -207,18 +207,27 @@
                                             <asp:ListItem>Ejecutada</asp:ListItem>
                                         </asp:DropDownList>
                                     </div>
+                                    <div class="text-center">
+                                    <label for="selectSm" class="form-control-label">Revisado por: </label>
+                                </div>
+                                     <div>
+                                    <asp:DropDownList runat="server" CssClass="auto-style8" ID="cmbRevision">
+                                        <asp:ListItem>Supervisor</asp:ListItem>
+                                        <asp:ListItem>Planificador</asp:ListItem>
+                                    </asp:DropDownList>
+                                </div>
                                 </div>
                                 <div class="text-center">
                                     <label for="selectSm" class="form-control-label">Asignar a:</label>
                                 </div>
-
+                               
                                 <div>
                                     <asp:DropDownList runat="server" AutoPostBack="True" ID="cmbRoles" DataSourceID="SqldsRol" DataTextField="Rol" DataValueField="IdRol" OnSelectedIndexChanged="cmbRoles_SelectedIndexChanged"></asp:DropDownList>
 
                                     <asp:SqlDataSource runat="server" ID="SqldsRol" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT Rol.* FROM Rol"></asp:SqlDataSource>
                                     <asp:SqlDataSource ID="SqldsGrid" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>"></asp:SqlDataSource>
                                 </div>
-
+                                
                                 <div class="auto-style9">
                                     <asp:GridView ID="gvUsuario" runat="server" AutoGenerateColumns="False" DataKeyNames="IdUsuario" DataSourceID="SqlDataSource2" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" PageSize="5" OnSelectedIndexChanged="gvUsuario_SelectedIndexChanged" Height="34px" Width="237px">
                                         <alternatingrowstyle backcolor="White" />
