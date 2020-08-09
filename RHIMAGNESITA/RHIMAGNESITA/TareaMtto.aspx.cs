@@ -20,7 +20,7 @@ public partial class TareaMtto : System.Web.UI.Page
         objTareaMttoE.Descripcion = txtDescripcion.Text;
 
         // Guardar Elemento
-        // Ciclo por cada registro del elemeto en la orden
+        // Ciclo por cada registro del elemeto en la planificacion
         for (int i = 0; i < GridView1.Rows.Count; i++)
         {
             //Campos Registra

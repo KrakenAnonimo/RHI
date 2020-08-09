@@ -31,23 +31,52 @@
         .auto-style10 {
             width: 232px;
             position: relative;
-            top: -191px;
-            left: 434px;
+            top: -69px;
+            left: 424px;
             height: 173px;
+            z-index: 2;
         }
 
         .auto-style11 {
             width: 549px;
             position: relative;
-            top: -1px;
-            left: 51px;
+            top: -71px;
+            left: -94px;
         }
 
         .auto-style12 {
             width: 321px;
             position: relative;
-            left: 183px;
-            top: 1px;
+            left: 486px;
+            top: -21px;
+        }
+
+        .auto-style13 {
+            display: block;
+            width: 74%;
+            height: 19px;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+            -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+            -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            position: relative;
+            left: 204px;
+            top: 15px;
+        }
+
+        .auto-style14 {
+            margin-bottom: 15px;
+            width: 262px;
+            height: 54px;
         }
     </style>
 </asp:Content>
@@ -65,12 +94,26 @@
                             <div class="card-header"><strong>REGISTRAR PLANIFICACION</strong></div>
                             <br />
                             <br />
-                            <div class="card-body card-block">
-                                 <div class="row form-group">
+                            <div class="card-body card-block" id="gvElementos">
+                                <div class="row form-group">
                                     <div class="text-center">
-                                        <label for="selectSm" class="form-control-label">Planificaciones con elemento</label>
+                                        <label for="selectSm" class="form-control-label">PLANIFICACION CON ELEMENTO</label>
                                     </div>
                                 </div>
+                                <div class="row form-group">
+                                    <div class="text-center">
+                                        <label for="selectSm" class="form-control-label">Busque el Elemento con su planificacion:</label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="auto-style14">
+                                        <asp:TextBox ID="txtBuscarE" runat="server" placeholder="Buscar..." class="auto-style13"></asp:TextBox>
+                                    </div>
+                                    <div>
+                                        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-primary btn-sm" Style="position: relative; left: 111px; top: -58px" OnClick="btnBuscar_Click" />
+                                    </div>
+                                </div>
+
                                 <div class="auto-style12">
                                     <asp:GridView runat="server" AutoGenerateColumns="False" DataKeyNames="IdPlanificacion" DataSourceID="SqlDataSource4" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" PageSize="5" ID="gvPlanificacion">
                                         <columns>
@@ -79,6 +122,7 @@
 <asp:BoundField DataField="Observaciones" HeaderText="Observaciones" SortExpression="Observaciones" Visible="False"></asp:BoundField>
 <asp:BoundField DataField="Estado" HeaderText="Estado" SortExpression="Estado"></asp:BoundField>
 <asp:BoundField DataField="IdElemento" HeaderText="IdElemento" SortExpression="IdElemento" Visible="False"></asp:BoundField>
+                                            <asp:CommandField ShowSelectButton="True" />
 </columns>
                                     </asp:GridView>
                                     <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" DeleteCommand="DELETE FROM [Planificacion] WHERE [IdPlanificacion] = @IdPlanificacion" InsertCommand="INSERT INTO [Planificacion] ([FechaPlanificacion], [Observaciones], [Estado], [IdElemento]) VALUES (@FechaPlanificacion, @Observaciones, @Estado, @IdElemento)" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT [IdPlanificacion], [FechaPlanificacion], [Observaciones], [Estado], [IdElemento] FROM [Planificacion]" UpdateCommand="UPDATE [Planificacion] SET [FechaPlanificacion] = @FechaPlanificacion, [Observaciones] = @Observaciones, [Estado] = @Estado, [IdElemento] = @IdElemento WHERE [IdPlanificacion] = @IdPlanificacion">
@@ -100,13 +144,9 @@
 </updateparameters>
                                     </asp:SqlDataSource>
                                 </div>
-                                <div class="row form-group">
-                                    <div class="text-center">
-                                        <label for="selectSm" class="form-control-label">Elemento</label>
-                                    </div>
-                                </div>
+
                                 <div class="auto-style11">
-                                    <asp:GridView runat="server" AutoGenerateColumns="False" DataKeyNames="IdElemento" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" PageSize="5" Width="540px" ID="gvElemento">
+                                    <asp:GridView runat="server" AutoGenerateColumns="False" DataKeyNames="IdElemento" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" PageSize="5" Width="540px" ID="gvElemento" OnSelectedIndexChanged="gvElemento_SelectedIndexChanged">
                                         <columns>
 <asp:BoundField DataField="IdElemento" HeaderText="IdElemento" ReadOnly="True" SortExpression="IdElemento" Visible="False"></asp:BoundField>
 <asp:BoundField DataField="Codigo" HeaderText="Codigo" SortExpression="Codigo"></asp:BoundField>
@@ -137,6 +177,13 @@
 <asp:Parameter Name="IdElemento" Type="Int32"></asp:Parameter>
 </updateparameters>
                                     </asp:SqlDataSource>
+                                    <asp:SqlDataSource runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>"></asp:SqlDataSource>
+                                </div>
+                                <div style="width: 207px; position: relative; top: -35px; left: 234px">
+                                    <asp:Label runat="server" Text="Elemento Seleccionado: " ID="lblelemento"></asp:Label>
+                                </div>
+                                <div style="width: 239px; position: relative; top: 12px; left: 220px; z-index: 3; height: 139px">
+                                    <asp:GridView runat="server" ID="gvElementoS"></asp:GridView>
                                 </div>
                                 <div class="form-group">
                                     <label for="FechaP" class=" form-control-label">Fecha Planificacion</label>
@@ -228,7 +275,7 @@
                                     </asp:SqlDataSource>
 
                                 </div>
-                                <div style="width: 152px; position: relative; top: -80px; left: 262px">
+                                <div style="width: 152px; position: relative; top: -21px; left: 253px; z-index: 1; height: 44px;">
                                     <asp:Label ID="lblTexto" runat="server" Text="Usuario Elegido: "></asp:Label>
                                     <br />
                                     <asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
