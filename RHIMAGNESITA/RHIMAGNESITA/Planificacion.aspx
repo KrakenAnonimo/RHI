@@ -31,8 +31,8 @@
         .auto-style10 {
             width: 232px;
             position: relative;
-            top: -177px;
-            left: 430px;
+            top: -64px;
+            left: 434px;
             height: 173px;
             z-index: 2;
         }
@@ -177,7 +177,6 @@
 <asp:Parameter Name="IdElemento" Type="Int32"></asp:Parameter>
 </updateparameters>
                                     </asp:SqlDataSource>
-                                    <asp:SqlDataSource runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>"></asp:SqlDataSource>
                                 </div>
                                 <div style="width: 207px; position: relative; top: -35px; left: 234px">
                                     <asp:Label runat="server" Text="Elemento Seleccionado: " ID="lblelemento"></asp:Label>
@@ -210,17 +209,7 @@
                                     <div class="text-center">
                                     <label for="selectSm" class="form-control-label">Revisado por: </label>
                                 </div>
-                                     <div>
-                                    <asp:DropDownList runat="server" CssClass="auto-style8" ID="cmbRevision">
-                                        <asp:ListItem>Supervisor</asp:ListItem>
-                                        <asp:ListItem>Planificador</asp:ListItem>
-                                    </asp:DropDownList>
                                 </div>
-                                </div>
-                                <div class="text-center">
-                                    <label for="selectSm" class="form-control-label">Asignar a:</label>
-                                </div>
-                               
                                 <div>
                                     <asp:DropDownList runat="server" AutoPostBack="True" ID="cmbRoles" DataSourceID="SqldsRol" DataTextField="Rol" DataValueField="IdRol" OnSelectedIndexChanged="cmbRoles_SelectedIndexChanged"></asp:DropDownList>
 
@@ -284,7 +273,7 @@
                                     </asp:SqlDataSource>
 
                                 </div>
-                                <div style="width: 152px; position: relative; top: -128px; left: 247px; z-index: 1; height: 44px;">
+                                <div style="width: 152px; position: relative; top: -30px; left: 250px; z-index: 1; height: 44px;">
                                     <asp:Label ID="lblTexto" runat="server" Text="Usuario Elegido: "></asp:Label>
                                     <br />
                                     <asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>

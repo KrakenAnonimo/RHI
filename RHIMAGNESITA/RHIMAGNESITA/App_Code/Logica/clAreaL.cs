@@ -11,33 +11,33 @@ public class clAreaL
     //Metodo registrar Area
     public int mtdRegistrarArea(clAreaE objDatos)
     {
-        clArea objAreaD = new clArea();
-        int regi = objAreaD.mtdRegistrarArea(objDatos);
+        clArea objArea = new clArea();
+        int regi = objArea.mtdRegistrarArea(objDatos);
         return regi;
     }
 
     //Metodo Listar Area
-    public List<clAreaE> mtdListarArea()
+    public List<clAreaE> mtdListarUsuaPlanificacion()
     {
-        clArea objAreaD = new clArea();
+        clArea objArea = new clArea();
         List<clAreaE> ListaArea = new List<clAreaE>();
-        ListaArea = objAreaD.mtdListarArea();
+        ListaArea = objArea.mtdListarArea();
         return ListaArea;
     }
 
     //Metodo Eliminar Area
     public int mtdEliminarArea(clAreaE objDatos)
     {
-        clArea objAreaD = new clArea();
-        int eliminar = objAreaD.mtdEliminarArea(objDatos);
+        clArea objArea = new clArea();
+        int eliminar = objArea.mtdEliminarArea(objDatos);
         return eliminar;
     }
 
     //Metodo Actualizar Area
     public int mtdActualizarArea(clAreaE objDatos)
     {
-        clArea objAreaD = new clArea();
-        int Actualizar = objAreaD.mtdActualizarArea(objDatos);
+        clArea objArea = new clArea();
+        int Actualizar = objArea.mtdActualizarArea(objDatos);
         return Actualizar;
     }
 }

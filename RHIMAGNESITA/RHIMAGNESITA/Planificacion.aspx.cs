@@ -26,21 +26,7 @@ public partial class Planificacion : System.Web.UI.Page
         objPlanificacionE.Estado = cmbEstado.SelectedValue.ToString();
         objPlanificacionE.IdElemento = int.Parse(gvElemento.DataKeys[fila].Value.ToString());
 
-        clPlanificacion objPlanificacion = new clPlanificacion();
-        int resultsql = objPlanificacion.mtdRegistrarPlanificacion(objPlanificacionE);
-
-
-        if (resultsql > 0)
-        {
-            //enviar mensaje 
-            Response.Write("<script>alert('Se Registro Correctamente')</script>");
-            //Limpiar Campos de texto
-            txtFechaP.Text = "";
-            txtObservaciones.Text = "";
-            //Redireccion de Pagina
-            Response.Redirect("~/Planificacion.aspx");
-        }
-
+        // Obtener id de la planificacion
         string sqlIplan = "select IdPlanificacion from Planifiacion where FechaPlanficacion = '" + txtFechaP + "'";
         SqlDataSource3.SelectCommand = sqlIplan;
 
@@ -52,13 +38,13 @@ public partial class Planificacion : System.Web.UI.Page
         {
             int idusuario = int.Parse(gvElegidos.Rows[i].Cells[0].Text);
 
-            string sqlInsUP = "insert into UsuaPlanificacion(IdPlanificacion,IdUsuario)" +
+            string sqlInsUP = "insert into UsuaPlanificacion (IdPlanificacion,IdUsuario)" +
                 "values(" + idplanificacion + "," + idusuario + ")";
 
             SqlDataSource3.InsertCommand = sqlInsUP;
             int result = SqlDataSource3.Insert();
-
         }
+
         // Guardar Elemento
         // Ciclo por cada registro del elemeto en la planificacion
         for (int i = 0; i < gvElementoS.Rows.Count; i++)
@@ -72,6 +58,20 @@ public partial class Planificacion : System.Web.UI.Page
 
             //Registro de id
             objPlanificacionE.IdElemento = IdElemento;
+        }
+
+        clPlanificacion objPlanificacion = new clPlanificacion();
+        int resultsql = objPlanificacion.mtdRegistrarPlanificacion(objPlanificacionE);
+
+        if (resultsql > 0)
+        {
+            //enviar mensaje 
+            Response.Write("<script>alert('Se Registro Correctamente')</script>");
+            //Limpiar Campos de texto
+            txtFechaP.Text = "";
+            txtObservaciones.Text = "";
+            //Redireccion de Pagina
+            Response.Redirect("~/Planificacion.aspx");
         }
     }
 
@@ -122,7 +122,7 @@ public partial class Planificacion : System.Web.UI.Page
         //Busqueda por nombre en la consulta
         SqlDataSource1.SelectCommand = SqlDataSource4.SelectCommand = "SELECT Elemento.IdElemento, Elemento.Codigo, Elemento.Nombre, Planificacion.IdPlanificacion, Planificacion.FechaPlanificacion, Planificacion.Estado FROM Elemento INNER JOIN Planificacion ON Elemento.IdElemento = Planificacion.IdElemento WHERE Elemento.Nombre Like '%" + txtBuscarE.Text + "%'";
         SqlDataSource1.DataBind();
-       
+        txtBuscarE.Text = "";
     }
 
     int filas = 0;
