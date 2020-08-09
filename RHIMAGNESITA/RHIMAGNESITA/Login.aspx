@@ -70,6 +70,7 @@
                             </div>
                         </form>
                     </div>
+
                     <!-- End Login Form -->
 
 
@@ -128,11 +129,19 @@
         </footer>
 
     </div>
+
     <!-- partial -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <script src="Vista/Login/script.js"></script>
     </form>
-    <asp:SqlDataSource ID="sqldsLogin" runat="server"></asp:SqlDataSource>
+    <div>
+        <asp:SqlDataSource ID="SqldsLogin" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT Rol.Rol, Usuario.Clave, Usuario.Email FROM Rol INNER JOIN Usuario ON Rol.IdRol = Usuario.IdRol WHERE (Usuario.Clave = @clave) AND (Usuario.Email = @usuario)">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="txtEmailLog" Name="usuario" PropertyName="Text" />
+                <asp:ControlParameter ControlID="txtPasswordLog" Name="clave" PropertyName="Text" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+    </div>
 </body>
 </html>
