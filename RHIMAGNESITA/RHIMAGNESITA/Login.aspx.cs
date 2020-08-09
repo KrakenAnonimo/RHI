@@ -10,16 +10,11 @@ public partial class Login : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
-    }
-
-    protected void btnIngresar_Click(object sender, EventArgs e)
-    {
         // Consultar en la BD por medio del sqlDatasource
         // Pasar datos del sqldataSource al dataTable
 
-        /*DataTable tblDatos = new DataTable();
-        tblDatos = ((DataView)sqldsLogin.Select(DataSourceSelectArguments.Empty)).Table;
+        DataTable tblDatos = new DataTable();
+        tblDatos = ((DataView)SqldsLogin.Select(DataSourceSelectArguments.Empty)).Table;
 
         if (tblDatos.Rows.Count > 0)
         {
@@ -31,10 +26,9 @@ public partial class Login : System.Web.UI.Page
         {
             // Si no existe mostrar un alert de informcionaz
             txtEmailLog.Text = "";
-            txtClave.Text = "";
+            txtPasswordLog.Text = "";
             Response.Write("<script>alert('Los datos no son los correstos');</script>");
-            Response.Redirect("~/Inicio.aspx");*/
+            Response.Redirect("~/Inicio.aspx");
         }
-
     }
 }

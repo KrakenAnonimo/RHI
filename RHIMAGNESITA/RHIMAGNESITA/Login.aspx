@@ -1,13 +1,10 @@
-﻿<!DOCTYPE html>
-<script runat="server">
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Login" %>
 
-    Protected Sub txtEmail_TextChanged(sender As Object, e As EventArgs)
+<!DOCTYPE html>
 
-    End Sub
-</script>
-
-<html lang="en">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <head>
     <meta charset="UTF-8">
     <title>Login/Sing Up</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:300,600" rel="stylesheet">
@@ -17,6 +14,9 @@
     <!-- Favicons -->
     <link href="Vista/PgPrin/img/favicon.png" rel="icon">
     <link href="Vista/PgPrin/img/apple-touch-icon.png" rel="apple-touch-icon">
+</head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
 </head>
 <body>
     <!--
