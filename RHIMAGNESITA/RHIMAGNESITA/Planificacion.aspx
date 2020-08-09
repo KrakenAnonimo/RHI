@@ -31,8 +31,8 @@
         .auto-style10 {
             width: 232px;
             position: relative;
-            top: -69px;
-            left: 424px;
+            top: -177px;
+            left: 430px;
             height: 173px;
             z-index: 2;
         }
@@ -275,7 +275,7 @@
                                     </asp:SqlDataSource>
 
                                 </div>
-                                <div style="width: 152px; position: relative; top: -21px; left: 253px; z-index: 1; height: 44px;">
+                                <div style="width: 152px; position: relative; top: -128px; left: 247px; z-index: 1; height: 44px;">
                                     <asp:Label ID="lblTexto" runat="server" Text="Usuario Elegido: "></asp:Label>
                                     <br />
                                     <asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
