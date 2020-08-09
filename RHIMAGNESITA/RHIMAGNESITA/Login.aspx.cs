@@ -20,7 +20,7 @@ public partial class Login : System.Web.UI.Page
         {
             Session["usuario"] = tblDatos.Rows[0][0].ToString();
             Session["rol"] = tblDatos.Rows[0][2].ToString();
-            Response.Redirect("~/Inicio2.aspx");
+            Response.Redirect("~/Inicio1.aspx");
         }
         else
         {
@@ -28,7 +28,7 @@ public partial class Login : System.Web.UI.Page
             txtEmailLog.Text = "";
             txtPasswordLog.Text = "";
             Response.Write("<script>alert('Los datos no son los correstos');</script>");
-            Response.Redirect("~/Inicio.aspx");
+            Response.Redirect("~/Login.aspx");
         }
     }
 }
