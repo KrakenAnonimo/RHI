@@ -280,7 +280,7 @@
                                 </div>
                                 <div class="auto-style10">
                                     <asp:GridView ID="gvElegidos" runat="server"></asp:GridView>
-                                    <asp:SqlDataSource ID="SqlDataSource3" runat="server"></asp:SqlDataSource>
+                                    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>"></asp:SqlDataSource>
                                 </div>
                                 <div class="row form-group">
                                     <div>

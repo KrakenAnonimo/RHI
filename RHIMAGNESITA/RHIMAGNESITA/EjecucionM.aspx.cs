@@ -16,12 +16,14 @@ public partial class EjecucionM :  System.Web.UI.Page
     {
         //Lista del OrdenMttoP
         List<clOrdenMttoPE> listaOrdenMttoP = new List<clOrdenMttoPE>();
+
         //Lista del TareaMtto
         List<clTareaMttoE> listaTareaMtto = new List<clTareaMttoE>(); 
 
          //Clase OrdenMttoP junto con el metodo listar
          clOrdenMttoPL objOrdenMttoPL = new clOrdenMttoPL();
         listaOrdenMttoP = objOrdenMttoPL.mtdListarOrdenMttoP();
+
         //Clase OrdenMttoC junto con el metodo listar
         clTareaMttoL objTareaMttoL = new clTareaMttoL();
         listaTareaMtto = objTareaMttoL.mtdListarTareaMtto();
@@ -31,10 +33,11 @@ public partial class EjecucionM :  System.Web.UI.Page
         cmbOrdenMttoP.DataTextField = "NumOrden";
         cmbOrdenMttoP.DataValueField = "IdOrdenMttoP";
         cmbOrdenMttoP.DataBind();
+
         //Carga de combo con datos TareaMtto
         cmbTareaMantenimiento.DataSource = listaTareaMtto;
         cmbTareaMantenimiento.DataTextField = "NombreTM";
-        cmbTareaMantenimiento.DataValueField = "IdElemento";
+        cmbTareaMantenimiento.DataValueField = "IdTareaMtto";
         cmbTareaMantenimiento.DataBind();
     }
 

@@ -17,7 +17,7 @@ public class clAreaL
     }
 
     //Metodo Listar Area
-    public List<clAreaE> mtdListarUsuaPlanificacion()
+    public List<clAreaE> mtdListarArea()
     {
         clArea objArea = new clArea();
         List<clAreaE> ListaArea = new List<clAreaE>();

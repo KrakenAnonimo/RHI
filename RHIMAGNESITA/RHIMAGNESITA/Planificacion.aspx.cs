@@ -17,64 +17,6 @@ public partial class Planificacion : System.Web.UI.Page
 
 
     }
-
-    protected void btnGuardar_Click(object sender, EventArgs e)
-    {
-        clPlanificacionE objPlanificacionE = new clPlanificacionE();
-        objPlanificacionE.FechaPlanificacion = txtFechaP.Text;
-        objPlanificacionE.Observaciones = txtObservaciones.Text;
-        objPlanificacionE.Estado = cmbEstado.SelectedValue.ToString();
-        objPlanificacionE.IdElemento = int.Parse(gvElemento.DataKeys[fila].Value.ToString());
-
-        // Obtener id de la planificacion
-        string sqlIplan = "select IdPlanificacion from Planifiacion where FechaPlanficacion = '" + txtFechaP + "'";
-        SqlDataSource3.SelectCommand = sqlIplan;
-
-        DataTable tblDatos = new DataTable();
-        tblDatos = ((DataView)SqlDataSource3.Select(DataSourceSelectArguments.Empty)).Table;
-        int idplanificacion = int.Parse(tblDatos.Rows[0][0].ToString());
-
-        for (int i = 0; i < gvElegidos.Rows.Count; i++)
-        {
-            int idusuario = int.Parse(gvElegidos.Rows[i].Cells[0].Text);
-
-            string sqlInsUP = "insert into UsuaPlanificacion (IdPlanificacion,IdUsuario)" +
-                "values(" + idplanificacion + "," + idusuario + ")";
-
-            SqlDataSource3.InsertCommand = sqlInsUP;
-            int result = SqlDataSource3.Insert();
-        }
-
-        // Guardar Elemento
-        // Ciclo por cada registro del elemeto en la planificacion
-        for (int i = 0; i < gvElementoS.Rows.Count; i++)
-        {
-            //Campos Registra
-            int IdElemento = int.Parse(gvElementoS.Rows[i].Cells[0].Text);
-
-            //No Registra
-            string Nombre = gvElementoS.Rows[i].Cells[1].Text;
-
-
-            //Registro de id
-            objPlanificacionE.IdElemento = IdElemento;
-        }
-
-        clPlanificacion objPlanificacion = new clPlanificacion();
-        int resultsql = objPlanificacion.mtdRegistrarPlanificacion(objPlanificacionE);
-
-        if (resultsql > 0)
-        {
-            //enviar mensaje 
-            Response.Write("<script>alert('Se Registro Correctamente')</script>");
-            //Limpiar Campos de texto
-            txtFechaP.Text = "";
-            txtObservaciones.Text = "";
-            //Redireccion de Pagina
-            Response.Redirect("~/Planificacion.aspx");
-        }
-    }
-
     protected void btnLimpiar_Click(object sender, EventArgs e)
     {
         //Limpiar Campos de texto
@@ -104,6 +46,23 @@ public partial class Planificacion : System.Web.UI.Page
         gvElegidos.DataBind();
     }
 
+    int filas = 0;
+    protected void gvElemento_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        filas = gvElemento.SelectedRow.RowIndex;
+
+        //clase Elemento
+        clElementop objElemento = new clElementop();
+
+        objElemento.IdElemento = int.Parse(gvElemento.DataKeys[filas].Value.ToString());
+        objElemento.Nombre = gvElemento.SelectedRow.Cells[1].Text;
+
+        listax.Add(objElemento);
+        gvElementoS.DataSource = listax;
+        gvElementoS.DataBind();
+    }
+    static List<clElementop> listax = new List<clElementop>();
+
     //Lista de la Clase
     static List<clUsuarios> lista = new List<clUsuarios>();
 
@@ -125,22 +84,62 @@ public partial class Planificacion : System.Web.UI.Page
         txtBuscarE.Text = "";
     }
 
-    int filas = 0;
-    protected void gvElemento_SelectedIndexChanged(object sender, EventArgs e)
+    protected void btnGuardar_Click(object sender, EventArgs e)
     {
-        filas = gvElemento.SelectedRow.RowIndex;
+        clPlanificacionE objPlanificacionE = new clPlanificacionE();
+        objPlanificacionE.FechaPlanificacion = txtFechaP.Text;
+        objPlanificacionE.Observaciones = txtObservaciones.Text;
+        objPlanificacionE.Estado = cmbEstado.SelectedValue.ToString();
 
-        //clase Elemento
-        clElementop objElemento = new clElementop();
+        // Obtener id de la planificacion
+        string sqlIplan = "select IdPlanificacion from Planificacion where FechaPlanificacion = '" + txtFechaP + "'";
+        SqlDataSource3.SelectCommand = sqlIplan;
 
-        objElemento.IdElemento = int.Parse(gvElemento.DataKeys[fila].Value.ToString());
-        objElemento.Nombre = gvElemento.SelectedRow.Cells[1].Text;
+        DataTable tblDatos = new DataTable();
+        tblDatos = ((DataView)SqlDataSource3.Select(DataSourceSelectArguments.Empty)).Table;
+        int IdPlanificacion = int.Parse(tblDatos.Rows[0][0].ToString());
 
-        listax.Add(objElemento);
-        gvElementoS.DataSource = listax;
-        gvElementoS.DataBind();
+        // Guardar Usuario
+        // Ciclo por cada registro del Usuario en la usuaplanificacion
+        for (int i = 0; i < gvElegidos.Rows.Count; i++)
+        {
+            int IdUsuario = int.Parse(gvElegidos.Rows[i].Cells[0].Text);
+
+            string sqlInsUP = "insert into UsuaPlanificacion (IdPlanificacion,IdUsuario)" +
+                "values(" + IdPlanificacion + "," + IdUsuario + ")";
+
+            SqlDataSource3.InsertCommand = sqlInsUP;
+            int result = SqlDataSource3.Insert();
+        }
+
+        // Guardar Elemento
+        // Ciclo por cada registro del elemeto en la planificacion
+        for (int i = 0; i < gvElementoS.Rows.Count; i++)
+        {
+            //Campos Registra
+            int IdElemento = int.Parse(gvElementoS.Rows[i].Cells[0].Text);
+
+            //No Registra
+            string Nombre = gvElementoS.Rows[i].Cells[1].Text;
+
+            //Registro de id
+            objPlanificacionE.IdElemento = IdElemento;
+        }
+
+        clPlanificacion objPlanificacion = new clPlanificacion();
+        int resultsql = objPlanificacion.mtdRegistrarPlanificacion(objPlanificacionE);
+
+        if (resultsql > 0)
+        {
+            //enviar mensaje 
+            Response.Write("<script>alert('Se Registro Correctamente')</script>");
+            //Limpiar Campos de texto
+            txtFechaP.Text = "";
+            txtObservaciones.Text = "";
+            //Redireccion de Pagina
+            Response.Redirect("~/Planificacion.aspx");
+        }
     }
-    static List<clElementop> listax = new List<clElementop>();
 }
 public class clUsuarios
 {
