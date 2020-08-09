@@ -27,7 +27,7 @@ public partial class Login : System.Web.UI.Page
             // Si no existe mostrar un alert de informcionaz
             txtEmailLog.Text = "";
             txtPasswordLog.Text = "";
-            Response.Write("<script>alert('Los datos no son los correstos');</script>");
+            Response.Write("<script>alert('Los datos no son los correctos');</script>");
             Response.Redirect("~/Login.aspx");
         }
     }

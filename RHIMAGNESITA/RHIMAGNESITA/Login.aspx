@@ -4,7 +4,6 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <head>
     <meta charset="UTF-8">
     <title>Login/Sing Up</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:300,600" rel="stylesheet">
@@ -14,9 +13,7 @@
     <!-- Favicons -->
     <link href="Vista/PgPrin/img/favicon.png" rel="icon">
     <link href="Vista/PgPrin/img/apple-touch-icon.png" rel="apple-touch-icon">
-</head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
 </head>
 <body>
     <!--
@@ -86,7 +83,7 @@
 
                             <div class="form-group">
                                 <label for="email">Email </label>
-                                <asp:TextBox ID="txtEmail" runat="server" class="email" TextMode="Email" OnTextChanged="txtEmail_TextChanged"></asp:TextBox>
+                                <asp:TextBox ID="txtEmail" runat="server" class="email" TextMode="Email" ></asp:TextBox>
                                 <span class="error"></span>
                             </div>
 

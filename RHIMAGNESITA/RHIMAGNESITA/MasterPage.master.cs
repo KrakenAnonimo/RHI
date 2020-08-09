@@ -11,4 +11,9 @@ public partial class MasterPage :  System.Web.UI.MasterPage
     {
 
     }
+    protected void btnSalir_Click(object sender, EventArgs e)
+    {
+        Session.Abandon();
+        Response.Redirect("~/Index.aspx");
+    }
 }
