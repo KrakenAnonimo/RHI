@@ -12,7 +12,7 @@ public class clOrdenMttoP
     //Metodo registrar OrdenMttoP
     public int mtdRegistrarOrdenMttoP(clOrdenMttoPE objOrdenMttoPE)
     {
-        string sqlInsert = "insert into OrdenMttoPreventivo(NumOrden,Disciplina,FechaInicio,HoraInicio,FechaFinal,HoraFianl,Ejecutado,TrabajoIE,Observaciones,Revisado,IdPlanificacion,IdReporteAS,IdUsuario)" +
+        string sqlInsert = "insert into OrdenMttoPreventivo(NumOrden,Disciplina,FechaInicio,HoraInicio,FechaFinal,HoraFinal,Ejecutado,TrabajoIE,Observaciones,Revisado,IdPlanificacion,IdReporteAS,IdUsuario)" +
             "Values('" + objOrdenMttoPE.NumOrden + "','" + objOrdenMttoPE.Disciplina + "','" + objOrdenMttoPE.FechaInicio + "','" + objOrdenMttoPE.HoraInicio + "','" + objOrdenMttoPE.FechaFinal + "','" + objOrdenMttoPE.HoraFinal + "','" + objOrdenMttoPE.Ejecutado + "','" + objOrdenMttoPE.TrabajoIE + "','" + objOrdenMttoPE.Observaciones + "','" + objOrdenMttoPE.Revisado + "','" + objOrdenMttoPE.IdPlanificacion + "','" + objOrdenMttoPE.IdReporteAS + "','" + objOrdenMttoPE.IdUsuario + "')";
 
 

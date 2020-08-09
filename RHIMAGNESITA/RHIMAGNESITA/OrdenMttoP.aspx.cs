@@ -14,21 +14,10 @@ public partial class OrdenMttoP : System.Web.UI.Page
     protected void Page_Init(object sender, EventArgs e)
     {
         //Listados de los 2 combos
-        List<clPlanificacionE> listaPlanificacion = new List<clPlanificacionE>();
         List<clReporteAveriaServicioE> listaReporteAveriaServicio = new List<clReporteAveriaServicioE>();
-
-        //Clases con sus metodos
-        clPlanificacionL objPlanificacionL = new clPlanificacionL();
-        listaPlanificacion = objPlanificacionL.mtdListarPlanificacion();
 
         clReporteAveriaServicioL objReporteAveriaServicioL = new clReporteAveriaServicioL();
         listaReporteAveriaServicio = objReporteAveriaServicioL.mtdListarReporteAveriaServicio();
-
-        //Carga de combos con sus datos
-        cmbPlanificacion.DataSource = listaPlanificacion;
-        cmbPlanificacion.DataTextField = "FechaPlanificacion";
-        cmbPlanificacion.DataValueField = "IdPlanificacion";
-        cmbPlanificacion.DataBind();
 
         cmbAveriaServicio.DataSource = listaReporteAveriaServicio;
         cmbAveriaServicio.DataTextField = "Titulo";
@@ -41,13 +30,28 @@ public partial class OrdenMttoP : System.Web.UI.Page
     {
         int idRol = int.Parse(RadioButtonList1.SelectedValue.ToString());
         string consulta = "select * from Usuario where IdRol=" + idRol;
-        SqlDataSource4.SelectCommand = consulta;
-        gvUsuarios.DataSourceID = "SqlDataSource4";
+        SqlDataSource5.SelectCommand = consulta;
+        gvUsuarios.DataSourceID = "SqlDataSource5";
         gvUsuarios.DataBind();
     }
 
-    int fila = 0;
+    int filas = 0;
 
+    protected void GridView2_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        fila = gvPlanificacion.SelectedRow.RowIndex;
+
+        //clase Planificacion
+        clPlanificacionx objPlanificacion = new clPlanificacionx();
+
+        objPlanificacion.IdPlanificacion = int.Parse(gvPlanificacion.DataKeys[fila].Value.ToString());
+        objPlanificacion.FechaPlanificacion = gvPlanificacion.SelectedRow.Cells[1].Text;
+
+        listax.Add(objPlanificacion);
+        gvPlanificaciones.DataSource = listax;
+        gvPlanificaciones.DataBind();
+    }
+    static List<clPlanificacionx> listax = new List<clPlanificacionx>();
     protected void gvUsuario_SelectedIndexChanged(object sender, EventArgs e)
     {
         fila = gvUsuarios.SelectedRow.RowIndex;
@@ -62,6 +66,14 @@ public partial class OrdenMttoP : System.Web.UI.Page
         lista.Add(objUsuarios);
         gvListaElegidos.DataSource = lista;
         gvListaElegidos.DataBind();
+    }
+    int fila = 0;
+    protected void btnBuscar_Click(object sender, EventArgs e)
+    {
+        //Busqueda por nombre en la consulta
+        SqlDataSource1.SelectCommand = "SELECT [IdPlanificacion], [FechaPlanificacion], [Observaciones], [IdElemento] FROM [Planificacion] WHERE FechaPlanificacion Like '%" + txtBuscarE.Text + "%'";
+        //Ejecucion
+        SqlDataSource1.DataBind();
     }
 
     static List<clUsuarioq> lista = new List<clUsuarioq>();
@@ -78,8 +90,33 @@ public partial class OrdenMttoP : System.Web.UI.Page
         objOrdenMttoPE.TrabajoIE = cmbTrabajoIE.SelectedValue.ToString();
         objOrdenMttoPE.Observaciones = txtObservaciones.Text;
         objOrdenMttoPE.Revisado = cmbRevisado.SelectedValue.ToString();
-        objOrdenMttoPE.IdPlanificacion = int.Parse(cmbPlanificacion.SelectedValue.ToString());
         objOrdenMttoPE.IdReporteAS = int.Parse(cmbAveriaServicio.SelectedValue.ToString());
+
+        // Guardar Usuarios
+        // Ciclo por cada registro de usuarios en la orden
+        for (int i = 0; i < gvListaElegidos.Rows.Count; i++)
+        {
+            //Campos Registra
+            int IdUsuario = int.Parse(gvListaElegidos.Rows[i].Cells[0].Text);
+
+            //Campos No Registra
+            int Documento = int.Parse(gvListaElegidos.Rows[i].Cells[1].Text);
+            string Nombre = gvListaElegidos.Rows[i].Cells[2].Text;
+
+            //Registro de id
+            objOrdenMttoPE.IdUsuario = IdUsuario;
+        }
+        // Guardar Planificacion
+        // Ciclo por cada registro de Planificacion en la orden
+        for (int i = 0; i < gvPlanificaciones.Rows.Count; i++)
+        {
+            //Campos Registra
+            int IdPlanificacion = int.Parse(gvPlanificaciones.Rows[i].Cells[0].Text);
+
+
+            //Registro de id
+            objOrdenMttoPE.IdPlanificacion = IdPlanificacion;
+        }
 
         clOrdenMttoP objOrdenMttoP = new clOrdenMttoP();
         int resultsql = objOrdenMttoP.mtdRegistrarOrdenMttoP(objOrdenMttoPE);
@@ -103,6 +140,7 @@ public partial class OrdenMttoP : System.Web.UI.Page
         }
     }
 
+
     protected void btnLimpiar_Click(object sender, EventArgs e)
     {
         txtNumOrdenP.Text = "";
@@ -120,5 +158,14 @@ public partial class OrdenMttoP : System.Web.UI.Page
         public int IdUsuario { get; set; }
         public string Documento { get; set; }
         public string Nombre { get; set; }
+    }
+
+    public class clPlanificacionx
+    {
+        //Atributos Tabla Planificacion
+        public int IdPlanificacion { get; set; }
+        public string FechaPlanificacion { get; set; }
+
+
     }
 }

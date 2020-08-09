@@ -37,14 +37,6 @@
             top: -189px;
         }
 
-        .auto-style13 {
-            width: 50%;
-            position: relative;
-            left: -160px;
-            top: 7px;
-            height: 20px;
-        }
-
         .auto-style15 {
             position: relative;
             left: 53px;
@@ -53,17 +45,50 @@
 
         .auto-style16 {
             position: relative;
-            left: 383px;
-            top: -14px;
+            left: -7px;
+            top: -25px;
         }
+
         .auto-style17 {
             position: relative;
             left: 181px;
             top: 9px;
         }
+
         .auto-style18 {
             text-align: center;
             height: 132px;
+            width: 306px;
+            position: relative;
+            top: 144px;
+            left: -15px;
+        }
+        
+        .auto-style19 {
+            display: block;
+            width: 74%;
+            height: 19px;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+            -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+            -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            position: relative;
+            left: 204px;
+            top: 15px;
+        }
+        .auto-style20 {
+            margin-bottom: 15px;
+            width: 262px;
+            height: 54px;
         }
     </style>
 </asp:Content>
@@ -93,25 +118,29 @@
                                         </asp:DropDownList>
                                     </div>
                                 </div>
-                                <div class="row form-group">
-                                    <div class="text-center">
+                                <div class="text-center">
                                         <label for="selectSm" class="form-control-label">Planificacion</label>
                                     </div>
                                     <div class="text-center">
-                                        <asp:DropDownList ID="cmbPlanificacion" runat="server" CssClass="auto-style13">
-                                        </asp:DropDownList>
+                                        <div class="auto-style20">
+                                            <asp:TextBox ID="txtBuscarE" runat="server" placeholder="Buscar..." class="auto-style19" TextMode="Date"></asp:TextBox>
+                                        </div>
+                                        <div>
+                                            <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-primary btn-sm" Style="position: relative; left: 111px; top: -58px" OnClick="btnBuscar_Click" />
+                                        </div>
                                     </div>
+                                <div class="row form-group">
                                     <div>
-                                        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="IdPlanificacion" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" CssClass="auto-style16" PageSize="5">
+                                        <asp:GridView ID="gvPlanificacion" runat="server" AutoGenerateColumns="False" DataKeyNames="IdPlanificacion" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" CssClass="auto-style16" PageSize="5" OnSelectedIndexChanged="GridView2_SelectedIndexChanged">
                                             <Columns>
                                                 <asp:BoundField DataField="IdPlanificacion" HeaderText="IdPlanificacion" ReadOnly="True" SortExpression="IdPlanificacion" Visible="False" />
                                                 <asp:BoundField DataField="FechaPlanificacion" HeaderText="FechaPlanificacion" SortExpression="FechaPlanificacion" />
-                                                <asp:BoundField DataField="Observaciones" HeaderText="Observaciones" SortExpression="Observaciones" Visible="False" />
+                                                <asp:BoundField DataField="Observaciones" HeaderText="Observaciones" SortExpression="Observaciones" />
                                                 <asp:BoundField DataField="IdElemento" HeaderText="IdElemento" SortExpression="IdElemento" Visible="False" />
                                                 <asp:CommandField ShowSelectButton="True" />
                                             </Columns>
                                         </asp:GridView>
-                                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" DeleteCommand="DELETE FROM [Planificacion] WHERE [IdPlanificacion] = @IdPlanificacion" InsertCommand="INSERT INTO [Planificacion] ([FechaPlanificacion], [Observaciones], [IdElemento]) VALUES (@FechaPlanificacion, @Observaciones, @IdElemento)" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT [IdPlanificacion], [FechaPlanificacion], [Observaciones], [IdElemento] FROM [Planificacion]" UpdateCommand="UPDATE [Planificacion] SET [FechaPlanificacion] = @FechaPlanificacion, [Observaciones] = @Observaciones, [IdElemento] = @IdElemento WHERE [IdPlanificacion] = @IdPlanificacion" >
+                                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" DeleteCommand="DELETE FROM [Planificacion] WHERE [IdPlanificacion] = @IdPlanificacion" InsertCommand="INSERT INTO [Planificacion] ([FechaPlanificacion], [Observaciones], [IdElemento]) VALUES (@FechaPlanificacion, @Observaciones, @IdElemento)" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT [IdPlanificacion], [FechaPlanificacion], [Observaciones], [IdElemento] FROM [Planificacion]" UpdateCommand="UPDATE [Planificacion] SET [FechaPlanificacion] = @FechaPlanificacion, [Observaciones] = @Observaciones, [IdElemento] = @IdElemento WHERE [IdPlanificacion] = @IdPlanificacion">
                                             <DeleteParameters>
                                                 <asp:Parameter Name="IdPlanificacion" Type="Int32" />
                                             </DeleteParameters>
@@ -129,14 +158,17 @@
                                         </asp:SqlDataSource>
 
                                     </div>
-                                </div>                                
+                                    <div style="width: 240px; position: relative; top: -118px; left: 411px">
+                                        <asp:GridView ID="gvPlanificaciones" runat="server"></asp:GridView>
+                                    </div>
+                                </div>
                                 <div class="row form-group">
                                     <div class="text-center">
                                         <label for="selectSm" class="form-control-label">Asignar a:</label>
                                         &nbsp;
                                     </div>
                                     <div class="auto-style9">
-                                        <asp:RadioButtonList ID="RadioButtonList1" runat="server" AutoPostBack="True" CssClass="auto-style17" DataSourceID="SqlDataSource4" DataTextField="IdRol" DataValueField="Rol" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged">
+                                        <asp:RadioButtonList ID="RadioButtonList1" runat="server" AutoPostBack="True" CssClass="auto-style17" DataSourceID="SqlDataSource4" DataTextField="Rol" DataValueField="IdRol" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged" RepeatDirection="Horizontal">
                                         </asp:RadioButtonList>
                                     </div>
                                     <div>
@@ -255,7 +287,7 @@
                                             <asp:ListItem>Planificador</asp:ListItem>
                                         </asp:DropDownList>
                                     </div>
-                                </div>                                
+                                </div>
                                 <div>
                                     <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" OnClick="btnGuardar_Click" />
                                     <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar Todo" class="btn btn-danger btn-sm" OnClick="btnLimpiar_Click" />
