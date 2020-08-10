@@ -140,7 +140,7 @@
                                 <label for="selectSm" class="form-control-label">Elige la Tarea de Mantenimiento</label>
                             </div>
                             <div class="auto-style12">
-                                <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="IdTareaMtto" DataSourceID="SqlDataSource2" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" PageSize="5">
+                                <asp:GridView ID="gvTareaMtto" runat="server" AutoGenerateColumns="False" DataKeyNames="IdTareaMtto" DataSourceID="SqlDataSource2" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" PageSize="5">
                                     <Columns>
                                         <asp:BoundField DataField="IdTareaMtto" HeaderText="IdTareaMtto" ReadOnly="True" SortExpression="IdTareaMtto" Visible="False" />
                                         <asp:BoundField DataField="NombreTM" HeaderText="NombreTM" SortExpression="NombreTM" />
