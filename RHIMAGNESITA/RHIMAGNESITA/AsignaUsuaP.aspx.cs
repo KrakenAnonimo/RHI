@@ -20,12 +20,13 @@ public partial class AsignaUsuaP : System.Web.UI.Page
         gvUsua.DataBind();
     }
     int fila = 0;
+    int filas = 0; 
     protected void btnGuardar_Click(object sender, EventArgs e)
     {
 
         clUsuaPlanificacionE objUsuaPlanificacionE = new clUsuaPlanificacionE();
         objUsuaPlanificacionE.IdUsuario = int.Parse(gvUsua.DataKeys[fila].Value.ToString());
-        objUsuaPlanificacionE.IdPlanificacion = int.Parse(gvPlanif.DataKeys[fila].Value.ToString());
+        objUsuaPlanificacionE.IdPlanificacion = int.Parse(gvPlanif.DataKeys[filas].Value.ToString());
        
         
         clUsuaPlanificacion objUsuaPlanificacion = new clUsuaPlanificacion();

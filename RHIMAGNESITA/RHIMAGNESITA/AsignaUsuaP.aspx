@@ -55,7 +55,7 @@
                                         <label for="selectSm" class="form-control-label">Asignar</label>
                                     </div>
                                     <div class="text-center">
-                                        <asp:DropDownList ID="cmbUsP" runat="server" CssClass="auto-style6" BackColor="White" DataSourceID="sqlRols" DataTextField="Rol" DataValueField="IdRol" ForeColor="Black" OnSelectedIndexChanged="cmbUsP_SelectedIndexChanged">
+                                        <asp:DropDownList ID="cmbUsP" runat="server" CssClass="auto-style6" BackColor="White" DataSourceID="sqlRols" DataTextField="Rol" DataValueField="IdRol" ForeColor="Black" OnSelectedIndexChanged="cmbUsP_SelectedIndexChanged" AutoPostBack="True">
                                         </asp:DropDownList>
                                         <asp:SqlDataSource runat="server" ID="sqlRols" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT Rol.* FROM Rol"></asp:SqlDataSource>
                                     </div>
@@ -63,7 +63,8 @@
                                     <br />
                                     <div class="auto-style8">
 
-                                        <asp:GridView runat="server" AutoGenerateColumns="False" DataKeyNames="IdUsuario" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" PageSize="5" ID="gvUsua">
+                                        <asp:GridView runat="server" AutoGenerateColumns="False" DataKeyNames="IdUsuario" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" PageSize="5" ID="gvUsua" ForeColor="Black" GridLines="Vertical">
+                                            <AlternatingRowStyle BackColor="White" />
                                             <columns>
 <asp:BoundField DataField="IdUsuario" HeaderText="IdUsuario" ReadOnly="True" SortExpression="IdUsuario" Visible="False"></asp:BoundField>
 <asp:BoundField DataField="Documento" HeaderText="Documento" SortExpression="Documento"></asp:BoundField>
@@ -77,15 +78,15 @@
 <asp:BoundField DataField="IdRol" HeaderText="IdRol" SortExpression="IdRol" Visible="False"></asp:BoundField>
                                                 <asp:CommandField ShowSelectButton="True" />
 </columns>
-                                            <footerstyle backcolor="White" forecolor="#000066" />
-                                            <headerstyle backcolor="#006699" font-bold="True" forecolor="White" />
-                                            <pagerstyle backcolor="White" forecolor="#000066" horizontalalign="Left" />
-                                            <rowstyle forecolor="#000066" />
-                                            <selectedrowstyle backcolor="#669999" font-bold="True" forecolor="White" />
-                                            <sortedascendingcellstyle backcolor="#F1F1F1" />
-                                            <sortedascendingheaderstyle backcolor="#007DBB" />
-                                            <sorteddescendingcellstyle backcolor="#CAC9C9" />
-                                            <sorteddescendingheaderstyle backcolor="#00547E" />
+                                            <footerstyle backcolor="#CCCC99" />
+                                            <headerstyle backcolor="#6B696B" font-bold="True" forecolor="White" />
+                                            <pagerstyle backcolor="#F7F7DE" forecolor="Black" horizontalalign="Right" />
+                                            <rowstyle BackColor="#F7F7DE" />
+                                            <selectedrowstyle backcolor="#CE5D5A" font-bold="True" forecolor="White" />
+                                            <sortedascendingcellstyle backcolor="#FBFBF2" />
+                                            <sortedascendingheaderstyle backcolor="#848384" />
+                                            <sorteddescendingcellstyle backcolor="#EAEAD3" />
+                                            <sorteddescendingheaderstyle backcolor="#575357" />
                                         </asp:GridView>
                                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" DeleteCommand="DELETE FROM [Usuario] WHERE [IdUsuario] = @IdUsuario" InsertCommand="INSERT INTO [Usuario] ([Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol]) VALUES (@Documento, @Nombre, @Apellido, @Telefono, @Email, @Clave, @Ciudad, @Direccion, @IdRol)" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT [IdUsuario], [Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol] FROM [Usuario]" UpdateCommand="UPDATE [Usuario] SET [Documento] = @Documento, [Nombre] = @Nombre, [Apellido] = @Apellido, [Telefono] = @Telefono, [Email] = @Email, [Clave] = @Clave, [Ciudad] = @Ciudad, [Direccion] = @Direccion, [IdRol] = @IdRol WHERE [IdUsuario] = @IdUsuario">
                                             <deleteparameters>
@@ -117,7 +118,8 @@
                                         </asp:SqlDataSource>
                                     </div>
                                     <div class="auto-style9">
-                                        <asp:GridView runat="server" AutoGenerateColumns="False" DataKeyNames="IdPlanificacion" DataSourceID="SqlDataSource2" EmptyDataText="No hay registros de datos para mostrar." ID="gvPlanif" AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" Height="19px" PageSize="5" Width="255px">
+                                        <asp:GridView runat="server" AutoGenerateColumns="False" DataKeyNames="IdPlanificacion" DataSourceID="SqlDataSource2" EmptyDataText="No hay registros de datos para mostrar." ID="gvPlanif" AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" Height="19px" PageSize="5" Width="255px" ForeColor="Black" GridLines="Vertical">
+                                            <AlternatingRowStyle BackColor="White" />
                                             <columns>
 <asp:BoundField DataField="IdPlanificacion" HeaderText="IdPlanificacion" ReadOnly="True" SortExpression="IdPlanificacion" Visible="False"></asp:BoundField>
 <asp:BoundField DataField="FechaPlanificacion" HeaderText="FechaPlanificacion" SortExpression="FechaPlanificacion"></asp:BoundField>
@@ -126,15 +128,15 @@
 <asp:BoundField DataField="IdElemento" HeaderText="IdElemento" SortExpression="IdElemento" Visible="False"></asp:BoundField>
                                                 <asp:CommandField ShowSelectButton="True" />
 </columns>
-                                            <FooterStyle BackColor="White" ForeColor="#000066" />
-                                            <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
-                                            <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
-                                            <RowStyle ForeColor="#000066" />
-                                            <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
-                                            <SortedAscendingCellStyle BackColor="#F1F1F1" />
-                                            <SortedAscendingHeaderStyle BackColor="#007DBB" />
-                                            <SortedDescendingCellStyle BackColor="#CAC9C9" />
-                                            <SortedDescendingHeaderStyle BackColor="#00547E" />
+                                            <FooterStyle BackColor="#CCCC99" />
+                                            <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                                            <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+                                            <RowStyle BackColor="#F7F7DE" />
+                                            <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+                                            <SortedAscendingCellStyle BackColor="#FBFBF2" />
+                                            <SortedAscendingHeaderStyle BackColor="#848384" />
+                                            <SortedDescendingCellStyle BackColor="#EAEAD3" />
+                                            <SortedDescendingHeaderStyle BackColor="#575357" />
                                         </asp:GridView>
                                         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" DeleteCommand="DELETE FROM [Planificacion] WHERE [IdPlanificacion] = @IdPlanificacion" InsertCommand="INSERT INTO [Planificacion] ([FechaPlanificacion], [Observaciones], [Estado], [IdElemento]) VALUES (@FechaPlanificacion, @Observaciones, @Estado, @IdElemento)" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT [IdPlanificacion], [FechaPlanificacion], [Observaciones], [Estado], [IdElemento] FROM [Planificacion]" UpdateCommand="UPDATE [Planificacion] SET [FechaPlanificacion] = @FechaPlanificacion, [Observaciones] = @Observaciones, [Estado] = @Estado, [IdElemento] = @IdElemento WHERE [IdPlanificacion] = @IdPlanificacion">
                                             <deleteparameters>

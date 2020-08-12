@@ -64,10 +64,12 @@
             width: 262px;
             height: 54px;
         }
+
         .auto-style15 {
             height: 12px;
             width: 663px;
         }
+
         .auto-style16 {
             width: 296px;
             top: -120px;
@@ -76,25 +78,30 @@
             height: 64px;
             position: relative;
         }
+
         .auto-style17 {
             width: 207px;
             position: relative;
             top: -133px;
             left: 217px;
         }
+
         .auto-style18 {
             text-align: center;
             width: 559px;
         }
+
         .auto-style19 {
             text-align: center;
             width: 571px;
         }
+
         .auto-style20 {
             text-align: center;
             width: 585px;
             height: 41px;
         }
+
         .auto-style21 {
             margin-bottom: 15px;
             width: 567px;
@@ -136,7 +143,8 @@
                                 </div>
 
                                 <div class="auto-style12">
-                                    <asp:GridView runat="server" AutoGenerateColumns="False" DataKeyNames="IdPlanificacion" DataSourceID="SqlDataSource4" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" PageSize="5" ID="gvPlanificacion" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" Width="233px">
+                                    <asp:GridView runat="server" AutoGenerateColumns="False" DataKeyNames="IdPlanificacion" DataSourceID="SqlDataSource4" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" PageSize="5" ID="gvPlanificacion" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" Width="233px" ForeColor="Black" GridLines="Vertical">
+                                        <AlternatingRowStyle BackColor="White" />
                                         <columns>
 <asp:BoundField DataField="IdPlanificacion" HeaderText="IdPlanificacion" ReadOnly="True" SortExpression="IdPlanificacion" Visible="False"></asp:BoundField>
 <asp:BoundField DataField="FechaPlanificacion" HeaderText="FechaPlanificacion" SortExpression="FechaPlanificacion"></asp:BoundField>
@@ -144,15 +152,15 @@
 <asp:BoundField DataField="Estado" HeaderText="Estado" SortExpression="Estado"></asp:BoundField>
 <asp:BoundField DataField="IdElemento" HeaderText="IdElemento" SortExpression="IdElemento" Visible="False"></asp:BoundField>
 </columns>
-                                        <FooterStyle BackColor="White" ForeColor="#000066" />
-                                        <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
-                                        <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
-                                        <RowStyle ForeColor="#000066" />
-                                        <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
-                                        <SortedAscendingCellStyle BackColor="#F1F1F1" />
-                                        <SortedAscendingHeaderStyle BackColor="#007DBB" />
-                                        <SortedDescendingCellStyle BackColor="#CAC9C9" />
-                                        <SortedDescendingHeaderStyle BackColor="#00547E" />
+                                        <footerstyle backcolor="#CCCC99" />
+                                        <headerstyle backcolor="#6B696B" font-bold="True" forecolor="White" />
+                                        <pagerstyle backcolor="#F7F7DE" forecolor="Black" horizontalalign="Right" />
+                                        <rowstyle BackColor="#F7F7DE" />
+                                        <selectedrowstyle backcolor="#CE5D5A" font-bold="True" forecolor="White" />
+                                        <sortedascendingcellstyle backcolor="#FBFBF2" />
+                                        <sortedascendingheaderstyle backcolor="#848384" />
+                                        <sorteddescendingcellstyle backcolor="#EAEAD3" />
+                                        <sorteddescendingheaderstyle backcolor="#575357" />
                                     </asp:GridView>
                                     <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" DeleteCommand="DELETE FROM [Planificacion] WHERE [IdPlanificacion] = @IdPlanificacion" InsertCommand="INSERT INTO [Planificacion] ([FechaPlanificacion], [Observaciones], [Estado], [IdElemento]) VALUES (@FechaPlanificacion, @Observaciones, @Estado, @IdElemento)" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT [IdPlanificacion], [FechaPlanificacion], [Observaciones], [Estado], [IdElemento] FROM [Planificacion]" UpdateCommand="UPDATE [Planificacion] SET [FechaPlanificacion] = @FechaPlanificacion, [Observaciones] = @Observaciones, [Estado] = @Estado, [IdElemento] = @IdElemento WHERE [IdPlanificacion] = @IdPlanificacion">
                                         <deleteparameters>
@@ -175,7 +183,8 @@
                                 </div>
 
                                 <div class="auto-style11">
-                                    <asp:GridView runat="server" AutoGenerateColumns="False" DataKeyNames="IdElemento" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" PageSize="5" Width="396px" ID="gvElemento" OnSelectedIndexChanged="gvElemento_SelectedIndexChanged" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3">
+                                    <asp:GridView runat="server" AutoGenerateColumns="False" DataKeyNames="IdElemento" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" PageSize="5" Width="390px" ID="gvElemento" OnSelectedIndexChanged="gvElemento_SelectedIndexChanged" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
+                                        <alternatingrowstyle backcolor="White" />
                                         <columns>
 <asp:BoundField DataField="IdElemento" HeaderText="IdElemento" ReadOnly="True" SortExpression="IdElemento" Visible="False"></asp:BoundField>
 <asp:BoundField DataField="Codigo" HeaderText="Codigo" SortExpression="Codigo"></asp:BoundField>
@@ -185,15 +194,15 @@
 <asp:BoundField DataField="IdArea" HeaderText="IdArea" SortExpression="IdArea" Visible="False"></asp:BoundField>
                                             <asp:CommandField ShowSelectButton="True" />
 </columns>
-                                        <FooterStyle BackColor="White" ForeColor="#000066" />
-                                        <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
-                                        <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
-                                        <RowStyle ForeColor="#000066" />
-                                        <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
-                                        <SortedAscendingCellStyle BackColor="#F1F1F1" />
-                                        <SortedAscendingHeaderStyle BackColor="#007DBB" />
-                                        <SortedDescendingCellStyle BackColor="#CAC9C9" />
-                                        <SortedDescendingHeaderStyle BackColor="#00547E" />
+                                        <footerstyle backcolor="#CCCC99" />
+                                        <headerstyle backcolor="#6B696B" font-bold="True" forecolor="White" />
+                                        <pagerstyle backcolor="#F7F7DE" forecolor="Black" horizontalalign="Right" />
+                                        <rowstyle backcolor="#F7F7DE" />
+                                        <selectedrowstyle backcolor="#CE5D5A" font-bold="True" forecolor="White" />
+                                        <sortedascendingcellstyle backcolor="#FBFBF2" />
+                                        <sortedascendingheaderstyle backcolor="#848384" />
+                                        <sorteddescendingcellstyle backcolor="#EAEAD3" />
+                                        <sorteddescendingheaderstyle backcolor="#575357" />
                                     </asp:GridView>
                                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" DeleteCommand="DELETE FROM [Elemento] WHERE [IdElemento] = @IdElemento" InsertCommand="INSERT INTO [Elemento] ([Codigo], [Nombre], [Descripcion], [Estado], [IdArea]) VALUES (@Codigo, @Nombre, @Descripcion, @Estado, @IdArea)" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT [IdElemento], [Codigo], [Nombre], [Descripcion], [Estado], [IdArea] FROM [Elemento]" UpdateCommand="UPDATE [Elemento] SET [Codigo] = @Codigo, [Nombre] = @Nombre, [Descripcion] = @Descripcion, [Estado] = @Estado, [IdArea] = @IdArea WHERE [IdElemento] = @IdElemento">
                                         <deleteparameters>
@@ -220,16 +229,17 @@
                                     <asp:Label runat="server" Text="Elemento Seleccionado: " ID="lblelemento"></asp:Label>
                                 </div>
                                 <div class="auto-style16">
-                                    <asp:GridView runat="server" ID="gvElementoS" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" Height="16px" Width="268px">
-                                        <FooterStyle BackColor="White" ForeColor="#000066" />
-                                        <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
-                                        <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
-                                        <RowStyle ForeColor="#000066" />
-                                        <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
-                                        <SortedAscendingCellStyle BackColor="#F1F1F1" />
-                                        <SortedAscendingHeaderStyle BackColor="#007DBB" />
-                                        <SortedDescendingCellStyle BackColor="#CAC9C9" />
-                                        <SortedDescendingHeaderStyle BackColor="#00547E" />
+                                    <asp:GridView runat="server" ID="gvElementoS" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" Height="16px" Width="268px" ForeColor="Black" GridLines="Vertical">
+                                        <AlternatingRowStyle BackColor="White" />
+                                        <footerstyle backcolor="#CCCC99" />
+                                        <headerstyle backcolor="#6B696B" font-bold="True" forecolor="White" />
+                                        <pagerstyle backcolor="#F7F7DE" forecolor="Black" horizontalalign="Right" />
+                                        <rowstyle BackColor="#F7F7DE" />
+                                        <selectedrowstyle backcolor="#CE5D5A" font-bold="True" forecolor="White" />
+                                        <sortedascendingcellstyle backcolor="#FBFBF2" />
+                                        <sortedascendingheaderstyle backcolor="#848384" />
+                                        <sorteddescendingcellstyle backcolor="#EAEAD3" />
+                                        <sorteddescendingheaderstyle backcolor="#575357" />
                                     </asp:GridView>
                                 </div>
                                 <div class="auto-style21">
@@ -257,7 +267,7 @@
                                 </div>
                                 <div>
                                 </div>
-                                
+
                                 <div class="row form-group">
                                     <div>
                                         <div>
