@@ -40,14 +40,14 @@ public partial class Login : System.Web.UI.Page
 
     protected void btnRegistrar_Click(object sender, EventArgs e)
     {
-        clLoginE objLoginE = new clLoginE();
+        clUsuarioE objLoginE = new clUsuarioE();
         objLoginE.Nombre = txtNombre.Text;
         objLoginE.Email = txtEmail.Text;
         objLoginE.Telefono = txtPhone.Text;
         objLoginE.Clave = txtPassword.Text;
 
-        clLogin objLogin = new clLogin();
-        int resultsql = objLogin.mtdRegistrarUsuarioLogin(objLoginE);
+        clUsuario objLogin = new clUsuario();
+        int resultsql = objLogin.mtdRegistrarUsuario(objLoginE);
 
         if (resultsql > 0)
         {
