@@ -25,7 +25,6 @@
         // Código que se ejecuta al iniciarse una nueva sesión
 
         Session["usuario"] = "NN";
-        //Session["idRol"] = ("Admin","Supervisor","Planificador","Tecnico","Soldador","Siso");
         Session["idusuario"] = 0;
         Session["idAdmin"] = 1;
         Session["idSupervisor"] = 2;

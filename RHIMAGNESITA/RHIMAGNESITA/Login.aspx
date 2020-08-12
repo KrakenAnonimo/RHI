@@ -36,7 +36,7 @@
 
                     <div class="success-msg">
                         <p>Perfecto! Eres un nuevo miembro ahora.</p>
-                        <a href="#" class="profile">Tu perfil/a>
+                        <a href="Login.aspx">Ingresar</a>
                     </div>
                 </div>
 
@@ -50,18 +50,19 @@
 
                             <div class="form-group">
                                 <label for="email">Email </label>
-                                <asp:TextBox ID="txtEmailLog" runat="server" class="email" TextMode="Email"></asp:TextBox>
+                                <asp:TextBox ID="txtEmailLog" runat="server" class="email" TextMode="Email" ValidateRequestMode="Enabled"></asp:TextBox>
                             </div>
 
                             <div class="form-group">
                                 <label for="password">Contraseña</label>
-                                <asp:TextBox ID="txtPasswordLog" runat="server" class="pass" TextMode="Password"></asp:TextBox>
+                                <asp:TextBox ID="txtPasswordLog" runat="server" class="pass" TextMode="Password" ValidateRequestMode="Enabled"></asp:TextBox>
                                 <span class="error"></span>
                             </div>
 
                             <div class="CTA">
                                 <!--Boton ingresar -->
-                                <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" />
+                                <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" OnClick="btnIngresar_Click"/>
+
                                 <!--fin del cod boton -->
                                 <a href="#" class="switch">Soy nuevo</a>
                             </div>
@@ -106,7 +107,8 @@
 
                             <div class="CTA">
                                 <!--Boton ingresar -->
-                                <asp:Button ID="btnSubmit" runat="server" Text="Registrar" />
+                                <asp:Button ID="btnRegistrar" runat="server" Text="Registrar" OnClick="btnRegistrar_Click"/>
+
                                 <!--fin del cod boton -->
                                 <a href="#" class="switch">Ya tengo una cuenta.</a>
                             </div>
