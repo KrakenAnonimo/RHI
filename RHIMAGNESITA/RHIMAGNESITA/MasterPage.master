@@ -100,6 +100,7 @@
                                                     <li><a href="Material.aspx">Material</a></li>
                                                     <li><a href="Elemento.aspx">Elemento</a></li>
                                                     <li><a href="Planificacion.aspx">Planificacion</a></li>
+                                                    <li><a href="AsignaUsuaP.aspx">Asignar Usuario a Planificacion</a></li>
                                                 </ul>
                                             </li>
                                             <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Ordenes de Mtto<span class="caret"></span></a>
@@ -133,11 +134,11 @@
                     <img src="Vista/PgPrin/img/xddx.jpg" width="100%" class="img-fluid" alt="Responsive image" />
                 </div>
                 <div class="auto-style6">
-            <asp:Label ID="Label1" runat="server" Text="Usuario:"></asp:Label>
-            &nbsp;<asp:Label ID="lblUsuario" runat="server" Text="" ></asp:Label>
-        </div>
+                    <asp:Label ID="Label1" runat="server" Text="Usuario:"></asp:Label>
+                    &nbsp;<asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
+                </div>
                 <p class="auto-style5"></p>
-                
+
                 <!-- header-area end -->
             </header>
             <!-- header end -->

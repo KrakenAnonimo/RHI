@@ -26,26 +26,6 @@ public partial class Planificacion : System.Web.UI.Page
 
     int fila = 0;
 
-    protected void gvUsuario_SelectedIndexChanged(object sender, EventArgs e)
-    {
-        //Mostrar usuario elegido en tabala y label
-        lblUsuario.Text = gvUsuario.SelectedRow.Cells[1].Text + " " + gvUsuario.SelectedRow.Cells[2].Text;
-        fila = gvUsuario.SelectedRow.RowIndex;
-
-        //clase usuario
-        clUsuarios objUsuarios = new clUsuarios();
-
-        //Objeto y variable a cargar
-        objUsuarios.IdUsuario = int.Parse(gvUsuario.DataKeys[fila].Value.ToString());
-        objUsuarios.Documento = gvUsuario.SelectedRow.Cells[1].Text;
-        objUsuarios.Nombre = gvUsuario.SelectedRow.Cells[2].Text;
-
-        //lista y grid tomando datos
-        lista.Add(objUsuarios);
-        gvElegidos.DataSource = lista;
-        gvElegidos.DataBind();
-    }
-
     int filas = 0;
     protected void gvElemento_SelectedIndexChanged(object sender, EventArgs e)
     {
@@ -63,19 +43,6 @@ public partial class Planificacion : System.Web.UI.Page
     }
     static List<clElementop> listax = new List<clElementop>();
 
-    //Lista de la Clase
-    static List<clUsuarios> lista = new List<clUsuarios>();
-
-    //Combo de Roles
-    protected void cmbRoles_SelectedIndexChanged(object sender, EventArgs e)
-    {
-        int idRol = int.Parse(cmbRoles.SelectedValue.ToString());
-        string consulta = "select * from Usuario where IdRol=" + idRol;
-        SqldsGrid.SelectCommand = consulta;
-        gvUsuario.DataSourceID = "SqldsGrid";
-        gvUsuario.DataBind();
-    }
-
     protected void btnBuscar_Click(object sender, EventArgs e)
     {
         //Busqueda por nombre en la consulta
@@ -83,7 +50,22 @@ public partial class Planificacion : System.Web.UI.Page
         SqlDataSource1.DataBind();
         txtBuscarE.Text = "";
     }
+    public class clUsuarios
+    {
+        //Atributos Tabla Usuarios
+        public int IdUsuario { get; set; }
+        public string Documento { get; set; }
+        public string Nombre { get; set; }
+    }
+    public class clElementop
+    {
+        //Atributos Tabla Elementos
+        public int IdElemento { get; set; }
 
+        public string Nombre { get; set; }
+
+
+    }
     protected void btnGuardar_Click(object sender, EventArgs e)
     {
         clPlanificacionE objPlanificacionE = new clPlanificacionE();
@@ -91,69 +73,30 @@ public partial class Planificacion : System.Web.UI.Page
         objPlanificacionE.Observaciones = txtObservaciones.Text;
         objPlanificacionE.Estado = cmbEstado.SelectedValue.ToString();
 
-        // Obtener id de la planificacion
-        string sqlIplan = "select IdPlanificacion from Planificacion where FechaPlanificacion = '" + txtFechaP + "'";
-        SqlDataSource3.SelectCommand = sqlIplan;
+            for (int i = 0; i < gvElementoS.Rows.Count; i++)
+            {
+                //Campos Registra
+                int IdElemento = int.Parse(gvElementoS.Rows[i].Cells[0].Text);
 
-        DataTable tblDatos = new DataTable();
-        tblDatos = ((DataView)SqlDataSource3.Select(DataSourceSelectArguments.Empty)).Table;
-        int IdPlanificacion = int.Parse(tblDatos.Rows[0][0].ToString());
+                //No Registra
+                string Nombre = gvElementoS.Rows[i].Cells[1].Text;
 
-        // Guardar Usuario
-        // Ciclo por cada registro del Usuario en la usuaplanificacion
-        for (int i = 0; i < gvElegidos.Rows.Count; i++)
-        {
-            int IdUsuario = int.Parse(gvElegidos.Rows[i].Cells[0].Text);
+                //Registro de id
+                objPlanificacionE.IdElemento = IdElemento;
+            }
 
-            string sqlInsUP = "insert into UsuaPlanificacion (IdPlanificacion,IdUsuario)" +
-                "values(" + IdPlanificacion + "," + IdUsuario + ")";
+            clPlanificacion objPlanificacion = new clPlanificacion();
+            int resultsql = objPlanificacion.mtdRegistrarPlanificacion(objPlanificacionE);
 
-            SqlDataSource3.InsertCommand = sqlInsUP;
-            int result = SqlDataSource3.Insert();
-        }
-
-        // Guardar Elemento
-        // Ciclo por cada registro del elemeto en la planificacion
-        for (int i = 0; i < gvElementoS.Rows.Count; i++)
-        {
-            //Campos Registra
-            int IdElemento = int.Parse(gvElementoS.Rows[i].Cells[0].Text);
-
-            //No Registra
-            string Nombre = gvElementoS.Rows[i].Cells[1].Text;
-
-            //Registro de id
-            objPlanificacionE.IdElemento = IdElemento;
-        }
-
-        clPlanificacion objPlanificacion = new clPlanificacion();
-        int resultsql = objPlanificacion.mtdRegistrarPlanificacion(objPlanificacionE);
-
-        if (resultsql > 0)
-        {
-            //enviar mensaje 
-            Response.Write("<script>alert('Se Registro Correctamente')</script>");
-            //Limpiar Campos de texto
-            txtFechaP.Text = "";
-            txtObservaciones.Text = "";
-            //Redireccion de Pagina
-            Response.Redirect("~/Planificacion.aspx");
-        }
+            if (resultsql > 0)
+            {
+                //enviar mensaje 
+                Response.Write("<script>alert('Se Registro Correctamente')</script>");
+                //Limpiar Campos de texto
+                txtFechaP.Text = "";
+                txtObservaciones.Text = "";
+                //Redireccion de Pagina
+                Response.Redirect("~/Planificacion.aspx");
+            }
     }
-}
-public class clUsuarios
-{
-    //Atributos Tabla Usuarios
-    public int IdUsuario { get; set; }
-    public string Documento { get; set; }
-    public string Nombre { get; set; }
-}
-public class clElementop
-{
-    //Atributos Tabla Elementos
-    public int IdElemento { get; set; }
-
-    public string Nombre { get; set; }
-
-
 }
