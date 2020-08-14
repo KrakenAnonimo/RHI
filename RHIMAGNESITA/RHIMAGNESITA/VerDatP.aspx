@@ -34,7 +34,7 @@
                 <tr>
                     <th scope="row">Fecha de la Planificacion:</th>
                     <td>
-                        <asp:TextBox ID="txtFechaP" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtFechaP" runat="server" TextMode="Date"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
