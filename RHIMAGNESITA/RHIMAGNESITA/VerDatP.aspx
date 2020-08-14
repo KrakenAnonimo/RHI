@@ -62,5 +62,12 @@
         <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm"/>
         <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-danger btn-sm"/>
     </div>
+    <div>
+        <asp:SqlDataSource ID="SqldsPlanificacion" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT IdPlanificacion, FechaPlanificacion, Observaciones, Estado, IdElemento FROM Planificacion WHERE (IdPlanificacion = @IdPlanificacion)">
+            <SelectParameters>
+                <asp:SessionParameter Name="IdPlanificacion" SessionField="idPlanificacion" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+    </div>
 </asp:Content>
 
