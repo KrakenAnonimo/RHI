@@ -13,7 +13,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div>
          <div style="position: relative; top: -11px; left: 188px; width: 1000px;" class="t-cn">
-            <h2>Lista Ejecuciones de Manteniminto</h2>
+            <h2>Lista Ejecuciones de Mantenimiento</h2>
         </div>
         <div top: 6px; left: 5px; z-index: 1; height: 171px; width: 1285px" class="auto-style7">
                         <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="IdEjecucionM" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." PageSize="5" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" Width="523px">

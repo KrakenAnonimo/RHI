@@ -16,7 +16,7 @@
         <div style="position: relative; top: -11px; left: 188px; width: 1000px;" class="t-cn">
             <h2>Lista de Areas</h2>
         </div>
-        <div class="auto-style7">
+        <div class="auto-styl7">
 
             <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="IdArea" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." ForeColor="Black" GridLines="Vertical" PageSize="5" Width="304px">
                 <AlternatingRowStyle BackColor="White" />

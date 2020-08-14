@@ -13,7 +13,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div>
         <div style="position: relative; top: -11px; left: 188px; width: 1000px;" class="t-cn">
-            <h2>Lista de Materiales</h2>
+            <h2>Lista de Materialess</h2>
         </div>
         <div top: 6px; left: 5px; z-index: 1; height: 171px; width: 1285px" class="auto-style7">
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="IdMaterial" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" PageSize="5" Width="482px">
