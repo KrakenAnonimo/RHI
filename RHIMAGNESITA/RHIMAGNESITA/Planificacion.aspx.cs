@@ -96,7 +96,7 @@ public partial class Planificacion : System.Web.UI.Page
                 txtFechaP.Text = "";
                 txtObservaciones.Text = "";
                 //Redireccion de Pagina
-                Response.Redirect("~/Planificacion.aspx");
+                Response.Redirect("~/AsignaUsuaP.aspx");
             }
     }
 }
