@@ -6,7 +6,7 @@
             width: 636px;
             position: relative;
             top: -11px;
-            left: 430px;
+            left: 428px;
         }
     </style>
 </asp:Content>

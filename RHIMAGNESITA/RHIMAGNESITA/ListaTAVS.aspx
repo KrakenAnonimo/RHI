@@ -5,8 +5,8 @@
         .auto-style7 {
             width: 467px;
             position: relative;
-            left: 515px;
-            top: -4px;
+            left: 531px;
+            top: -6px;
             height: 190px;
         }
     </style>
