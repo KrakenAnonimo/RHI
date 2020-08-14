@@ -11,4 +11,9 @@ public partial class ListaA : System.Web.UI.Page
     {
 
     }
+
+    protected void imgbtnAtras_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("~/ListasGenerales.aspx");
+    }
 }

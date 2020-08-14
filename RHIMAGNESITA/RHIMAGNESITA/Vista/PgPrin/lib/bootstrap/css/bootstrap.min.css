@@ -2711,7 +2711,8 @@ pre {
 }
 
 table {
-    background-color: transparent
+    background-color: transparent;
+    text-align: center;
 }
 
 caption {

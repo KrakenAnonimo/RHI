@@ -1,52 +1,70 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="ListasGenerales.aspx.cs" Inherits="ListasGenerales" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <div style="width: 175px; position: relative; top: 4px; left: 91px;">
-        <div style="width: 70px; position: relative; top: 1px; left: 25px; z-index: 1; height: 64px">
-            <asp:Image runat="server" ImageUrl="~/Vista/Iconos/User.png"></asp:Image>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div>
+        <div style="position: relative; top: -5px; left: 22px;">
+            <div class="btn-toolbar" role="toolbar">
+                <button type="button" class="btn btn-default btn-lg" onclick="location.href='ListaU.aspx'">
+                    <span class="glyphicon glyphicon-user"></span>Lista de Usuario
+                </button>
+                <div class="btn-toolbar" role="toolbar">
+                    <button type="button" class="btn btn-default btn-lg" onclick="location.href='ListaA.aspx'">
+                        <span class="glyphicon glyphicon-tree-deciduous"></span>Lista de Area
+                    </button>
+                    <div class="btn-toolbar" role="toolbar">
+                        <button type="button" class="btn btn-default btn-lg" onclick="location.href='ListaM.aspx'">
+                            <span class="glyphicon glyphicon-leaf"></span>Lista de Material
+                        </button>
+                        <div class="btn-toolbar" role="toolbar">
+                            <button type="button" class="btn btn-default btn-lg" onclick="location.href='ListaE.aspx'">
+                                <span class="glyphicon glyphicon-wrench"></span>Lista de Elemento
+                            </button>
+                            <div class="btn-toolbar" role="toolbar">
+                                <button type="button" class="btn btn-default btn-lg" onclick="location.href='ListaP.aspx'">
+                                    <span class="glyphicon glyphicon-list-alt"></span>Lista de Planificacion
+                                </button>
+                                <div class="btn-toolbar" role="toolbar">
+                                    <button type="button" class="btn btn-default btn-lg" onclick="location.href='ListaOC.aspx'">
+                                        <span class="glyphicon glyphicon-chevron-up"></span>Lista de OrdenMtto C
+                                    </button>
+                                    <div class="btn-toolbar" role="toolbar">
+                                        <button type="button" class="btn btn-default btn-lg" onclick="location.href='ListaOP.aspx'">
+                                            <span class="glyphicon glyphicon-chevron-down"></span>Lista de OrdenMtto P
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <asp:Button runat="server" Text="Lista de Usuarios" class="btn btn-warning btn-sm" ID="btnListaU" OnClick="btnListaU_Click" />
     </div>
-    <div style="width: 144px; position: relative; top: -28px; left: 286px;">
-        <asp:Button runat="server" Text="Lista de Areas" class="btn btn-warning btn-sm" ID="btnListaA" OnClick="btnListaA_Click" />
-    </div>
-    <div style="width: 188px; position: relative; top: -60px; left: 453px;">
-        <asp:Button runat="server" Text="Lista de Materiales" class="btn btn-warning btn-sm" ID="btnListaM" OnClick="btnListaM_Click" />
-    </div>
-    <div style="width: 192px; position: relative; top: -94px; left: 660px;">
-        <asp:Button runat="server" Text="Lista de Elementos" class="btn btn-warning btn-sm" ID="btnListaE" OnClick="btnListaE_Click" />
-    </div>
-    <div style="width: 231px; position: relative; top: -127px; left: 872px;">
-        <asp:Button runat="server" Text="Lista de Planificaciones" class="btn btn-warning btn-sm" ID="btnListaP" OnClick="btnListaP_Click" />
-    </div>
-    <div style="width: 250px; position: relative; top: -92px; left: 185px;">
-        <div style="width: 70px; position: relative; top: 1px; left: 51px; z-index: 1; height: 64px">
-            <asp:Image runat="server" ImageUrl="~/Vista/Iconos/Orden.png"></asp:Image>
+    <div>
+        <div style="position: relative; top: 0px; left: 164px; margin-left: 40px">
+            <div class="btn-toolbar" role="toolbar">
+                <button type="button" class="btn btn-default btn-lg" onclick="location.href='ListaTM.aspx'">
+                    <span class="glyphicon glyphicon-file"></span>Lista de Tarea Mtto
+                </button>
+                <div class="btn-toolbar" role="toolbar">
+                    <button type="button" class="btn btn-default btn-lg" onclick="location.href='ListaTAVS.aspx'">
+                        <span class="glyphicon glyphicon-th-list"></span>Lista de Tarea Averia S.
+                    </button>
+                    <div class="btn-toolbar" role="toolbar">
+                        <button type="button" class="btn btn-default btn-lg" onclick="location.href='ListaRAVS.aspx'">
+                            <span class="glyphicon glyphicon-stats"></span>Lista de Reporte Averia S.
+                        </button>
+                        <div class="btn-toolbar" role="toolbar">
+                            <button type="button" class="btn btn-default btn-lg" onclick="location.href='ListaEM.aspx'">
+                                <span class="glyphicon glyphicon-ok"></span>Lista de Ejecucion Mtto
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <asp:Button runat="server" Text="Lista de Ordenes de MttoC" class="btn btn-warning btn-sm" ID="btnListaOC" OnClick="btnListaOC_Click" />
-    </div>
-    <div style="width: 250px; position: relative; top: -188px; left: 557px;">
-         <div style="width: 70px; position: relative; top: 1px; left: 51px; z-index: 1; height: 64px">
-            <asp:Image runat="server" ImageUrl="~/Vista/Iconos/Orden.png"></asp:Image>
-        </div>
-        <asp:Button runat="server" Text="Lista de Ordenes de MttoP" class="btn btn-warning btn-sm" ID="btnListaOP" OnClick="btnListaOP_Click" />
-    </div>
-    <div style="width: 221px; position: relative; top: -96px; left: 79px;">
-        <div style="width: 70px; position: relative; top: 1px; left: 41px; z-index: 1; height: 64px">
-            <asp:Image runat="server" ImageUrl="~/Vista/Iconos/Tarea.png"></asp:Image>
-        </div>
-        <asp:Button runat="server" Text="Lista de Tareas de Mtto" class="btn btn-warning btn-sm" ID="btnListaTM" OnClick="btnListaTM_Click" />
-    </div>
-    <div style="width: 219px; position: relative; top: -129px; left: 326px;">
-        <asp:Button runat="server" Text="Lista de Tareas de AvS" class="btn btn-warning btn-sm" ID="btnListaTAVS" OnClick="btnListaTAVS_Click" />
-    </div>
-    <div style="width: 226px; position: relative; top: -163px; left: 563px;">
-        <asp:Button runat="server" Text="Lista de Reporte de AVS" class="btn btn-warning btn-sm" ID="btnListaRAVS" OnClick="btnListaRAVS_Click" />
-    </div>
-    <div style="width: 242px; position: relative; top: -196px; left: 854px;">
-        <asp:Button runat="server" Text="Lista de Ejecucion de Mtto" class="btn btn-warning btn-sm" ID="btnListaEM" OnClick="btnListaEM_Click" />
     </div>
 </asp:Content>
 

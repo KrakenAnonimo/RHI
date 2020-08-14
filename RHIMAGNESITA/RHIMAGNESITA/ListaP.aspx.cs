@@ -11,6 +11,10 @@ public partial class ListaP : System.Web.UI.Page
     {
 
     }
+    protected void imgbtnAtras_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("~/ListasGenerales.aspx");
+    }
 
     protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
     {

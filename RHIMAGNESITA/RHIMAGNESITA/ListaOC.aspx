@@ -3,9 +3,16 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+     <div style="width: 91px; position: relative; top: 0px; left: 40px">
+        <asp:ImageButton ID="imgbtnAtras" runat="server" ImageUrl="~/Vista/Iconos/atras.png" OnClick="imgbtnAtras_Click" />
+    </div>
     <div> 
-        <div style="position: relative; top: -11px; left: 188px; width: 1000px;"><h2>Lista de las Ordenes de Mantenimiento Correctivas</h2></div>
-        <div top: 6px; left: 5px; z-index: 1; height: 171px; width: 1285px" style="width: 836px; position: relative; top: -13px; left: 238px">
+        <div style="position: relative; top: -11px; left: 188px; width: 1000px; text-align: center;"><h2>Lista de las Ordenes de Mantenimiento Correctivas</h2>
+        </div>
+    </div>
+    <br />
+    <div>
+        <div top: 6px; left: 5px; z-index: 1; height: 171px; width: 1285px" style="width: 836px; position: relative; top: -34px; left: 286px; text-align: center;">
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="IdOrdenMttoC" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" PageSize="5">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
