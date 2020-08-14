@@ -59,8 +59,21 @@
         </table>
     </div>
     <div class="auto-style7">
-        <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm"/>
-        <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-danger btn-sm"/>
+        <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" OnClick="btnGuardar_Click"/>
+        <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-danger btn-sm" OnClick="btnEliminar_Click"/>
+    </div>
+    <div>
+        <asp:SqlDataSource ID="SqldsUpdateP" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" UpdateCommand="UPDATE Planificacion SET FechaPlanificacion = @fecha WHERE (IdPlanificacion = @Idplanificacion)">
+            <UpdateParameters>
+                <asp:SessionParameter Name="Idplanificacion" SessionField="idPlanificacion" />
+                <asp:ControlParameter ControlID="txtFechaP" Name="fecha" PropertyName="Text" />
+            </UpdateParameters>
+        </asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqldsPlanificacion" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT IdPlanificacion, FechaPlanificacion, Observaciones, Estado, IdElemento FROM Planificacion WHERE (IdPlanificacion = @IdPlanificacion)">
+            <SelectParameters>
+                <asp:SessionParameter Name="IdPlanificacion" SessionField="idPlanificacion" />
+            </SelectParameters>
+        </asp:SqlDataSource>
     </div>
 </asp:Content>
 

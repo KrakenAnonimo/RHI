@@ -26,12 +26,13 @@
 
         Session["usuario"] = "NN";
         Session["idusuario"] = 0;
-        Session["idAdmin"] = 1;
-        Session["idSupervisor"] = 2;
-        Session["idPlanificador"] = 3;
-        Session["idTecnico"] = 4;
-        Session["idSoldador"] = 5;
-        Session["idSiso"] = 6;
+       Session["idPlanificacion"] = 0;
+        Session["idTareaMtto"] = 0;
+        Session["idElemento"] = 0;
+        Session["idMaterial"] = 0;
+        Session["idOrdenMttoC"] = 0;
+        Session["idOrdenMttoP"] = 0;
+        Session["idEjecucionM"] = 0;
         
         
     }

@@ -11,4 +11,11 @@ public partial class ListaP : System.Web.UI.Page
     {
 
     }
+
+    protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        int numFila = GridView1.SelectedRow.RowIndex;
+        Session["idPlanificacion"] = GridView1.DataKeys[numFila].Value;
+        Response.Redirect("~/VerDatP.aspx");
+    }
 }
