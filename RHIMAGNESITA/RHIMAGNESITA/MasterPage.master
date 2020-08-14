@@ -118,7 +118,7 @@
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a class="page-scroll" href="ListaGeneral.aspx">Listas</a>
+                                                <a class="page-scroll" href="ListasGenerales.aspx">Listas</a>
                                             </li>
                                             <li>
                                                 <a class="page-scroll" href="index.aspx" id="btnsalir" onclick="btnSalir_Click">Salir</a>

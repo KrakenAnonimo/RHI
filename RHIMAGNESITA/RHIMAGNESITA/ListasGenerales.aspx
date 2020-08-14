@@ -1,14 +1,13 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="ListaGeneral.aspx.cs" Inherits="ListaGeneral" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="ListasGenerales.aspx.cs" Inherits="ListasGenerales" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <br />
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div style="width: 175px; position: relative; top: 4px; left: 91px;">
         <div style="width: 70px; position: relative; top: 1px; left: 25px; z-index: 1; height: 64px">
             <asp:Image runat="server" ImageUrl="~/Vista/Iconos/User.png"></asp:Image>
         </div>
-        <asp:Button runat="server" Text="Lista de Usuarios" class="btn btn-warning btn-sm" ID="btnListaU" />
+        <asp:Button runat="server" Text="Lista de Usuarios" class="btn btn-warning btn-sm" ID="btnListaU" OnClick="btnListaU_Click" />
     </div>
     <div style="width: 144px; position: relative; top: -28px; left: 286px;">
         <asp:Button runat="server" Text="Lista de Areas" class="btn btn-warning btn-sm" ID="btnListaA" OnClick="btnListaA_Click" />
@@ -49,6 +48,5 @@
     <div style="width: 242px; position: relative; top: -196px; left: 854px;">
         <asp:Button runat="server" Text="Lista de Ejecucion de Mtto" class="btn btn-warning btn-sm" ID="btnListaEM" OnClick="btnListaEM_Click" />
     </div>
-    <br />
 </asp:Content>
 
