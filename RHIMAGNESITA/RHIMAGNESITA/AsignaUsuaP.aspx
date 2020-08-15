@@ -63,7 +63,7 @@
                                     <br />
                                     <div class="auto-style8">
 
-                                        <asp:GridView runat="server" AutoGenerateColumns="False" DataKeyNames="IdUsuario" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" PageSize="5" ID="gvUsua" ForeColor="Black" GridLines="Vertical">
+                                        <asp:GridView runat="server" AutoGenerateColumns="False" DataKeyNames="IdUsuario" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" PageSize="5" ID="gvUsua" ForeColor="Black" GridLines="Vertical" OnSelectedIndexChanged="gvUsua_SelectedIndexChanged">
                                             <AlternatingRowStyle BackColor="White" />
                                             <columns>
 <asp:BoundField DataField="IdUsuario" HeaderText="IdUsuario" ReadOnly="True" SortExpression="IdUsuario" Visible="False"></asp:BoundField>
@@ -118,7 +118,7 @@
                                         </asp:SqlDataSource>
                                     </div>
                                     <div class="auto-style9">
-                                        <asp:GridView runat="server" AutoGenerateColumns="False" DataKeyNames="IdPlanificacion" DataSourceID="SqlDataSource2" EmptyDataText="No hay registros de datos para mostrar." ID="gvPlanif" AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" Height="19px" PageSize="5" Width="255px" ForeColor="Black" GridLines="Vertical">
+                                        <asp:GridView runat="server" AutoGenerateColumns="False" DataKeyNames="IdPlanificacion" DataSourceID="SqlDataSource2" EmptyDataText="No hay registros de datos para mostrar." ID="gvPlanif" AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" Height="19px" PageSize="5" Width="255px" ForeColor="Black" GridLines="Vertical" OnSelectedIndexChanged="gvPlanif_SelectedIndexChanged">
                                             <AlternatingRowStyle BackColor="White" />
                                             <columns>
 <asp:BoundField DataField="IdPlanificacion" HeaderText="IdPlanificacion" ReadOnly="True" SortExpression="IdPlanificacion" Visible="False"></asp:BoundField>
@@ -156,6 +156,10 @@
 <asp:Parameter Name="IdPlanificacion" Type="Int32"></asp:Parameter>
 </updateparameters>
                                         </asp:SqlDataSource>
+                                    </div>
+                                    <div>
+                                        <asp:GridView ID="gvUsuarioElegido" runat="server"></asp:GridView>
+                                        <asp:GridView ID="gvPlanificaiconElegido" runat="server"></asp:GridView>
                                     </div>
                                     <br />
                                     <br />

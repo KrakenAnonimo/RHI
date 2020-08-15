@@ -20,17 +20,63 @@ public partial class AsignaUsuaP : System.Web.UI.Page
         gvUsua.DataBind();
     }
     int fila = 0;
-    int filas = 0; 
+    
+    protected void gvUsua_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        fila = gvUsua.SelectedRow.RowIndex;
+        
+        
+        //clase usuario
+        clUsuariox objUsuarios = new clUsuariox();
+
+        objUsuarios.IdUsuario = int.Parse(gvUsua.DataKeys[fila].Value.ToString());
+
+        lista.Add(objUsuarios);
+        gvUsuarioElegido.DataSource = lista;
+        gvUsuarioElegido.DataBind();
+
+    }
+    static List<clUsuariox> lista = new List<clUsuariox>();
+    int filas = 0;
+    protected void gvPlanif_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        filas = gvPlanif.SelectedRow.RowIndex;
+
+        //clase Planificacion
+        clPlanificaciox objPlanificacion = new clPlanificaciox();
+        objPlanificacion.IdPlanificacion = int.Parse(gvPlanif.DataKeys[filas].Value.ToString());
+
+        listas.Add(objPlanificacion);
+        gvPlanificaiconElegido.DataSource = listas;
+        gvPlanificaiconElegido.DataBind();
+    }
+    
+    static List<clPlanificaciox> listas = new List<clPlanificaciox>();
     protected void btnGuardar_Click(object sender, EventArgs e)
     {
 
         clUsuaPlanificacionE objUsuaPlanificacionE = new clUsuaPlanificacionE();
-        objUsuaPlanificacionE.IdUsuario = int.Parse(gvUsua.DataKeys[fila].Value.ToString());
-        objUsuaPlanificacionE.IdPlanificacion = int.Parse(gvPlanif.DataKeys[filas].Value.ToString());
-       
-        
-       
-        
+        // Guardar Usuarios y planificaicon
+        // Ciclo por cada registro de usuarios en la orden
+        for (int i = 0; i < gvUsuarioElegido.Rows.Count; i++)
+        {
+            //Campos Registra
+            int IdUsuario = int.Parse(gvUsuarioElegido.Rows[i].Cells[0].Text);
+
+            //Registro de id
+            objUsuaPlanificacionE.IdUsuario = IdUsuario;
+        }
+
+        // Ciclo por cada registro de usuarios en la orden
+        for (int i = 0; i < gvPlanificaiconElegido.Rows.Count; i++)
+        {
+            //Campos Registra
+            int IdPlanificacion = int.Parse(gvPlanificaiconElegido.Rows[i].Cells[0].Text);
+
+            //Registro de id
+            objUsuaPlanificacionE.IdPlanificacion = IdPlanificacion;
+        }
+
         clUsuaPlanificacion objUsuaPlanificacion = new clUsuaPlanificacion();
         int resultsql = objUsuaPlanificacion.mtdRegistrarUsuaPlanificacion(objUsuaPlanificacionE);
 
@@ -43,6 +89,15 @@ public partial class AsignaUsuaP : System.Web.UI.Page
             Response.Redirect("~/AsignaUsuaP.aspx");
         }
     }
-
- 
+    
+}
+public class clUsuariox
+{
+    //Atributos Tabla Usuarios
+    public int IdUsuario { get; set; }
+}
+public class clPlanificaciox
+{
+    //Atributos Tabla Planificaciox
+    public int IdPlanificacion { get; set; }
 }
