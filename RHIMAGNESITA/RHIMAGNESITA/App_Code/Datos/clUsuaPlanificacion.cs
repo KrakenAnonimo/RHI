@@ -12,7 +12,7 @@ public class clUsuaPlanificacion
         //Metodo registrar Elemento
         public int mtdRegistrarUsuaPlanificacion(clUsuaPlanificacionE objDatos)
         {
-            string sqlInsert = "insert into UsuaPlanificacion(IdUsuario, IdPlanificacion)" +
+            string sqlInsert = "insert into UsuaPlanificacion(IdUsuario,IdPlanificacion)" +
             "values('" + objDatos.IdUsuario + "','" + objDatos.IdPlanificacion + "')";
         
             clMetodoCN objMtdCN = new clMetodoCN(); 

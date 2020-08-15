@@ -19,22 +19,22 @@
             position: relative;
             left: 7px;
             top: 1px;
-            height: 16px;
+            height: 36px;
         }
 
         .auto-style11 {
             width: 421px;
             position: relative;
-            left: -51px;
-            top: -92px;
+            left: -64px;
+            top: -111px;
             height: 175px;
         }
 
         .auto-style12 {
             width: 246px;
             position: relative;
-            left: 376px;
-            top: 16px;
+            left: 362px;
+            top: 12px;
         }
 
         .auto-style13 {
@@ -72,8 +72,8 @@
 
         .auto-style16 {
             width: 296px;
-            top: -120px;
-            left: 183px;
+            top: -68px;
+            left: 147px;
             z-index: 3;
             height: 64px;
             position: relative;
@@ -82,8 +82,8 @@
         .auto-style17 {
             width: 207px;
             position: relative;
-            top: -133px;
-            left: 217px;
+            top: -72px;
+            left: 177px;
         }
 
         .auto-style18 {
@@ -99,7 +99,7 @@
         .auto-style20 {
             text-align: center;
             width: 585px;
-            height: 41px;
+            height: 51px;
         }
 
         .auto-style21 {
