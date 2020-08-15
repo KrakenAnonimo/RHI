@@ -68,7 +68,7 @@
     <div>
         <asp:SqlDataSource ID="SqldsEjecucionM" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT IdEjecucionM, Estado, FechaEjecucion, Duracion, Observaciones, IdTareaMtto, IdOrdenMttoP FROM EjecucionM WHERE (IdEjecucionM = @idEjecucionM)">
             <SelectParameters>
-                <asp:SessionParameter Name="idEjecucionM" SessionField="idEjecucionMtto" />
+                <asp:SessionParameter Name="idEjecucionM" SessionField="idEjecucionM" />
             </SelectParameters>
         </asp:SqlDataSource>
     </div>

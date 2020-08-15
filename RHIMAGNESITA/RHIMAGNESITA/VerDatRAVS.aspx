@@ -25,7 +25,7 @@
                 <tr>
                     <th scope="row">Numero del Reporte:</th>
                     <td>
-                        <asp:Label ID="lblReporte" runat="server" Text=""></asp:Label>
+                        <asp:Label ID="lblNumeroR" runat="server" Text=""></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -64,6 +64,13 @@
     <div class="auto-style7">
         <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" />
         <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-danger btn-sm" />
+    </div>
+    <div>
+        <asp:SqlDataSource ID="SqldsRAVS" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT IdReporteAS, NumReporte, Titulo, Descripcion, FechaReporte, IdElemento, IdUsuario FROM ReporteAveriaServicio WHERE (IdReporteAS = @idRAVS)">
+            <SelectParameters>
+                <asp:SessionParameter Name="idRAVS" SessionField="idReporteAVS" />
+            </SelectParameters>
+        </asp:SqlDataSource>
     </div>
 </asp:Content>
 
