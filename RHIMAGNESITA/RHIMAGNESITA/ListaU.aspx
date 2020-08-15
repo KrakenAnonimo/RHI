@@ -8,11 +8,39 @@
             left: 442px;
             top: -37px;
         }
+         .auto-style14 {
+            margin-bottom: 15px;
+            width: 129px;
+            height: 54px;
+        }
+        .auto-style15 {
+            height: 12px;
+            width: 211px;
+            position: relative;
+            top: -12px;
+            left: 73px;
+        }
+           .auto-style9 {
+            margin-bottom: 15px;
+            text-align: left;
+            position: relative;
+            top: 6px;
+            left: -16px;
+            width: 234px;
+        }
+          .auto-style11 {
+            position: relative;
+            text-align: center;
+            width: 20px;
+            display: block;
+            left: 114px;
+            top: 9px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div style="width: 91px; position: relative; top: 0px; left: 40px">
-        <asp:ImageButton ID="imgbtnAtras" runat="server" ImageUrl="~/Vista/Iconos/atras.png" OnClick="imgbtnAtras_Click"/>
+        <asp:ImageButton ID="imgbtnAtras" runat="server" ImageUrl="~/Vista/Iconos/atras.png" OnClick="imgbtnAtras_Click" />
     </div>
     <div>
         <div style="position: relative; top: -11px; left: 188px; width: 1000px;" class="t-cn">
@@ -20,6 +48,19 @@
         </div>
     </div>
     <br />
+    <div style="width: 311px; position: relative; top: -25px; left: 581px">
+        <div class="auto-style14">
+            <asp:TextBox ID="txtBuscar" runat="server" placeholder="Buscar..." class="auto-style13"></asp:TextBox>
+        </div>
+        <div class="auto-style15">
+            <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-primary btn-sm" Style="position: relative; left: 111px; top: -58px" OnClick="btnBuscar_Click" />
+        </div>
+    </div>
+     <div style="position: relative; top: -73px; left: 372px; width: 275px">
+       <div class="auto-style9">
+           <asp:RadioButtonList ID="RadioButtonList1" runat="server" CssClass="auto-style11" AutoPostBack="True" RepeatDirection="Horizontal" DataSourceID="SqldsRoles" DataTextField="Rol" DataValueField="IdRol" ></asp:RadioButtonList>
+       </div>
+    </div>
     <div>
         <div class="auto-style7">
             <div class="t-cn">
@@ -79,7 +120,8 @@
                     <asp:Parameter Name="IdUsuario" Type="Int32"></asp:Parameter>
                 </UpdateParameters>
             </asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqldsRoles" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT Rol.* FROM Rol"></asp:SqlDataSource>
         </div>
     </div>
-</asp:Content>
+    </asp:Content>
 

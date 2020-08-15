@@ -25,8 +25,8 @@
         .auto-style11 {
             width: 421px;
             position: relative;
-            left: -64px;
-            top: -111px;
+            left: -70px;
+            top: -75px;
             height: 175px;
         }
 
@@ -141,88 +141,87 @@
                                         <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-primary btn-sm" Style="position: relative; left: 111px; top: -58px" OnClick="btnBuscar_Click" />
                                     </div>
                                 </div>
-
                                 <div class="auto-style12">
                                     <asp:GridView runat="server" AutoGenerateColumns="False" DataKeyNames="IdPlanificacion" DataSourceID="SqlDataSource4" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" PageSize="5" ID="gvPlanificacion" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" Width="233px" ForeColor="Black" GridLines="Vertical">
                                         <AlternatingRowStyle BackColor="White" />
-                                        <columns>
-<asp:BoundField DataField="IdPlanificacion" HeaderText="IdPlanificacion" ReadOnly="True" SortExpression="IdPlanificacion" Visible="False"></asp:BoundField>
-<asp:BoundField DataField="FechaPlanificacion" HeaderText="FechaPlanificacion" SortExpression="FechaPlanificacion"></asp:BoundField>
-<asp:BoundField DataField="Observaciones" HeaderText="Observaciones" SortExpression="Observaciones" Visible="False"></asp:BoundField>
-<asp:BoundField DataField="Estado" HeaderText="Estado" SortExpression="Estado"></asp:BoundField>
-<asp:BoundField DataField="IdElemento" HeaderText="IdElemento" SortExpression="IdElemento" Visible="False"></asp:BoundField>
-</columns>
-                                        <footerstyle backcolor="#CCCC99" />
-                                        <headerstyle backcolor="#6B696B" font-bold="True" forecolor="White" />
-                                        <pagerstyle backcolor="#F7F7DE" forecolor="Black" horizontalalign="Right" />
-                                        <rowstyle BackColor="#F7F7DE" />
-                                        <selectedrowstyle backcolor="#CE5D5A" font-bold="True" forecolor="White" />
-                                        <sortedascendingcellstyle backcolor="#FBFBF2" />
-                                        <sortedascendingheaderstyle backcolor="#848384" />
-                                        <sorteddescendingcellstyle backcolor="#EAEAD3" />
-                                        <sorteddescendingheaderstyle backcolor="#575357" />
+                                        <Columns>
+                                            <asp:BoundField DataField="IdPlanificacion" HeaderText="IdPlanificacion" ReadOnly="True" SortExpression="IdPlanificacion" Visible="False"></asp:BoundField>
+                                            <asp:BoundField DataField="FechaPlanificacion" HeaderText="FechaPlanificacion" SortExpression="FechaPlanificacion"></asp:BoundField>
+                                            <asp:BoundField DataField="Observaciones" HeaderText="Observaciones" SortExpression="Observaciones" Visible="False"></asp:BoundField>
+                                            <asp:BoundField DataField="Estado" HeaderText="Estado" SortExpression="Estado"></asp:BoundField>
+                                            <asp:BoundField DataField="IdElemento" HeaderText="IdElemento" SortExpression="IdElemento" Visible="False"></asp:BoundField>
+                                        </Columns>
+                                        <FooterStyle BackColor="#CCCC99" />
+                                        <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                                        <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+                                        <RowStyle BackColor="#F7F7DE" />
+                                        <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+                                        <SortedAscendingCellStyle BackColor="#FBFBF2" />
+                                        <SortedAscendingHeaderStyle BackColor="#848384" />
+                                        <SortedDescendingCellStyle BackColor="#EAEAD3" />
+                                        <SortedDescendingHeaderStyle BackColor="#575357" />
                                     </asp:GridView>
                                     <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" DeleteCommand="DELETE FROM [Planificacion] WHERE [IdPlanificacion] = @IdPlanificacion" InsertCommand="INSERT INTO [Planificacion] ([FechaPlanificacion], [Observaciones], [Estado], [IdElemento]) VALUES (@FechaPlanificacion, @Observaciones, @Estado, @IdElemento)" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT [IdPlanificacion], [FechaPlanificacion], [Observaciones], [Estado], [IdElemento] FROM [Planificacion]" UpdateCommand="UPDATE [Planificacion] SET [FechaPlanificacion] = @FechaPlanificacion, [Observaciones] = @Observaciones, [Estado] = @Estado, [IdElemento] = @IdElemento WHERE [IdPlanificacion] = @IdPlanificacion">
-                                        <deleteparameters>
-<asp:Parameter Name="IdPlanificacion" Type="Int32"></asp:Parameter>
-</deleteparameters>
-                                        <insertparameters>
-<asp:Parameter Name="FechaPlanificacion" Type="String"></asp:Parameter>
-<asp:Parameter Name="Observaciones" Type="String"></asp:Parameter>
-<asp:Parameter Name="Estado" Type="String"></asp:Parameter>
-<asp:Parameter Name="IdElemento" Type="Int32"></asp:Parameter>
-</insertparameters>
-                                        <updateparameters>
-<asp:Parameter Name="FechaPlanificacion" Type="String"></asp:Parameter>
-<asp:Parameter Name="Observaciones" Type="String"></asp:Parameter>
-<asp:Parameter Name="Estado" Type="String"></asp:Parameter>
-<asp:Parameter Name="IdElemento" Type="Int32"></asp:Parameter>
-<asp:Parameter Name="IdPlanificacion" Type="Int32"></asp:Parameter>
-</updateparameters>
+                                        <DeleteParameters>
+                                            <asp:Parameter Name="IdPlanificacion" Type="Int32"></asp:Parameter>
+                                        </DeleteParameters>
+                                        <InsertParameters>
+                                            <asp:Parameter Name="FechaPlanificacion" Type="String"></asp:Parameter>
+                                            <asp:Parameter Name="Observaciones" Type="String"></asp:Parameter>
+                                            <asp:Parameter Name="Estado" Type="String"></asp:Parameter>
+                                            <asp:Parameter Name="IdElemento" Type="Int32"></asp:Parameter>
+                                        </InsertParameters>
+                                        <UpdateParameters>
+                                            <asp:Parameter Name="FechaPlanificacion" Type="String"></asp:Parameter>
+                                            <asp:Parameter Name="Observaciones" Type="String"></asp:Parameter>
+                                            <asp:Parameter Name="Estado" Type="String"></asp:Parameter>
+                                            <asp:Parameter Name="IdElemento" Type="Int32"></asp:Parameter>
+                                            <asp:Parameter Name="IdPlanificacion" Type="Int32"></asp:Parameter>
+                                        </UpdateParameters>
                                     </asp:SqlDataSource>
                                 </div>
 
                                 <div class="auto-style11">
                                     <asp:GridView runat="server" AutoGenerateColumns="False" DataKeyNames="IdElemento" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" PageSize="5" Width="390px" ID="gvElemento" OnSelectedIndexChanged="gvElemento_SelectedIndexChanged" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
-                                        <alternatingrowstyle backcolor="White" />
-                                        <columns>
-<asp:BoundField DataField="IdElemento" HeaderText="IdElemento" ReadOnly="True" SortExpression="IdElemento" Visible="False"></asp:BoundField>
-<asp:BoundField DataField="Codigo" HeaderText="Codigo" SortExpression="Codigo"></asp:BoundField>
-<asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre"></asp:BoundField>
-<asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" Visible="False"></asp:BoundField>
-<asp:BoundField DataField="Estado" HeaderText="Estado" SortExpression="Estado" Visible="False"></asp:BoundField>
-<asp:BoundField DataField="IdArea" HeaderText="IdArea" SortExpression="IdArea" Visible="False"></asp:BoundField>
+                                        <AlternatingRowStyle BackColor="White" />
+                                        <Columns>
+                                            <asp:BoundField DataField="IdElemento" HeaderText="IdElemento" ReadOnly="True" SortExpression="IdElemento" Visible="False"></asp:BoundField>
+                                            <asp:BoundField DataField="Codigo" HeaderText="Codigo" SortExpression="Codigo"></asp:BoundField>
+                                            <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre"></asp:BoundField>
+                                            <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" Visible="False"></asp:BoundField>
+                                            <asp:BoundField DataField="Estado" HeaderText="Estado" SortExpression="Estado" Visible="False"></asp:BoundField>
+                                            <asp:BoundField DataField="IdArea" HeaderText="IdArea" SortExpression="IdArea" Visible="False"></asp:BoundField>
                                             <asp:CommandField ShowSelectButton="True" />
-</columns>
-                                        <footerstyle backcolor="#CCCC99" />
-                                        <headerstyle backcolor="#6B696B" font-bold="True" forecolor="White" />
-                                        <pagerstyle backcolor="#F7F7DE" forecolor="Black" horizontalalign="Right" />
-                                        <rowstyle backcolor="#F7F7DE" />
-                                        <selectedrowstyle backcolor="#CE5D5A" font-bold="True" forecolor="White" />
-                                        <sortedascendingcellstyle backcolor="#FBFBF2" />
-                                        <sortedascendingheaderstyle backcolor="#848384" />
-                                        <sorteddescendingcellstyle backcolor="#EAEAD3" />
-                                        <sorteddescendingheaderstyle backcolor="#575357" />
+                                        </Columns>
+                                        <FooterStyle BackColor="#CCCC99" />
+                                        <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                                        <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+                                        <RowStyle BackColor="#F7F7DE" />
+                                        <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+                                        <SortedAscendingCellStyle BackColor="#FBFBF2" />
+                                        <SortedAscendingHeaderStyle BackColor="#848384" />
+                                        <SortedDescendingCellStyle BackColor="#EAEAD3" />
+                                        <SortedDescendingHeaderStyle BackColor="#575357" />
                                     </asp:GridView>
                                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" DeleteCommand="DELETE FROM [Elemento] WHERE [IdElemento] = @IdElemento" InsertCommand="INSERT INTO [Elemento] ([Codigo], [Nombre], [Descripcion], [Estado], [IdArea]) VALUES (@Codigo, @Nombre, @Descripcion, @Estado, @IdArea)" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT [IdElemento], [Codigo], [Nombre], [Descripcion], [Estado], [IdArea] FROM [Elemento]" UpdateCommand="UPDATE [Elemento] SET [Codigo] = @Codigo, [Nombre] = @Nombre, [Descripcion] = @Descripcion, [Estado] = @Estado, [IdArea] = @IdArea WHERE [IdElemento] = @IdElemento">
-                                        <deleteparameters>
-<asp:Parameter Name="IdElemento" Type="Int32"></asp:Parameter>
-</deleteparameters>
-                                        <insertparameters>
-<asp:Parameter Name="Codigo" Type="String"></asp:Parameter>
-<asp:Parameter Name="Nombre" Type="String"></asp:Parameter>
-<asp:Parameter Name="Descripcion" Type="String"></asp:Parameter>
-<asp:Parameter Name="Estado" Type="String"></asp:Parameter>
-<asp:Parameter Name="IdArea" Type="Int32"></asp:Parameter>
-</insertparameters>
-                                        <updateparameters>
-<asp:Parameter Name="Codigo" Type="String"></asp:Parameter>
-<asp:Parameter Name="Nombre" Type="String"></asp:Parameter>
-<asp:Parameter Name="Descripcion" Type="String"></asp:Parameter>
-<asp:Parameter Name="Estado" Type="String"></asp:Parameter>
-<asp:Parameter Name="IdArea" Type="Int32"></asp:Parameter>
-<asp:Parameter Name="IdElemento" Type="Int32"></asp:Parameter>
-</updateparameters>
+                                        <DeleteParameters>
+                                            <asp:Parameter Name="IdElemento" Type="Int32"></asp:Parameter>
+                                        </DeleteParameters>
+                                        <InsertParameters>
+                                            <asp:Parameter Name="Codigo" Type="String"></asp:Parameter>
+                                            <asp:Parameter Name="Nombre" Type="String"></asp:Parameter>
+                                            <asp:Parameter Name="Descripcion" Type="String"></asp:Parameter>
+                                            <asp:Parameter Name="Estado" Type="String"></asp:Parameter>
+                                            <asp:Parameter Name="IdArea" Type="Int32"></asp:Parameter>
+                                        </InsertParameters>
+                                        <UpdateParameters>
+                                            <asp:Parameter Name="Codigo" Type="String"></asp:Parameter>
+                                            <asp:Parameter Name="Nombre" Type="String"></asp:Parameter>
+                                            <asp:Parameter Name="Descripcion" Type="String"></asp:Parameter>
+                                            <asp:Parameter Name="Estado" Type="String"></asp:Parameter>
+                                            <asp:Parameter Name="IdArea" Type="Int32"></asp:Parameter>
+                                            <asp:Parameter Name="IdElemento" Type="Int32"></asp:Parameter>
+                                        </UpdateParameters>
                                     </asp:SqlDataSource>
                                 </div>
                                 <div class="auto-style17">
@@ -231,15 +230,15 @@
                                 <div class="auto-style16">
                                     <asp:GridView runat="server" ID="gvElementoS" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" Height="16px" Width="268px" ForeColor="Black" GridLines="Vertical">
                                         <AlternatingRowStyle BackColor="White" />
-                                        <footerstyle backcolor="#CCCC99" />
-                                        <headerstyle backcolor="#6B696B" font-bold="True" forecolor="White" />
-                                        <pagerstyle backcolor="#F7F7DE" forecolor="Black" horizontalalign="Right" />
-                                        <rowstyle BackColor="#F7F7DE" />
-                                        <selectedrowstyle backcolor="#CE5D5A" font-bold="True" forecolor="White" />
-                                        <sortedascendingcellstyle backcolor="#FBFBF2" />
-                                        <sortedascendingheaderstyle backcolor="#848384" />
-                                        <sorteddescendingcellstyle backcolor="#EAEAD3" />
-                                        <sorteddescendingheaderstyle backcolor="#575357" />
+                                        <FooterStyle BackColor="#CCCC99" />
+                                        <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                                        <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+                                        <RowStyle BackColor="#F7F7DE" />
+                                        <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+                                        <SortedAscendingCellStyle BackColor="#FBFBF2" />
+                                        <SortedAscendingHeaderStyle BackColor="#848384" />
+                                        <SortedDescendingCellStyle BackColor="#EAEAD3" />
+                                        <SortedDescendingHeaderStyle BackColor="#575357" />
                                     </asp:GridView>
                                 </div>
                                 <div class="auto-style21">

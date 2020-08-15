@@ -1,6 +1,25 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="ListaOC.aspx.cs" Inherits="ListaOC" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <style>
+        .auto-style9 {
+            margin-bottom: 15px;
+            text-align: left;
+            position: relative;
+            top: 6px;
+            left: -16px;
+            width: 234px;
+        }
+
+        .auto-style11 {
+            position: relative;
+            text-align: center;
+            width: 219px;
+            display: block;
+            left: -394px;
+            top: 70px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
      <div style="width: 91px; position: relative; top: 0px; left: 40px">
@@ -11,8 +30,16 @@
         </div>
     </div>
     <br />
+    <div style="position: relative; top: -110px; left: 983px; width: 474px; height: 23px; margin-left: 40px;">
+       <div class="auto-style9">
+           <asp:RadioButtonList ID="RadioButtonList1" runat="server" CssClass="auto-style11" AutoPostBack="True" RepeatDirection="Horizontal" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged" >
+               <asp:ListItem>Ejecutada</asp:ListItem>
+               <asp:ListItem>Sin Ejecutar</asp:ListItem>
+           </asp:RadioButtonList>
+       </div>
+    </div>
     <div>
-        <div top: 6px; left: 5px; z-index: 1; height: 171px; width: 1285px" style="width: 836px; position: relative; top: -34px; left: 286px; text-align: center;">
+        <div top: 6px; left: 5px; z-index: 1; height: 171px; width: 1285px" style="width: 836px; position: relative; top: -14px; left: 288px; text-align: center;">
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="IdOrdenMttoC" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" PageSize="5" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>

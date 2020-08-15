@@ -8,6 +8,20 @@
             left: 244px;
             top: -4px;
         }
+
+        .auto-style14 {
+            margin-bottom: 15px;
+            width: 129px;
+            height: 54px;
+        }
+
+        .auto-style15 {
+            height: 12px;
+            width: 211px;
+            position: relative;
+            top: -12px;
+            left: 73px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -20,8 +34,17 @@
         </div>
         </div>
         </div>
+    <div style="width: 311px; position: relative; top: -11px; left: 589px">
+        <div class="auto-style14">
+            <asp:TextBox ID="txtBuscar" runat="server" placeholder="Buscar..." class="auto-style13" TextMode="Date"></asp:TextBox>
+        </div>
+        <div class="auto-style15">
+            <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-primary btn-sm" Style="position: relative; left: 111px; top: -58px" OnClick="btnBuscar_Click" />
+        </div>
+    </div>
+   
         <div>
-        <div top: 6px; left: 5px; z-index: 1; height: 171px; width: 1285px" style="width: 828px; position: relative; top: -11px; left: 575px; height: 180px;">
+        <div top: 6px; left: 5px; z-index: 1; height: 171px; width: 1285px" style="width: 828px; position: relative; top: -38px; left: 558px; height: 180px;">
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="IdPlanificacion" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" PageSize="5">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
@@ -62,7 +85,9 @@
                     <asp:Parameter Name="IdPlanificacion" Type="Int32" />
                 </UpdateParameters>
             </asp:SqlDataSource>
+            
         </div>
         </div>
-</asp:Content>
+
+    </asp:Content>
 
