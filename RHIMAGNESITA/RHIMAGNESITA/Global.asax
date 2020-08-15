@@ -26,15 +26,18 @@
 
         Session["usuario"] = "NN";
         Session["idusuario"] = 0;
-       Session["idPlanificacion"] = 0;
+        Session["idPlanificacion"] = 0;
         Session["idTareaMtto"] = 0;
         Session["idElemento"] = 0;
         Session["idMaterial"] = 0;
         Session["idOrdenMttoC"] = 0;
         Session["idOrdenMttoP"] = 0;
         Session["idEjecucionM"] = 0;
-        
-        
+        Session["idTareaAVS"] = 0;
+        Session["idReporteAVS"] = 0;
+        Session["idOrdenMttoP"] = 0;
+        Session["idOrdenMttoC"] = 0;
+        Session["idArea"] = 0;
     }
 
     void Session_End(object sender, EventArgs e)

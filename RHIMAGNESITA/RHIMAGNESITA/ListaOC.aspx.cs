@@ -15,4 +15,11 @@ public partial class ListaOC : System.Web.UI.Page
     {
         Response.Redirect("~/ListasGenerales.aspx");
     }
+
+    protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        int numFila = GridView1.SelectedRow.RowIndex;
+        Session["idOrdenMttoC"] = GridView1.DataKeys[numFila].Value;
+        Response.Redirect("~/VerDatOC.aspx");
+    }
 }

@@ -16,4 +16,11 @@ public partial class ListaA : System.Web.UI.Page
     {
         Response.Redirect("~/ListasGenerales.aspx");
     }
+
+    protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        int numFila = GridView1.SelectedRow.RowIndex;
+        Session["idArea"] = GridView1.DataKeys[numFila].Value;
+        Response.Redirect("~/VerDatA.aspx");
+    }
 }
