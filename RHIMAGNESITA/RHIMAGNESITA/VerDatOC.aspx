@@ -101,5 +101,12 @@
         <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" />
         <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-danger btn-sm" />
     </div>
+    <div>
+        <asp:SqlDataSource ID="SqldsOrdenMttoC" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT IdOrdenMttoC, NumOrden, Disciplina, FechaInicio, HoraInicio, FechaFinal, HoraFinal, Ejecutado, TrabajoIE, Observaciones, Revisado, IdOrdenMttoP, IdUsuario FROM OrdenMttoCorrectivo WHERE (IdOrdenMttoC = @idOrdenC)">
+            <SelectParameters>
+                <asp:SessionParameter Name="idOrdenC" SessionField="idOrdenMttoC" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+    </div>
 </asp:Content>
 

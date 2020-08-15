@@ -23,6 +23,12 @@
                     </td>
                 </tr>
                 <tr>
+                    <th scope="row">Codigo:</th>
+                    <td>
+                        <asp:Label ID="lblCodigo" runat="server" Text=""></asp:Label>
+                    </td>
+                </tr>
+                <tr>
                     <th scope="row">Nombre del Elemento:</th>
                     <td>
                         <asp:Label ID="lblNombreE" runat="server" ></asp:Label>
@@ -52,6 +58,13 @@
     <div class="auto-style7">
         <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" />
         <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-danger btn-sm"  />
+    </div>
+    <div>
+        <asp:SqlDataSource ID="SqldsElemento" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT IdElemento, Codigo, Nombre, Descripcion, Estado, IdArea FROM Elemento WHERE (IdElemento = @IdElemento)">
+            <SelectParameters>
+                <asp:SessionParameter Name="IdElemento" SessionField="idElemento" />
+            </SelectParameters>
+        </asp:SqlDataSource>
     </div>
 </asp:Content>
 

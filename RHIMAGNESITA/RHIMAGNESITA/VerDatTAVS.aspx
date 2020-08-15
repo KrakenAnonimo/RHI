@@ -59,5 +59,12 @@
         <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" />
         <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-danger btn-sm"  />
     </div>
+    <div>
+        <asp:SqlDataSource ID="SqldsTAVS" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT IdTareaAS, NombreAS, Duracion, FechaEjecucion, IdOrdenMttoP, IdOrdenMttoC FROM TareaAveriaServicio WHERE (IdTareaAS = @idTAVS)">
+            <SelectParameters>
+                <asp:SessionParameter Name="idTAVS" SessionField="idTareaAVS" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+    </div>
 </asp:Content>
 

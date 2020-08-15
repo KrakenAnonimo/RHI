@@ -41,5 +41,12 @@
         <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" />
         <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-danger btn-sm"  />
     </div>
+    <div>
+        <asp:SqlDataSource ID="SqldsArea" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT IdArea, Nombre, Ubicacion FROM Area WHERE (IdArea = @idArea)">
+            <SelectParameters>
+                <asp:SessionParameter Name="idArea" SessionField="idArea" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+    </div>
 </asp:Content>
 

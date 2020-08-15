@@ -25,7 +25,7 @@
                 <tr>
                     <th scope="row">Nombre de la Tarea:</th>
                     <td>
-                        <asp:TextBox ID="lblNombreTM" runat="server" Text=""></asp:TextBox>
+                        <asp:Label ID="lblNombreTM" runat="server" Text=""></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -52,6 +52,13 @@
     <div class="auto-style7">
         <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" />
         <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-danger btn-sm" />
+    </div>
+    <div>
+        <asp:SqlDataSource ID="SqldsTareaM" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT IdTareaMtto, NombreTM, Duracion, Descripcion, IdElemento FROM TareaMtto WHERE (IdTareaMtto = @idTareaM)">
+            <SelectParameters>
+                <asp:SessionParameter Name="idTareaM" SessionField="idTareaMtto" />
+            </SelectParameters>
+        </asp:SqlDataSource>
     </div>
 </asp:Content>
 

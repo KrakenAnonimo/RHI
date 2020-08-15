@@ -25,7 +25,7 @@
                 <tr>
                     <th scope="row">Numero de la Orden:</th>
                     <td>
-                        <asp:Label ID="lblNumeroOP" runat="server"></asp:Label>
+                        <asp:Label ID="lblNumero" runat="server"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -91,7 +91,7 @@
                  <tr>
                     <th scope="row">Codigo del Reporte Averia/Servicio:</th>
                     <td>
-                        <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                        <asp:Label ID="lblidRAVS" runat="server" Text=""></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -106,6 +106,13 @@
     <div class="auto-style7">
         <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" />
         <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-danger btn-sm" />
+    </div>
+    <div>
+        <asp:SqlDataSource ID="SqldsOrdenMttoP" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT IdOrdenMttoP, NumOrden, Disciplina, FechaInicio, HoraInicio, FechaFinal, HoraFinal, Ejecutado, TrabajoIE, Observaciones, Revisado, IdPlanificacion, IdReporteAS, IdUsuario FROM OrdenMttoPreventivo WHERE (IdOrdenMttoP = @idOrdenP)">
+            <SelectParameters>
+                <asp:SessionParameter Name="idOrdenP" SessionField="idOrdenMttoP" />
+            </SelectParameters>
+        </asp:SqlDataSource>
     </div>
 </asp:Content>
 

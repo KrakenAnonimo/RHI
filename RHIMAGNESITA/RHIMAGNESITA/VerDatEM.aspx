@@ -22,6 +22,12 @@
                         <asp:Label ID="lblIdEM" runat="server" Text=""></asp:Label>
                     </td>
                 </tr>
+                 <tr>
+                    <th scope="row">Estado:</th>
+                    <td>
+                        <asp:Label ID="lblEstado" runat="server" Text=""></asp:Label>
+                    </td>
+                </tr>
                 <tr>
                     <th scope="row">Fecha de Ejecucion:</th>
                     <td>
@@ -58,6 +64,13 @@
     <div class="auto-style7">
         <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" />
         <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-danger btn-sm"  />
+    </div>
+    <div>
+        <asp:SqlDataSource ID="SqldsEjecucionM" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT IdEjecucionM, Estado, FechaEjecucion, Duracion, Observaciones, IdTareaMtto, IdOrdenMttoP FROM EjecucionM WHERE (IdEjecucionM = @idEjecucionM)">
+            <SelectParameters>
+                <asp:SessionParameter Name="idEjecucionM" SessionField="idEjecucionMtto" />
+            </SelectParameters>
+        </asp:SqlDataSource>
     </div>
 </asp:Content>
 
