@@ -1,24 +1,28 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="ListaTAVS.aspx.cs" Inherits="ListaTAVS" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <style type="text/css">
         .auto-style7 {
             width: 467px;
             position: relative;
-            left: 531px;
-            top: -6px;
+            left: 511px;
+            top: 1px;
             height: 190px;
         }
     </style>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div style="width: 91px; position: relative; top: 0px; left: 40px">
+        <asp:ImageButton ID="imgbtnAtras" runat="server" ImageUrl="~/Vista/Iconos/atras.png" OnClick="imgbtnAtras_Click" />
+    </div>
     <div>
         <div style="position: relative; top: -11px; left: 188px; width: 1000px;" class="t-cn">
             <h2>Lista de Tareas Averia o Servicio</h2>
         </div>
+    </div>
+    <div>
         <div class="auto-style7">
-
-            <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="IdTareaAS" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." ForeColor="Black" GridLines="Vertical" PageSize="5" Width="316px">
+            <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="IdTareaAS" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." ForeColor="Black" GridLines="Vertical" PageSize="5" Width="316px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:BoundField DataField="IdTareaAS" HeaderText="IdTareaAS" ReadOnly="True" SortExpression="IdTareaAS" Visible="False" />
@@ -28,7 +32,7 @@
                     <asp:BoundField DataField="IdOrdenMttoP" HeaderText="IdOrdenMttoP" SortExpression="IdOrdenMttoP" Visible="False" />
                     <asp:BoundField DataField="IdOrdenMttoC" HeaderText="IdOrdenMttoC" SortExpression="IdOrdenMttoC" Visible="False" />
                     <asp:CommandField SelectText="Ver" ShowSelectButton="True">
-                    <ControlStyle ForeColor="#3EC1D5" />
+                        <ControlStyle ForeColor="#3EC1D5" />
                     </asp:CommandField>
                 </Columns>
                 <FooterStyle BackColor="#CCCC99" />
@@ -61,7 +65,6 @@
                     <asp:Parameter Name="IdTareaAS" Type="Int32" />
                 </UpdateParameters>
             </asp:SqlDataSource>
-
         </div>
     </div>
 </asp:Content>

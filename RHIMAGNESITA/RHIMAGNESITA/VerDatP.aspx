@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="VerDatP.aspx.cs" Inherits="VerDatP" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-      <style type="text/css">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <style type="text/css">
         .auto-style7 {
             position: relative;
             left: 621px;
@@ -11,9 +11,9 @@
         }
     </style>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <div>
-        <asp:ImageButton ID="imgbtnAtras" runat="server" href="ListaP.aspx" ImageUrl="~/Vista/Iconos/atras.png" OnClick="imgbtnAtras_Click" />
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div style="width: 91px; position: relative; top: 0px; left: 40px">
+        <asp:ImageButton ID="imgbtnAtras" runat="server" ImageUrl="~/Vista/Iconos/atras.png" OnClick="imgbtnAtras_Click" />
     </div>
     <div>
         <table class="table table-hover table-dark">
@@ -59,16 +59,10 @@
         </table>
     </div>
     <div class="auto-style7">
-        <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" OnClick="btnGuardar_Click"/>
-        <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-danger btn-sm" OnClick="btnEliminar_Click"/>
+        <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" OnClick="btnGuardar_Click" />
+        <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-danger btn-sm" OnClick="btnEliminar_Click" />
     </div>
     <div>
-        <asp:SqlDataSource ID="SqldsUpdateP" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" UpdateCommand="UPDATE Planificacion SET FechaPlanificacion = @fecha WHERE (IdPlanificacion = @Idplanificacion)">
-            <UpdateParameters>
-                <asp:SessionParameter Name="Idplanificacion" SessionField="idPlanificacion" />
-                <asp:ControlParameter ControlID="txtFechaP" Name="fecha" PropertyName="Text" />
-            </UpdateParameters>
-        </asp:SqlDataSource>
         <asp:SqlDataSource ID="SqldsPlanificacion" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT IdPlanificacion, FechaPlanificacion, Observaciones, Estado, IdElemento FROM Planificacion WHERE (IdPlanificacion = @IdPlanificacion)">
             <SelectParameters>
                 <asp:SessionParameter Name="IdPlanificacion" SessionField="idPlanificacion" />

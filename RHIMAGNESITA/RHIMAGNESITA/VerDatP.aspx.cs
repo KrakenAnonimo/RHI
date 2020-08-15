@@ -10,6 +10,10 @@ public partial class VerDatP : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        
+    }
+    protected void Page_Init(object sender, EventArgs e)
+    {
         DataTable tblDatos = new DataTable();
         tblDatos = ((DataView)SqldsPlanificacion.Select(DataSourceSelectArguments.Empty)).Table;
 
@@ -20,7 +24,6 @@ public partial class VerDatP : System.Web.UI.Page
         lblIdE.Text = tblDatos.Rows[0][4].ToString();
     }
 
-
     protected void imgbtnAtras_Click(object sender, ImageClickEventArgs e)
     {
         Response.Redirect("~/ListaP.aspx");
@@ -28,13 +31,36 @@ public partial class VerDatP : System.Web.UI.Page
 
     protected void btnGuardar_Click(object sender, EventArgs e)
     {
-        SqldsUpdateP.Update();
-        Response.Redirect("~/ListaP.aspx");
+        clPlanificacionE objPlanificacionE = new clPlanificacionE();
+        objPlanificacionE.IdPlanificacion = int.Parse(lblIdP.Text);
+        objPlanificacionE.FechaPlanificacion = txtFechaP.Text;
+
+        clPlanificacion objPlanificacion = new clPlanificacion();
+        int resultsql = objPlanificacion.mtdActualizarPlanificacion(objPlanificacionE);
+
+        if (resultsql > 0)
+        {
+            //enviar mensaje 
+            Response.Write("<script>alert('Se Registro Correctamente')</script>");
+            //Redireccionar
+            Response.Redirect("~/ListaP.aspx");
+        }
     }
 
     protected void btnEliminar_Click(object sender, EventArgs e)
     {
-        
-        Response.Redirect("~/ListaP.aspx");
+        clPlanificacionE objPlanificacionE = new clPlanificacionE();
+        objPlanificacionE.IdPlanificacion = int.Parse(lblIdP.Text);
+
+        clPlanificacion objPlanificacion = new clPlanificacion();
+        int resultsql = objPlanificacion.mtdEliminarPlanificacion(objPlanificacionE);
+
+        if (resultsql > 0)
+        {
+            //enviar mensaje 
+            Response.Write("<script>alert('Se Elimino Correctamente')</script>");
+            //Redireccionar
+            Response.Redirect("~/ListaP.aspx");
+        }
     }
 }

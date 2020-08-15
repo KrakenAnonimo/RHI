@@ -26,7 +26,7 @@ public class clPlanificacion
     //Metodo Eliminar Planificacion
     public int mtdEliminarPlanificacion(clPlanificacionE objDatos)
     {
-        string consulta = "Delete from Planificacion where FechaPlanificacion = '" + objDatos.FechaPlanificacion + "')";
+        string consulta = "Delete from Planificacion where IdPlanificacion = '" + objDatos.IdPlanificacion + "')";
         clMetodoCN objMtdCN = new clMetodoCN();
         int result = objMtdCN.mtdConectado(consulta);
         return result;
@@ -57,8 +57,7 @@ public class clPlanificacion
     //Metodo Actualizar Planificacion
     public int mtdActualizarPlanificacion(clPlanificacionE objDatos)
     {
-        string consulta = "Update Planificacion set FechaPlanificacion = '" + objDatos.FechaPlanificacion + "','" + objDatos.Observaciones + "','"+ objDatos.Estado +"','" + objDatos.
-            IdElemento + "')";
+        string consulta = "Update Planificacion set FechaPlanificacion= '" + objDatos.FechaPlanificacion + "' " + "where '" + objDatos.IdPlanificacion +"' )";
         clMetodoCN objMtdCN = new clMetodoCN();
         int regis = objMtdCN.mtdConectado(consulta);
         return regis;

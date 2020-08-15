@@ -11,9 +11,17 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+     <div style="width: 91px; position: relative; top: 0px; left: 40px">
+        <asp:ImageButton ID="imgbtnAtras" runat="server" ImageUrl="~/Vista/Iconos/atras.png" OnClick="imgbtnAtras_Click" />
+    </div>
+    <div>
     <div class="auto-style7"> 
-        <div style="position: relative; top: -11px; left: 188px; width: 1000px;"><h2>Lista de las Planificaciones</h2></div>
-        <div top: 6px; left: 5px; z-index: 1; height: 171px; width: 1285px" style="width: 836px; position: relative; top: -13px; left: 238px">
+        <div style="position: relative; top: -13px; left: 11px; width: 1000px;"><h2>Lista de las Planificaciones</h2>
+        </div>
+        </div>
+        </div>
+        <div>
+        <div top: 6px; left: 5px; z-index: 1; height: 171px; width: 1285px" style="width: 828px; position: relative; top: -11px; left: 575px; height: 180px;">
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="IdPlanificacion" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" PageSize="5">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>

@@ -5,18 +5,24 @@
         .auto-style7 {
             width: 567px;
             position: relative;
-            left: 408px;
-            top: -7px;
+            left: 405px;
+            top: -33px;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <div style="width: 91px; position: relative; top: 0px; left: 40px">
+        <asp:ImageButton ID="imgbtnAtras" runat="server" ImageUrl="~/Vista/Iconos/atras.png" OnClick="imgbtnAtras_Click" />
+    </div>
     <div>
          <div style="position: relative; top: -11px; left: 188px; width: 1000px;" class="t-cn">
             <h2>Lista Ejecuciones de Mantenimiento</h2>
         </div>
+        </div>
+    <br />
+    <div>
         <div top: 6px; left: 5px; z-index: 1; height: 171px; width: 1285px" class="auto-style7">
-                        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="IdEjecucionM" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." PageSize="5" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" Width="523px">
+                        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="IdEjecucionM" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." PageSize="5" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" Width="523px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                             <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:BoundField DataField="IdEjecucionM" HeaderText="IdEjecucionM" ReadOnly="True" SortExpression="IdEjecucionM" Visible="False" />
@@ -26,7 +32,9 @@
                     <asp:BoundField DataField="Observaciones" HeaderText="Observaciones" SortExpression="Observaciones" />
                     <asp:BoundField DataField="IdTareaMtto" HeaderText="IdTareaMtto" SortExpression="IdTareaMtto" Visible="False" />
                     <asp:BoundField DataField="IdOrdenMttoP" HeaderText="IdOrdenMttoP" SortExpression="IdOrdenMttoP" Visible="False" />
-                    <asp:CommandField SelectText="Ver" ShowSelectButton="True" />
+                    <asp:CommandField SelectText="Ver" ShowSelectButton="True" >
+                    <ControlStyle ForeColor="#3EC1D5" />
+                    </asp:CommandField>
                 </Columns>
                             <FooterStyle BackColor="#CCCC99" />
                             <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />

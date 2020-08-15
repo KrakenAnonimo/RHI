@@ -11,4 +11,15 @@ public partial class ListaM : System.Web.UI.Page
     {
 
     }
+    protected void imgbtnAtras_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("~/ListasGenerales.aspx");
+    }
+
+    protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        int numFila = GridView1.SelectedRow.RowIndex;
+        Session["idMaterial"] = GridView1.DataKeys[numFila].Value;
+        Response.Redirect("~/VerDatM.aspx");
+    }
 }

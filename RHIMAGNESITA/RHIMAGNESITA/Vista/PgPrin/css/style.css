@@ -71,8 +71,7 @@ a:focus {
 
 img {
     max-width: 100%;
-    height: auto;
-}
+    }
 
 .fix {
     overflow: hidden;
@@ -98,6 +97,7 @@ h1 {
 h2 {
     font-size: 38px;
     line-height: 40px;
+    text-align: center;
 }
 
 h3 {
@@ -1917,7 +1917,7 @@ div#preloader {
 }
 
 .table {
-    width: 50%;
+    width: 100%;
     height: 100%;
     display: table;
 }

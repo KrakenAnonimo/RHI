@@ -11,4 +11,15 @@ public partial class ListaU : System.Web.UI.Page
     {
 
     }
+    protected void imgbtnAtras_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("~/ListasGenerales.aspx");
+    }
+
+    protected void Unnamed1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        int numFila = GridView1.SelectedRow.RowIndex;
+        Session["idUsuario"] = GridView1.DataKeys[numFila].Value;
+        Response.Redirect("~/VerDatU.aspx");
+    }
 }
