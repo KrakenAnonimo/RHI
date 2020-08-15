@@ -11,4 +11,8 @@ public partial class VerDatU : System.Web.UI.Page
     {
 
     }
+    protected void imgbtnAtras_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("~/ListaU.aspx");
+    }
 }
