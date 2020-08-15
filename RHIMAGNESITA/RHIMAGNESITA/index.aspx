@@ -57,7 +57,7 @@
                                     <span class="icon-bar"></span>
                                 </button>
                                 <!-- Brand -->
-                                <a class="navbar-brand page-scroll sticky-logo" href="index.html">
+                                <a class="navbar-brand page-scroll sticky-logo" href="index.aspx">
                                     <h1><span>RHI-</span>MAGNESITA</h1>
                                     <!-- Uncomment below if you prefer to use an image logo -->
                                     <!-- <img src="img/logo.png" alt="" title=""> -->
@@ -206,19 +206,19 @@
                             </p>
                             <ul>
                                 <li>
-                                    <i class="fa fa-check"></i> Revision de Inventario
+                                    <i class="fa fa-check"></i>Revision de Inventario
                                 </li>
                                 <li>
-                                    <i class="fa fa-check"></i> Planificacion
+                                    <i class="fa fa-check"></i>Planificacion
                                 </li>
                                 <li>
-                                    <i class="fa fa-check"></i> Orden de Trabajo
+                                    <i class="fa fa-check"></i>Orden de Trabajo
                                 </li>
                                 <li>
-                                    <i class="fa fa-check"></i> Reporte de Aveia/Servicio
+                                    <i class="fa fa-check"></i>Reporte de Aveia/Servicio
                                 </li>
                                 <li>
-                                    <i class="fa fa-check"></i> Ejecucion y Control
+                                    <i class="fa fa-check"></i>Ejecucion y Control
                                 </li>
                             </ul>
                         </div>
@@ -252,7 +252,7 @@
                                     </a>
                                     <h4>Rango</h4>
                                     <p>
-                                         Está listada en la Bolsa de Londres y es un componente del índice FTSE 250.
+                                        Está listada en la Bolsa de Londres y es un componente del índice FTSE 250.
                                     </p>
                                 </div>
                             </div>
@@ -364,7 +364,7 @@
                             <div class="single-skill">
                                 <div class="progress-circular">
                                     <!--Aqui se edita el diseño de porcentaje en las imagenes de circulo azul-->
-                                     <!--en data-rel-->
+                                    <!--en data-rel-->
                                     <input type="text" class="knob" value="0" data-rel="99" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
                                     <h3 class="progress-h4">Sistema de manejo integrado</h3>
                                 </div>
@@ -518,7 +518,7 @@
                                 <div class="event-content head-team">
                                     <h4>Proyecto</h4>
                                     <p>
-                                       Texto de relleno prt1.
+                                        Texto de relleno prt1.
                                     </p>
                                     <p>
                                         Texto de relleno prt2.
@@ -721,8 +721,7 @@
                                     <img src="Vista/PgPrin/img/portfolio/1.jpg" alt="" /></a>
                                 <div class="add-actions text-center">
                                     <div class="project-dec">
-                                        <a class="venobox" data-gall="myGallery" href="Vista/PgPrin/img/portfolio/1.jpg">
-                                        </a>
+                                        <a class="venobox" data-gall="myGallery" href="Vista/PgPrin/img/portfolio/1.jpg"></a>
                                     </div>
                                 </div>
                             </div>
@@ -737,8 +736,7 @@
                                     <img src="Vista/PgPrin/img/portfolio/2.jpg" alt="" /></a>
                                 <div class="add-actions text-center">
                                     <div class="project-dec">
-                                        <a class="venobox" data-gall="myGallery" href="Vista/PgPrin/img/portfolio/2.jpg">
-                                        </a>
+                                        <a class="venobox" data-gall="myGallery" href="Vista/PgPrin/img/portfolio/2.jpg"></a>
                                     </div>
                                 </div>
                             </div>
@@ -753,8 +751,7 @@
                                     <img src="Vista/PgPrin/img/portfolio/3.jpg" alt="" /></a>
                                 <div class="add-actions text-center">
                                     <div class="project-dec">
-                                        <a class="venobox" data-gall="myGallery" href="Vista/PgPrin/img/portfolio/3.jpg">
-                                        </a>
+                                        <a class="venobox" data-gall="myGallery" href="Vista/PgPrin/img/portfolio/3.jpg"></a>
                                     </div>
                                 </div>
                             </div>
@@ -769,8 +766,7 @@
                                     <img src="Vista/PgPrin/img/portfolio/4.jpg" alt="" /></a>
                                 <div class="add-actions text-center">
                                     <div class="project-dec">
-                                        <a class="venobox" data-gall="myGallery" href="Vista/PgPrin/img/portfolio/4.jpg">
-                                        </a>
+                                        <a class="venobox" data-gall="myGallery" href="Vista/PgPrin/img/portfolio/4.jpg"></a>
                                     </div>
                                 </div>
                             </div>
@@ -785,8 +781,7 @@
                                     <img src="Vista/PgPrin/img/portfolio/5.jpg" alt="" /></a>
                                 <div class="add-actions text-center text-center">
                                     <div class="project-dec">
-                                        <a class="venobox" data-gall="myGallery" href="Vista/PgPrin/img/portfolio/5.jpg">
-                                        </a>
+                                        <a class="venobox" data-gall="myGallery" href="Vista/PgPrin/img/portfolio/5.jpg"></a>
                                     </div>
                                 </div>
                             </div>
@@ -801,8 +796,7 @@
                                     <img src="Vista/PgPrin/img/portfolio/6.jpg" alt="" /></a>
                                 <div class="add-actions text-center">
                                     <div class="project-dec">
-                                        <a class="venobox" data-gall="myGallery" href="Vista/PgPrin/img/portfolio/6.jpg">
-                                        </a>
+                                        <a class="venobox" data-gall="myGallery" href="Vista/PgPrin/img/portfolio/6.jpg"></a>
                                     </div>
                                 </div>
                             </div>
@@ -959,7 +953,8 @@
                                     <div class="validation"></div>
                                 </div>
                                 <div class="text-center">
-                                    <button type="submit">Enviar mensaje</button></div>
+                                    <button type="submit">Enviar mensaje</button>
+                                </div>
                             </form>
                         </div>
                     </div>
