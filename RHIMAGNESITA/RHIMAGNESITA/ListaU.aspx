@@ -39,9 +39,6 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div style="width: 91px; position: relative; top: 0px; left: 40px">
-        <asp:ImageButton ID="imgbtnAtras" runat="server" ImageUrl="~/Vista/Iconos/atras.png" OnClick="imgbtnAtras_Click" />
-    </div>
     <div>
         <div style="position: relative; top: -11px; left: 188px; width: 1000px;" class="t-cn">
             <h2>Lista de Usuarios</h2>
