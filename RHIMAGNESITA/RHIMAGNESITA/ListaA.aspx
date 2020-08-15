@@ -11,20 +11,25 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div style="width: 91px; position: relative; top: 0px; left: 40px">
+        <asp:ImageButton ID="imgbtnAtras" runat="server" ImageUrl="~/Vista/Iconos/atras.png" OnClick="imgbtnAtras_Click" />
+    </div>
     <div>
         <div style="position: relative; top: -11px; left: 188px; width: 1000px;" class="t-cn">
             <h2>Lista de Areas</h2>
         </div>
+    </div>
+    <div>
         <div class="auto-style7">
 
-            <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="IdArea" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." ForeColor="Black" GridLines="Vertical" PageSize="5" Width="304px">
+            <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="IdArea" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." ForeColor="Black" GridLines="Vertical" PageSize="5" Width="304px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:BoundField DataField="IdArea" HeaderText="IdArea" ReadOnly="True" SortExpression="IdArea" Visible="False" />
                     <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
                     <asp:BoundField DataField="Ubicacion" HeaderText="Ubicacion" SortExpression="Ubicacion" />
                     <asp:CommandField SelectText="Ver" ShowSelectButton="True">
-                    <ControlStyle ForeColor="#3EC1D5" />
+                        <ControlStyle ForeColor="#3EC1D5" />
                     </asp:CommandField>
                 </Columns>
                 <FooterStyle BackColor="#CCCC99" />
