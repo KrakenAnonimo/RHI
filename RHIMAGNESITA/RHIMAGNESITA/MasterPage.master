@@ -59,17 +59,14 @@
 <!--Inicio Var-->
 <body data-spy="scroll" data-target="#navbar-example">
     <form id="form1" runat="server">
-
         <div>
-
             <div id="preloader"></div>
-
             <header>
                 <!-- header-area start -->
                 <div id="sticker" class="header-area">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-13 col-sm-13">
+                            <div class="col-md-12 col-sm-12">
 
                                 <!-- Navigation -->
                                 <nav class="navbar navbar-default">
@@ -82,11 +79,11 @@
                                             <span class="icon-bar"></span>
                                         </button>
                                         <!-- Brand -->
-                                        <a class="navbar-brand page-scroll sticky-logo" href="Default1.aspx">
-                                            <h1><span>RHI-</span>MAGNESITA</h1>
-                                            <!-- Uncomment below if you prefer to use an image logo -->
-                                            <!-- <img src="img/logo.png" alt="" title=""> -->
-                                        </a>
+                                         <a class="navbar-brand page-scroll sticky-logo" href="inicio1.aspx">
+                                    <h1><span>RHI-</span>MAGNESITA</h1>
+                                    <!-- Uncomment below if you prefer to use an image logo -->
+                                    <!-- <img src="img/logo.png" alt="" title=""> -->
+                                </a>
                                     </div>
                                     <!-- Collect the nav links, forms, and other content for toggling -->
                                     <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
