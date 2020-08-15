@@ -29,6 +29,8 @@ public partial class AsignaUsuaP : System.Web.UI.Page
         objUsuaPlanificacionE.IdPlanificacion = int.Parse(gvPlanif.DataKeys[filas].Value.ToString());
        
         
+       
+        
         clUsuaPlanificacion objUsuaPlanificacion = new clUsuaPlanificacion();
         int resultsql = objUsuaPlanificacion.mtdRegistrarUsuaPlanificacion(objUsuaPlanificacionE);
 

@@ -24,14 +24,14 @@
         .auto-style8 {
             width: 314px;
             position: relative;
-            left: -35px;
-            top: -2px;
+            left: -88px;
+            top: 63px;
         }
         .auto-style9 {
             width: 445px;
             position: relative;
-            left: 285px;
-            top: -161px;
+            left: 256px;
+            top: -82px;
         }
     </style>
 </asp:Content>
