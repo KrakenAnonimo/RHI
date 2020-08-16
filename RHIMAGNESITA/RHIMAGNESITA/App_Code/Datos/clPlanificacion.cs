@@ -57,7 +57,7 @@ public class clPlanificacion
     //Metodo Actualizar Planificacion
     public int mtdActualizarPlanificacion(clPlanificacionE objDatos)
     {
-        string consulta = "Update Planificacion set FechaPlanificacion= '" + objDatos.FechaPlanificacion + "' " + "where '" + objDatos.IdPlanificacion +"' )";
+        string consulta = "Update Planificacion set FechaPlanificacion = '" + objDatos.FechaPlanificacion + "' where IdPlanificacion = '" +objDatos.IdPlanificacion +"'";
         clMetodoCN objMtdCN = new clMetodoCN();
         int regis = objMtdCN.mtdConectado(consulta);
         return regis;

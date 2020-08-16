@@ -24,10 +24,10 @@ public partial class AsignaUsuaP : System.Web.UI.Page
     protected void gvUsua_SelectedIndexChanged(object sender, EventArgs e)
     {
         fila = gvUsua.SelectedRow.RowIndex;
-        
-        
+
+
         //clase usuario
-        clUsuariox objUsuarios = new clUsuariox();
+        clUsuarioX objUsuarios = new clUsuarioX();
 
         objUsuarios.IdUsuario = int.Parse(gvUsua.DataKeys[fila].Value.ToString());
 
@@ -36,7 +36,7 @@ public partial class AsignaUsuaP : System.Web.UI.Page
         gvUsuarioElegido.DataBind();
 
     }
-    static List<clUsuariox> lista = new List<clUsuariox>();
+    static List<clUsuarioX> lista = new List<clUsuarioX>();
     int filas = 0;
     protected void gvPlanif_SelectedIndexChanged(object sender, EventArgs e)
     {
@@ -91,7 +91,7 @@ public partial class AsignaUsuaP : System.Web.UI.Page
     }
     
 }
-public class clUsuariox
+public class clUsuarioX
 {
     //Atributos Tabla Usuarios
     public int IdUsuario { get; set; }
