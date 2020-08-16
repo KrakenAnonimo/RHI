@@ -79,11 +79,11 @@
                                             <span class="icon-bar"></span>
                                         </button>
                                         <!-- Brand -->
-                                         <a class="navbar-brand page-scroll sticky-logo" href="inicio1.aspx">
-                                    <h1><span>RHI-</span>MAGNESITA</h1>
-                                    <!-- Uncomment below if you prefer to use an image logo -->
-                                    <!-- <img src="img/logo.png" alt="" title=""> -->
-                                </a>
+                                        <a class="navbar-brand page-scroll sticky-logo" href="inicio1.aspx">
+                                            <h1><span>RHI-</span>MAGNESITA</h1>
+                                            <!-- Uncomment below if you prefer to use an image logo -->
+                                            <!-- <img src="img/logo.png" alt="" title=""> -->
+                                        </a>
                                     </div>
                                     <!-- Collect the nav links, forms, and other content for toggling -->
                                     <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
@@ -116,33 +116,42 @@
                                             <li>
                                                 <a class="page-scroll" href="ListasGenerales.aspx">Listas</a>
                                             </li>
-                                            <li>
-                                                <a class="page-scroll" href="index.aspx" id="btnsalir" onclick="btnSalir_Click">Salir</a>
+                                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-sliders" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" d="M14 3.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0zM11.5 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM7 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0zM4.5 10a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm9.5 3.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0zM11.5 15a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                                                    <path fill-rule="evenodd" d="M9.5 4H0V3h9.5v1zM16 4h-2.5V3H16v1zM9.5 14H0v-1h9.5v1zm6.5 0h-2.5v-1H16v1zM6.5 9H16V8H6.5v1zM0 9h2.5V8H0v1z" />
+                                                </svg><span class="caret"></span></a>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a class="nav-link" href="Perfil.aspx"><i class="fa fa- user"></i>Mi Perfil</a></li>
+                                                    <li><a class="page-scroll" href="index.aspx" id="btnsalir" onclick="btnSalir_Click">Salir</a></li>
+                                                </ul>
                                             </li>
                                         </ul>
                                     </div>
-
-                                    <!-- navbar-collapse -->
                                 </nav>
-                                <!-- END: Navigation -->
+                                </ul>
                             </div>
+                            <!-- navbar-collapse -->
+                            </nav>
+                                <!-- END: Navigation -->
                         </div>
                     </div>
                 </div>
-                <div>
-                    <img src="Vista/PgPrin/img/xddx.jpg" width="100%" class="img-fluid" alt="Responsive image" />
-                </div>
-                <div class="auto-style6">
-                    <asp:Label ID="Label1" runat="server" Text="Usuario:"></asp:Label>
-                    &nbsp;<asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
-                </div>
-                <p class="auto-style5"></p>
+        </div>
+        <div>
+            <img src="Vista/PgPrin/img/xddx.jpg" width="100%" class="img-fluid" alt="Responsive image" />
+        </div>
+        <div class="auto-style6">
+            <asp:Label ID="Label1" runat="server" Text="Usuario:"></asp:Label>
+            &nbsp;<asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
+        </div>
+        <p class="auto-style5"></p>
 
-                <!-- header-area end -->
-            </header>
+        <!-- header-area end -->
+        </header>
             <!-- header end -->
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
         </div>
     </form>
     <!--fin Var-->
