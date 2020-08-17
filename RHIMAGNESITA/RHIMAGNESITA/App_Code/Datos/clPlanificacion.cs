@@ -26,7 +26,7 @@ public class clPlanificacion
     //Metodo Eliminar Planificacion
     public int mtdEliminarPlanificacion(clPlanificacionE objDatos)
     {
-        string consulta = "Delete from Planificacion where IdPlanificacion = '" + objDatos.IdPlanificacion + "')";
+        string consulta = "Delete from Planificacion where IdPlanificacion = '" + objDatos.IdPlanificacion + "'";
         clMetodoCN objMtdCN = new clMetodoCN();
         int result = objMtdCN.mtdConectado(consulta);
         return result;

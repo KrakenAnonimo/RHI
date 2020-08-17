@@ -35,7 +35,8 @@
                 <br>
                 <ul class="list-group">
                     <li class="list-group-item text-muted">Actividad <i class="fa fa-dashboard fa-1x"></i></li>
-                    <li class="list-group-item text-right"><span class="pull-left"><strong><asp:Label ID="Label1" runat="server" Text=""></asp:Label></strong></span>R</li>
+                    <li class="list-group-item text-right"><span class="pull-left"><strong>
+                        <asp:Label ID="lblRol" runat="server" Text=""></asp:Label></strong></span><asp:Label ID="lblidU" runat="server" Text=""></asp:Label></li>
                     <li class="list-group-item text-right"><span class="pull-left"><strong>Ordenes</strong></span>O</li>
                     <li class="list-group-item text-right"><span class="pull-left"><strong>Tareas</strong></span>T</li>
                     <li class="list-group-item text-right"><span class="pull-left"><strong>Planificaciones</strong></span>P</li>
@@ -120,185 +121,16 @@
                                     <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" />
                                     <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" class="btn btn-danger btn-sm" />
                                 </div>
+                                <asp:SqlDataSource ID="SqldsDatos" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT Rol.IdRol, Rol.Rol, Usuario.IdUsuario, Usuario.Documento, Usuario.Nombre, Usuario.Apellido, Usuario.Telefono, Usuario.Email, Usuario.Ciudad, Usuario.Direccion, Usuario.IdRol AS Expr1 FROM Rol INNER JOIN Usuario ON Rol.IdRol = Usuario.IdRol WHERE (Usuario.IdUsuario = @idUsuario)">
+                                    <SelectParameters>
+                                        <asp:SessionParameter Name="idUsuario" SessionField="idUsuario" />
+                                    </SelectParameters>
+                                </asp:SqlDataSource>
                             </div>
                         </form>
                         <hr>
                     </div>
-                    <!--/tab-pane-->
-                    <div class="tab-pane" id="messages">
-                        <hr>
-                        <form class="form" action="##" method="post" id="registrationForm">
-                            <div class="form-group">
-                                <div class="col-xs-6">
-                                    <label for="first_name">
-                                        <h4>First name</h4>
-                                    </label>
-                                    <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any.">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-xs-6">
-                                    <label for="last_name">
-                                        <h4>Last name</h4>
-                                    </label>
-                                    <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any.">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-xs-6">
-                                    <label for="phone">
-                                        <h4>Phone</h4>
-                                    </label>
-                                    <input type="text" class="form-control" name="phone" id="phone" placeholder="enter phone" title="enter your phone number if any.">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="col-xs-6">
-                                    <label for="mobile">
-                                        <h4>Mobile</h4>
-                                    </label>
-                                    <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter mobile number" title="enter your mobile number if any.">
-                                </div>
-                            </div>
-                            <div class="form-group">
-
-                                <div class="col-xs-6">
-                                    <label for="email">
-                                        <h4>Email</h4>
-                                    </label>
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email.">
-                                </div>
-                            </div>
-                            <div class="form-group">
-
-                                <div class="col-xs-6">
-                                    <label for="email">
-                                        <h4>Location</h4>
-                                    </label>
-                                    <input type="email" class="form-control" id="location" placeholder="somewhere" title="enter a location">
-                                </div>
-                            </div>
-                            <div class="form-group">
-
-                                <div class="col-xs-6">
-                                    <label for="password">
-                                        <h4>Password</h4>
-                                    </label>
-                                    <input type="password" class="form-control" name="password" id="password" placeholder="password" title="enter your password.">
-                                </div>
-                            </div>
-                            <div class="form-group">
-
-                                <div class="col-xs-6">
-                                    <label for="password2">
-                                        <h4>Verify</h4>
-                                    </label>
-                                    <input type="password" class="form-control" name="password2" id="password2" placeholder="password2" title="enter your password2.">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-xs-12">
-                                    <br>
-                                    <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i>Save</button>
-                                    <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i>Reset</button>
-                                </div>
-                            </div>
-                        </form>
-
-                    </div>
-                    <!--/tab-pane-->
-                    <div class="tab-pane" id="settings">
-
-
-                        <hr>
-                        <form class="form" action="##" method="post" id="registrationForm">
-                            <div class="form-group">
-
-                                <div class="col-xs-6">
-                                    <label for="first_name">
-                                        <h4>First name</h4>
-                                    </label>
-                                    <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any.">
-                                </div>
-                            </div>
-                            <div class="form-group">
-
-                                <div class="col-xs-6">
-                                    <label for="last_name">
-                                        <h4>Last name</h4>
-                                    </label>
-                                    <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any.">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-
-                                <div class="col-xs-6">
-                                    <label for="phone">
-                                        <h4>Phone</h4>
-                                    </label>
-                                    <input type="text" class="form-control" name="phone" id="phone" placeholder="enter phone" title="enter your phone number if any.">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="col-xs-6">
-                                    <label for="mobile">
-                                        <h4>Mobile</h4>
-                                    </label>
-                                    <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter mobile number" title="enter your mobile number if any.">
-                                </div>
-                            </div>
-                            <div class="form-group">
-
-                                <div class="col-xs-6">
-                                    <label for="email">
-                                        <h4>Email</h4>
-                                    </label>
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email.">
-                                </div>
-                            </div>
-                            <div class="form-group">
-
-                                <div class="col-xs-6">
-                                    <label for="email">
-                                        <h4>Location</h4>
-                                    </label>
-                                    <input type="email" class="form-control" id="location" placeholder="somewhere" title="enter a location">
-                                </div>
-                            </div>
-                            <div class="form-group">
-
-                                <div class="col-xs-6">
-                                    <label for="password">
-                                        <h4>Password</h4>
-                                    </label>
-                                    <input type="password" class="form-control" name="password" id="password" placeholder="password" title="enter your password.">
-                                </div>
-                            </div>
-                            <div class="form-group">
-
-                                <div class="col-xs-6">
-                                    <label for="password2">
-                                        <h4>Verify</h4>
-                                    </label>
-                                    <input type="password" class="form-control" name="password2" id="password2" placeholder="password2" title="enter your password2.">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-xs-12">
-                                    <br>
-                                    <button class="btn btn-lg btn-success pull-right" type="submit"><i class="glyphicon glyphicon-ok-sign"></i>Save</button>
-                                    <!--<button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>-->
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-
                 </div>
-                <!--/tab-pane-->
-            </div>
             <!--/tab-content-->
 
         </div>
