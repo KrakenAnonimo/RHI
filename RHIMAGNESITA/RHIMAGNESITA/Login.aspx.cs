@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Net.Mail;
-using System.Net;
 
 public partial class Login : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        
+
     }
     protected void btnIngresar_Click(object sender, EventArgs e)
     {
@@ -37,7 +37,6 @@ public partial class Login : System.Web.UI.Page
             Response.Redirect("~/Login.aspx");
         }
     }
-
     protected void btnRegistrar_Click(object sender, EventArgs e)
     {
         clUsuarioE objLoginE = new clUsuarioE();
