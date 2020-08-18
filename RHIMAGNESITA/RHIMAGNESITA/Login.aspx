@@ -101,18 +101,18 @@
                                             <div class="row">
                                                 <div class="col-sm-10 col-sm-offset-1">
                                                     <div class="input-group">
-                                                        <span class="input-group-addon">
-                                                            <i class="material-icons">face</i>
-                                                        </span>
-                                                        <div class="input-group">
-                                                        <span class="input-group-addon">
-                                                            <i class="material-icons">document</i>
+                                                    <span class="input-group-addon">
+                                                            <i class="material-icons">featured_play_list</i>
                                                         </span>
                                                         <div class="form-group label-floating">
                                                             <label class="control-label">Documento</label>
                                                             <asp:TextBox ID="txtDocumentoR" runat="server" class="form-control"></asp:TextBox>
                                                         </div>
                                                     </div>
+                                                    <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                            <i class="material-icons">face</i>
+                                                        </span>
                                                         <div class="form-group label-floating">
                                                             <label class="control-label">Nombre</label>
                                                             <asp:TextBox ID="txtNombreR" runat="server" class="form-control"></asp:TextBox>
@@ -137,7 +137,6 @@
                                                             <asp:TextBox ID="txtCorreoR" runat="server" class="form-control"></asp:TextBox>
                                                         </div>
                                                     </div>
-
                                                     <div class="input-group">
                                                         <span class="input-group-addon">
                                                             <i class="material-icons">lock_outline</i>

@@ -46,6 +46,15 @@ public partial class Usuario :  System.Web.UI.Page
 
         if (resultsql > 0)
         {
+            clCorreo objCorreo = new clCorreo(txtEmail.Text, "Registro Correcto!", "Registro Exitoso!");
+            if (objCorreo.Estado)
+            {
+                Response.Write("El correo se envio correctamente...");
+            }
+            else
+            {
+                Response.Write("Erro al enviar <br>" + objCorreo.Mensaje_error);
+            }
             //enviar mensaje 
             //Limpiar Campos de texto
             Response.Write("<script>alert('Se Registro Correctamente')</script>");

@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 public partial class Login : System.Web.UI.Page
 {
+    
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -51,34 +54,20 @@ public partial class Login : System.Web.UI.Page
 
         if (resultsql > 0)
         {
+           
+
+            clCorreo objCorreo = new clCorreo( txtCorreoR.Text ,"Registro Correcto!","Registro Exitoso!");
+            if(objCorreo.Estado){
+                Response.Write("El correo se envio correctamente...");
+            }
+            else
+            {
+                Response.Write("Erro al enviar <br>" + objCorreo.Mensaje_error);
+            }
+
             //enviar mensaje 
             Response.Write("<script>alert('Se Registro Correctamente')</script>");
             Response.Redirect("~/Login.aspx");
-            /* //Enviar correo
-             string body =
-                 "<body>" +
-                 "<h1>Bienvenido a RHI-Magneista!</h1>" +
-                 "<h4>Querido Usuario,</4>" +
-                 "<span>Se registro correctamente en la plataforma!</span>" +
-                 "<span>Felicitaciones.</span>" +
-                 "<br/><br/>" +
-                 "</body>";
-
-             SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
-             smtp.Credentials = new NetworkCredential("rhimagnesita00@gmail.com", "3053208890");
-             smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-             smtp.EnableSsl = true;
-             smtp.UseDefaultCredentials = false;
-
-             MailMessage mail = new MailMessage();
-             mail.From = new MailAddress("rhimagnesita00@gmail.com", "Registro Exitoso");
-             mail.To.Add(new MailAddress(txtEmail.Text));
-             mail.Subject = "Mensaje de Registro";
-             mail.Body = body;
-
-             smtp.Send(mail);*/
-
-
         }
     }
 }
