@@ -138,7 +138,6 @@
                                                             <asp:TextBox ID="txtClaveR" runat="server" class="form-control"></asp:TextBox>
                                                         </div>
                                                     </div>
-
                                                 </div>
                                             </div>
                                         </div>
