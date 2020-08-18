@@ -314,21 +314,21 @@ h2.title {
     background-color: #ff9800; }
   .wizard-card[data-color="orange"] .radio input[type=radio]:checked ~ .circle {
     border-color: #ff9800; }
-  .wizard-card[data-color="blue"] .moving-tab {
+  .wizard-card[data-color="red"] .moving-tab {
     background-color: #3DBBCE;
-    box-shadow: 0 16px 26px -10px rgba(244, 67, 54, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(244, 67, 54, 0.2); }
+    box-shadow: 0 16px 26px -10px rgba(61, 187, 206, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(61, 187, 206, 0.2); }
   .wizard-card[data-color="red"] .picture:hover {
     border-color: #3DBBCE; }
-  .wizard-card[data-color="blue"] .choice:hover .icon, .wizard-card[data-color="red"] .choice.active .icon {
+  .wizard-card[data-color="red"] .choice:hover .icon, .wizard-card[data-color="red"] .choice.active .icon {
     border-color: #3DBBCE;
     color: #3DBBCE; }
-  .wizard-card[data-color="blue"] .form-group .form-control {
+  .wizard-card[data-color="red"] .form-group .form-control {
     background-image: linear-gradient(#3DBBCE, #3DBBCE), linear-gradient(#D2D2D2, #D2D2D2); }
-  .wizard-card[data-color="blue"] .checkbox input[type=checkbox]:checked + .checkbox-material .check {
+  .wizard-card[data-color="red"] .checkbox input[type=checkbox]:checked + .checkbox-material .check {
     background-color: #3DBBCE; }
-  .wizard-card[data-color="blue"] .radio input[type=radio]:checked ~ .check {
+  .wizard-card[data-color="red"] .radio input[type=radio]:checked ~ .check {
     background-color: #3DBBCE; }
-  .wizard-card[data-color="blue"] .radio input[type=radio]:checked ~ .circle {
+  .wizard-card[data-color="red"] .radio input[type=radio]:checked ~ .circle {
     border-color: #3DBBCE; }
   .wizard-card .picture input[type="file"] {
     cursor: pointer;
@@ -984,12 +984,12 @@ select.form-control {
         background-color: transparent;
         color: #ff9800; }
   .btn.btn-danger {
-    box-shadow: 0 2px 2px 0 rgba(244, 67, 54, 0.14), 0 3px 1px -2px rgba(244, 67, 54, 0.2), 0 1px 5px 0 rgba(244, 67, 54, 0.12); }
+    box-shadow: 0 2px 2px 0 rgba(61, 187, 206, 0.14), 0 3px 1px -2px rgba(61, 187, 206, 0.2), 0 1px 5px 0 rgba(61, 187, 206, 0.12); }
     .btn.btn-danger, .btn.btn-danger:hover, .btn.btn-danger:focus, .btn.btn-danger:active, .btn.btn-danger.active, .btn.btn-danger:active:focus, .btn.btn-danger:active:hover, .btn.btn-danger.active:focus, .btn.btn-danger.active:hover, .open > .btn.btn-danger.dropdown-toggle, .open > .btn.btn-danger.dropdown-toggle:focus, .open > .btn.btn-danger.dropdown-toggle:hover {
       background-color: #3DBBCE;
       color: #FFFFFF; }
     .btn.btn-danger:focus, .btn.btn-danger:active, .btn.btn-danger:hover {
-      box-shadow: 0 14px 26px -12px rgba(244, 67, 54, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(244, 67, 54, 0.2); }
+      box-shadow: 0 14px 26px -12px rgba(61, 187, 206, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(61, 187, 206, 0.2); }
     .btn.btn-danger.disabled, .btn.btn-danger.disabled:hover, .btn.btn-danger.disabled:focus, .btn.btn-danger.disabled.focus, .btn.btn-danger.disabled:active, .btn.btn-danger.disabled.active, .btn.btn-danger:disabled, .btn.btn-danger:disabled:hover, .btn.btn-danger:disabled:focus, .btn.btn-danger:disabled.focus, .btn.btn-danger:disabled:active, .btn.btn-danger:disabled.active, .btn.btn-danger[disabled], .btn.btn-danger[disabled]:hover, .btn.btn-danger[disabled]:focus, .btn.btn-danger[disabled].focus, .btn.btn-danger[disabled]:active, .btn.btn-danger[disabled].active, fieldset[disabled] .btn.btn-danger, fieldset[disabled] .btn.btn-danger:hover, fieldset[disabled] .btn.btn-danger:focus, fieldset[disabled] .btn.btn-danger.focus, fieldset[disabled] .btn.btn-danger:active, fieldset[disabled] .btn.btn-danger.active {
       box-shadow: none; }
     .btn.btn-danger.btn-simple {
