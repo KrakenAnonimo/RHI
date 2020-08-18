@@ -19,12 +19,33 @@ public partial class VerDatM : System.Web.UI.Page
 
         lblIdM.Text = Session["idMaterial"].ToString();
         lblCodigo.Text = tblDatos.Rows[0][1].ToString();
-        lblNombreM.Text = tblDatos.Rows[0][2].ToString();
-        lblDescripcion.Text = tblDatos.Rows[0][3].ToString();
-        lblUnidad.Text = tblDatos.Rows[0][4].ToString();
+        txtNombreM.Text = tblDatos.Rows[0][2].ToString();
+        txtDescripcionM.Text = tblDatos.Rows[0][3].ToString();
+        txtUnidadM.Text = tblDatos.Rows[0][4].ToString();
     }
     protected void imgbtnAtras_Click(object sender, ImageClickEventArgs e)
     {
         Response.Redirect("~/ListaM.aspx");
+    }
+
+    protected void btnGuardar_Click(object sender, EventArgs e)
+    {
+        clMaterialE objMaterialM = new clMaterialE();
+        objMaterialM.IdMaterial = int.Parse(lblIdM.Text);
+        objMaterialM.Nombre = txtNombreM.Text;
+        objMaterialM.Descripcion = txtDescripcionM.Text;
+        objMaterialM.Unidad = txtUnidadM.Text;
+
+
+        clMaterial objMaterial = new clMaterial();
+        int resultsql = objMaterial.mtdActualizarMaterial(objMaterialM);
+
+        if (resultsql > 0)
+        {
+            //enviar mensaje 
+            Response.Write("<script>alert('Se Actualizo Correctamente')</script>");
+            //Redireccionar
+            Response.Redirect("~/ListaM.aspx");
+        }
     }
 }

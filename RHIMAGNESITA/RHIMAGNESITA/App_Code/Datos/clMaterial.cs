@@ -59,7 +59,7 @@ public class clMaterial
     //Metodo Actualizar Material
     public int mtdActualizarMaterial(clMaterialE objDatos)
     {
-        string consulta = "Update Usuario set Material = '" + objDatos.Codigo + "','" + objDatos.Nombre + "','" + objDatos.Descripcion + "','" + objDatos.Unidad + "')";
+        string consulta = "Update Material set Nombre = '" + objDatos.Nombre + "', Descripcion = '" + objDatos.Descripcion + "', Unidad = '" + objDatos.Unidad + "'where IdMaterial = '" + objDatos.IdMaterial + "'";
         clMetodoCN objMtdCN = new clMetodoCN();
         int regis = objMtdCN.mtdConectado(consulta);
         return regis;

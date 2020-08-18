@@ -24,7 +24,7 @@ public class clArea
     //Metodo Eliminar Area
     public int mtdEliminarArea(clAreaE objDatos)
     {
-        string consulta = "Delete from Area where Nombre = '" + objDatos.Nombre + "')";
+        string consulta = "Delete from Area where Nombre = '" + objDatos.Nombre + "'";
         clMetodoCN objMtdCN = new clMetodoCN();
         int result = objMtdCN.mtdConectado(consulta);
 
@@ -54,7 +54,7 @@ public class clArea
     //Metodo Actualizar Area
     public int mtdActualizarArea(clAreaE objDatos)
     {
-        string consulta = "Update Area set Nombre = '" + objDatos.Nombre + "','" + objDatos.Ubicacion + "')";
+        string consulta = "Update Area set Nombre = '" + objDatos.Nombre + "', Ubicacion = '" + objDatos.Ubicacion + "'where IdArea = '" + objDatos.IdArea + "'";
         clMetodoCN objMtdCN = new clMetodoCN();
         int regis = objMtdCN.mtdConectado(consulta);
         return regis;

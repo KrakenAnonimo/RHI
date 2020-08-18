@@ -19,14 +19,35 @@ public partial class VerDatRAVS : System.Web.UI.Page
 
         lblIdR.Text = Session["idReporteAVS"].ToString();
         lblNumeroR.Text = tblDatos.Rows[0][1].ToString();
-        lblTitulo.Text = tblDatos.Rows[0][2].ToString();
-        lblDescripcion.Text = tblDatos.Rows[0][3].ToString();
-        lblFechaR.Text = tblDatos.Rows[0][4].ToString();
+        txtTitulo.Text = tblDatos.Rows[0][2].ToString();
+        txtDescripcion.Text = tblDatos.Rows[0][3].ToString();
+        txtFechaR.Text = tblDatos.Rows[0][4].ToString();
         lblIdE.Text = tblDatos.Rows[0][5].ToString();
         lblIdU.Text = tblDatos.Rows[0][6].ToString();
     }
     protected void imgbtnAtras_Click(object sender, ImageClickEventArgs e)
     {
         Response.Redirect("~/ListaRAVS.aspx");
+    }
+
+    protected void btnGuardar_Click(object sender, EventArgs e)
+    {
+        clReporteAveriaServicioE objclReporteAveriaServicioE = new clReporteAveriaServicioE();
+        objclReporteAveriaServicioE.IdReporteAS = int.Parse(lblIdR.Text);
+        objclReporteAveriaServicioE.Titulo = txtDescripcion.Text;
+        objclReporteAveriaServicioE.Descripcion = txtDescripcion.Text;
+        objclReporteAveriaServicioE.FechaReporte = txtFechaR.Text;
+      
+
+        clReporteAveriaServicio objEjecucionM = new clReporteAveriaServicio();
+        int resultsql = objEjecucionM.mtdActualizarReporteAS(objclReporteAveriaServicioE);
+
+        if (resultsql > 0)
+        {
+            //enviar mensaje 
+            Response.Write("<script>alert('Se Actualizo Correctamente')</script>");
+            //Redireccionar
+            Response.Redirect("~/ListaRAVS.aspx");
+        }
     }
 }

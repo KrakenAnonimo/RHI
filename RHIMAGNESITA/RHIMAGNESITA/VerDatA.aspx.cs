@@ -25,4 +25,40 @@ public partial class VerDatA : System.Web.UI.Page
     {
         Response.Redirect("~/ListaA.aspx");
     }
+
+    protected void btnGuardar_Click(object sender, EventArgs e)
+    {
+        clAreaE objAreaE = new clAreaE();
+        objAreaE.IdArea = int.Parse(lblIdA.Text);
+        objAreaE.Nombre = txtNombreA.Text;
+        objAreaE.Ubicacion = txtUbicacion.Text;
+
+        clArea objArea = new clArea();
+        int resultsql = objArea.mtdActualizarArea(objAreaE);
+
+        if (resultsql > 0)
+        {
+            //enviar mensaje 
+            Response.Write("<script>alert('Se Actualizo Correctamente')</script>");
+            //Redireccionar
+            Response.Redirect("~/ListaA.aspx");
+        }
+    }
+
+    protected void btnEliminar_Click(object sender, EventArgs e)
+    {
+        clAreaE objAreaE = new clAreaE();
+        objAreaE.Nombre = txtNombreA.Text;
+
+        clArea objArea = new clArea();
+        int resultsql = objArea.mtdEliminarArea(objAreaE);
+
+        if (resultsql > 0)
+        {
+            //enviar mensaje 
+            Response.Write("<script>alert('Se Elimino Correctamente')</script>");
+            //Redireccionar
+            Response.Redirect("~/ListaA.aspx");
+        }
+    }
 }

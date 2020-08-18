@@ -59,7 +59,7 @@ public class clTareaAveriaServicio
     //Metodo Actualizar TareaAS
     public int mtdActualizarTareaAS(clTareaAveriaServicioE objTareaAveriaServicioE)
     {
-        string consulta = "Update TareaAveriaServicio set NumOrden = '" + objTareaAveriaServicioE.NombreAS + "','" + objTareaAveriaServicioE.Duracion + "','" + objTareaAveriaServicioE.FechaEjecucion + "','" + objTareaAveriaServicioE.IdOrdenMttoP + "','" + objTareaAveriaServicioE.IdOrdenMttoC + "')";
+        string consulta = "Update TareaAveriaServicio set NombreAS = '" + objTareaAveriaServicioE.NombreAS + "', Duracion = '" + objTareaAveriaServicioE.Duracion + "', FechaEjecucion = '" + objTareaAveriaServicioE.FechaEjecucion + "' where IdTareaAS = '" + objTareaAveriaServicioE.IdTareaAS + "'";
         clMetodoCN objMtdCN = new clMetodoCN();
         int regis = objMtdCN.mtdConectado(consulta);
         return regis;

@@ -19,13 +19,33 @@ public partial class VerDatE : System.Web.UI.Page
 
         lblIdE.Text = Session["idElemento"].ToString();
         lblCodigo.Text = tblDatos.Rows[0][1].ToString();
-        lblNombreE.Text = tblDatos.Rows[0][2].ToString();
-        lblDescripcion.Text = tblDatos.Rows[0][3].ToString();
-        lblEstado.Text = tblDatos.Rows[0][4].ToString();
+        txtNombreE.Text = tblDatos.Rows[0][2].ToString();
+        txtDescripcion.Text = tblDatos.Rows[0][3].ToString();
+        cmbEstado.Text = tblDatos.Rows[0][4].ToString();
         lblIdA.Text = tblDatos.Rows[0][5].ToString();
     }
     protected void imgbtnAtras_Click(object sender, ImageClickEventArgs e)
     {
         Response.Redirect("~/ListaE.aspx");
+    }
+
+    protected void btnGuardar_Click(object sender, EventArgs e)
+    {
+        clElementoE objElementoE = new clElementoE();
+        objElementoE.IdElemento = int.Parse(lblIdE.Text);
+        objElementoE.Nombre = txtNombreE.Text;
+        objElementoE.Descripcion = txtDescripcion.Text;
+        objElementoE.Estado = cmbEstado.Text;
+
+        clElemento objElemento = new clElemento();
+        int resultsql = objElemento.mtdActualizarElemento(objElementoE);
+
+        if (resultsql > 0)
+        {
+            //enviar mensaje 
+            Response.Write("<script>alert('Se Actualizo Correctamente')</script>");
+            //Redireccionar
+            Response.Redirect("~/ListaE.aspx");
+        }
     }
 }

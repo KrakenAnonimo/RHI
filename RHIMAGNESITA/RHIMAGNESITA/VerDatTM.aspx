@@ -25,19 +25,19 @@
                 <tr>
                     <th scope="row">Nombre de la Tarea:</th>
                     <td>
-                        <asp:Label ID="lblNombreTM" runat="server" Text=""></asp:Label>
+                        <asp:TextBox ID="txtNombreTM" runat="server" Text=""></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">Duracion:</th>
                     <td>
-                        <asp:Label ID="lblDuracion" runat="server" Text=""></asp:Label>
+                        <asp:TextBox runat="server" ID="txtDuracionTM" placeholder="Horas" class="form-control" TextMode="Number"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">Descripcion:</th>
                     <td>
-                        <asp:Label ID="lblDescripcion" runat="server" Text=""></asp:Label>
+                       <asp:TextBox ID="txtDescripcion" runat="server" Text=""></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -50,7 +50,7 @@
         </table>
     </div>
     <div class="auto-style7">
-        <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" />
+        <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" OnClick="btnGuardar_Click" />
         <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-danger btn-sm" />
     </div>
     <div>

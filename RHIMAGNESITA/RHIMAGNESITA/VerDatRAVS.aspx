@@ -1,8 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="VerDatRAVS.aspx.cs" Inherits="VerDatRAVS" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div style="width: 91px; position: relative; top: 0px; left: 40px">
         <asp:ImageButton ID="imgbtnAtras" runat="server" ImageUrl="~/Vista/Iconos/atras.png" OnClick="imgbtnAtras_Click" />
     </div>
@@ -31,19 +31,19 @@
                 <tr>
                     <th scope="row">Titulo:</th>
                     <td>
-                        <asp:Label ID="lblTitulo" runat="server" Text=""></asp:Label>
+                        <asp:TextBox ID="txtTitulo" runat="server" Text=""></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">Descripcion:</th>
                     <td>
-                        <asp:Label ID="lblDescripcion" runat="server" Text=""></asp:Label>
+                        <asp:TextBox ID="txtDescripcion" runat="server" Text=""></asp:TextBox>
                     </td>
                 </tr>
-                 <tr>
+                <tr>
                     <th scope="row">Fecha del Reporte:</th>
                     <td>
-                        <asp:Label ID="lblFechaR" runat="server" ></asp:Label>
+                        <asp:TextBox ID="txtFechaR" runat="server" TextMode="Date"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -62,7 +62,7 @@
         </table>
     </div>
     <div class="auto-style7">
-        <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" />
+        <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" OnClick="btnGuardar_Click" />
         <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-danger btn-sm" />
     </div>
     <div>

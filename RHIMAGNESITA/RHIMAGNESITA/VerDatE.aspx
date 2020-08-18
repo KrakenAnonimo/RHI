@@ -1,6 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="VerDatE.aspx.cs" Inherits="VerDatE" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <style type="text/css">
+        .auto-style7 {
+            height: 53px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div style="width: 91px; position: relative; top: 0px; left: 40px">
@@ -31,19 +36,23 @@
                 <tr>
                     <th scope="row">Nombre del Elemento:</th>
                     <td>
-                        <asp:Label ID="lblNombreE" runat="server" ></asp:Label>
+                        <asp:TextBox ID="txtNombreE" runat="server" Text="" Width="117px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row">Descripcion:</th>
-                    <td>
-                        <asp:Label ID="lblDescripcion" runat="server" Text=""></asp:Label>
+                    <th scope="row" class="auto-style7">Descripcion:</th>
+                    <td class="auto-style7">
+                        <asp:TextBox ID="txtDescripcion" runat="server" Text="" TextMode="MultiLine"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">Estado:</th>
                     <td>
-                        <asp:Label ID="lblEstado" runat="server" Text=""></asp:Label>
+                        <asp:DropDownList ID="cmbEstado" runat="server">
+                            <asp:ListItem>Mantenimiento</asp:ListItem>
+                            <asp:ListItem>Disponible</asp:ListItem>
+                            <asp:ListItem>Fuera de Servicio</asp:ListItem>
+                        </asp:DropDownList>
                     </td>
                 </tr>
                 <tr>
@@ -56,8 +65,8 @@
         </table>
     </div>
     <div class="auto-style7">
-        <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" />
-        <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-danger btn-sm"  />
+        <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" OnClick="btnGuardar_Click" />
+        <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-danger btn-sm"/>
     </div>
     <div>
         <asp:SqlDataSource ID="SqldsElemento" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT IdElemento, Codigo, Nombre, Descripcion, Estado, IdArea FROM Elemento WHERE (IdElemento = @IdElemento)">
