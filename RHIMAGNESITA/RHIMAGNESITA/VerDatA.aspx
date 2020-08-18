@@ -1,8 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="VerDatA.aspx.cs" Inherits="VerDatA" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div style="width: 91px; position: relative; top: 0px; left: 40px">
         <asp:ImageButton ID="imgbtnAtras" runat="server" ImageUrl="~/Vista/Iconos/atras.png" OnClick="imgbtnAtras_Click" />
     </div>
@@ -19,19 +19,19 @@
                 <tr>
                     <th scope="row">Codigo del Area:</th>
                     <td>
-                        <asp:Label ID="lblIdA" runat="server" Text=""></asp:Label>
+                        <asp:Label ID="lblIdA" runat="server" Text="">
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">Nombre del Area:</th>
                     <td>
-                        <asp:Label ID="lblNombreA" runat="server" ></asp:Label>
+                        </asp:Label><asp:TextBox ID="txtNombreA" runat="server"  Text=""></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">Ubicacion:</th>
                     <td>
-                        <asp:Label ID="lblUbicacion" runat="server" Text=""></asp:Label>
+                        </asp:Label><asp:TextBox ID="txtUbicacion" runat="server"  Text=""></asp:TextBox>
                     </td>
                 </tr>
             </tbody>
@@ -39,7 +39,7 @@
     </div>
     <div class="auto-style7">
         <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" />
-        <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-danger btn-sm"  />
+        <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-danger btn-sm" />
     </div>
     <div>
         <asp:SqlDataSource ID="SqldsArea" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT IdArea, Nombre, Ubicacion FROM Area WHERE (IdArea = @idArea)">

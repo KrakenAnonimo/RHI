@@ -18,8 +18,8 @@ public partial class VerDatA : System.Web.UI.Page
         tblDatos = ((DataView)SqldsArea.Select(DataSourceSelectArguments.Empty)).Table;
 
         lblIdA.Text = Session["idArea"].ToString();
-        lblNombreA.Text = tblDatos.Rows[0][1].ToString();
-        lblUbicacion.Text = tblDatos.Rows[0][2].ToString();
+        txtNombreA.Text = tblDatos.Rows[0][1].ToString();
+        txtUbicacion.Text = tblDatos.Rows[0][2].ToString();
     }
     protected void imgbtnAtras_Click(object sender, ImageClickEventArgs e)
     {
