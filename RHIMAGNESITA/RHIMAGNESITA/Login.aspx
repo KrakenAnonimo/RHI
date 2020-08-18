@@ -35,7 +35,7 @@
                     <div class="logo">
                         <img src="Vista/Login/assets/img/new_logo.png">
                     </div>
-                    <div class="brand" >
+                    <div class="brand">
                         RHI-Magnesita
                     </div>
                 </div>
@@ -80,7 +80,7 @@
                                                         </span>
                                                         <div class="form-group label-floating">
                                                             <label class="control-label">Correo</label>
-                                                            <asp:TextBox ID="TextBox3" runat="server" class="form-control"></asp:TextBox>
+                                                            <asp:TextBox ID="txtCorreoL" runat="server" class="form-control"></asp:TextBox>
                                                         </div>
                                                     </div>
 
@@ -90,7 +90,7 @@
                                                         </span>
                                                         <div class="form-group label-floating">
                                                             <label class="control-label">Contraseña</label>
-                                                            <asp:TextBox ID="TextBox4" runat="server" class="form-control"></asp:TextBox>
+                                                            <asp:TextBox ID="txtPasswordL" runat="server" class="form-control"></asp:TextBox>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -104,9 +104,18 @@
                                                         <span class="input-group-addon">
                                                             <i class="material-icons">face</i>
                                                         </span>
+                                                        <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="material-icons">document</i>
+                                                        </span>
+                                                        <div class="form-group label-floating">
+                                                            <label class="control-label">Documento</label>
+                                                            <asp:TextBox ID="txtDocumentoR" runat="server" class="form-control"></asp:TextBox>
+                                                        </div>
+                                                    </div>
                                                         <div class="form-group label-floating">
                                                             <label class="control-label">Nombre</label>
-                                                            <asp:TextBox ID="txtNombre" runat="server" class="form-control"></asp:TextBox>
+                                                            <asp:TextBox ID="txtNombreR" runat="server" class="form-control"></asp:TextBox>
                                                         </div>
                                                     </div>
 
@@ -116,7 +125,7 @@
                                                         </span>
                                                         <div class="form-group label-floating">
                                                             <label class="control-label">Telefono</label>
-                                                            <asp:TextBox ID="txtTelefono" runat="server" class="form-control"></asp:TextBox>
+                                                            <asp:TextBox ID="txtTelefonoR" runat="server" class="form-control"></asp:TextBox>
                                                         </div>
                                                     </div>
                                                     <div class="input-group">
@@ -125,7 +134,7 @@
                                                         </span>
                                                         <div class="form-group label-floating">
                                                             <label class="control-label">Correo</label>
-                                                            <asp:TextBox ID="txtEmailR" runat="server" class="form-control"></asp:TextBox>
+                                                            <asp:TextBox ID="txtCorreoR" runat="server" class="form-control"></asp:TextBox>
                                                         </div>
                                                     </div>
 
@@ -135,7 +144,7 @@
                                                         </span>
                                                         <div class="form-group label-floating">
                                                             <label class="control-label">Contraseña</label>
-                                                            <asp:TextBox ID="txtClaveR" runat="server" class="form-control"></asp:TextBox>
+                                                            <asp:TextBox ID="txtPasswordR" runat="server" class="form-control"></asp:TextBox>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -143,13 +152,21 @@
                                         </div>
                                         <div class="wizard-footer">
                                             <div class="pull-right">
-                                                <asp:Button ID="btnLogin" runat="server" Text="Ingresar" class='btn btn-next btn-fill btn-danger btn-wd' />
-                                                <asp:Button ID="btnRegistrar" runat="server" Text="Registrarse" class='btn btn-finish btn-fill btn-danger btn-wd' />
+                                                <asp:Button ID="btnLogin" runat="server" Text="Ingresar" class='btn btn-next btn-fill btn-danger btn-wd' OnClick="btnLogin_Click" />
+                                                <asp:Button ID="btnRegistrar" runat="server" Text="Registrarse" class='btn btn-finish btn-fill btn-danger btn-wd' OnClick="btnRegistrar_Click" />
                                             </div>
                                             <div class="pull-left">
                                                 <asp:Button ID="btnAtras" runat="server" Text="Atras" class='btn btn-previous btn-fill btn-default btn-wd' />
                                             </div>
                                             <div class="clearfix"></div>
+                                        </div>
+                                        <div>
+                                            <asp:SqlDataSource ID="SqldsLogin" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT Rol.*, Usuario.* FROM Rol INNER JOIN Usuario ON Rol.IdRol = Usuario.IdRol WHERE (Usuario.Clave = @clave) AND (Usuario.Email = @usuario)">
+                                                <SelectParameters>
+                                                    <asp:ControlParameter ControlID="txtCorreoL" Name="usuario" PropertyName="Text" />
+                                                    <asp:ControlParameter ControlID="txtPasswordL" Name="clave" PropertyName="Text" />
+                                                </SelectParameters>
+                                            </asp:SqlDataSource>
                                         </div>
                                 </form>
                             </div>

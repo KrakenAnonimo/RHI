@@ -121,7 +121,7 @@
                                     <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" />
                                     <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" class="btn btn-danger btn-sm" />
                                 </div>
-                                <asp:SqlDataSource ID="SqldsDatos" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT Rol.IdRol, Rol.Rol, Usuario.IdUsuario, Usuario.Documento, Usuario.Nombre, Usuario.Apellido, Usuario.Telefono, Usuario.Email, Usuario.Ciudad, Usuario.Direccion, Usuario.IdRol AS Expr1 FROM Rol INNER JOIN Usuario ON Rol.IdRol = Usuario.IdRol WHERE (Usuario.IdUsuario = @idUsuario)">
+                                <asp:SqlDataSource ID="SqldsDatos" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT Rol.*, Usuario.* FROM Rol INNER JOIN Usuario ON Rol.IdRol = Usuario.IdRol WHERE (Usuario.IdUsuario = @idUsuario)">
                                     <SelectParameters>
                                         <asp:SessionParameter Name="idUsuario" SessionField="idUsuario" />
                                     </SelectParameters>
