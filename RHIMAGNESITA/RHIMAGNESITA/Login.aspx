@@ -30,19 +30,19 @@
     <form id="form1" runat="server">
         <div class="image-container set-full-height" style="background-image: url('Vista/Login/assets/img/wizard-book.jpg')">
             <!--   Creative Tim Branding   -->
-            <a href="http://creative-tim.com">
+            <a href="index.aspx">
                 <div class="logo-container">
                     <div class="logo">
                         <img src="Vista/Login/assets/img/new_logo.png">
                     </div>
-                    <div class="brand">
+                    <div class="brand" >
                         RHI-Magnesita
                     </div>
                 </div>
             </a>
 
             <!--  Made With Material Kit  -->
-            <a href="http://demos.creative-tim.com/material-kit/index.html?ref=material-bootstrap-wizard" class="made-with-mk">
+            <a href="index.aspx" class="made-with-mk">
                 <div class="brand">MK</div>
                 <div class="made-with">x <strong>-x</strong></div>
             </a>
@@ -93,7 +93,6 @@
                                                             <asp:TextBox ID="TextBox4" runat="server" class="form-control"></asp:TextBox>
                                                         </div>
                                                     </div>
-
                                                 </div>
                                             </div>
                                         </div>
@@ -179,6 +178,6 @@
 <!--  Plugin for the Wizard -->
 <script src="Vista/Login/assets/js/material-bootstrap-wizard.js"></script>
 
-<!--  More information about jquery.validate here: http://jqueryvalidation.org/	 -->
+<!--  More information about jquery.validate here: 	 -->
 <script src="Vista/Login/assets/js/jquery.validate.min.js"></script>
 </html>

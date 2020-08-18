@@ -201,7 +201,7 @@ h2.title {
   color: #9c27b0; }
 
 .text-danger {
-  color: #f44336; }
+  color: #3DBBCE; }
 
 .text-success {
   color: #4caf50; }
@@ -314,22 +314,22 @@ h2.title {
     background-color: #ff9800; }
   .wizard-card[data-color="orange"] .radio input[type=radio]:checked ~ .circle {
     border-color: #ff9800; }
-  .wizard-card[data-color="red"] .moving-tab {
-    background-color: #f44336;
+  .wizard-card[data-color="blue"] .moving-tab {
+    background-color: #3DBBCE;
     box-shadow: 0 16px 26px -10px rgba(244, 67, 54, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(244, 67, 54, 0.2); }
   .wizard-card[data-color="red"] .picture:hover {
-    border-color: #f44336; }
-  .wizard-card[data-color="red"] .choice:hover .icon, .wizard-card[data-color="red"] .choice.active .icon {
-    border-color: #f44336;
-    color: #f44336; }
-  .wizard-card[data-color="red"] .form-group .form-control {
-    background-image: linear-gradient(#f44336, #f44336), linear-gradient(#D2D2D2, #D2D2D2); }
-  .wizard-card[data-color="red"] .checkbox input[type=checkbox]:checked + .checkbox-material .check {
-    background-color: #f44336; }
-  .wizard-card[data-color="red"] .radio input[type=radio]:checked ~ .check {
-    background-color: #f44336; }
-  .wizard-card[data-color="red"] .radio input[type=radio]:checked ~ .circle {
-    border-color: #f44336; }
+    border-color: #3DBBCE; }
+  .wizard-card[data-color="blue"] .choice:hover .icon, .wizard-card[data-color="red"] .choice.active .icon {
+    border-color: #3DBBCE;
+    color: #3DBBCE; }
+  .wizard-card[data-color="blue"] .form-group .form-control {
+    background-image: linear-gradient(#3DBBCE, #3DBBCE), linear-gradient(#D2D2D2, #D2D2D2); }
+  .wizard-card[data-color="blue"] .checkbox input[type=checkbox]:checked + .checkbox-material .check {
+    background-color: #3DBBCE; }
+  .wizard-card[data-color="blue"] .radio input[type=radio]:checked ~ .check {
+    background-color: #3DBBCE; }
+  .wizard-card[data-color="blue"] .radio input[type=radio]:checked ~ .circle {
+    border-color: #3DBBCE; }
   .wizard-card .picture input[type="file"] {
     cursor: pointer;
     display: block;
@@ -539,7 +539,7 @@ output {
   .label.label-warning {
     background-color: #ff9800; }
   .label.label-danger {
-    background-color: #f44336; }
+    background-color: #3DBBCE; }
   .label.label-rose {
     background-color: #e91e63; }
 
@@ -607,7 +607,7 @@ output {
   .form-group.is-focused.form-warning .form-control {
     background-image: linear-gradient(#ff9800, #ff9800), linear-gradient(#D2D2D2, #D2D2D2); }
   .form-group.is-focused.form-danger .form-control {
-    background-image: linear-gradient(#f44336, #f44336), linear-gradient(#D2D2D2, #D2D2D2); }
+    background-image: linear-gradient(#3DBBCE, #3DBBCE), linear-gradient(#D2D2D2, #D2D2D2); }
   .form-group.is-focused.form-rose .form-control {
     background-image: linear-gradient(#e91e63, #e91e63), linear-gradient(#D2D2D2, #D2D2D2); }
   .form-group.is-focused.form-white .form-control {
@@ -627,10 +627,10 @@ output {
   .form-group.has-error .form-control {
     box-shadow: none; }
   .form-group.has-error.is-focused .form-control {
-    background-image: linear-gradient(#f44336, #f44336), linear-gradient(#D2D2D2, #D2D2D2); }
+    background-image: linear-gradient(#3DBBCE, #3DBBCE), linear-gradient(#D2D2D2, #D2D2D2); }
   .form-group.has-error label.control-label,
   .form-group.has-error .help-block {
-    color: #f44336; }
+    color: #3DBBCE; }
   .form-group.has-success .form-control {
     box-shadow: none; }
   .form-group.has-success.is-focused .form-control {
@@ -886,7 +886,7 @@ select.form-control {
     color: #4caf50;
     opacity: 1; }
   .has-error .form-control-feedback {
-    color: #f44336;
+    color: #3DBBCE;
     opacity: 1; }
 
 .btn {
@@ -986,7 +986,7 @@ select.form-control {
   .btn.btn-danger {
     box-shadow: 0 2px 2px 0 rgba(244, 67, 54, 0.14), 0 3px 1px -2px rgba(244, 67, 54, 0.2), 0 1px 5px 0 rgba(244, 67, 54, 0.12); }
     .btn.btn-danger, .btn.btn-danger:hover, .btn.btn-danger:focus, .btn.btn-danger:active, .btn.btn-danger.active, .btn.btn-danger:active:focus, .btn.btn-danger:active:hover, .btn.btn-danger.active:focus, .btn.btn-danger.active:hover, .open > .btn.btn-danger.dropdown-toggle, .open > .btn.btn-danger.dropdown-toggle:focus, .open > .btn.btn-danger.dropdown-toggle:hover {
-      background-color: #f44336;
+      background-color: #3DBBCE;
       color: #FFFFFF; }
     .btn.btn-danger:focus, .btn.btn-danger:active, .btn.btn-danger:hover {
       box-shadow: 0 14px 26px -12px rgba(244, 67, 54, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(244, 67, 54, 0.2); }
@@ -994,11 +994,11 @@ select.form-control {
       box-shadow: none; }
     .btn.btn-danger.btn-simple {
       background-color: transparent;
-      color: #f44336;
+      color: #3DBBCE;
       box-shadow: none; }
       .btn.btn-danger.btn-simple:hover, .btn.btn-danger.btn-simple:focus, .btn.btn-danger.btn-simple:active {
         background-color: transparent;
-        color: #f44336; }
+        color: #3DBBCE; }
   .btn:focus, .btn:active, .btn:active:focus {
     outline: 0; }
   .btn.btn-round {
