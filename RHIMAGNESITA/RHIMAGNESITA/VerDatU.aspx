@@ -26,43 +26,43 @@
                 <tr>
                     <th scope="row">Documento:</th>
                     <td>
-                        <asp:Label ID="lblDocumento" runat="server" ></asp:Label>
+                         <asp:TextBox ID="txtDocumento" runat="server" Text="" TextMode="Number"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">Nombre:</th>
                     <td>
-                        <asp:Label ID="lblNombre" runat="server" Text=""></asp:Label>
+                        <asp:TextBox ID="txtNombre" runat="server" Text=""></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">Apellido:</th>
                     <td>
-                        <asp:Label ID="lblApellido" runat="server" Text=""></asp:Label>
+                         <asp:TextBox ID="txtApellido" runat="server" Text=""></asp:TextBox>
                     </td>
                 </tr>
                  <tr>
                     <th scope="row">Telefono:</th>
                     <td>
-                        <asp:Label ID="lblTelefono" runat="server" Text=""></asp:Label>
+                         <asp:TextBox ID="txtTelefono" runat="server" Text="" TextMode="Number"></asp:TextBox>
                     </td>
                 </tr>
                  <tr>
                     <th scope="row">Email:</th>
                     <td>
-                        <asp:Label ID="lblEmail" runat="server" Text=""></asp:Label>
+                        <asp:TextBox ID="txtEmail" runat="server" Text="" TextMode="Email"></asp:TextBox>
                     </td>
                 </tr>
                  <tr>
                     <th scope="row">Ciudad:</th>
                     <td>
-                        <asp:Label ID="lblCiudad" runat="server" Text=""></asp:Label>
+                        <asp:TextBox ID="txtCiudad" runat="server" Text=""></asp:TextBox>
                     </td>
                 </tr>
                  <tr>
                     <th scope="row">Direccion:</th>
                     <td>
-                        <asp:Label ID="lblDireccion" runat="server" Text=""></asp:Label>
+                         <asp:TextBox ID="txtDireccion" runat="server" Text=""></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -75,7 +75,7 @@
         </table>
     </div>
     <div class="auto-style7">
-        <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" />
+        <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" OnClick="btnGuardar_Click" />
         <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-danger btn-sm" />
     </div>
     <div>
