@@ -60,7 +60,7 @@ public class clReporteAveriaServicio
     //Metodo Actualizar ReporteAS
     public int mtdActualizarReporteAS(clReporteAveriaServicioE objReporteAveriaServicioE)
     {
-        string consulta = "Update ReporteAveriaServicio set NumOrden = '" + objReporteAveriaServicioE.NumReporte + "','" + objReporteAveriaServicioE.Titulo + "','" + objReporteAveriaServicioE.Descripcion + "','" + objReporteAveriaServicioE.FechaReporte + "','" + objReporteAveriaServicioE.IdElemento + "','" + objReporteAveriaServicioE.IdUsuario + "')";
+        string consulta = "Update ReporteAveriaServicio set Titulo = '" + objReporteAveriaServicioE.Titulo + "', Descripcion = '" + objReporteAveriaServicioE.Descripcion + "', FechaReporte = '" + objReporteAveriaServicioE.FechaReporte + "' where IdReporteAS = '" + objReporteAveriaServicioE.IdReporteAS + "'";
         clMetodoCN objMtdCN = new clMetodoCN();
         int regis = objMtdCN.mtdConectado(consulta);
         return regis;

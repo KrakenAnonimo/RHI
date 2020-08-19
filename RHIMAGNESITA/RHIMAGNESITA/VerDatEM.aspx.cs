@@ -18,15 +18,36 @@ public partial class VerDatEM : System.Web.UI.Page
         tblDatos = ((DataView)SqldsEjecucionM.Select(DataSourceSelectArguments.Empty)).Table;
 
         lblIdEM.Text = Session["idEjecucionM"].ToString();
-        lblEstado.Text = tblDatos.Rows[0][1].ToString();
-        lblFechaTAVS.Text = tblDatos.Rows[0][2].ToString();
-        lblDuracion.Text = tblDatos.Rows[0][3].ToString();
-        lblObservaciones.Text = tblDatos.Rows[0][4].ToString();
+        cmbEstadoEM.Text = tblDatos.Rows[0][1].ToString();
+        txtFechaEM.Text = tblDatos.Rows[0][2].ToString();
+        txtDuracion.Text = tblDatos.Rows[0][3].ToString();
+        txtObservaciones.Text = tblDatos.Rows[0][4].ToString();
         lblIdTM.Text = tblDatos.Rows[0][5].ToString();
         lblIdOP.Text = tblDatos.Rows[0][6].ToString();
     }
     protected void imgbtnAtras_Click(object sender, ImageClickEventArgs e)
     {
         Response.Redirect("~/ListaEM.aspx");
+    }
+
+    protected void btnGuardar_Click(object sender, EventArgs e)
+    {
+        clEjecucionME objEjcuacionEM = new clEjecucionME();
+        objEjcuacionEM.IdEjecucionM = int.Parse(lblIdEM.Text);
+        objEjcuacionEM.Estado =  cmbEstadoEM.Text;
+        objEjcuacionEM.FechaEjecucion = txtFechaEM.Text;
+        objEjcuacionEM.Duracion = txtDuracion.Text;
+        objEjcuacionEM.Observaciones = txtObservaciones.Text;
+
+        clEjecucionM objEjecucionM = new clEjecucionM();
+        int resultsql = objEjecucionM.mtdActualizarEjecucionM(objEjcuacionEM);
+
+        if (resultsql > 0)
+        {
+            //enviar mensaje 
+            Response.Write("<script>alert('Se Actualizo Correctamente')</script>");
+            //Redireccionar
+            Response.Redirect("~/ListaEM.aspx");
+        }
     }
 }

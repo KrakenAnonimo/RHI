@@ -57,7 +57,7 @@ public class clElemento
     //Metodo Actualizar Elemento
     public int mtdActualizarElemento(clElementoE objDatos)
     {
-        string consulta = "Update Elemento set Nombre = '" + objDatos.Codigo + "','" + objDatos.Nombre + "','" + objDatos.Descripcion + "','" + objDatos.Estado + "','" + objDatos.IdArea + "')";
+        string consulta = "Update Elemento set Nombre = '" + objDatos.Nombre + "', Descripcion = '" + objDatos.Descripcion + "', Estado = '" + objDatos.Estado + "' where IdElemento = '" + objDatos.IdElemento + "'";
         clMetodoCN objMtdCN = new clMetodoCN();
         int regis = objMtdCN.mtdConectado(consulta);
         return regis;

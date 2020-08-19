@@ -33,7 +33,8 @@ public class clEjecucionM
         return result;
     }
 
-    //Metodo Listar EjecucionM
+    //Metodo Listar EjecucionM4
+
     public List<clEjecucionME> mtdListarEjecucionM()
     {
         string consulta = "select * from EjecucionM";
@@ -60,7 +61,7 @@ public class clEjecucionM
     //Metodo Actualizar EjecucionM
     public int mtdActualizarEjecucionM(clEjecucionME objEjecucionME)
     {
-        string consulta = "Update EjecucionM set FechaEjecucion = '" + objEjecucionME.Estado + "','" + objEjecucionME.FechaEjecucion + "','" + objEjecucionME.Duracion + "','" + objEjecucionME.Observaciones + "','" + objEjecucionME.IdTareaMtto + "','" + objEjecucionME.IdOrdenMttoP + "')";
+        string consulta = "Update EjecucionM set Estado = '" + objEjecucionME.Estado + "', FechaEjecucion = '" + objEjecucionME.FechaEjecucion + "', Duracion ='" + objEjecucionME.Duracion + "', Observaciones = '" + objEjecucionME.Observaciones + "'where IdEjecucionM = '" + objEjecucionME.IdEjecucionM + "'";
         clMetodoCN objMtdCN = new clMetodoCN();
         int regis = objMtdCN.mtdConectado(consulta);
         return regis;

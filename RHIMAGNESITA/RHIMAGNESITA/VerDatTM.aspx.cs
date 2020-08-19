@@ -18,13 +18,34 @@ public partial class VerDatTM : System.Web.UI.Page
         tblDatos = ((DataView)SqldsTareaM.Select(DataSourceSelectArguments.Empty)).Table;
 
         lblIdTM.Text = Session["idTareaMtto"].ToString();
-        lblNombreTM.Text = tblDatos.Rows[0][1].ToString();
-        lblDuracion.Text = tblDatos.Rows[0][2].ToString();
-        lblDescripcion.Text = tblDatos.Rows[0][3].ToString();
+        txtNombreTM.Text = tblDatos.Rows[0][1].ToString();
+        txtDuracionTM.Text = tblDatos.Rows[0][2].ToString();
+        txtDescripcion.Text = tblDatos.Rows[0][3].ToString();
         lblIdE.Text = tblDatos.Rows[0][4].ToString();
     }
     protected void imgbtnAtras_Click(object sender, ImageClickEventArgs e)
     {
         Response.Redirect("~/ListaTM.aspx");
+    }
+
+    protected void btnGuardar_Click(object sender, EventArgs e)
+    {
+        clTareaMttoE objTareaMttoE = new clTareaMttoE();
+        objTareaMttoE.IdTareaMtto = int.Parse(lblIdTM.Text);
+        objTareaMttoE.NombreTM = txtNombreTM.Text;
+        objTareaMttoE.Duracion = txtDuracionTM.Text;
+        objTareaMttoE.Descripcion = txtDescripcion.Text;
+
+
+        clTareaMtto objTareaMtto = new clTareaMtto();
+        int resultsql = objTareaMtto.mtdActualizarTareaMtto(objTareaMttoE);
+
+        if (resultsql > 0)
+        {
+            //enviar mensaje 
+            Response.Write("<script>alert('Se Actualizo Correctamente')</script>");
+            //Redireccionar
+            Response.Redirect("~/ListaTM.aspx");
+        }
     }
 }

@@ -58,7 +58,7 @@ public class clTareaMtto
     //Metodo Actualizar TareaMtto
     public int mtdActualizarTareaMtto(clTareaMttoE objTareaMttoE)
     {
-        string consulta = "Update TareaMtto set NombreTM = '" + objTareaMttoE.NombreTM + "','" + objTareaMttoE.Duracion + "','" + objTareaMttoE.Descripcion + "','" + objTareaMttoE.IdElemento + "')";
+        string consulta = "Update TareaMtto set NombreTM = '" + objTareaMttoE.NombreTM + "', Duracion = '" + objTareaMttoE.Duracion + "', Descripcion = '" + objTareaMttoE.Descripcion + "' where IdTareaMtto = '" + objTareaMttoE.IdTareaMtto + "'";
         clMetodoCN objMtdCN = new clMetodoCN();
         int regis = objMtdCN.mtdConectado(consulta);
         return regis;
