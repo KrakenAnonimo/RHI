@@ -27,7 +27,7 @@
         Session["usuario"] = "NN";
          Session["Correo"] = 0;
          Session["Clave"] = 0;
-
+        Session["rol"] = ("Admin","Supervisor","Planificador","Tecnico","Soldador","Siso");
         Session["idUsuario"] = 0;
         Session["idPlanificacion"] = 0;
         Session["idTareaMtto"] = 0;
