@@ -17,14 +17,16 @@ public partial class Perfil : System.Web.UI.Page
         DataTable tblDatos = new DataTable();
         tblDatos = ((DataView)SqldsDatos.Select(DataSourceSelectArguments.Empty)).Table;
 
-        lblidU.Text = Session["idUsuario"].ToString();
-        lblDocumento.Text = tblDatos.Rows[0][1].ToString();
-        lblNombre.Text = tblDatos.Rows[0][2].ToString();
-        lblApellido.Text = tblDatos.Rows[0][3].ToString();
-        lblTelefono.Text = tblDatos.Rows[0][4].ToString();
-        lblEmail.Text = tblDatos.Rows[0][5].ToString();
-        lblCiudad.Text = tblDatos.Rows[0][6].ToString();
-        lblDireccion.Text = tblDatos.Rows[0][7].ToString();
-        lblRol.Text = tblDatos.Rows[0][8].ToString();
+        lblidU.Text = tblDatos.Rows[0][2].ToString();
+        lblDocumento.Text = tblDatos.Rows[0][3].ToString();
+        lblNombre.Text = tblDatos.Rows[0][4].ToString();
+        lblApellido.Text = tblDatos.Rows[0][5].ToString();
+        lblTelefono.Text = tblDatos.Rows[0][6].ToString();
+        lblClave.Text = tblDatos.Rows[0][8].ToString();
+        lblEmail.Text = tblDatos.Rows[0][7].ToString();
+        lblRol.Text = tblDatos.Rows[0][11].ToString();
+        lblCiudad.Text = tblDatos.Rows[0][9].ToString();
+        lblDireccion.Text = tblDatos.Rows[0][10].ToString();
+        
     }
 }

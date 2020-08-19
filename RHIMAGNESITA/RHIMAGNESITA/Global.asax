@@ -25,7 +25,8 @@
         // Código que se ejecuta al iniciarse una nueva sesión
 
         Session["usuario"] = "NN";
-
+         Session["Correo"] = 0;
+         Session["Clave"] = 0;
 
         Session["idUsuario"] = 0;
         Session["idPlanificacion"] = 0;

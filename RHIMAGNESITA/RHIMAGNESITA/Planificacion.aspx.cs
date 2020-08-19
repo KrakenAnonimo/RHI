@@ -36,7 +36,7 @@ public partial class Planificacion : System.Web.UI.Page
 
         objElemento.IdElemento = int.Parse(gvElemento.DataKeys[filas].Value.ToString());
         objElemento.Nombre = gvElemento.SelectedRow.Cells[1].Text;
-
+        
         listax.Add(objElemento);
         gvElementoS.DataSource = listax;
         gvElementoS.DataBind();

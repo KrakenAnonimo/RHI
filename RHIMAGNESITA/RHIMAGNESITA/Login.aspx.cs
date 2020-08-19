@@ -26,8 +26,9 @@ public partial class Login : System.Web.UI.Page
 
         if (tblDatos.Rows.Count > 0)
         {
-            Session["usuario"] = tblDatos.Rows[0][0].ToString();
-            Session["rol"] = tblDatos.Rows[0][1].ToString();
+            Session["Correo"] = txtCorreoL.Text;
+            Session["Clave"] = txtPasswordL.Text;
+            Session["rol"] = tblDatos.Rows[0][2].ToString();
             Response.Redirect("~/Perfil.aspx");
         }
         else

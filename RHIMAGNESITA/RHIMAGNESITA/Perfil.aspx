@@ -96,7 +96,7 @@
                                     <label for="Clave">
                                         <h4>Clave</h4>
                                     </label>
-                                    <asp:Label ID="lblClave" runat="server" Text="" class="form-control"></asp:Label>
+                                    <asp:Label ID="lblClave" runat="server" class="form-control" ></asp:Label>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -121,9 +121,9 @@
                                     <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" />
                                     <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" class="btn btn-danger btn-sm" />
                                 </div>
-                                <asp:SqlDataSource ID="SqldsDatos" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT Rol.*, Usuario.* FROM Rol INNER JOIN Usuario ON Rol.IdRol = Usuario.IdRol WHERE (Usuario.IdUsuario = @idUsuario)">
+                                <asp:SqlDataSource ID="SqldsDatos" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT Rol.IdRol, Rol.Rol, Usuario.IdUsuario, Usuario.Documento, Usuario.Nombre, Usuario.Apellido, Usuario.Telefono, Usuario.Email, Usuario.Clave, Usuario.Ciudad, Usuario.Direccion, Usuario.IdRol AS Expr2, Usuario.IdUsuario AS Expr1 FROM Rol INNER JOIN Usuario ON Rol.IdRol = Usuario.IdRol WHERE (Usuario.Email = @correo)">
                                     <SelectParameters>
-                                        <asp:SessionParameter Name="idUsuario" SessionField="idUsuario" />
+                                        <asp:SessionParameter Name="correo" SessionField="Correo" />
                                     </SelectParameters>
                                 </asp:SqlDataSource>
                             </div>
