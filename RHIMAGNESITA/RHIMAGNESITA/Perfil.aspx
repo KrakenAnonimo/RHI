@@ -34,9 +34,9 @@
                 </div>
                 <br>
                 <ul class="list-group">
-                    <li class="list-group-item text-muted">Actividad <i class="fa fa-dashboard fa-1x"></i></li>
+                    <li class="list-group-item text-muted">Actividad <i class="fa fa-dashboard fa-1x"></i></li>                    
                     <li class="list-group-item text-right"><span class="pull-left"><strong>
-                        <asp:Label ID="lblRol" runat="server" Text=""></asp:Label></strong></span><asp:Label ID="lblidU" runat="server" Text=""></asp:Label></li>
+                        Id Rol: <asp:Label ID="lblRol" runat="server" Text=""></asp:Label></strong></span>Id Usuario: <asp:Label ID="lblidU" runat="server" Text=""></asp:Label></li>
                     <li class="list-group-item text-right"><span class="pull-left"><strong>Ordenes</strong></span>O</li>
                     <li class="list-group-item text-right"><span class="pull-left"><strong>Tareas</strong></span>T</li>
                     <li class="list-group-item text-right"><span class="pull-left"><strong>Planificaciones</strong></span>P</li>
