@@ -66,7 +66,7 @@ public class clOrdenMttoC
     //Metodo Actualizar OrdenMttoC
     public int mtdActualizarOrdenMttoC(clOrdenMttoCE objOrdenMttoCE)
     {
-        string consulta = "Update OrdenMttoCorrectivo set NumOrden = '" + objOrdenMttoCE.NumOrden + "','" + objOrdenMttoCE.Disciplina + "','" + objOrdenMttoCE.FechaInicio + "','" + objOrdenMttoCE.HoraInicio + "','" + objOrdenMttoCE.FechaFinal + "','" + objOrdenMttoCE.HoraFinal + "','" + objOrdenMttoCE.Ejecutado + "','" + objOrdenMttoCE.TrabajoIE + "'," + objOrdenMttoCE.Observaciones + "','" + objOrdenMttoCE.Revisado + "','" + objOrdenMttoCE.IdOrdenMttoP + "','" + objOrdenMttoCE.IdUsuario + "')";
+        string consulta = "Update OrdenMttoCorrectivo set Disciplina = '" + objOrdenMttoCE.Disciplina + "', FechaInicio = '" + objOrdenMttoCE.FechaInicio + "', HoraInicio = '" + objOrdenMttoCE.HoraInicio + "', FechaFinal = '" + objOrdenMttoCE.FechaFinal + "', HoraFinal ='" + objOrdenMttoCE.HoraFinal + "', Ejecutado = '" + objOrdenMttoCE.Ejecutado + "', TrabajoIE = '" + objOrdenMttoCE.TrabajoIE + "', Observaciones = '" + objOrdenMttoCE.Observaciones + "', Revisado = '" + objOrdenMttoCE.Revisado + "'where IdOrdenMttoC = '" + objOrdenMttoCE.IdOrdenMttoC + "'";
         clMetodoCN objMtdCN = new clMetodoCN();
         int regis = objMtdCN.mtdConectado(consulta);
         return regis;

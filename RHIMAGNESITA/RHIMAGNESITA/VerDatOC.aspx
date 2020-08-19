@@ -31,55 +31,64 @@
                 <tr>
                     <th scope="row">Disciplina:</th>
                     <td>
-                        <asp:Label ID="lblDisciplina" runat="server" Text=""></asp:Label>
+                        <asp:TextBox ID="txtDisciplina" runat="server" Text=""></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">Fecha de Inicio:</th>
                     <td>
-                        <asp:Label ID="lblFechaI" runat="server" Text=""></asp:Label>
+                        <asp:TextBox ID="txtFechaI" runat="server" Text="" TextMode="Date"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">Hora de Inicio:</th>
                     <td>
-                        <asp:Label ID="lblHoraI" runat="server" Text=""></asp:Label>
+                        <asp:TextBox ID="txtHoraI" runat="server" Text="" TextMode="Time"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">Fecha de Final:</th>
                     <td>
-                        <asp:Label ID="lblFechaF" runat="server" Text=""></asp:Label>
+                        <asp:TextBox ID="txtFechaF" runat="server" Text="" TextMode="Date"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">Hora de Final:</th>
                     <td>
-                        <asp:Label ID="lblHoraF" runat="server" Text=""></asp:Label>
+                        <asp:TextBox ID="txtHoraF" runat="server" Text="" TextMode="Time"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">Ejecutado:</th>
                     <td>
-                        <asp:Label ID="lblEjecutado" runat="server" Text=""></asp:Label>
+                        <asp:DropDownList ID="cmbEjecutado" runat="server">
+                            <asp:ListItem>Sin Ejecutar</asp:ListItem>
+                            <asp:ListItem>Ejecutada</asp:ListItem>
+                        </asp:DropDownList>
                     </td>
                 </tr>
                  <tr>
                     <th scope="row">Tabajo Interno/Externo:</th>
                     <td>
-                        <asp:Label ID="lblTrabajoIE" runat="server" Text=""></asp:Label>
+                        <asp:DropDownList ID="cmbTIXE" runat="server" Height="23px" Width="101px">
+                            <asp:ListItem>Interno</asp:ListItem>
+                            <asp:ListItem>Externo</asp:ListItem>
+                        </asp:DropDownList>
                     </td>
                 </tr>
                  <tr>
                     <th scope="row">Observaciones:</th>
                     <td>
-                        <asp:Label ID="lblObservaciones" runat="server" Text=""></asp:Label>
+                       <asp:TextBox ID="txtObservaciones" runat="server" Text="" TextMode="MultiLine"></asp:TextBox>
                     </td>
                 </tr>
                  <tr>
                     <th scope="row">Revisado:</th>
                     <td>
-                        <asp:Label ID="lblRevisado" runat="server" Text=""></asp:Label>
+                        <asp:DropDownList ID="cmbRevisado" runat="server" Height="18px">
+                            <asp:ListItem>Supervisor</asp:ListItem>
+                            <asp:ListItem>Planificador</asp:ListItem>
+                        </asp:DropDownList>
                     </td>
                 </tr>
                  <tr>
@@ -98,7 +107,7 @@
         </table>
     </div>
     <div class="auto-style7">
-        <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" />
+        <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" OnClick="btnGuardar_Click" />
         <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-danger btn-sm" />
     </div>
     <div>
