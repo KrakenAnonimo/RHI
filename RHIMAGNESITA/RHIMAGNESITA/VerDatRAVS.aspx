@@ -43,7 +43,7 @@
                 <tr>
                     <th scope="row">Fecha del Reporte:</th>
                     <td>
-                        <asp:TextBox ID="txtFechaR" runat="server" TextMode="Date"></asp:TextBox>
+                          <asp:TextBox ID="txtFechaReporte" runat="server" placeholder="Fecha del Reporte"  TextMode="Date"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -67,9 +67,9 @@
     </div>
     <div>
         <asp:SqlDataSource ID="SqldsRAVS" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT IdReporteAS, NumReporte, Titulo, Descripcion, FechaReporte, IdElemento, IdUsuario FROM ReporteAveriaServicio WHERE (IdReporteAS = @idRAVS)">
-            <SelectParameters>
+            <selectparameters>
                 <asp:SessionParameter Name="idRAVS" SessionField="idReporteAVS" />
-            </SelectParameters>
+            </selectparameters>
         </asp:SqlDataSource>
     </div>
 </asp:Content>

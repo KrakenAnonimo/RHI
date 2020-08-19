@@ -21,7 +21,7 @@ public partial class VerDatRAVS : System.Web.UI.Page
         lblNumeroR.Text = tblDatos.Rows[0][1].ToString();
         txtTitulo.Text = tblDatos.Rows[0][2].ToString();
         txtDescripcion.Text = tblDatos.Rows[0][3].ToString();
-        txtFechaR.Text = tblDatos.Rows[0][4].ToString();
+        txtFechaReporte.Text = tblDatos.Rows[0][4].ToString();
         lblIdE.Text = tblDatos.Rows[0][5].ToString();
         lblIdU.Text = tblDatos.Rows[0][6].ToString();
     }
@@ -34,9 +34,9 @@ public partial class VerDatRAVS : System.Web.UI.Page
     {
         clReporteAveriaServicioE objclReporteAveriaServicioE = new clReporteAveriaServicioE();
         objclReporteAveriaServicioE.IdReporteAS = int.Parse(lblIdR.Text);
-        objclReporteAveriaServicioE.Titulo = txtDescripcion.Text;
+        objclReporteAveriaServicioE.Titulo = txtTitulo.Text;
         objclReporteAveriaServicioE.Descripcion = txtDescripcion.Text;
-        objclReporteAveriaServicioE.FechaReporte = txtFechaR.Text;
+        objclReporteAveriaServicioE.FechaReporte = txtFechaReporte.Text;
       
 
         clReporteAveriaServicio objEjecucionM = new clReporteAveriaServicio();
