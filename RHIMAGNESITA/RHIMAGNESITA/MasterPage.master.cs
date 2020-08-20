@@ -11,9 +11,9 @@ public partial class MasterPage :  System.Web.UI.MasterPage
     {
         lblUsuario.Text = Session["usuario"].ToString();
 
-        if (Session["rol"].ToString() != "Supervisor" + "Planificador" + "Admin")
+        if (Session["rol"].ToString() != "Admin")
         {
-            Response.Redirect("~/ErrorSPA.aspx");
+            Response.Redirect("~/ErrorASP.aspx");
         }
     }
     protected void btnSalir_Click(object sender, EventArgs e)

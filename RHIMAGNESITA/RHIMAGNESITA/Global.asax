@@ -1,6 +1,6 @@
 ﻿<%@ Application Language="C#" %>
 
-<script runat="server">
+<script RunAt="server">
 
     void Application_Start(object sender, EventArgs e)
     {
@@ -25,9 +25,9 @@
         // Código que se ejecuta al iniciarse una nueva sesión
 
         Session["usuario"] = "NN";
-         Session["Correo"] = 0;
-         Session["Clave"] = 0;
-        Session["rol"] = ("Admin","Supervisor","Planificador","Tecnico","Soldador","Siso");
+        Session["Correo"] = 0;
+        Session["Clave"] = 0;
+        Session["rol"] = ("Admin", "Supervisor", "Planificador", "Tecnico", "Soldador", "Siso");
         Session["idUsuario"] = 0;
         Session["idPlanificacion"] = 0;
         Session["idTareaMtto"] = 0;
