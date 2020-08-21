@@ -43,7 +43,7 @@ public partial class VerDatU : System.Web.UI.Page
         objUsuarioE.Email = txtEmail.Text;
         objUsuarioE.Ciudad = txtCiudad.Text;
         objUsuarioE.Direccion = txtDireccion.Text;
-        objUsuarioE.IdRol = cmbRolUsua.Text;
+        objUsuarioE.IdRol = int.Parse(cmbRolUsua.Text);
 
         clUsuario objUsuario = new clUsuario();
         int resultsql = objUsuario.mtdActualizarUsuario(objUsuarioE);
