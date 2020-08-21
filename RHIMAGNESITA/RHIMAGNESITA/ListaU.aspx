@@ -55,7 +55,7 @@
     </div>
      <div style="position: relative; top: -73px; left: 372px; width: 275px">
        <div class="auto-style9">
-           <asp:RadioButtonList ID="RadioButtonList1" runat="server" CssClass="auto-style11" AutoPostBack="True" RepeatDirection="Horizontal" DataSourceID="SqldsRoles" DataTextField="Rol" DataValueField="IdRol" ></asp:RadioButtonList>
+           <asp:RadioButtonList ID="RadioButtonList1" runat="server" CssClass="auto-style11" AutoPostBack="True" RepeatDirection="Horizontal" DataSourceID="SqldsRoles" DataTextField="Rol" DataValueField="IdRol" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged" ></asp:RadioButtonList>
        </div>
     </div>
     <div>

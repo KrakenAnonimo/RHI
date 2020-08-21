@@ -68,7 +68,14 @@
                 <tr>
                     <th scope="row">Codigo del Rol:</th>
                     <td>
-                        <asp:Label ID="lblIdR" runat="server" Text=""></asp:Label>
+                        <asp:DropDownList ID="cmbRolUsua" runat="server">
+                            <asp:ListItem>Administrador</asp:ListItem>
+                            <asp:ListItem>Disponible</asp:ListItem>
+                            <asp:ListItem>Fuera de Servicio</asp:ListItem>
+                            <asp:ListItem>Mantenimiento</asp:ListItem>
+                            <asp:ListItem>Disponible</asp:ListItem>
+                            <asp:ListItem>Fuera de Servicio</asp:ListItem>
+                        </asp:DropDownList>
                     </td>
                 </tr>
             </tbody>
