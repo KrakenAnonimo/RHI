@@ -26,6 +26,10 @@ public partial class VerDatU : System.Web.UI.Page
         txtCiudad.Text = tblDatos.Rows[0][6].ToString();
         txtDireccion.Text = tblDatos.Rows[0][7].ToString();
         cmbRolUsua.Text = tblDatos.Rows[0][8].ToString();
+
+
+
+
     }
     protected void imgbtnAtras_Click(object sender, ImageClickEventArgs e)
     {
@@ -43,7 +47,7 @@ public partial class VerDatU : System.Web.UI.Page
         objUsuarioE.Email = txtEmail.Text;
         objUsuarioE.Ciudad = txtCiudad.Text;
         objUsuarioE.Direccion = txtDireccion.Text;
-        objUsuarioE.IdRol = int.Parse(cmbRolUsua.Text);
+        objUsuarioE.IdRol = int.Parse(cmbRolUsua.SelectedValue.ToString());
 
         clUsuario objUsuario = new clUsuario();
         int resultsql = objUsuario.mtdActualizarUsuario(objUsuarioE);

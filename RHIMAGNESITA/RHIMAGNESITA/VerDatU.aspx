@@ -68,13 +68,7 @@
                 <tr>
                     <th scope="row">Codigo del Rol:</th>
                     <td>
-                        <asp:DropDownList ID="cmbRolUsua" runat="server">
-                            <asp:ListItem>Administrador</asp:ListItem>
-                            <asp:ListItem>Disponible</asp:ListItem>
-                            <asp:ListItem>Fuera de Servicio</asp:ListItem>
-                            <asp:ListItem>Mantenimiento</asp:ListItem>
-                            <asp:ListItem>Disponible</asp:ListItem>
-                            <asp:ListItem>Fuera de Servicio</asp:ListItem>
+                        <asp:DropDownList ID="cmbRolUsua" runat="server" DataSourceID="sqlRol" DataTextField="Rol" DataValueField="IdRol">
                         </asp:DropDownList>
                     </td>
                 </tr>
@@ -91,6 +85,7 @@
                 <asp:SessionParameter Name="idUsuario" SessionField="idUsuario" />
             </SelectParameters>
         </asp:SqlDataSource>
+        <asp:SqlDataSource ID="sqlRol" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT Rol.* FROM Rol"></asp:SqlDataSource>
     </div>
 </asp:Content>
 
