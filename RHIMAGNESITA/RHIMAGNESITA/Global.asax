@@ -18,6 +18,29 @@
     {
         // Código que se ejecuta cuando se produce un error sin procesar
 
+        // Código que se ejecuta cuando ocurre un error no manejado
+        HttpContext con = HttpContext.Current;
+        var v = Server.GetLastError();
+
+        var HttpEx = v as HttpException;
+        if (HttpEx != null && HttpEx.GetHttpCode() == 404 )
+        {
+            //url invalida
+            Server.Transfer("~/PageNotFound.aspx");
+        }
+        else
+        {
+            //Exception
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("Pagina :      " + con.Request.Url.ToString());
+            sb.AppendLine("Mensaje de Error : " + v.Message);
+            sb.AppendLine("Mensaje interno  : " + v.InnerException.ToString());
+
+            //Aquí guarda el archivo de texto que contiene los detalles de este error
+            string fileName = System.IO.Path.Combine(Server.MapPath("~/Errores"), DateTime.Now.ToString("ddMMyyyyhhmmss") + ".txt");
+            System.IO.File.WriteAllText(fileName, sb.ToString());
+            Server.Transfer("~/PageNotFound.aspx");
+        }
     }
 
     void Session_Start(object sender, EventArgs e)
