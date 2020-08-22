@@ -96,8 +96,7 @@ public partial class OrdenMttoC : System.Web.UI.Page
         if (resultsql > 0)
         {
             //enviar mensaje
-            Response.Write("<script>alert('Se Registro Correctamente la Orden de Mtto Correctivo')</script>");
-
+            Response.Write("<script>alert('Se registro una nueva Orden de Mantenimiento Correctiva correctamente!');window.location.href='OrdenMttoC.aspx'</script>");
             //Limpiar Campos de texto
             txtNumOrdenC.Text = "";
             txtDisciplina.Text = "";
@@ -106,7 +105,6 @@ public partial class OrdenMttoC : System.Web.UI.Page
             txtFechaOF.Text = "";
             txtHoraF.Text = "";
             txtObservaciones.Text = "";
-            Response.Redirect("~/OrdenMttoC.aspx");
         }
     }
     protected void btnLimpiar_Click(object sender, EventArgs e)

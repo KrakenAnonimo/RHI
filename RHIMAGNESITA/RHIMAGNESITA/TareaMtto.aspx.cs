@@ -40,13 +40,11 @@ public partial class TareaMtto : System.Web.UI.Page
         if (resultsql > 0)
         {
             //enviar mensaje
-            Response.Write("<script>alert('Se Registro Correctamente la Orden de Mtto Correctivo')</script>");
-
+            Response.Write("<script>alert('Se registro una nueva Tarea de Mantenimiento correctamente!');window.location.href='TareaMtto.aspx'</script>");
             //Limpiar Campos de texto
             txtDescripcion.Text = "";
             txtDuracion.Text = "";
             txtNombreTM.Text = "";
-            Response.Redirect("~/TareaMtto.aspx");
         }
     }
 

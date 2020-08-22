@@ -26,14 +26,12 @@ public partial class Material : System.Web.UI.Page
         if (resultsql > 0)
         {
             //enviar mensaje 
+            Response.Write("<script>alert('Se registro un nuevo Material correctamente!');window.location.href='Material.aspx'</script>");
             //Limpiar Campos de texto
-            Response.Write("<script>alert('Se Registro Correctamente')</script>");
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtDescripcion.Text = "";
             txtUnidadM.Text = "";
-            Response.Redirect("~/Material.aspx");
-           
         }
 
     }

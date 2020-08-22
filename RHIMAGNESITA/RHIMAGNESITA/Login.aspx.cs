@@ -12,7 +12,7 @@ using SimpleCrypto;
 
 public partial class Login : System.Web.UI.Page
 {
-    
+
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -29,12 +29,12 @@ public partial class Login : System.Web.UI.Page
         if (tblDatos.Rows.Count > 0)
         {
             //Sesiones funcionales
-            //Session["Correo"] = txtCorreoL.Text;
-            //Session["Clave"] = txtPasswordL.Text;
+            Session["Correo"] = txtCorreoL.Text;
+            Session["Clave"] = txtPasswordL.Text;
 
             //Sesiones no funcionales
-            Session["usuario"] = tblDatos.Rows[0][1].ToString();
-            Session["rol"] = tblDatos.Rows[0][0].ToString();
+            Session["usuario"] = tblDatos.Rows[0][0].ToString();
+            Session["rol"] = tblDatos.Rows[0][1].ToString();
             //Redireccionamiento de pagina
             Response.Redirect("~/Perfil.aspx");
         }
@@ -43,8 +43,9 @@ public partial class Login : System.Web.UI.Page
             // Si no existe mostrar un alert de informcionaz
             txtCorreoL.Text = "";
             txtPasswordL.Text = "";
-            Response.Write("<script>alert('Los datos no son los correctos');</script>");
-            Response.Redirect("~/Login.aspx");
+
+            Response.Write("<script>alert('Datos incorrectos');window.location.href='Login.aspx'</script>");
+
         }
     }
 
@@ -56,7 +57,7 @@ public partial class Login : System.Web.UI.Page
         string salt = cryptoService.GenerateSalt();
 
         string contraseniaencriptada = cryptoService.Compute(txtPasswordR.Text);
-
+        //fin del algoritmo
         //Clase RegistroUE con objetos
         clRegistroUE objLoginE = new clRegistroUE();
         objLoginE.Documento = int.Parse(txtDocumentoR.Text);
@@ -72,18 +73,19 @@ public partial class Login : System.Web.UI.Page
         if (resultsql > 0)
         {
             //Envio de correo
-            clCorreo objCorreo = new clCorreo( txtCorreoR.Text ,"Registro Correcto!","Registro Exitoso!");
-            if(objCorreo.Estado){
-                Response.Write("El correo se envio correctamente...");
+            clCorreo objCorreo = new clCorreo(txtCorreoR.Text, "Registro Correcto!", "Registro Exitoso!");
+            if (objCorreo.Estado)
+            {
+                Response.Write("<script>alert('Registro Exitoso!');window.location.href='Login.aspx'</script>");
             }
             else
             {
+                Response.Write("<script>alert('Error al registrar datos');window.location.href='Login.aspx'</script>");
                 Response.Write("Erro al enviar <br>" + objCorreo.Mensaje_error);
             }
 
             //enviar mensaje 
-            Response.Write("<script>alert('Se Registro Correctamente')</script>");
-            Response.Redirect("~/Login.aspx");
+            Response.Write("<script>alert('Registro Completado! :D');window.location.href='Login.aspx'</script>");
         }
     }
 }

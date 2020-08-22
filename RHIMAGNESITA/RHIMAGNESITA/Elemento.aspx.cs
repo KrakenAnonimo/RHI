@@ -41,12 +41,11 @@ public partial class Elemento : System.Web.UI.Page
         if (resultsql > 0)
         {
             //enviar mensaje 
+            Response.Write("<script>alert('Se registro un nuevo Elemento correctamente!');window.location.href=Elemento.aspx''</script>");
             //Limpiar Campos de texto
-            Response.Write("<script>alert('Se Registro Correctamente')</script>");
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtDescripcion.Text = "";
-            Response.Redirect("~/Elemento.aspx");
         }
 
     }

@@ -33,12 +33,11 @@ public partial class EjecucionM :  System.Web.UI.Page
         if (resultsql > 0)
         {
             //enviar mensaje 
+            Response.Write("<script>alert('Se registro una nueva Ejecucion de Mantenimiento correctamente!');window.location.href='EjecucionM.aspx'</script>");
             //Limpiar Campos de texto
-            Response.Write("<script>alert('Se Registro Correctamente')</script>");
             txtFechaEj.Text = "";
             txtDuracion.Text = "";
             txtObservaciones.Text = "";
-            Response.Redirect("~/EjecucionM.aspx");
         }
 
     }

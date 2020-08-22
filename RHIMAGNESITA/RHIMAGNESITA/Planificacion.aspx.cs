@@ -36,7 +36,7 @@ public partial class Planificacion : System.Web.UI.Page
 
         objElemento.IdElemento = int.Parse(gvElemento.DataKeys[filas].Value.ToString());
         objElemento.Nombre = gvElemento.SelectedRow.Cells[1].Text;
-        
+
         listax.Add(objElemento);
         gvElementoS.DataSource = listax;
         gvElementoS.DataBind();
@@ -73,30 +73,28 @@ public partial class Planificacion : System.Web.UI.Page
         objPlanificacionE.Observaciones = txtObservaciones.Text;
         objPlanificacionE.Estado = cmbEstado.SelectedValue.ToString();
 
-            for (int i = 0; i < gvElementoS.Rows.Count; i++)
-            {
-                //Campos Registra
-                int IdElemento = int.Parse(gvElementoS.Rows[i].Cells[0].Text);
+        for (int i = 0; i < gvElementoS.Rows.Count; i++)
+        {
+            //Campos Registra
+            int IdElemento = int.Parse(gvElementoS.Rows[i].Cells[0].Text);
 
-                //No Registra
-                string Nombre = gvElementoS.Rows[i].Cells[1].Text;
+            //No Registra
+            string Nombre = gvElementoS.Rows[i].Cells[1].Text;
 
-                //Registro de id
-                objPlanificacionE.IdElemento = IdElemento;
-            }
+            //Registro de id
+            objPlanificacionE.IdElemento = IdElemento;
+        }
 
-            clPlanificacion objPlanificacion = new clPlanificacion();
-            int resultsql = objPlanificacion.mtdRegistrarPlanificacion(objPlanificacionE);
+        clPlanificacion objPlanificacion = new clPlanificacion();
+        int resultsql = objPlanificacion.mtdRegistrarPlanificacion(objPlanificacionE);
 
-            if (resultsql > 0)
-            {
-                //enviar mensaje 
-                Response.Write("<script>alert('Se Registro Correctamente')</script>");
-                //Limpiar Campos de texto
-                txtFechaP.Text = "";
-                txtObservaciones.Text = "";
-                //Redireccion de Pagina
-                Response.Redirect("~/AsignaUsuaP.aspx");
-            }
+        if (resultsql > 0)
+        {
+            //enviar mensaje 
+            Response.Write("<script>alert('Se registro una nueva Planificacion correctamente!');window.location.href='Planificacion.aspx'</script>");
+            //Limpiar Campos de texto
+            txtFechaP.Text = "";
+            txtObservaciones.Text = "";
+        }
     }
 }

@@ -51,6 +51,7 @@ public partial class RContrasenia : System.Web.UI.Page
             // Clear the textbox valuess
             txtRCorreo.Text = "";
         }
-        Response.Redirect("~/Login.aspx");
+        //enviar mensaje 
+        Response.Write("<script>alert('El correo de recuperacion de contraseña fue enviado, revisa tu bandeja de entrada.');window.location.href='Login.aspx'</script>");
     }
 }

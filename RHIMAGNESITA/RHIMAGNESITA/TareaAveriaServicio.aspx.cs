@@ -56,12 +56,11 @@ public partial class TareaAveriaServicio : System.Web.UI.Page
         if (resultsql > 0)
         {
             //enviar mensaje 
+            Response.Write("<script>alert('Se registro correctamente una nueva Tarea de Averia o Servicio!');window.location.href='TareaAveriaServicio.aspx'</script>");
             //Limpiar Campos de texto
-            Response.Write("<script>alert('Se Registro Correctamente')</script>");
             txtNombreAV.Text = "";
             txtDuracion.Text = "";
             txtFechaP.Text = "";
-            Response.Redirect("~/TareaAveriaServicio.aspx");
         }
     }
 }

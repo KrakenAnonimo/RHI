@@ -124,8 +124,7 @@ public partial class OrdenMttoP : System.Web.UI.Page
         if (resultsql > 0)
         {
             //enviar mensaje
-            Response.Write("<script>alert('Se Registro Correctamente la Orden de Mtto Preventivo')</script>");
-
+            Response.Write("<script>alert('Se registro una nueva Orden de Mantenimiento Preventiva correctamente!');window.location.href='OrdenMttoP.aspx'</script>");
             //Limpiar Campos de texto
             txtNumOrdenP.Text = "";
             txtDisciplina.Text = "";
@@ -135,8 +134,6 @@ public partial class OrdenMttoP : System.Web.UI.Page
             txtHoraF.Text = "";
             txtObservaciones.Text = "";
 
-            //Redirecionar la pagina
-            Response.Redirect("~/OrdenMttoP.aspx");
         }
     }
 

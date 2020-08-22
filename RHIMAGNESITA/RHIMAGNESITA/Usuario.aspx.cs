@@ -37,6 +37,7 @@ public partial class Usuario :  System.Web.UI.Page
         string salt = cryptoService.GenerateSalt();
 
         string contraseniaencriptada = cryptoService.Compute(txtClave.Text);
+        //fin del algoritmo
 
         clUsuarioE objUsuarioE = new clUsuarioE();
         objUsuarioE.Documento = txtDocumento.Text;
@@ -44,7 +45,7 @@ public partial class Usuario :  System.Web.UI.Page
         objUsuarioE.Apellido = txtApellido.Text;
         objUsuarioE.Telefono = txtTelefono.Text;
         objUsuarioE.Email = txtEmail.Text;
-        objUsuarioE.Clave = contraseniaencriptada;
+        objUsuarioE.Clave = txtClave.Text;
         objUsuarioE.Ciudad = txtCiudad.Text;
         objUsuarioE.Direccion = txtDireccion.Text;
         objUsuarioE.IdRol = int.Parse(cmbRol.SelectedValue.ToString());
@@ -57,15 +58,14 @@ public partial class Usuario :  System.Web.UI.Page
             clCorreo objCorreo = new clCorreo(txtEmail.Text, "Registro Correcto!", "Registro Exitoso!");
             if (objCorreo.Estado)
             {
-                Response.Write("El correo se envio correctamente...");
+                Response.Write("<script>alert('Registro exitoso del usuario.');window.location.href=''</script>");
             }
             else
             {
                 Response.Write("Erro al enviar <br>" + objCorreo.Mensaje_error);
             }
-            //enviar mensaje 
             //Limpiar Campos de texto
-            Response.Write("<script>alert('Se Registro Correctamente')</script>");
+     
             txtDocumento.Text = "";
             txtNombre.Text = "";
             txtApellido.Text = "";
@@ -74,7 +74,6 @@ public partial class Usuario :  System.Web.UI.Page
             txtClave.Text = "";
             txtCiudad.Text = "";
             txtDireccion.Text = "";
-            Response.Redirect("~/Usuario.aspx");
         }
     
     }
