@@ -28,11 +28,14 @@ public partial class Login : System.Web.UI.Page
 
         if (tblDatos.Rows.Count > 0)
         {
-            Session["Correo"] = txtCorreoL.Text;
-            Session["Clave"] = txtPasswordL.Text;
+            //Sesiones funcionales
+            //Session["Correo"] = txtCorreoL.Text;
+            //Session["Clave"] = txtPasswordL.Text;
 
+            //Sesiones no funcionales
             Session["usuario"] = tblDatos.Rows[0][1].ToString();
-            Session["rol"] = tblDatos.Rows[0][2].ToString();
+            Session["rol"] = tblDatos.Rows[0][0].ToString();
+            //Redireccionamiento de pagina
             Response.Redirect("~/Perfil.aspx");
         }
         else

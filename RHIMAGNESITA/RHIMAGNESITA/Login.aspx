@@ -164,9 +164,9 @@
                                         <div class="clearfix"></div>
                                     </div>
                                     <div>
-                                        <asp:SqlDataSource ID="SqldsLogin" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT Rol.*, Usuario.* FROM Rol INNER JOIN Usuario ON Rol.IdRol = Usuario.IdRol WHERE (Usuario.Clave = @clave) AND (Usuario.Email = @usuario)">
+                                        <asp:SqlDataSource ID="SqldsLogin" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT Rol.Rol, Usuario.Email, Usuario.Clave FROM Usuario INNER JOIN Rol ON Usuario.IdRol = Rol.IdRol WHERE (Usuario.Email = @email) AND (Usuario.Clave = @clave)">
                                             <SelectParameters>
-                                                <asp:ControlParameter ControlID="txtCorreoL" Name="usuario" PropertyName="Text" />
+                                                <asp:ControlParameter ControlID="txtCorreoL" Name="email" PropertyName="Text" />
                                                 <asp:ControlParameter ControlID="txtPasswordL" Name="clave" PropertyName="Text" />
                                             </SelectParameters>
                                         </asp:SqlDataSource>
