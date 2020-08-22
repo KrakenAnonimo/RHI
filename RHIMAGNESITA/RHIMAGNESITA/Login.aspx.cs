@@ -8,6 +8,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+using SimpleCrypto;
+
 public partial class Login : System.Web.UI.Page
 {
     
@@ -45,12 +47,19 @@ public partial class Login : System.Web.UI.Page
 
     protected void btnRegistrar_Click(object sender, EventArgs e)
     {
+        ICryptoService cryptoService = new PBKDF2();
+
+        //Algoritmo de encriptacion
+        string salt = cryptoService.GenerateSalt();
+
+        string contraseniaencriptada = cryptoService.Compute(txtPasswordR.Text);
+
         clRegistroUE objLoginE = new clRegistroUE();
         objLoginE.Documento = int.Parse(txtDocumentoR.Text);
         objLoginE.Nombre = txtNombreR.Text;
         objLoginE.Email = txtCorreoR.Text;
         objLoginE.Telefono = txtTelefonoR.Text;
-        objLoginE.Clave = txtPasswordR.Text;
+        objLoginE.Clave = contraseniaencriptada;
 
         clRegistroU objLogin = new clRegistroU();
         int resultsql = objLogin.mtdRegistrarUsuarioLogin(objLoginE);
