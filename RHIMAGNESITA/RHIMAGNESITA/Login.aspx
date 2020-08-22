@@ -68,7 +68,6 @@
                                             <li><a href="#captain" data-toggle="tab">Sing up</a></li>
                                         </ul>
                                     </div>
-
                                     <div class="tab-content">
                                         <div class="tab-pane" id="details">
                                             <div class="row">
@@ -93,6 +92,10 @@
                                                             <asp:TextBox ID="txtPasswordL" runat="server" class="form-control"></asp:TextBox>
                                                         </div>
                                                     </div>
+                                                    <br />
+                                                    <div>
+                                                        <asp:HyperLink ID="hlRecuperarClave" runat="server" class='btn-default' NavigateUrl="~/RContrasenia.aspx">Olvide mi contraseña </asp:HyperLink>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -101,7 +104,7 @@
                                             <div class="row">
                                                 <div class="col-sm-10 col-sm-offset-1">
                                                     <div class="input-group">
-                                                    <span class="input-group-addon">
+                                                        <span class="input-group-addon">
                                                             <i class="material-icons">featured_play_list</i>
                                                         </span>
                                                         <div class="form-group label-floating">
@@ -110,7 +113,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="input-group">
-                                                    <span class="input-group-addon">
+                                                        <span class="input-group-addon">
                                                             <i class="material-icons">face</i>
                                                         </span>
                                                         <div class="form-group label-floating">
@@ -149,24 +152,25 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="wizard-footer">
-                                            <div class="pull-right">
-                                                <asp:Button ID="btnLogin" runat="server" Text="Ingresar" class='btn btn-next btn-fill btn-danger btn-wd' OnClick="btnLogin_Click" />
-                                                <asp:Button ID="btnRegistrar" runat="server" Text="Registrarse" class='btn btn-finish btn-fill btn-danger btn-wd' OnClick="btnRegistrar_Click" />
-                                            </div>
-                                            <div class="pull-left">
-                                                <asp:Button ID="btnAtras" runat="server" Text="Atras" class='btn btn-previous btn-fill btn-default btn-wd' />
-                                            </div>
-                                            <div class="clearfix"></div>
+                                    </div>
+                                    <div class="wizard-footer">
+                                        <div class="pull-right">
+                                            <asp:Button ID="btnLogin" runat="server" Text="Ingresar" class='btn btn-next btn-fill btn-danger btn-wd' OnClick="btnLogin_Click" />
+                                            <asp:Button ID="btnRegistrar" runat="server" Text="Registrarse" class='btn btn-finish btn-fill btn-danger btn-wd' OnClick="btnRegistrar_Click" />
                                         </div>
-                                        <div>
-                                            <asp:SqlDataSource ID="SqldsLogin" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT Rol.*, Usuario.* FROM Rol INNER JOIN Usuario ON Rol.IdRol = Usuario.IdRol WHERE (Usuario.Clave = @clave) AND (Usuario.Email = @usuario)">
-                                                <SelectParameters>
-                                                    <asp:ControlParameter ControlID="txtCorreoL" Name="usuario" PropertyName="Text" />
-                                                    <asp:ControlParameter ControlID="txtPasswordL" Name="clave" PropertyName="Text" />
-                                                </SelectParameters>
-                                            </asp:SqlDataSource>
+                                        <div class="pull-left">
+                                            <asp:Button ID="btnAtras" runat="server" Text="Atras" class='btn btn-previous btn-fill btn-default btn-wd' />
                                         </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div>
+                                        <asp:SqlDataSource ID="SqldsLogin" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT Rol.*, Usuario.* FROM Rol INNER JOIN Usuario ON Rol.IdRol = Usuario.IdRol WHERE (Usuario.Clave = @clave) AND (Usuario.Email = @usuario)">
+                                            <SelectParameters>
+                                                <asp:ControlParameter ControlID="txtCorreoL" Name="usuario" PropertyName="Text" />
+                                                <asp:ControlParameter ControlID="txtPasswordL" Name="clave" PropertyName="Text" />
+                                            </SelectParameters>
+                                        </asp:SqlDataSource>
+                                    </div>
                                 </form>
                             </div>
                         </div>

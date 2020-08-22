@@ -54,20 +54,21 @@ public partial class Login : System.Web.UI.Page
 
         string contraseniaencriptada = cryptoService.Compute(txtPasswordR.Text);
 
+        //Clase RegistroUE con objetos
         clRegistroUE objLoginE = new clRegistroUE();
         objLoginE.Documento = int.Parse(txtDocumentoR.Text);
         objLoginE.Nombre = txtNombreR.Text;
         objLoginE.Email = txtCorreoR.Text;
         objLoginE.Telefono = txtTelefonoR.Text;
-        objLoginE.Clave = contraseniaencriptada;
+        objLoginE.Clave = contraseniaencriptada; //Debe tomar el txt a su vez.
 
+        //Metodo
         clRegistroU objLogin = new clRegistroU();
         int resultsql = objLogin.mtdRegistrarUsuarioLogin(objLoginE);
 
         if (resultsql > 0)
         {
-           
-
+            //Envio de correo
             clCorreo objCorreo = new clCorreo( txtCorreoR.Text ,"Registro Correcto!","Registro Exitoso!");
             if(objCorreo.Estado){
                 Response.Write("El correo se envio correctamente...");
