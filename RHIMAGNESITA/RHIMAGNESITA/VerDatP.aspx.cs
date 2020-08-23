@@ -10,7 +10,7 @@ public partial class VerDatP : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        
+
     }
     protected void Page_Init(object sender, EventArgs e)
     {
@@ -20,7 +20,7 @@ public partial class VerDatP : System.Web.UI.Page
         lblIdP.Text = Session["idPlanificacion"].ToString();
         txtFechaP.Text = tblDatos.Rows[0][1].ToString();
         lblObservaciones.Text = tblDatos.Rows[0][2].ToString();
-        lblEstado.Text = tblDatos.Rows[0][3].ToString();
+        cmbEstadoP.Text = tblDatos.Rows[0][3].ToString();
         lblIdE.Text = tblDatos.Rows[0][4].ToString();
     }
 
@@ -34,6 +34,7 @@ public partial class VerDatP : System.Web.UI.Page
         clPlanificacionE objPlanificacionE = new clPlanificacionE();
         objPlanificacionE.IdPlanificacion = int.Parse(lblIdP.Text);
         objPlanificacionE.FechaPlanificacion = txtFechaP.Text;
+        objPlanificacionE.Estado = cmbEstadoP.Text;
 
         clPlanificacion objPlanificacion = new clPlanificacion();
         int resultsql = objPlanificacion.mtdActualizarPlanificacion(objPlanificacionE);
@@ -41,9 +42,7 @@ public partial class VerDatP : System.Web.UI.Page
         if (resultsql > 0)
         {
             //enviar mensaje 
-            Response.Write("<script>alert('Se Registro Correctamente')</script>");
-            //Redireccionar
-            Response.Redirect("~/ListaP.aspx");
+            Response.Write("<script>alert('Datos actualizados de la Planificacion!.');window.location.href='ListaP.aspx'</script>");
         }
     }
 
@@ -58,9 +57,7 @@ public partial class VerDatP : System.Web.UI.Page
         if (resultsql > 0)
         {
             //enviar mensaje 
-            Response.Write("<script>alert('Se Elimino Correctamente')</script>");
-            //Redireccionar
-            Response.Redirect("~/ListaP.aspx");
+            Response.Write("<script>alert('Detos de la planificacion eliminados!.');window.location.href='ListaP.aspx'</script>");
         }
     }
 }

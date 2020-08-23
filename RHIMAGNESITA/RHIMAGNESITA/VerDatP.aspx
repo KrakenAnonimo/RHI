@@ -46,7 +46,10 @@
                 <tr>
                     <th scope="row">Estado:</th>
                     <td>
-                        <asp:Label ID="lblEstado" runat="server" Text=""></asp:Label>
+                        <asp:DropDownList ID="cmbEstadoP" runat="server">
+                            <asp:ListItem>Por Ejecutar</asp:ListItem>
+                            <asp:ListItem>Ejecutada</asp:ListItem>
+                        </asp:DropDownList>
                     </td>
                 </tr>
                 <tr>
