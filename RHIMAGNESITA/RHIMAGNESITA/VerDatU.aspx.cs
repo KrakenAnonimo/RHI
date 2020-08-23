@@ -27,9 +27,6 @@ public partial class VerDatU : System.Web.UI.Page
         txtDireccion.Text = tblDatos.Rows[0][7].ToString();
         cmbRolUsua.Text = tblDatos.Rows[0][8].ToString();
 
-
-
-
     }
     protected void imgbtnAtras_Click(object sender, ImageClickEventArgs e)
     {
@@ -55,9 +52,22 @@ public partial class VerDatU : System.Web.UI.Page
         if (resultsql > 0)
         {
             //enviar mensaje 
-            Response.Write("<script>alert('Se Actualizo Correctamente')</script>");
-            //Redireccionar
-            Response.Redirect("~/ListaU.aspx");
+            Response.Write("<script>alert('Datos actualizados del usuario!.');window.location.href='ListaU.aspx'</script>");
+        }
+    }
+
+    protected void btnEliminar_Click(object sender, EventArgs e)
+    {
+        clUsuarioE objUsuarioE = new clUsuarioE();
+        objUsuarioE.Documento = txtDocumento.Text;
+
+        clUsuario objUsuario = new clUsuario();
+        int resultsql = objUsuario.mtdEliminarUsuario(objUsuarioE);
+
+        if (resultsql > 0)
+        {
+            //enviar mensaje 
+            Response.Write("<script>alert('Datos y usuario eliminados!.');window.location.href='ListaU.aspx'</script>");
         }
     }
 }

@@ -77,7 +77,7 @@
     </div>
     <div class="auto-style7">
         <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" OnClick="btnGuardar_Click" />
-        <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-danger btn-sm" />
+        <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-danger btn-sm" OnClick="btnEliminar_Click" />
     </div>
     <div>
         <asp:SqlDataSource ID="SqldsUsuario" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT IdUsuario, Documento, Nombre, Apellido, Telefono, Email, Ciudad, Direccion, IdRol FROM Usuario WHERE (IdUsuario = @idUsuario)">

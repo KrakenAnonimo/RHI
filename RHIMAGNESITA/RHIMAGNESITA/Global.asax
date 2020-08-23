@@ -37,7 +37,7 @@
             sb.AppendLine("Mensaje interno  : " + v.InnerException.ToString());
 
             //Aquí guarda el archivo de texto que contiene los detalles de este error
-            string fileName = System.IO.Path.Combine(Server.MapPath("~/Errores"), DateTime.Now.ToString("ddMMyyyyhhmmss") + ".txt");
+            string fileName = System.IO.Path.Combine(Server.MapPath("~/Errores"), DateTime.Now.ToString("dd-MM-yyyy(hh-mm)") + ".txt");
             System.IO.File.WriteAllText(fileName, sb.ToString());
             Server.Transfer("~/PageNotFound.aspx");
         }
@@ -46,14 +46,13 @@
     void Session_Start(object sender, EventArgs e)
     {
         // Código que se ejecuta al iniciarse una nueva sesión
-
         Session["usuario"] = "NN";
         Session["idUsuario"] = 0;
+        //Sesion de roles de acceso
+        Session["rol"] = ("Admin" + "Supervisor" + "Planificador" + "Tecnico" + "Soldador" + "Siso");
         //Sesion de correo y clave de acceso
         Session["Correo"] = 0;
         Session["Clave"] = 0;
-        //Sesion de roles de acceso
-        Session["rol"] = ("Admin" + "Supervisor" + "Planificador" + "Tecnico" + "Soldador" + "Siso");
         Session["idPlanificacion"] = 0;
         Session["idTareaMtto"] = 0;
         Session["idElemento"] = 0;

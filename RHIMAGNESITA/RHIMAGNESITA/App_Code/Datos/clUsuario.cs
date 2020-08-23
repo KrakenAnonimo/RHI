@@ -26,7 +26,7 @@ public class clUsuario
     //Metodo Eliminar Usuario
     public int mtdEliminarUsuario(clUsuarioE objDatos)
     {
-        string consulta = "Delete from Usuario where Documento = '" + objDatos.Documento + "')";
+        string consulta = "Delete from Usuario where Documento = '" + objDatos.Documento + "'";
         clMetodoCN objMtdCN = new clMetodoCN();
         int result = objMtdCN.mtdConectado(consulta);
 
