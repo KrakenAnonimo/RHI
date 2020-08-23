@@ -56,9 +56,7 @@ public partial class VerDatA : System.Web.UI.Page
         if (resultsql > 0)
         {
             //enviar mensaje 
-            Response.Write("<script>alert('Se Elimino Correctamente')</script>");
-            //Redireccionar
-            Response.Redirect("~/ListaA.aspx");
+            Response.Write("<script>alert('Datos actualizados de la Area!.');window.location.href='ListaA.aspx'</script>");
         }
     }
 }

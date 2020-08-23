@@ -44,9 +44,7 @@ public partial class VerDatTAVS : System.Web.UI.Page
         if (resultsql > 0)
         {
             //enviar mensaje 
-            Response.Write("<script>alert('Se Actualizo Correctamente')</script>");
-            //Redireccionar
-            Response.Redirect("~/ListaTAVS.aspx");
+            Response.Write("<script>alert('Datos Actualizados de Tarea Averia o Servicio!.');window.location.href='ListaTAVS.aspx'</script>");
         }
     }
 }

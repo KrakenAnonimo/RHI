@@ -43,9 +43,7 @@ public partial class VerDatM : System.Web.UI.Page
         if (resultsql > 0)
         {
             //enviar mensaje 
-            Response.Write("<script>alert('Se Actualizo Correctamente')</script>");
-            //Redireccionar
-            Response.Redirect("~/ListaM.aspx");
+            Response.Write("<script>alert('Datos actualizados del Material!.');window.location.href='ListaM.aspx'</script>");
         }
     }
 }
