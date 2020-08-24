@@ -4,7 +4,7 @@
 
 <html>
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>RHI-MAGNESITA</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
@@ -56,7 +56,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-   <div>
+        <div>
             <div id="preloader"></div>
             <header>
                 <!-- header-area start -->
@@ -64,7 +64,6 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12 col-sm-12">
-
                                 <!-- Navigation -->
                                 <nav class="navbar navbar-default">
                                     <!-- Brand and toggle get grouped for better mobile display -->
@@ -87,12 +86,12 @@
                                         <ul class="nav navbar-nav navbar-right">
                                             <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Ordenes de Mtto<span class="caret"></span></a>
                                                 <ul class="dropdown-menu" role="menu">
-                                                    <li><a href="OrdenMttoP.aspx">Orden Mtt Preventivo</a></li>
-                                                    <li><a href="OrdenMttoC.aspx">Orden Mtt Correctivo</a></li>
+                                                    <li><a href="ROrdenMttoP.aspx">Orden Mtt Preventivo</a></li>
+                                                    <li><a href="ROrdenMttoC.aspx">Orden Mtt Correctivo</a></li>
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a class="page-scroll" href="EjecucionM.aspx">Ejecucion Mtto</a>
+                                                <a class="page-scroll" href="REjecucionM.aspx">Ejecucion Mtto</a>
                                             </li>
                                             <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-sliders" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -132,7 +131,7 @@
         </asp:ContentPlaceHolder>
         </div>
     </form>
-     <!--fin Var-->
+    <!--fin Var-->
     <!--Pie-->
     <div>
         <footer>
