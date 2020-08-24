@@ -88,8 +88,11 @@
                                     <!-- Collect the nav links, forms, and other content for toggling -->
                                     <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
                                         <ul class="nav navbar-nav navbar-right">
-                                            <li>
-                                                <a class="page-scroll" href="Usuario.aspx">Usuario</a>
+                                             <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuarios<span class="caret"></span></a>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="Rol.aspx">Rol</a></li>
+                                                    <li><a href="Usuario.aspx">Usuario</a></li>
+                                                </ul>
                                             </li>
                                             <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Programacion<span class="caret"></span></a>
                                                 <ul class="dropdown-menu" role="menu">
