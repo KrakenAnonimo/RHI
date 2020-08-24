@@ -43,9 +43,7 @@ public partial class VerDatTM : System.Web.UI.Page
         if (resultsql > 0)
         {
             //enviar mensaje 
-            Response.Write("<script>alert('Se Actualizo Correctamente')</script>");
-            //Redireccionar
-            Response.Redirect("~/ListaTM.aspx");
+            Response.Write("<script>alert('Datos Actualizados de Tarea de Mantenimiento!.');window.location.href='ListaTM.aspx'</script>");
         }
     }
 }

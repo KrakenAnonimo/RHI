@@ -45,9 +45,7 @@ public partial class VerDatEM : System.Web.UI.Page
         if (resultsql > 0)
         {
             //enviar mensaje 
-            Response.Write("<script>alert('Se Actualizo Correctamente')</script>");
-            //Redireccionar
-            Response.Redirect("~/ListaEM.aspx");
+            Response.Write("<script>alert('Datos actualizados de la Ejecucion de Mantenimiento!.');window.location.href='ListaEM.aspx'</script>");
         }
     }
 }

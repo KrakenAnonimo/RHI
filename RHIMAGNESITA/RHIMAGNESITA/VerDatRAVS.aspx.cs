@@ -45,9 +45,7 @@ public partial class VerDatRAVS : System.Web.UI.Page
         if (resultsql > 0)
         {
             //enviar mensaje 
-            Response.Write("<script>alert('Se Actualizo Correctamente')</script>");
-            //Redireccionar
-            Response.Redirect("~/ListaRAVS.aspx");
+            Response.Write("<script>alert('Datos Actualizados de Reporte de Averia o Servicio!.');window.location.href='ListaRAVS.aspx'</script>");
         }
     }
 }

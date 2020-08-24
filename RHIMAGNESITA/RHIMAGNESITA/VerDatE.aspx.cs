@@ -43,9 +43,7 @@ public partial class VerDatE : System.Web.UI.Page
         if (resultsql > 0)
         {
             //enviar mensaje 
-            Response.Write("<script>alert('Se Actualizo Correctamente')</script>");
-            //Redireccionar
-            Response.Redirect("~/ListaE.aspx");
+            Response.Write("<script>alert('Datos actualizados del Elemento!.');window.location.href='ListaE.aspx'</script>");
         }
     }
 }

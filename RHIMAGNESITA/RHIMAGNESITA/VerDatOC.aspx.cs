@@ -57,9 +57,7 @@ public partial class VerDatOC : System.Web.UI.Page
         if (resultsql > 0)
         {
             //enviar mensaje 
-            Response.Write("<script>alert('Se Actualizo Correctamente')</script>");
-            //Redireccionar
-            Response.Redirect("~/ListaOC.aspx");
+            Response.Write("<script>alert('Datos actualizados de la Orden de Mtto Correctiva!.');window.location.href='ListaOC.aspx'</script>");
         }
     }
 }
