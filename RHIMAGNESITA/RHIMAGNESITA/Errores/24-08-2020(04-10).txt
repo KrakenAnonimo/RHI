@@ -1,0 +1,13 @@
+Pagina :      http://localhost:54775/ReporteAveriaServicio.aspx
+Mensaje de Error : Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'.
+Mensaje interno  : System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Int32.Parse(String s)
+   en ReporteAveriaServicio.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\andre\source\repos\KrakenAnonimo\RHI\RHIMAGNESITA\RHIMAGNESITA\ReporteAveriaServicio.aspx.cs:línea 22
+   en System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   en System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   en System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   en System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   en System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)

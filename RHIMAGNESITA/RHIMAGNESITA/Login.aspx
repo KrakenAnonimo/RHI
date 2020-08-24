@@ -89,7 +89,7 @@
                                                         </span>
                                                         <div class="form-group label-floating">
                                                             <label class="control-label">Contraseña</label>
-                                                            <asp:TextBox ID="txtPasswordL" runat="server" class="form-control"></asp:TextBox>
+                                                            <asp:TextBox ID="txtPasswordL" runat="server" class="form-control" TextMode="Password"></asp:TextBox>
                                                         </div>
                                                     </div>
                                                     <br />
@@ -146,7 +146,7 @@
                                                         </span>
                                                         <div class="form-group label-floating">
                                                             <label class="control-label">Contraseña</label>
-                                                            <asp:TextBox ID="txtPasswordR" runat="server" class="form-control"></asp:TextBox>
+                                                            <asp:TextBox ID="txtPasswordR" runat="server" class="form-control" TextMode="Password"></asp:TextBox>
                                                         </div>
                                                     </div>
                                                 </div>
