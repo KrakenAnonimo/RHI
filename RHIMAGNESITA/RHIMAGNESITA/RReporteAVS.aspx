@@ -1,7 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage4.master" AutoEventWireup="true" CodeFile="ReporteAveriaServicio.aspx.cs" Inherits="ReporteAveriaServicio" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage4.master" AutoEventWireup="true" CodeFile="RReporteAVS.aspx.cs" Inherits="RReporteAVS" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-    <style type="text/css">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+      <style type="text/css">
         .auto-style7 {
             position: relative;
             min-height: 1px;
@@ -22,8 +22,8 @@
         }
     </style>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <!--No mover estos espacios-->
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+      <!--No mover estos espacios-->
     <br />
     <!--No mover estos espacios-->
     <!--Resto del Codigo-->
@@ -76,8 +76,8 @@
                                     <asp:TextBox ID="txtFechaReporte" runat="server" placeholder="Fecha del Reporte" class="form-control" TextMode="Date"></asp:TextBox>
                                 </div>                                                              
                                 <div>
-                                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" OnClick="btnGuardar_Click" />
-                                    <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar Todo" class="btn btn-danger btn-sm" OnClick="btnLimpiar_Click" />
+                                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" />
+                                    <asp:Button ID="btnDescargar" runat="server" Text="Limpiar Todo" class="btn btn-danger btn-sm" />
                                 </div>
                             </div>
                         </div>
