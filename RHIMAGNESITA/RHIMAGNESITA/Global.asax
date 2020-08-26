@@ -44,15 +44,18 @@
     }
 
     void Session_Start(object sender, EventArgs e)
-    {
+    {   
+        //Sesion de roles de acceso
+        Session["rol"] = "";
+        
         // Código que se ejecuta al iniciarse una nueva sesión
         Session["usuario"] = "NN";
         Session["idUsuario"] = 0;
-        //Sesion de roles de acceso
-        Session["rol"] = ("Admin" + "Supervisor" + "Planificador" + "Tecnico" + "Soldador" + "Siso");
+        
         //Sesion de correo y clave de acceso
         Session["Correo"] = 0;
         Session["Clave"] = 0;
+
         Session["idPlanificacion"] = 0;
         Session["idTareaMtto"] = 0;
         Session["idElemento"] = 0;
