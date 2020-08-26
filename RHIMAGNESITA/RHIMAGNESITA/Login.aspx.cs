@@ -30,7 +30,7 @@ public partial class Login : System.Web.UI.Page
         {
             //Sesiones funcionales
             //Session["Correo"] = txtCorreoL.Text;
-           // Session["Clave"] = txtPasswordL.Text;
+            //Session["Clave"] = txtPasswordL.Text;
 
             //Sesiones no funcionales
             Session["usuario"] = tblDatos.Rows[0][0].ToString();
@@ -64,7 +64,7 @@ public partial class Login : System.Web.UI.Page
         objLoginE.Nombre = txtNombreR.Text;
         objLoginE.Email = txtCorreoR.Text;
         objLoginE.Telefono = txtTelefonoR.Text;
-        objLoginE.Clave = contraseniaencriptada; //Debe tomar el txt a su vez.
+        objLoginE.Clave = txtPasswordR.Text; //Debe tomar el txt a su vez.
 
         //Metodo
         clRegistroU objLogin = new clRegistroU();
