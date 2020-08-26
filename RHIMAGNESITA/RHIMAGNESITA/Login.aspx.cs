@@ -40,7 +40,7 @@ public partial class Login : System.Web.UI.Page
         }
         else
         {
-            // Si no existe mostrar un alert de informcionaz
+            // Si no existe mostrar un alert de informacion
             txtCorreoL.Text = "";
             txtPasswordL.Text = "";
 
