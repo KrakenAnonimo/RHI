@@ -40,4 +40,11 @@ public class clOrdenMttoCL
         int Actualizar = objOrdenMttoCD.mtdActualizarOrdenMttoC(objDatos);
         return Actualizar;
     }
+
+    public int mtdActualizarOrdenMttoC2(clOrdenMttoCE objDatos)
+    {
+        clOrdenMttoC objOrdenMttoCD = new clOrdenMttoC();
+        int Actualizar = objOrdenMttoCD.mtdActualizarOrdenMttoC2(objDatos);
+        return Actualizar;
+    }
 }

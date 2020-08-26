@@ -194,7 +194,7 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" />
+                                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" OnClick="btnGuardar_Click" />
                                     <asp:Button ID="btnDescargar" runat="server" Text="Descargar" class="btn btn-danger btn-sm" />
                                 </div>
                             </div>

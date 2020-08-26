@@ -22,6 +22,18 @@ public class clReporteAveriaServicio
         return result;
 
     }
+    public int mtdRegistrarReporteAS2(clReporteAveriaServicioE objReporteAveriaServicioE)
+    {
+        string sqlInsert = "insert into ReporteAveriaServicio(NumReporte,Titulo,Descripcion,FechaReporte,IdElemento,IdUsuario)" +
+            "Values('" + objReporteAveriaServicioE.NumReporte + "','" + objReporteAveriaServicioE.Titulo + "','" + objReporteAveriaServicioE.Descripcion + "','" + objReporteAveriaServicioE.FechaReporte + "','" + objReporteAveriaServicioE.IdElemento + "','" + objReporteAveriaServicioE.IdUsuario + "')";
+
+
+        clMetodoCN objMtdCN = new clMetodoCN();
+        int result = objMtdCN.mtdConectado(sqlInsert);
+
+        return result;
+
+    }
 
     //Metodo Eliminar ReporteAS
     public int mtdEliminarReporteAS(clReporteAveriaServicioE objDatos)

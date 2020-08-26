@@ -16,6 +16,13 @@ public class clReporteAveriaServicioL
         return regi;
     }
 
+    public int mtdRegistrarReporteAveriaServicio2(clReporteAveriaServicioE objDatos)
+    {
+        clReporteAveriaServicio objReporteAveriaServicioD = new clReporteAveriaServicio();
+        int regi = objReporteAveriaServicioD.mtdRegistrarReporteAS2(objDatos);
+        return regi;
+    }
+
     //Metodo Listar ReporteAS
     public List<clReporteAveriaServicioE> mtdListarReporteAveriaServicio()
     {

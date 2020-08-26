@@ -24,7 +24,7 @@ public partial class Planificacion : System.Web.UI.Page
         txtObservaciones.Text = "";
     }
 
-    int fila = 0;
+  
 
     int filas = 0;
     protected void gvElemento_SelectedIndexChanged(object sender, EventArgs e)
