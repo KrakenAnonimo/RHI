@@ -1,12 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage3.master" AutoEventWireup="true" CodeFile="REjecucionM.aspx.cs" Inherits="REjecucionM" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <style type="text/css">
-        .auto-style3 {
-            margin-bottom: 15px;
-            text-align: center;
-        }
-
+        
         .auto-style7 {
             position: relative;
             min-height: 1px;
@@ -19,50 +15,10 @@
             top: -75px;
         }
 
-        .auto-style9 {
-            text-align: center;
-            width: 370px;
-            position: relative;
-            left: -86px;
-            top: 17px;
-            height: 25px;
-        }
-
-        .auto-style10 {
-            width: 407px;
-            height: 173px;
-            position: relative;
-            left: -58px;
-            top: 33px;
-        }
-        .auto-style11 {
-            text-align: center;
-            width: 270px;
-            position: relative;
-            left: 432px;
-            top: -194px;
-            height: 27px;
-        }
-        .auto-style12 {
-            width: 651px;
-            position: relative;
-            left: -12px;
-            top: -8px;
-        }
-        .auto-style13 {
-            margin-bottom: 15px;
-            height: 64px;
-            width: 658px;
-        }
-        .auto-style14 {
-            text-align: center;
-            width: 686px;
-            height: 30px;
-        }
-    </style>
+        </style>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-     <!--No mover estos espacios-->
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <!--No mover estos espacios-->
     <br />
     <!--No mover estos espacios-->
     <!--Resto del codigo-->
@@ -76,7 +32,7 @@
                         <br />
                         <div class="form-group">
                             <div class="text-center">
-                                <label for="selectSm" class="form-control-label"> Orden de Mantenimiento Preventiva</label>
+                                <label for="selectSm" class="form-control-label">Orden de Mantenimiento Preventiva</label>
                             </div>
                             <div class="text-center">
                                 <asp:Label ID="lblOrdenMttoP" runat="server" Text="" class="form-control"></asp:Label>
@@ -104,7 +60,7 @@
                         <div class="card-body card-block">
                             <div class="text-center">
                                 <label for="FechaOF" class=" form-control-label">Fecha Ejecucion</label>
-                                <asp:Label ID="lblFechaEjecucion" runat="server" Text=""  class="form-control"></asp:Label>
+                                <asp:Label ID="lblFechaEjecucion" runat="server" Text="" class="form-control"></asp:Label>
                             </div>
                             <div class="text-center">
                                 <label for="Horas" class=" form-control-label">Duracion</label>
@@ -118,7 +74,7 @@
                                     <asp:TextBox runat="server" Rows="9" placeholder="Observaciones..." class="form-control" ID="txtObservaciones" TextMode="MultiLine"></asp:TextBox>
                                 </div>
                             </div>
-                            <asp:Button runat="server" Text="Guardar" class="btn btn-success btn-sm" ID="btnGuardar" />
+                            <asp:Button runat="server" Text="Guardar" class="btn btn-success btn-sm" ID="btnGuardar" OnClick="btnGuardar_Click" />
                             <asp:Button runat="server" Text="Descargar" class="btn btn-danger btn-sm" ID="btnDescargar" />
                         </div>
                     </div>

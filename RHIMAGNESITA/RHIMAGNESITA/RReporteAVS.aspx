@@ -76,7 +76,7 @@
                                     <asp:TextBox ID="txtFechaReporte" runat="server" placeholder="Fecha del Reporte" class="form-control" TextMode="Date"></asp:TextBox>
                                 </div>                                                              
                                 <div>
-                                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" />
+                                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" OnClick="btnGuardar_Click" />
                                     <asp:Button ID="btnDescargar" runat="server" Text="Limpiar Todo" class="btn btn-danger btn-sm" />
                                 </div>
                             </div>

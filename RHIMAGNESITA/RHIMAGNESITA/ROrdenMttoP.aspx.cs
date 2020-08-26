@@ -11,4 +11,23 @@ public partial class ROrdenMttoP : System.Web.UI.Page
     {
 
     }
+
+    protected void btnGuardar_Click(object sender, EventArgs e)
+    {
+
+        clOrdenMttoPE objOrdenMttoPE = new clOrdenMttoPE();
+  
+        objOrdenMttoPE.Ejecutado = cmbEjecucionOr.Text;
+        objOrdenMttoPE.Observaciones = txtObservaciones.Text;
+   
+
+        clOrdenMttoP objOrdenMttoP = new clOrdenMttoP();
+        int resultsql = objOrdenMttoP.mtdActualizarOrdenMttoP2(objOrdenMttoPE);
+
+        if (resultsql > 0)
+        {
+            //enviar mensaje 
+            Response.Write("<script>alert('Datos actualizados de la Orden de Mtto Preventiva!.');window.location.href='ListaOP.aspx'</script>");
+        }
+    }
 }

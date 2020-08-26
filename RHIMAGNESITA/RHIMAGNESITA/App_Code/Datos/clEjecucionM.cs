@@ -66,4 +66,11 @@ public class clEjecucionM
         int regis = objMtdCN.mtdConectado(consulta);
         return regis;
     }
+    public int mtdActualizarEjecucionM2(clEjecucionME objEjecucionME)
+    {
+        string consulta = "Update EjecucionM set Estado = '" + objEjecucionME.Estado + "', Observaciones = '" + objEjecucionME.Observaciones + "'where IdEjecucionM = '" + objEjecucionME.IdEjecucionM + "'";
+        clMetodoCN objMtdCN = new clMetodoCN();
+        int regis = objMtdCN.mtdConectado(consulta);
+        return regis;
+    }
 }

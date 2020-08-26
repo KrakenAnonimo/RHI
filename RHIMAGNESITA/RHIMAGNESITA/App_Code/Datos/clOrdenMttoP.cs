@@ -72,4 +72,11 @@ public class clOrdenMttoP
         int regis = objMtdCN.mtdConectado(consulta);
         return regis;
     }
+    public int mtdActualizarOrdenMttoP2(clOrdenMttoPE objOrdenMttoPE)
+    {
+        string consulta = "Update OrdenMttoPreventivo set Ejecutado = '" + objOrdenMttoPE.Ejecutado + "', Observaciones = '" + objOrdenMttoPE.Observaciones + "'where IdOrdenMttoP = '" + objOrdenMttoPE.IdOrdenMttoP + "'";
+        clMetodoCN objMtdCN = new clMetodoCN();
+        int regis = objMtdCN.mtdConectado(consulta);
+        return regis;
+    }
 }

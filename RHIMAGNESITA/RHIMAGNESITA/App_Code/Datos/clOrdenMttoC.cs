@@ -71,4 +71,11 @@ public class clOrdenMttoC
         int regis = objMtdCN.mtdConectado(consulta);
         return regis;
     }
+    public int mtdActualizarOrdenMttoC2(clOrdenMttoCE objOrdenMttoCE)
+    {
+        string consulta = "Update OrdenMttoCorrectivo set Ejecutado = '" + objOrdenMttoCE.Ejecutado + ", Observaciones = '" + objOrdenMttoCE.Observaciones + "'where IdOrdenMttoC = '" + objOrdenMttoCE.IdOrdenMttoC + "'";
+        clMetodoCN objMtdCN = new clMetodoCN();
+        int regis = objMtdCN.mtdConectado(consulta);
+        return regis;
+    }
 }

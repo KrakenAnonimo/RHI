@@ -40,4 +40,10 @@ public class clEjecucionML
         int Actualizar = objEjecucionMD.mtdActualizarEjecucionM(objDatos);
         return Actualizar;
     }
+    public int mtdActualizarEjecucionM2(clEjecucionME objDatos)
+    {
+        clEjecucionM objEjecucionMD = new clEjecucionM();
+        int Actualizar = objEjecucionMD.mtdActualizarEjecucionM2(objDatos);
+        return Actualizar;
+    }
 }
