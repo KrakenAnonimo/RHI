@@ -56,6 +56,7 @@
         Session["Correo"] = 0;
         Session["Clave"] = 0;
 
+        //Sesiones de ids
         Session["idPlanificacion"] = 0;
         Session["idTareaMtto"] = 0;
         Session["idElemento"] = 0;
