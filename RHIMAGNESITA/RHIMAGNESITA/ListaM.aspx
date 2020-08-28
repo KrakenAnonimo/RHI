@@ -2,12 +2,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <style type="text/css">
-        .auto-style7 {
-            position: relative;
-            left: 448px;
-            top: -36px;
-            width: 544px;
-        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -15,15 +9,15 @@
         <asp:ImageButton ID="imgbtnAtras" runat="server" ImageUrl="~/Vista/Iconos/atras.png" OnClick="imgbtnAtras_Click" />
     </div>
     <div>
-        <div style="position: relative; top: -11px; left: 188px; width: 1000px;" class="t-cn">
+        <div style="align-content: center; align-items: center; text-align: center;">
             <h2>Lista de Materialess</h2>
         </div>
         </div>
          <br />
     <div>
-        <div top: 6px; left: 5px; z-index: 1; height: 171px; width: 1285px" class="auto-style7">
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="IdMaterial" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" PageSize="5" Width="482px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
-                <AlternatingRowStyle BackColor="White" />
+        <div style="align-content: center; align-items: center; text-align: center;">
+            <asp:GridView AlternatingRowStyle-HorizontalAlign="NotSet" Width="100%" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="IdMaterial" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" PageSize="5" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" SelectedRowStyle-HorizontalAlign="NotSet" HeaderStyle-HorizontalAlign="NotSet" FooterStyle-HorizontalAlign="NotSet" EmptyDataRowStyle-HorizontalAlign="NotSet" EditRowStyle-HorizontalAlign="NotSet" HorizontalAlign="NotSet" PagerStyle-HorizontalAlign="Center" RowStyle-HorizontalAlign="NotSet" SortedAscendingCellStyle-HorizontalAlign="NotSet" SortedAscendingHeaderStyle-HorizontalAlign="NotSet" SortedDescendingCellStyle-HorizontalAlign="NotSet" SortedDescendingHeaderStyle-HorizontalAlign="NotSet" HeaderStyle-VerticalAlign="Middle">
+                <AlternatingRowStyle BackColor="White" HorizontalAlign="Left" />
                 <columns>
                     <asp:BoundField DataField="IdMaterial" HeaderText="IdMaterial" ReadOnly="True" SortExpression="IdMaterial" Visible="False" />
                     <asp:BoundField DataField="Codigo" HeaderText="Codigo" SortExpression="Codigo" />
@@ -34,15 +28,17 @@
                     <ControlStyle ForeColor="#3EC1D5" />
                     </asp:CommandField>
                 </columns>
-                <FooterStyle BackColor="#CCCC99" />
-                <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
-                <RowStyle BackColor="#F7F7DE" />
-                <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
-                <SortedAscendingCellStyle BackColor="#FBFBF2" />
-                <SortedAscendingHeaderStyle BackColor="#848384" />
-                <SortedDescendingCellStyle BackColor="#EAEAD3" />
-                <SortedDescendingHeaderStyle BackColor="#575357" />
+           <EditRowStyle HorizontalAlign="Left" />
+                    <EmptyDataRowStyle HorizontalAlign="Left" />
+                    <FooterStyle BackColor="#ffffff" VerticalAlign="Middle" HorizontalAlign="Left" />
+                    <HeaderStyle BackColor="#00BCD4" Font-Bold="True" ForeColor="White" Font-Overline="False" Font-Size="15px" HorizontalAlign="Center" Height="30px" />
+                    <PagerStyle BackColor="#ffffff" ForeColor="Black" HorizontalAlign="center" />
+                    <RowStyle BackColor="#ffffff" HorizontalAlign="Left" />
+                    <SelectedRowStyle BackColor="#848384" Font-Bold="True" ForeColor="White" HorizontalAlign="Left" />
+                    <SortedAscendingCellStyle BackColor="#848384" HorizontalAlign="Left" />
+                    <SortedAscendingHeaderStyle BackColor="#848384" HorizontalAlign="Left" />
+                    <SortedDescendingCellStyle BackColor="#848384" HorizontalAlign="Left" />
+                    <SortedDescendingHeaderStyle BackColor="#00BCD4" HorizontalAlign="Left" />
             </asp:GridView>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" DeleteCommand="DELETE FROM [Material] WHERE [IdMaterial] = @IdMaterial" InsertCommand="INSERT INTO [Material] ([Codigo], [Nombre], [Descripcion], [Unidad]) VALUES (@Codigo, @Nombre, @Descripcion, @Unidad)" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT [IdMaterial], [Codigo], [Nombre], [Descripcion], [Unidad] FROM [Material]" UpdateCommand="UPDATE [Material] SET [Codigo] = @Codigo, [Nombre] = @Nombre, [Descripcion] = @Descripcion, [Unidad] = @Unidad WHERE [IdMaterial] = @IdMaterial">
                 <deleteparameters>

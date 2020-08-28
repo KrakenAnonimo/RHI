@@ -1,51 +1,31 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="ListaP.aspx.cs" Inherits="ListaP" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <style type="text/css">
-        .auto-style7 {
-            width: 883px;
-            position: relative;
-            left: 485px;
-            top: -4px;
-        }
-
-        .auto-style14 {
-            margin-bottom: 15px;
-            width: 129px;
-            height: 54px;
-        }
-
-        .auto-style15 {
-            height: 12px;
-            width: 211px;
-            position: relative;
-            top: -12px;
-            left: 73px;
-        }
     </style>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-     <div style="width: 91px; position: relative; top: 0px; left: 40px">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div style="width: 91px; position: relative; top: 0px; left: 40px">
         <asp:ImageButton ID="imgbtnAtras" runat="server" ImageUrl="~/Vista/Iconos/atras.png" OnClick="imgbtnAtras_Click" />
     </div>
     <div>
-    <div class="auto-style7"> 
-        <div style="position: relative; top: -13px; left: 11px; width: 1000px;"><h2>Lista de las Planificaciones</h2>
-        </div>
-        </div>
-        </div>
-    <div style="width: 311px; position: relative; top: -11px; left: 589px">
-        <div class="auto-style14">
-            <asp:TextBox ID="txtBuscar" runat="server" placeholder="Buscar..." class="auto-style13" TextMode="Date"></asp:TextBox>
-        </div>
-        <div class="auto-style15">
-            <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-primary btn-sm" Style="position: relative; left: 111px; top: -58px" OnClick="btnBuscar_Click" />
+        <div>
+            <div style="align-content: center; align-items: center; text-align: center;">
+                <h2>Lista de las Planificaciones</h2>
+            </div>
         </div>
     </div>
-   
-        <div>
-        <div top: 6px; left: 5px; z-index: 1; height: 171px; width: 1285px" style="width: 828px; position: relative; top: -38px; left: 558px; height: 180px;">
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="IdPlanificacion" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" PageSize="5">
+    <div>
+        <div style="align-content: center; align-items: center; text-align: center;">
+            <asp:Label>Buscar por fechas: </asp:Label>
+            <asp:TextBox ID="txtBuscar" runat="server" placeholder="Buscar..." class="auto-style13" TextMode="Date"></asp:TextBox>
+            <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-primary btn-sm" OnClick="btnBuscar_Click" />
+        </div>
+    </div>
+    <div>
+        <div style="align-content: center; align-items: center; text-align: center;">
+            <asp:Panel ID="Panel1" runat="server">
+            <asp:GridView AlternatingRowStyle-HorizontalAlign="left" Width="100%" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="IdPlanificacion" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" PageSize="5" SelectedRowStyle-HorizontalAlign="NotSet" HeaderStyle-HorizontalAlign="NotSet" FooterStyle-HorizontalAlign="NotSet" EmptyDataRowStyle-HorizontalAlign="NotSet" EditRowStyle-HorizontalAlign="NotSet" HorizontalAlign="NotSet" PagerStyle-HorizontalAlign="Center" RowStyle-HorizontalAlign="NotSet" SortedAscendingCellStyle-HorizontalAlign="NotSet" SortedAscendingHeaderStyle-HorizontalAlign="NotSet" SortedDescendingCellStyle-HorizontalAlign="NotSet" SortedDescendingHeaderStyle-HorizontalAlign="NotSet" HeaderStyle-VerticalAlign="Middle">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:BoundField DataField="IdPlanificacion" HeaderText="IdPlanificacion" ReadOnly="True" SortExpression="IdPlanificacion" Visible="False" />
@@ -53,19 +33,21 @@
                     <asp:BoundField DataField="Observaciones" HeaderText="Observaciones" SortExpression="Observaciones" />
                     <asp:BoundField DataField="Estado" HeaderText="Estado" SortExpression="Estado" />
                     <asp:BoundField DataField="IdElemento" HeaderText="IdElemento" SortExpression="IdElemento" Visible="False" />
-                    <asp:CommandField SelectText="Ver" ShowSelectButton="True" >
-                    <ControlStyle ForeColor="#3EC1D5" />
+                    <asp:CommandField SelectText="Ver" ShowSelectButton="True">
+                        <ControlStyle ForeColor="#3EC1D5" />
                     </asp:CommandField>
                 </Columns>
-                <FooterStyle BackColor="#CCCC99" />
-                <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
-                <RowStyle BackColor="#F7F7DE" />
-                <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
-                <SortedAscendingCellStyle BackColor="#FBFBF2" />
-                <SortedAscendingHeaderStyle BackColor="#848384" />
-                <SortedDescendingCellStyle BackColor="#EAEAD3" />
-                <SortedDescendingHeaderStyle BackColor="#575357" />
+                 <EditRowStyle HorizontalAlign="Left" />
+                    <EmptyDataRowStyle HorizontalAlign="Left" />
+                    <FooterStyle BackColor="#ffffff" VerticalAlign="Middle" HorizontalAlign="Left" />
+                    <HeaderStyle BackColor="#00BCD4" Font-Bold="True" ForeColor="White" Font-Overline="False" Font-Size="15px" HorizontalAlign="Center" Height="30px" />
+                    <PagerStyle BackColor="#ffffff" ForeColor="Black" HorizontalAlign="center" />
+                    <RowStyle BackColor="#ffffff" HorizontalAlign="Left" />
+                    <SelectedRowStyle BackColor="#848384" Font-Bold="True" ForeColor="White" HorizontalAlign="Left" />
+                    <SortedAscendingCellStyle BackColor="#848384" HorizontalAlign="Left" />
+                    <SortedAscendingHeaderStyle BackColor="#848384" HorizontalAlign="Left" />
+                    <SortedDescendingCellStyle BackColor="#848384" HorizontalAlign="Left" />
+                    <SortedDescendingHeaderStyle BackColor="#00BCD4" HorizontalAlign="Left" />
             </asp:GridView>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" DeleteCommand="DELETE FROM [Planificacion] WHERE [IdPlanificacion] = @IdPlanificacion" InsertCommand="INSERT INTO [Planificacion] ([FechaPlanificacion], [Observaciones], [Estado], [IdElemento]) VALUES (@FechaPlanificacion, @Observaciones, @Estado, @IdElemento)" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT [IdPlanificacion], [FechaPlanificacion], [Observaciones], [Estado], [IdElemento] FROM [Planificacion]" UpdateCommand="UPDATE [Planificacion] SET [FechaPlanificacion] = @FechaPlanificacion, [Observaciones] = @Observaciones, [Estado] = @Estado, [IdElemento] = @IdElemento WHERE [IdPlanificacion] = @IdPlanificacion">
                 <DeleteParameters>
@@ -85,9 +67,8 @@
                     <asp:Parameter Name="IdPlanificacion" Type="Int32" />
                 </UpdateParameters>
             </asp:SqlDataSource>
-            
+            </asp:Panel>
         </div>
-        </div>
-
-    </asp:Content>
+    </div>
+</asp:Content>
 

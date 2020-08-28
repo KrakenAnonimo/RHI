@@ -9,18 +9,10 @@ public partial class ListaM : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Session["rol"].ToString() != "Admin")
-        {
-            Response.Redirect("~/ErrorASP.aspx");
-        }
-        else if (Session["rol"].ToString() != "Supervisor")
-        {
-            Response.Redirect("~/ErrorASP.aspx");
-        }
-        else if (Session["rol"].ToString() != "Planificador")
-        {
-            Response.Redirect("~/ErrorASP.aspx");
-        }
+        /* if (Session["rol"].ToString() != "Admin" && Session["rol"].ToString() != "Supervisor" && Session["rol"].ToString() != "Planificador")
+         {
+             Response.Redirect("~/ErrorASP.aspx");
+         }*/
     }
     protected void imgbtnAtras_Click(object sender, ImageClickEventArgs e)
     {

@@ -2,69 +2,68 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <style type="text/css">
-        .auto-style7 {
-            width: 636px;
-            position: relative;
-            top: -11px;
-            left: 428px;
-        }
+      
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-     <div style="width: 91px; position: relative; top: 0px; left: 40px">
+    <div style="width: 91px; position: relative; top: 0px; left: 40px">
         <asp:ImageButton ID="imgbtnAtras" runat="server" ImageUrl="~/Vista/Iconos/atras.png" OnClick="imgbtnAtras_Click" />
     </div>
     <div>
-        <div style="position: relative; top: -11px; left: 188px; width: 1000px;" class="t-cn">
+        <div style="align-content: center; align-items: center; text-align: center;">
             <h2>Lista de Elementos</h2>
         </div>
     </div>
     <br />
     <div>
-        <div top: 6px; left: 5px; z-index: 1; height: 171px; width: 1285px" class="auto-style7">
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="IdElemento" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" PageSize="5" Width="504px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
-                <AlternatingRowStyle BackColor="White" />
-                <Columns>
-                    <asp:BoundField DataField="IdElemento" HeaderText="IdElemento" ReadOnly="True" SortExpression="IdElemento" Visible="False" />
-                    <asp:BoundField DataField="Codigo" HeaderText="Codigo" SortExpression="Codigo" />
-                    <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
-                    <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
-                    <asp:BoundField DataField="Estado" HeaderText="Estado" SortExpression="Estado" />
-                    <asp:BoundField DataField="IdArea" HeaderText="IdArea" SortExpression="IdArea" Visible="False" />
-                    <asp:CommandField SelectText="Ver" ShowSelectButton="True">
-                    <ControlStyle ForeColor="#3EC1D5" />
-                    </asp:CommandField>
-                </Columns>
-                <FooterStyle BackColor="#CCCC99" />
-                <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
-                <RowStyle BackColor="#F7F7DE" />
-                <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
-                <SortedAscendingCellStyle BackColor="#FBFBF2" />
-                <SortedAscendingHeaderStyle BackColor="#848384" />
-                <SortedDescendingCellStyle BackColor="#EAEAD3" />
-                <SortedDescendingHeaderStyle BackColor="#575357" />
-            </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" DeleteCommand="DELETE FROM [Elemento] WHERE [IdElemento] = @IdElemento" InsertCommand="INSERT INTO [Elemento] ([Codigo], [Nombre], [Descripcion], [Estado], [IdArea]) VALUES (@Codigo, @Nombre, @Descripcion, @Estado, @IdArea)" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT [IdElemento], [Codigo], [Nombre], [Descripcion], [Estado], [IdArea] FROM [Elemento]" UpdateCommand="UPDATE [Elemento] SET [Codigo] = @Codigo, [Nombre] = @Nombre, [Descripcion] = @Descripcion, [Estado] = @Estado, [IdArea] = @IdArea WHERE [IdElemento] = @IdElemento">
-                <DeleteParameters>
-                    <asp:Parameter Name="IdElemento" Type="Int32" />
-                </DeleteParameters>
-                <InsertParameters>
-                    <asp:Parameter Name="Codigo" Type="String" />
-                    <asp:Parameter Name="Nombre" Type="String" />
-                    <asp:Parameter Name="Descripcion" Type="String" />
-                    <asp:Parameter Name="Estado" Type="String" />
-                    <asp:Parameter Name="IdArea" Type="Int32" />
-                </InsertParameters>
-                <UpdateParameters>
-                    <asp:Parameter Name="Codigo" Type="String" />
-                    <asp:Parameter Name="Nombre" Type="String" />
-                    <asp:Parameter Name="Descripcion" Type="String" />
-                    <asp:Parameter Name="Estado" Type="String" />
-                    <asp:Parameter Name="IdArea" Type="Int32" />
-                    <asp:Parameter Name="IdElemento" Type="Int32" />
-                </UpdateParameters>
-            </asp:SqlDataSource>
+        <div style="align-content: center; align-items: center; text-align: center;">
+            <asp:Panel ID="Panel1" runat="server">
+                <asp:GridView AlternatingRowStyle-HorizontalAlign="Center" Width="100%" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="IdElemento" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#ffffff" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" PageSize="5" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" SelectedRowStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" FooterStyle-HorizontalAlign="Center" EmptyDataRowStyle-HorizontalAlign="Center" EditRowStyle-HorizontalAlign="Center" HorizontalAlign="Center" PagerStyle-HorizontalAlign="Center" RowStyle-HorizontalAlign="Center" SortedAscendingCellStyle-HorizontalAlign="Center" SortedAscendingHeaderStyle-HorizontalAlign="Center" SortedDescendingCellStyle-HorizontalAlign="Center" SortedDescendingHeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle">
+                    <AlternatingRowStyle BackColor="White" HorizontalAlign="Left" />
+                    <Columns>
+                        <asp:BoundField DataField="IdElemento" HeaderText="IdElemento" ReadOnly="True" SortExpression="IdElemento" Visible="False" />
+                        <asp:BoundField DataField="Codigo" HeaderText="Codigo" SortExpression="Codigo" />
+                        <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                        <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
+                        <asp:BoundField DataField="Estado" HeaderText="Estado" SortExpression="Estado" />
+                        <asp:BoundField DataField="IdArea" HeaderText="IdArea" SortExpression="IdArea" Visible="False" />
+                        <asp:CommandField SelectText="Ver" ShowSelectButton="True">
+                            <ControlStyle ForeColor="#3EC1D5" />
+                        </asp:CommandField>
+                    </Columns>
+                    <EditRowStyle HorizontalAlign="Left" />
+                    <EmptyDataRowStyle HorizontalAlign="Left" />
+                    <FooterStyle BackColor="#ffffff" VerticalAlign="Middle" HorizontalAlign="Left" />
+                    <HeaderStyle BackColor="#00BCD4" Font-Bold="True" ForeColor="White" Font-Overline="False" Font-Size="15px" HorizontalAlign="Left" Height="30px" />
+                    <PagerStyle BackColor="#ffffff" ForeColor="Black" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#ffffff" HorizontalAlign="Left" />
+                    <SelectedRowStyle BackColor="#848384" Font-Bold="True" ForeColor="White" HorizontalAlign="Left" />
+                    <SortedAscendingCellStyle BackColor="#ffffff" HorizontalAlign="Left" />
+                    <SortedAscendingHeaderStyle BackColor="#848384" HorizontalAlign="Left" />
+                    <SortedDescendingCellStyle BackColor="#ffffff" HorizontalAlign="Left" />
+                    <SortedDescendingHeaderStyle BackColor="#00BCD4" HorizontalAlign="Left" />
+                </asp:GridView>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" DeleteCommand="DELETE FROM [Elemento] WHERE [IdElemento] = @IdElemento" InsertCommand="INSERT INTO [Elemento] ([Codigo], [Nombre], [Descripcion], [Estado], [IdArea]) VALUES (@Codigo, @Nombre, @Descripcion, @Estado, @IdArea)" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT [IdElemento], [Codigo], [Nombre], [Descripcion], [Estado], [IdArea] FROM [Elemento]" UpdateCommand="UPDATE [Elemento] SET [Codigo] = @Codigo, [Nombre] = @Nombre, [Descripcion] = @Descripcion, [Estado] = @Estado, [IdArea] = @IdArea WHERE [IdElemento] = @IdElemento">
+                    <DeleteParameters>
+                        <asp:Parameter Name="IdElemento" Type="Int32" />
+                    </DeleteParameters>
+                    <InsertParameters>
+                        <asp:Parameter Name="Codigo" Type="String" />
+                        <asp:Parameter Name="Nombre" Type="String" />
+                        <asp:Parameter Name="Descripcion" Type="String" />
+                        <asp:Parameter Name="Estado" Type="String" />
+                        <asp:Parameter Name="IdArea" Type="Int32" />
+                    </InsertParameters>
+                    <UpdateParameters>
+                        <asp:Parameter Name="Codigo" Type="String" />
+                        <asp:Parameter Name="Nombre" Type="String" />
+                        <asp:Parameter Name="Descripcion" Type="String" />
+                        <asp:Parameter Name="Estado" Type="String" />
+                        <asp:Parameter Name="IdArea" Type="Int32" />
+                        <asp:Parameter Name="IdElemento" Type="Int32" />
+                    </UpdateParameters>
+                </asp:SqlDataSource>
+            </asp:Panel>
         </div>
     </div>
 </asp:Content>
