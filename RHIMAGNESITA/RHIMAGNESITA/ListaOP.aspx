@@ -1,6 +1,42 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="ListaOP.aspx.cs" Inherits="ListaOP" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <style type="text/css">
+        .auto-style7 {
+            position: relative;
+            left: 320px;
+            top: 13px;
+            width: 211px;
+            height: 23px;
+        }
+        .auto-style9 {
+            width: 277px;
+        }
+        .auto-style10 {
+            width: 159px;
+            position: relative;
+            left: 767px;
+            top: -9px;
+        }
+        .auto-style11 {
+            width: 220px;
+        }
+        .auto-style12 {
+            width: 130px;
+            position: relative;
+            left: 947px;
+            top: -33px;
+        }
+        .auto-style13 {
+            width: 262px;
+        }
+        .auto-style14 {
+            width: 82px;
+            position: relative;
+            left: 1108px;
+            top: -58px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
      <div style="width: 91px; position: relative; top: 0px; left: 40px">
@@ -10,7 +46,26 @@
         <div style="position: relative; top: -15px; left: 233px; width: 1000px; margin-left: 40px;"><h2>Lista de las Ordenes de Mantenimiento Preventivas</h2>
         </div>
         </div>
-    <br />
+      <br />
+      <br />
+      <br />
+     <div style="margin-left: 40px;" class="auto-style7">
+       <div class="auto-style9">
+           <asp:RadioButtonList ID="rblEjec" runat="server" CssClass="auto-style11" AutoPostBack="True" RepeatDirection="Horizontal" OnSelectedIndexChanged="rblEjec_SelectedIndexChanged" >
+               <asp:ListItem>Ejecutada</asp:ListItem>
+               <asp:ListItem>Sin Ejecutar</asp:ListItem>
+           </asp:RadioButtonList>
+       </div>
+    </div>
+      <div class="auto-style10">
+                <label for="NombreA" class=" form-control-label">Buscar por Dicsiplina</label>        
+   </div>
+        <div class="auto-style12">
+            <asp:TextBox ID="txtBuscarD" runat="server" placeholder="Buscar..." class="auto-style13" Width="129px"></asp:TextBox>
+        </div>
+        <div class="auto-style14">
+            <asp:Button ID="btnBuscarD" runat="server" Text="Buscar" class="btn btn-primary btn-sm" Style="left: 111px; top: -58px" OnClick="btnBuscarD_Click"  />
+        </div>
      <div>
          <div top: 6px; left: 5px; z-index: 1; height: 171px; width: 1285px" style="width: 836px; position: relative; top: -38px; left: 282px; margin-left: 40px;">
              <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="IdOrdenMttoP" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" PageSize="5" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">

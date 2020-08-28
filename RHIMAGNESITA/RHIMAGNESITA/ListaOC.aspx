@@ -19,6 +19,33 @@
             left: -394px;
             top: 70px;
         }
+        
+        .auto-style14 {
+            width: 124px;
+            position: relative;
+            top: -9px;
+            left: 794px;
+        }
+        .auto-style15 {
+            width: 80px;
+            position: relative;
+            top: -36px;
+            left: 947px;
+        }
+        .auto-style16 {
+            position: relative;
+            top: -25px;
+            left: 684px;
+            width: 474px;
+            height: 23px;
+        }
+        .auto-style17 {
+            margin-bottom: 15px;
+            width: 169px;
+            position: relative;
+            left: 607px;
+            top: 28px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -30,7 +57,7 @@
         </div>
     </div>
     <br />
-    <div style="position: relative; top: -110px; left: 983px; width: 474px; height: 23px; margin-left: 40px;">
+    <div style="margin-left: 40px;" class="auto-style16">
        <div class="auto-style9">
            <asp:RadioButtonList ID="RadioButtonList1" runat="server" CssClass="auto-style11" AutoPostBack="True" RepeatDirection="Horizontal" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged" >
                <asp:ListItem>Ejecutada</asp:ListItem>
@@ -38,6 +65,15 @@
            </asp:RadioButtonList>
        </div>
     </div>
+    <div class="auto-style17">
+                <label for="NombreA" class=" form-control-label">Buscar por Dicsiplina</label>        
+   </div>
+        <div class="auto-style14">
+            <asp:TextBox ID="txtBuscar" runat="server" placeholder="Buscar..." class="auto-style13" OnTextChanged="txtBuscar_TextChanged"></asp:TextBox>
+        </div>
+        <div class="auto-style15">
+            <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-primary btn-sm" Style="left: 111px; top: -58px"  />
+        </div>
     <div>
         <div top: 6px; left: 5px; z-index: 1; height: 171px; width: 1285px" style="width: 836px; position: relative; top: -14px; left: 288px; text-align: center;">
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="IdOrdenMttoC" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" PageSize="5" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
