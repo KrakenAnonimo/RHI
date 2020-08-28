@@ -10,22 +10,21 @@
             <h2>Lista de Usuarios</h2>
         </div>
     </div>
-    <br />
     <div style="align-content: center; align-items: center; text-align: center;">
-        <div class="auto-style14">
-            <asp:TextBox ID="txtBuscar" runat="server" placeholder="Buscar..." class="auto-style13"></asp:TextBox>
-            <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-primary btn-sm" Style="position: relative; left: 111px; top: -58px" OnClick="btnBuscar_Click" />
-        </div>
+        <asp:Label>Buscar por Documento:</asp:Label>
+        <asp:TextBox ID="txtBuscar" runat="server" placeholder="Buscar..."></asp:TextBox>
+        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-primary btn-sm" OnClick="btnBuscar_Click" />
     </div>
-    <div>
-        <div style="align-content: center; align-items: center; text-align: center;">
+    <div style="align-content: center; align-items: center; text-align: center;">
+        <aps:label>Filtrar tabla por Rol:</aps:label>
+        <div style="align-content: center; align-items: center;>
             <asp:RadioButtonList ID="RadioButtonList1" runat="server" AutoPostBack="True" RepeatDirection="Horizontal" DataSourceID="SqldsRoles" DataTextField="Rol" DataValueField="IdRol" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged"></asp:RadioButtonList>
         </div>
     </div>
     <div>
         <div style="align-content: center; align-items: center; text-align: center;">
             <asp:Panel ID="Panel1" runat="server">
-                <asp:GridView AlternatingRowStyle-HorizontalAlign="left" Width="100%"  runat="server" AutoGenerateColumns="False" DataKeyNames="IdUsuario" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" PageSize="5" ID="GridView1" OnSelectedIndexChanged="Unnamed1_SelectedIndexChanged" SelectedRowStyle-HorizontalAlign="NotSet" HeaderStyle-HorizontalAlign="NotSet" FooterStyle-HorizontalAlign="NotSet" EmptyDataRowStyle-HorizontalAlign="NotSet" EditRowStyle-HorizontalAlign="NotSet" HorizontalAlign="NotSet" PagerStyle-HorizontalAlign="Center" RowStyle-HorizontalAlign="NotSet" SortedAscendingCellStyle-HorizontalAlign="NotSet" SortedAscendingHeaderStyle-HorizontalAlign="NotSet" SortedDescendingCellStyle-HorizontalAlign="NotSet" SortedDescendingHeaderStyle-HorizontalAlign="NotSet" HeaderStyle-VerticalAlign="Middle">
+                <asp:GridView AlternatingRowStyle-HorizontalAlign="left" Width="100%" runat="server" AutoGenerateColumns="False" DataKeyNames="IdUsuario" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" PageSize="5" ID="GridView1" OnSelectedIndexChanged="Unnamed1_SelectedIndexChanged" SelectedRowStyle-HorizontalAlign="NotSet" HeaderStyle-HorizontalAlign="NotSet" FooterStyle-HorizontalAlign="NotSet" EmptyDataRowStyle-HorizontalAlign="NotSet" EditRowStyle-HorizontalAlign="NotSet" HorizontalAlign="NotSet" PagerStyle-HorizontalAlign="Center" RowStyle-HorizontalAlign="NotSet" SortedAscendingCellStyle-HorizontalAlign="NotSet" SortedAscendingHeaderStyle-HorizontalAlign="NotSet" SortedDescendingCellStyle-HorizontalAlign="NotSet" SortedDescendingHeaderStyle-HorizontalAlign="NotSet" HeaderStyle-VerticalAlign="Middle">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:BoundField DataField="IdUsuario" HeaderText="IdUsuario" ReadOnly="True" SortExpression="IdUsuario" Visible="False"></asp:BoundField>
@@ -42,7 +41,7 @@
                             <ControlStyle ForeColor="#3EC1D5" />
                         </asp:CommandField>
                     </Columns>
-                      <EditRowStyle HorizontalAlign="Left" />
+                    <EditRowStyle HorizontalAlign="Left" />
                     <EmptyDataRowStyle HorizontalAlign="Left" />
                     <FooterStyle BackColor="#ffffff" VerticalAlign="Middle" HorizontalAlign="Left" />
                     <HeaderStyle BackColor="#00BCD4" Font-Bold="True" ForeColor="White" Font-Overline="False" Font-Size="15px" HorizontalAlign="Center" Height="30px" />
