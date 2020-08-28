@@ -16,7 +16,6 @@ public partial class REjecucionM : System.Web.UI.Page
     protected void btnGuardar_Click(object sender, EventArgs e)
     {
         clEjecucionME objEjcuacionEM = new clEjecucionME();
-        objEjcuacionEM.IdEjecucionM = int.Parse(lblIdEM.Text);
         objEjcuacionEM.Estado = cmbEstado.Text;
         objEjcuacionEM.Observaciones = txtObservaciones.Text;
 
