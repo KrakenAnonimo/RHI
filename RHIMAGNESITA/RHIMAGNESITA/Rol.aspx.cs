@@ -9,7 +9,10 @@ public partial class Rol : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (Session["rol"].ToString() != "Admin")
+        {
+            Response.Redirect("~/ErrorA.aspx");
+        }
     }
 
     protected void btnGuardar_Click(object sender, EventArgs e)

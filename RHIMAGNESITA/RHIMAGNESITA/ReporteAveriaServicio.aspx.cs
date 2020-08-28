@@ -9,13 +9,11 @@ public partial class ReporteAveriaServicio : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (Session["rol"].ToString() != "Admin" && Session["rol"].ToString() != "Supervisor" && Session["rol"].ToString() != "Planificador" && Session["rol"].ToString() != "Siso")
+        {
+            Response.Redirect("~/ErrorASP.aspx");
+        }
     }
-    protected void Page_Init(object sender, EventArgs e)
-    {
-
-    }
-
     protected void btnGuardar_Click(object sender, EventArgs e)
     {
         clReporteAveriaServicioE objReporteAveriaServicioE = new clReporteAveriaServicioE();

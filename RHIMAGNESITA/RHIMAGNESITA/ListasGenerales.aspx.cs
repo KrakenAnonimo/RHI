@@ -13,5 +13,13 @@ public partial class ListasGenerales : System.Web.UI.Page
         {
             Response.Redirect("~/ErrorASP.aspx");
         }
+        else if (Session["rol"].ToString() != "Supervisor")
+        {
+            Response.Redirect("~/ErrorASP.aspx");
+        }
+        else if (Session["rol"].ToString() != "Planificador")
+        {
+            Response.Redirect("~/ErrorASP.aspx");
+        }
     }
 }

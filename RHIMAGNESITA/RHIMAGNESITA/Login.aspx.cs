@@ -33,8 +33,14 @@ public partial class Login : System.Web.UI.Page
             Session["Clave"] = txtPasswordL.Text;
 
             //Sesiones no funcionales
-            Session["usuario"] = tblDatos.Rows[0][0].ToString();
-            Session["rol"] = tblDatos.Rows[0][1].ToString();
+            int cantidad = tblDatos.Rows.Count;
+            
+
+            Session["usuario"] = tblDatos.Rows[0][1].ToString();
+            Session["rol"] = tblDatos.Rows[0][0].ToString();
+
+            string usuario = Session["usuario"].ToString();
+            string rol = Session["rol"].ToString();
             //Redireccionamiento de pagina
             Response.Redirect("~/Perfil.aspx");
         }

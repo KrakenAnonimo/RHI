@@ -4,11 +4,12 @@
     <style>
         .auto-style9 {
             margin-bottom: 15px;
-            text-align: left;
+            text-align: center;
+            align-content:center;
             position: relative;
             top: 6px;
             left: -16px;
-            width: 234px;
+            width: 100%;
         }
 
         .auto-style11 {
@@ -19,30 +20,30 @@
             left: -394px;
             top: 70px;
         }
-        
+
         .auto-style14 {
-            width: 124px;
-            position: relative;
+            width: 100%;
+            text-align:center;
             top: -9px;
             left: 794px;
         }
+
         .auto-style15 {
             width: 80px;
-            position: relative;
             top: -36px;
             left: 947px;
         }
+
         .auto-style16 {
-            position: relative;
             top: -25px;
             left: 684px;
             width: 474px;
             height: 23px;
         }
+
         .auto-style17 {
             margin-bottom: 15px;
             width: 169px;
-            position: relative;
             left: 607px;
             top: 28px;
         }
@@ -53,7 +54,8 @@
         <asp:ImageButton ID="imgbtnAtras" runat="server" ImageUrl="~/Vista/Iconos/atras.png" OnClick="imgbtnAtras_Click" />
     </div>
     <div> 
-        <div style="position: relative; top: -11px; left: 188px; width: 1000px; text-align: center;"><h2>Lista de las Ordenes de Mantenimiento Correctivas</h2>
+        <div style=" top: -11px; left: 188px; width: 100%; text-align: center;">
+            <h2>Lista de las Ordenes de Mantenimiento Correctivas</h2>
         </div>
     </div>
     <br />
@@ -69,13 +71,11 @@
                 <label for="NombreA" class=" form-control-label">Buscar por Dicsiplina</label>        
    </div>
         <div class="auto-style14">
-            <asp:TextBox ID="txtBuscar" runat="server" placeholder="Buscar..." class="auto-style13" OnTextChanged="txtBuscar_TextChanged"></asp:TextBox>
-        </div>
-        <div class="auto-style15">
-            <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-primary btn-sm" Style="left: 111px; top: -58px"  />
+            <asp:DropDownList ID="cmbBusqueda" runat="server"></asp:DropDownList>
         </div>
     <div>
-        <div top: 6px; left: 5px; z-index: 1; height: 171px; width: 1285px" style="width: 836px; position: relative; top: -14px; left: 288px; text-align: center;">
+        <div top: 6px; left: 5px; z-index: 1; height: 171px; width: 100%" style="width: 100%; top: -14px; left: 288px; text-align: center;">
+            <asp:Panel ID="Panel1" runat="server">
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="IdOrdenMttoC" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" PageSize="5" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
@@ -140,6 +140,7 @@
                     <asp:Parameter Name="IdOrdenMttoC" Type="Int32" />
                 </UpdateParameters>
             </asp:SqlDataSource>
+                </asp:Panel>
         </div>
     </div>
 </asp:Content>

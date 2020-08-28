@@ -9,7 +9,10 @@ public partial class TareaMtto : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (Session["rol"].ToString() != "Admin" && Session["rol"].ToString() != "Supervisor" && Session["rol"].ToString() != "Planificador")
+        {
+            Response.Redirect("~/ErrorASP.aspx");
+        }
     }
 
     protected void btnGuardar_Click(object sender, EventArgs e)

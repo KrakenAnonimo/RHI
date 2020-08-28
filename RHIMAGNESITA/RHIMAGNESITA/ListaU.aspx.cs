@@ -11,6 +11,13 @@ public partial class ListaU : System.Web.UI.Page
     {
 
     }
+    protected void Page_Init(object sender, EventArgs e)
+    {
+        if (Session["rol"].ToString() != "Admin" && Session["rol"].ToString() != "Supervisor" && Session["rol"].ToString() != "Planificador")
+        {
+            Response.Redirect("~/ErrorASP.aspx");
+        }
+    }
     protected void imgbtnAtras_Click(object sender, ImageClickEventArgs e)
     {
         Response.Redirect("~/ListasGenerales.aspx");

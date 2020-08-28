@@ -9,7 +9,10 @@ public partial class ListaOC : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (Session["rol"].ToString() != "Admin" && Session["rol"].ToString() != "Supervisor" && Session["rol"].ToString() != "Planificador")
+        {
+            Response.Redirect("~/ErrorASP.aspx");
+        }
     }
     protected void imgbtnAtras_Click(object sender, ImageClickEventArgs e)
     {
@@ -28,13 +31,5 @@ public partial class ListaOC : System.Web.UI.Page
         //Busqueda por ejecucion en la consulta
         SqlDataSource1.SelectCommand = SqlDataSource1.SelectCommand = "SELECT OrdenMttoCorrectivo.* FROM OrdenMttoCorrectivo WHERE OrdenMttoCorrectivo.Ejecutado Like '%" + RadioButtonList1.Text + "%'";
         SqlDataSource1.DataBind();
-    }
-
-    protected void txtBuscar_TextChanged(object sender, EventArgs e)
-    {
-        //Busqueda por ejecucion en la consulta
-        SqlDataSource1.SelectCommand = SqlDataSource1.SelectCommand = "SELECT OrdenMttoCorrectivo.* FROM OrdenMttoCorrectivo WHERE OrdenMttoCorrectivo.Disciplina Like '%" + txtBuscar.Text + "%'";
-        SqlDataSource1.DataBind();
-        txtBuscar.Text = "";
     }
 }
