@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ErrorASP.aspx.cs" Inherits="ErrorASP" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ErrorS.aspx.cs" Inherits="ErrorS" %>
 
 <!DOCTYPE html>
 
@@ -121,7 +121,7 @@
 
         <p class="auto-style5"></p>
         <div class="auto-style7">
-            <h1>Error de Acceso al Control de Registro de datos, ingrese con alguno de estos roles (Admin,Supervisor,Planificador).</h1>
+            <h1>Error de Acceso al Control de Registro de datos, ingrese con el rol de Siso.</h1>
         </div>
         <!-- header-area end -->
         </header>

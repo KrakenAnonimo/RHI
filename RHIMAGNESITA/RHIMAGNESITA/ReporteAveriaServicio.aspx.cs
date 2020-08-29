@@ -9,10 +9,10 @@ public partial class ReporteAveriaServicio : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Session["rol"].ToString() != "Admin" && Session["rol"].ToString() != "Supervisor" && Session["rol"].ToString() != "Planificador" && Session["rol"].ToString() != "Siso")
+        /*if (Session["rol"].ToString() != "Admin" && Session["rol"].ToString() != "Supervisor" && Session["rol"].ToString() != "Planificador" && Session["rol"].ToString() != "Siso")
         {
             Response.Redirect("~/ErrorASP.aspx");
-        }
+        }*/
     }
     protected void btnGuardar_Click(object sender, EventArgs e)
     {
@@ -21,8 +21,6 @@ public partial class ReporteAveriaServicio : System.Web.UI.Page
         objReporteAveriaServicioE.Titulo = txtTitulo.Text;
         objReporteAveriaServicioE.Descripcion = txtDescripcion.Text;
         objReporteAveriaServicioE.FechaReporte = txtFechaReporte.Text;
-        objReporteAveriaServicioE.IdElemento = int.Parse(cmbElemento.SelectedValue.ToString());
-        objReporteAveriaServicioE.IdUsuario = int.Parse(cmbUsuario.SelectedValue.ToString());
 
         clReporteAveriaServicio objReporteAveriaServicio = new clReporteAveriaServicio();
         int resultsql = objReporteAveriaServicio.mtdRegistrarReporteAS(objReporteAveriaServicioE);
@@ -37,8 +35,6 @@ public partial class ReporteAveriaServicio : System.Web.UI.Page
             txtTitulo.Text = "";
             txtDescripcion.Text = "";
             txtFechaReporte.Text = "";
-            cmbElemento.Text = "";
-            cmbUsuario.Text = "";
 
             //Redirecionar la pagina
             Response.Redirect("~/ReporteAveriaServicio.aspx");
@@ -51,7 +47,5 @@ public partial class ReporteAveriaServicio : System.Web.UI.Page
         txtTitulo.Text = "";
         txtDescripcion.Text = "";
         txtFechaReporte.Text = "";
-        cmbElemento.Text = "";
-        cmbUsuario.Text = "";
     }
 }

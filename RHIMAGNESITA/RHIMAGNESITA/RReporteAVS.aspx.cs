@@ -9,9 +9,9 @@ public partial class RReporteAVS : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Session["rol"].ToString() != "Tecnico" && Session["rol"].ToString() != "Soldador")
+        if (Session["rol"].ToString() != "Siso")
         {
-            Response.Redirect("~/ErrorTS.aspx");
+            Response.Redirect("~/ErrorS.aspx");
         }
     }
 
