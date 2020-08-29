@@ -14,19 +14,23 @@
         </div>
     </div>
     <div>
-        <div style=" align-content: center; align-items:center; text-align:center;">
-            <label for="Ejecucion" class=" form-control-label">Buscar por Ejecucion: 
-                <asp:RadioButtonList ID="RadioButtonList1" runat="server" AutoPostBack="True" RepeatDirection="Horizontal" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged">
+        <div style="align-content: center; align-items: center; text-align: center;">
+            <label for="Ejecucion" class=" form-control-label">
+                Buscar por Ejecucion: 
+                <asp:RadioButtonList ID="RadioButtonList1" runat="server" AutoPostBack="True" RepeatDirection="Horizontal" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged" Height="22px" Width="193px">
                     <asp:ListItem>Ejecutada</asp:ListItem>
                     <asp:ListItem>Sin Ejecutar</asp:ListItem>
                 </asp:RadioButtonList>
-                </label>
-            </div>
+            </label>
         </div>
     </div>
-    <div style="align-content: center; align-items:center; text-align:center;">
+    </div>
+    <div style="align-content: center; align-items: center; text-align: center;">
         <label for="NombreA" class=" form-control-label">Buscar por Disciplina: </label>
-        <asp:DropDownList ID="cmbBusqueda" runat="server"></asp:DropDownList>
+        <div>
+            <asp:TextBox ID="txtBuscarE" runat="server" placeholder="Buscar..."></asp:TextBox>
+            <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-primary btn-sm"  />
+        </div>
     </div>
     <div>
         <div style="width: 100%;">
