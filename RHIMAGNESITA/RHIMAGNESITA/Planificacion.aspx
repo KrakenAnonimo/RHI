@@ -10,7 +10,7 @@
             text-align: center;
             padding-left: 15px;
             padding-right: 15px;
-            left: 360px;
+            left: 339px;
             top: -75px;
         }
 
@@ -33,8 +33,8 @@
         .auto-style12 {
             width: 246px;
             position: relative;
-            left: 362px;
-            top: 12px;
+            left: 363px;
+            top: 34px;
         }
 
         .auto-style13 {
@@ -66,14 +66,14 @@
         }
 
         .auto-style15 {
-            height: 12px;
-            width: 663px;
+            height: 15px;
+            width: 658px;
         }
 
         .auto-style16 {
             width: 296px;
-            top: -68px;
-            left: 147px;
+            top: -88px;
+            left: 176px;
             z-index: 3;
             height: 64px;
             position: relative;
@@ -82,18 +82,13 @@
         .auto-style17 {
             width: 207px;
             position: relative;
-            top: -72px;
-            left: 177px;
+            top: -86px;
+            left: 214px;
         }
 
         .auto-style18 {
             text-align: center;
             width: 559px;
-        }
-
-        .auto-style19 {
-            text-align: center;
-            width: 571px;
         }
 
         .auto-style20 {
@@ -103,8 +98,16 @@
         }
 
         .auto-style21 {
+            text-align: center;
             margin-bottom: 15px;
             width: 567px;
+        }
+
+        .auto-style22 {
+            width: 301px;
+            position: relative;
+            top: -311px;
+            left: 168px;
         }
     </style>
 </asp:Content>
@@ -130,7 +133,7 @@
                                 </div>
                                 <div class="row form-group">
                                     <div class="text-center">
-                                        <label for="selectSm" class="form-control-label">Busque el Elemento con su planificacion:</label>
+                                        <label for="selectSm" class="form-control-label">Busque un Elemento con su planificacion para selecionarlo:</label>
                                     </div>
                                 </div>
                                 <div>
@@ -227,6 +230,9 @@
                                 <div class="auto-style17">
                                     <asp:Label runat="server" Text="Elemento Seleccionado: " ID="lblelemento"></asp:Label>
                                 </div>
+                                <div class="auto-style22">
+                                    <asp:Label runat="server" Text="Elementos existentes con sus planificaciones:" ID="lbltexto"></asp:Label>
+                                </div>
                                 <div class="auto-style16">
                                     <asp:GridView runat="server" ID="gvElementoS" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" Height="16px" Width="268px" ForeColor="Black" GridLines="Vertical">
                                         <AlternatingRowStyle BackColor="White" />
@@ -245,30 +251,28 @@
                                     <label for="FechaP" class=" form-control-label">Fecha Planificacion</label>
                                     <asp:TextBox ID="txtFechaP" runat="server" placeholder="Elija una fecha de planificacion" class="form-control" TextMode="Date" Width="551px"></asp:TextBox>
                                 </div>
-                                <div class="form-group">
+                                <div class="auto-style21">
                                     <div class="text-center">
                                         <label for="textarea-input" class=" form-control-label">Observaciones</label>
                                     </div>
-                                    <div class="auto-style18">
+                                    <div class="text-center">
                                         <asp:TextBox ID="txtObservaciones" runat="server" Rows="9" placeholder="Observaciones..." class="form-control" TextMode="MultiLine" Width="553px"></asp:TextBox>
                                     </div>
                                 </div>
-                                <div class="row form-group">
-                                    <div class="auto-style19">
+                                <div class="auto-style21">
+                                    <div class="text-center">
                                         <label for="selectSm" class="form-control-label">Estado</label>
                                     </div>
-                                    <div class="auto-style20">
+                                    <div class="text-center">
                                         <asp:DropDownList ID="cmbEstado" runat="server" CssClass="auto-style8">
                                             <asp:ListItem>Por Ejecutar</asp:ListItem>
                                             <asp:ListItem>Ejecutada</asp:ListItem>
                                         </asp:DropDownList>
                                     </div>
                                 </div>
-                                <div>
-                                </div>
 
                                 <div class="row form-group">
-                                    <div>
+                                    <div class="text-center">
                                         <div>
                                             <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" OnClick="btnGuardar_Click" />
                                             <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar Todo" class="btn btn-danger btn-sm" OnClick="btnLimpiar_Click" />
