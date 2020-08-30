@@ -5,19 +5,22 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div style="width: 91px; position: relative; top: 0px; left: 40px">
+        <asp:ImageButton ID="imgbtnAtras" runat="server" ImageUrl="~/Vista/Iconos/atras.png" OnClick="imgbtnAtras_Click" />
+    </div>
     <div>
         <div style="align-content: center; align-items: center; text-align: center;">
             <h2>Lista de Usuarios</h2>
         </div>
     </div>
     <div style="align-content: center; align-items: center; text-align: center;">
-        <asp:Label>Buscar por Documento:</asp:Label>
+        <asp:Label runat="server">Buscar por Documento:</asp:Label>
         <asp:TextBox ID="txtBuscar" runat="server" placeholder="Buscar..."></asp:TextBox>
         <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-primary btn-sm" OnClick="btnBuscar_Click" />
     </div>
     <div style="align-content: center; align-items: center; text-align: center;">
-        <aps:label>Filtrar tabla por Rol:</aps:label>
-        <div style="align-content: center; align-items: center;>
+        <aps:label runat="server">Filtrar tabla por Rol:</aps:label>
+        <div style="align-content: center; align-items: center;">
             <asp:RadioButtonList ID="RadioButtonList1" runat="server" AutoPostBack="True" RepeatDirection="Horizontal" DataSourceID="SqldsRoles" DataTextField="Rol" DataValueField="IdRol" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged"></asp:RadioButtonList>
         </div>
     </div>
