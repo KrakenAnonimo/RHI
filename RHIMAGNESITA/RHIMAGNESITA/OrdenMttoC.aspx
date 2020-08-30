@@ -82,7 +82,7 @@
                                         <label for="selectSm" class="form-control-label">Orden de Mtto Preventivo</label>
                                     </div>
                                     <div class="text-center">
-                                        <asp:DropDownList ID="cmbOrdenMttoP" runat="server" CssClass="auto-style8" >
+                                        <asp:DropDownList ID="cmbOrdenMttoP" runat="server" CssClass="auto-style8">
                                         </asp:DropDownList>
                                     </div>
                                 </div>
@@ -95,7 +95,7 @@
                                     </div>
                                     <div>
                                         <asp:GridView ID="gvUsuarios" runat="server" AutoGenerateColumns="False" DataKeyNames="IdUsuario" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" CssClass="auto-style12" PageSize="5" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
-                                            <columns>
+                                            <Columns>
                                                 <asp:BoundField DataField="IdUsuario" HeaderText="IdUsuario" ReadOnly="True" SortExpression="IdUsuario" Visible="False" />
                                                 <asp:BoundField DataField="Documento" HeaderText="Documento" SortExpression="Documento" />
                                                 <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
@@ -107,13 +107,13 @@
                                                 <asp:BoundField DataField="Direccion" HeaderText="Direccion" SortExpression="Direccion" Visible="False" />
                                                 <asp:BoundField DataField="IdRol" HeaderText="IdRol" SortExpression="IdRol" Visible="False" />
                                                 <asp:CommandField ShowSelectButton="True" />
-                                            </columns>
+                                            </Columns>
                                         </asp:GridView>
                                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" DeleteCommand="DELETE FROM [Usuario] WHERE [IdUsuario] = @IdUsuario" InsertCommand="INSERT INTO [Usuario] ([Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol]) VALUES (@Documento, @Nombre, @Apellido, @Telefono, @Email, @Clave, @Ciudad, @Direccion, @IdRol)" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT [IdUsuario], [Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol] FROM [Usuario]" UpdateCommand="UPDATE [Usuario] SET [Documento] = @Documento, [Nombre] = @Nombre, [Apellido] = @Apellido, [Telefono] = @Telefono, [Email] = @Email, [Clave] = @Clave, [Ciudad] = @Ciudad, [Direccion] = @Direccion, [IdRol] = @IdRol WHERE [IdUsuario] = @IdUsuario">
-                                            <deleteparameters>
+                                            <DeleteParameters>
                                                 <asp:Parameter Name="IdUsuario" Type="Int32" />
-                                            </deleteparameters>
-                                            <insertparameters>
+                                            </DeleteParameters>
+                                            <InsertParameters>
                                                 <asp:Parameter Name="Documento" Type="String" />
                                                 <asp:Parameter Name="Nombre" Type="String" />
                                                 <asp:Parameter Name="Apellido" Type="String" />
@@ -123,8 +123,8 @@
                                                 <asp:Parameter Name="Ciudad" Type="String" />
                                                 <asp:Parameter Name="Direccion" Type="String" />
                                                 <asp:Parameter Name="IdRol" Type="Int32" />
-                                            </insertparameters>
-                                            <updateparameters>
+                                            </InsertParameters>
+                                            <UpdateParameters>
                                                 <asp:Parameter Name="Documento" Type="String" />
                                                 <asp:Parameter Name="Nombre" Type="String" />
                                                 <asp:Parameter Name="Apellido" Type="String" />
@@ -135,7 +135,7 @@
                                                 <asp:Parameter Name="Direccion" Type="String" />
                                                 <asp:Parameter Name="IdRol" Type="Int32" />
                                                 <asp:Parameter Name="IdUsuario" Type="Int32" />
-                                            </updateparameters>
+                                            </UpdateParameters>
                                         </asp:SqlDataSource>
 
                                         <asp:SqlDataSource ID="SqldsRoles" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT Rol.* FROM Rol"></asp:SqlDataSource>
@@ -155,7 +155,13 @@
                                 <div>
                                     <div class="auto-style3">
                                         <label for="Disciplina" class=" form-control-label">Disciplina</label>
-                                        <asp:TextBox ID="txtDisciplina" runat="server" placeholder="Disciplina" class="form-control" TextMode="SingleLine"></asp:TextBox>
+                                        <div class="text-center">
+                                            <asp:DropDownList ID="cmbDisciplina" runat="server" CssClass="auto-style8">
+                                                <asp:ListItem Value="Mecanico">Mecanico</asp:ListItem>
+                                                <asp:ListItem Value="Electrico">Electrico</asp:ListItem>
+                                                <asp:ListItem Value="Soldadura">Soldadura</asp:ListItem>
+                                            </asp:DropDownList>
+                                        </div>
                                     </div>
                                     <div class="auto-style3">
                                         <label for="FechaOI" class=" form-control-label">Fecha Inicial</label>

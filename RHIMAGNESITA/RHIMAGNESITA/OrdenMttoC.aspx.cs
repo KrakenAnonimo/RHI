@@ -67,7 +67,7 @@ public partial class OrdenMttoC : System.Web.UI.Page
     {
         clOrdenMttoCE objOrdenMttoCE = new clOrdenMttoCE();
         objOrdenMttoCE.NumOrden = txtNumOrdenC.Text;
-        objOrdenMttoCE.Disciplina = txtDisciplina.Text;
+        objOrdenMttoCE.Disciplina = cmbDisciplina.Text;
         objOrdenMttoCE.FechaInicio = txtFechaOI.Text;
         objOrdenMttoCE.HoraInicio = txtHoraI.Text;
         objOrdenMttoCE.FechaFinal = txtFechaOF.Text;
@@ -114,7 +114,6 @@ public partial class OrdenMttoC : System.Web.UI.Page
     {
         //Limpiar Campos de texto
         txtNumOrdenC.Text = "";
-        txtDisciplina.Text = "";
         txtFechaOI.Text = "";
         txtHoraI.Text = "";
         txtFechaOF.Text = "";

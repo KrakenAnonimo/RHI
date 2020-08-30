@@ -27,7 +27,7 @@ public partial class Inicio5 : System.Web.UI.Page
         }
         else if (Session["rol"].ToString() == "NN")
         {
-            Response.Redirect("~/Index.aspx.aspx");
+            Response.Redirect("~/Index.aspx");
         }
     }
 }
