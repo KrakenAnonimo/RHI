@@ -84,7 +84,7 @@ public partial class OrdenMttoP : System.Web.UI.Page
     {
         clOrdenMttoPE objOrdenMttoPE = new clOrdenMttoPE();
         objOrdenMttoPE.NumOrden = txtNumOrdenP.Text;
-        objOrdenMttoPE.Disciplina = txtDisciplina.Text;
+        objOrdenMttoPE.Disciplina = cmbDis.Text;
         objOrdenMttoPE.FechaInicio = txtFechaOI.Text;
         objOrdenMttoPE.HoraInicio = txtHoraI.Text;
         objOrdenMttoPE.FechaFinal = txtFechaOF.Text;
@@ -130,7 +130,6 @@ public partial class OrdenMttoP : System.Web.UI.Page
             Response.Write("<script>alert('Se registro una nueva Orden de Mantenimiento Preventiva correctamente!');window.location.href='OrdenMttoP.aspx'</script>");
             //Limpiar Campos de texto
             txtNumOrdenP.Text = "";
-            txtDisciplina.Text = "";
             txtFechaOI.Text = "";
             txtHoraI.Text = "";
             txtFechaOF.Text = "";
@@ -144,7 +143,6 @@ public partial class OrdenMttoP : System.Web.UI.Page
     protected void btnLimpiar_Click(object sender, EventArgs e)
     {
         txtNumOrdenP.Text = "";
-        txtDisciplina.Text = "";
         txtFechaOI.Text = "";
         txtHoraI.Text = "";
         txtFechaOF.Text = "";

@@ -63,7 +63,7 @@
             top: 144px;
             left: -15px;
         }
-        
+
         .auto-style19 {
             display: block;
             width: 74%;
@@ -85,6 +85,7 @@
             left: 204px;
             top: 15px;
         }
+
         .auto-style20 {
             margin-bottom: 15px;
             width: 262px;
@@ -119,42 +120,42 @@
                                     </div>
                                 </div>
                                 <div class="text-center">
-                                        <label for="selectSm" class="form-control-label">Planificacion</label>
+                                    <label for="selectSm" class="form-control-label">Planificacion</label>
+                                </div>
+                                <div class="text-center">
+                                    <div class="auto-style20">
+                                        <asp:TextBox ID="txtBuscarE" runat="server" placeholder="Buscar..." class="auto-style19" TextMode="Date"></asp:TextBox>
                                     </div>
-                                    <div class="text-center">
-                                        <div class="auto-style20">
-                                            <asp:TextBox ID="txtBuscarE" runat="server" placeholder="Buscar..." class="auto-style19" TextMode="Date"></asp:TextBox>
-                                        </div>
-                                        <div>
-                                            <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-primary btn-sm" Style="position: relative; left: 111px; top: -58px" OnClick="btnBuscar_Click" />
-                                        </div>
+                                    <div>
+                                        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-primary btn-sm" Style="position: relative; left: 111px; top: -58px" OnClick="btnBuscar_Click" />
                                     </div>
+                                </div>
                                 <div class="row form-group">
                                     <div>
                                         <asp:GridView ID="gvPlanificacion" runat="server" AutoGenerateColumns="False" DataKeyNames="IdPlanificacion" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" CssClass="auto-style16" PageSize="5" OnSelectedIndexChanged="GridView2_SelectedIndexChanged">
-                                            <Columns>
+                                            <columns>
                                                 <asp:BoundField DataField="IdPlanificacion" HeaderText="IdPlanificacion" ReadOnly="True" SortExpression="IdPlanificacion" Visible="False" />
                                                 <asp:BoundField DataField="FechaPlanificacion" HeaderText="FechaPlanificacion" SortExpression="FechaPlanificacion" />
                                                 <asp:BoundField DataField="Observaciones" HeaderText="Observaciones" SortExpression="Observaciones" />
                                                 <asp:BoundField DataField="IdElemento" HeaderText="IdElemento" SortExpression="IdElemento" Visible="False" />
                                                 <asp:CommandField ShowSelectButton="True" />
-                                            </Columns>
+                                            </columns>
                                         </asp:GridView>
                                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" DeleteCommand="DELETE FROM [Planificacion] WHERE [IdPlanificacion] = @IdPlanificacion" InsertCommand="INSERT INTO [Planificacion] ([FechaPlanificacion], [Observaciones], [IdElemento]) VALUES (@FechaPlanificacion, @Observaciones, @IdElemento)" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT [IdPlanificacion], [FechaPlanificacion], [Observaciones], [IdElemento] FROM [Planificacion]" UpdateCommand="UPDATE [Planificacion] SET [FechaPlanificacion] = @FechaPlanificacion, [Observaciones] = @Observaciones, [IdElemento] = @IdElemento WHERE [IdPlanificacion] = @IdPlanificacion">
-                                            <DeleteParameters>
+                                            <deleteparameters>
                                                 <asp:Parameter Name="IdPlanificacion" Type="Int32" />
-                                            </DeleteParameters>
-                                            <InsertParameters>
+                                            </deleteparameters>
+                                            <insertparameters>
                                                 <asp:Parameter Name="FechaPlanificacion" Type="String" />
                                                 <asp:Parameter Name="Observaciones" Type="String" />
                                                 <asp:Parameter Name="IdElemento" Type="Int32" />
-                                            </InsertParameters>
-                                            <UpdateParameters>
+                                            </insertparameters>
+                                            <updateparameters>
                                                 <asp:Parameter Name="FechaPlanificacion" Type="String" />
                                                 <asp:Parameter Name="Observaciones" Type="String" />
                                                 <asp:Parameter Name="IdElemento" Type="Int32" />
                                                 <asp:Parameter Name="IdPlanificacion" Type="Int32" />
-                                            </UpdateParameters>
+                                            </updateparameters>
                                         </asp:SqlDataSource>
 
                                     </div>
@@ -173,7 +174,7 @@
                                     </div>
                                     <div>
                                         <asp:GridView ID="gvUsuarios" runat="server" AutoGenerateColumns="False" DataKeyNames="IdUsuario" DataSourceID="SqlDataSource3" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" CssClass="auto-style15" PageSize="5" OnSelectedIndexChanged="gvUsuario_SelectedIndexChanged">
-                                            <Columns>
+                                            <columns>
                                                 <asp:BoundField DataField="IdUsuario" HeaderText="IdUsuario" ReadOnly="True" SortExpression="IdUsuario" Visible="False" />
                                                 <asp:BoundField DataField="Documento" HeaderText="Documento" SortExpression="Documento" />
                                                 <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
@@ -185,13 +186,13 @@
                                                 <asp:BoundField DataField="Direccion" HeaderText="Direccion" SortExpression="Direccion" Visible="False" />
                                                 <asp:BoundField DataField="IdRol" HeaderText="IdRol" SortExpression="IdRol" Visible="False" />
                                                 <asp:CommandField ShowSelectButton="True" />
-                                            </Columns>
+                                            </columns>
                                         </asp:GridView>
                                         <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" DeleteCommand="DELETE FROM [Usuario] WHERE [IdUsuario] = @IdUsuario" InsertCommand="INSERT INTO [Usuario] ([Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol]) VALUES (@Documento, @Nombre, @Apellido, @Telefono, @Email, @Clave, @Ciudad, @Direccion, @IdRol)" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT [IdUsuario], [Documento], [Nombre], [Apellido], [Telefono], [Email], [Clave], [Ciudad], [Direccion], [IdRol] FROM [Usuario]" UpdateCommand="UPDATE [Usuario] SET [Documento] = @Documento, [Nombre] = @Nombre, [Apellido] = @Apellido, [Telefono] = @Telefono, [Email] = @Email, [Clave] = @Clave, [Ciudad] = @Ciudad, [Direccion] = @Direccion, [IdRol] = @IdRol WHERE [IdUsuario] = @IdUsuario">
-                                            <DeleteParameters>
+                                            <deleteparameters>
                                                 <asp:Parameter Name="IdUsuario" Type="Int32" />
-                                            </DeleteParameters>
-                                            <InsertParameters>
+                                            </deleteparameters>
+                                            <insertparameters>
                                                 <asp:Parameter Name="Documento" Type="String" />
                                                 <asp:Parameter Name="Nombre" Type="String" />
                                                 <asp:Parameter Name="Apellido" Type="String" />
@@ -201,8 +202,8 @@
                                                 <asp:Parameter Name="Ciudad" Type="String" />
                                                 <asp:Parameter Name="Direccion" Type="String" />
                                                 <asp:Parameter Name="IdRol" Type="Int32" />
-                                            </InsertParameters>
-                                            <UpdateParameters>
+                                            </insertparameters>
+                                            <updateparameters>
                                                 <asp:Parameter Name="Documento" Type="String" />
                                                 <asp:Parameter Name="Nombre" Type="String" />
                                                 <asp:Parameter Name="Apellido" Type="String" />
@@ -213,7 +214,7 @@
                                                 <asp:Parameter Name="Direccion" Type="String" />
                                                 <asp:Parameter Name="IdRol" Type="Int32" />
                                                 <asp:Parameter Name="IdUsuario" Type="Int32" />
-                                            </UpdateParameters>
+                                            </updateparameters>
                                         </asp:SqlDataSource>
 
                                         <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT Rol.* FROM Rol"></asp:SqlDataSource>
@@ -230,7 +231,13 @@
                                 </div>
                                 <div class="auto-style3">
                                     <label for="Disciplina" class=" form-control-label">Disciplina</label>
-                                    <asp:TextBox ID="txtDisciplina" runat="server" placeholder="Disciplina" class="form-control" TextMode="SingleLine"></asp:TextBox>
+                                    <div class="text-center">
+                                        <asp:DropDownList ID="cmbDis" runat="server" CssClass="auto-style8">
+                                            <asp:ListItem Value="Mecanico">Mecanico</asp:ListItem>
+                                            <asp:ListItem Value="Electrico">Electrico</asp:ListItem>
+                                            <asp:ListItem Value="Soldadura">Soldadura</asp:ListItem>
+                                        </asp:DropDownList>
+                                    </div>
                                 </div>
                                 <div class="auto-style3">
                                     <label for="FechaOI" class=" form-control-label">Fecha Inicial</label>

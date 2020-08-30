@@ -29,13 +29,13 @@
         <label for="NombreA" class=" form-control-label">Buscar por Disciplina: </label>
         <div>
             <asp:TextBox ID="txtBuscarE" runat="server" placeholder="Buscar..."></asp:TextBox>
-            <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-primary btn-sm"  />
+            <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-primary btn-sm" OnClick="btnBuscar_Click" />
         </div>
     </div>
     <div>
         <div style="width: 100%;">
             <asp:Panel ID="Panel1" runat="server">
-                <asp:GridView AlternatingRowStyle-HorizontalAlign="Center" Width="100%" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="IdOrdenMttoC" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" PageSize="5" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" SelectedRowStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" FooterStyle-HorizontalAlign="Center" EmptyDataRowStyle-HorizontalAlign="Center" EditRowStyle-HorizontalAlign="Center" HorizontalAlign="Center" PagerStyle-HorizontalAlign="Center" RowStyle-HorizontalAlign="Center" SortedAscendingCellStyle-HorizontalAlign="Center" SortedAscendingHeaderStyle-HorizontalAlign="Center" SortedDescendingCellStyle-HorizontalAlign="Center" SortedDescendingHeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle">
+                <asp:GridView AlternatingRowStyle-HorizontalAlign="Center" Width="100%" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="IdOrdenMttoC" DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" PageSize="15" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" SelectedRowStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" FooterStyle-HorizontalAlign="Center" EmptyDataRowStyle-HorizontalAlign="Center" EditRowStyle-HorizontalAlign="Center" HorizontalAlign="Center" PagerStyle-HorizontalAlign="Center" RowStyle-HorizontalAlign="Center" SortedAscendingCellStyle-HorizontalAlign="Center" SortedAscendingHeaderStyle-HorizontalAlign="Center" SortedDescendingCellStyle-HorizontalAlign="Center" SortedDescendingHeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle">
                     <AlternatingRowStyle BackColor="White" HorizontalAlign="Left" />
                     <Columns>
                         <asp:BoundField DataField="IdOrdenMttoC" HeaderText="IdOrdenMttoC" ReadOnly="True" SortExpression="IdOrdenMttoC" Visible="False">
