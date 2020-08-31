@@ -3,59 +3,58 @@
 <!DOCTYPE html>
 
 <html>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-   <title>RHI-MAGNESITA</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
-    <style type="text/css">
-        .auto-style5 {
-            height: 20px;
-            color: rgb(0, 0, 0);
-            background: #000000;
-            text-align: center;
-        }
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>RHI-MAGNESITA</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="" name="keywords">
+<meta content="" name="description">
+<asp:ContentPlaceHolder ID="head" runat="server">
+</asp:ContentPlaceHolder>
+<style type="text/css">
+    .auto-style5 {
+        height: 20px;
+        color: rgb(0, 0, 0);
+        background: #000000;
+        text-align: center;
+    }
 
-        .auto-style6 {
-            height: 20px;
-            color: rgb(0, 0, 0);
-            background: #999999;
-            text-align: center;
-        }
-    </style>
+    .auto-style6 {
+        height: 20px;
+        color: rgb(0, 0, 0);
+        background: #999999;
+        text-align: center;
+    }
+</style>
 
-    <!-- Favicons -->
-    <link href="Vista/PgPrin/img/favicon.png" rel="icon">
-    <link href="Vista/PgPrin/img/apple-touch-icon.png" rel="apple-touch-icon">
+<!-- Favicons -->
+<link href="Vista/PgPrin/img/favicon.png" rel="icon">
+<link href="Vista/PgPrin/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
 
-    <!-- Bootstrap CSS File -->
-    <link href="Vista/PgPrin/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap CSS File -->
+<link href="Vista/PgPrin/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Libraries CSS Files -->
-    <link href="Vista/PgPrin/lib/nivo-slider/css/nivo-slider.css" rel="stylesheet">
-    <link href="Vista/PgPrin/lib/owlcarousel/owl.carousel.css" rel="stylesheet">
-    <link href="Vista/PgPrin/lib/owlcarousel/owl.transitions.css" rel="stylesheet">
-    <link href="Vista/PgPrin/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="Vista/PgPrin/lib/animate/animate.min.css" rel="stylesheet">
-    <link href="Vista/PgPrin/lib/venobox/venobox.css" rel="stylesheet">
+<!-- Libraries CSS Files -->
+<link href="Vista/PgPrin/lib/nivo-slider/css/nivo-slider.css" rel="stylesheet">
+<link href="Vista/PgPrin/lib/owlcarousel/owl.carousel.css" rel="stylesheet">
+<link href="Vista/PgPrin/lib/owlcarousel/owl.transitions.css" rel="stylesheet">
+<link href="Vista/PgPrin/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="Vista/PgPrin/lib/animate/animate.min.css" rel="stylesheet">
+<link href="Vista/PgPrin/lib/venobox/venobox.css" rel="stylesheet">
+<!-- Nivo Slider Theme -->
+<link href="Vista/PgPrin/css/nivo-slider-theme.css" rel="stylesheet">
 
-    <!-- Nivo Slider Theme -->
-    <link href="Vista/PgPrin/css/nivo-slider-theme.css" rel="stylesheet">
+<!-- Main Stylesheet File -->
+<link href="Vista/PgPrin/css/style.css" rel="stylesheet">
 
-    <!-- Main Stylesheet File -->
-    <link href="Vista/PgPrin/css/style.css" rel="stylesheet">
-
-    <!-- Responsive Stylesheet File -->
-    <link href="Vista/PgPrin/css/responsive.css" rel="stylesheet">
+<!-- Responsive Stylesheet File -->
+<link href="Vista/PgPrin/css/responsive.css" rel="stylesheet">
 </head>
 <body>
-     <form id="form1" runat="server">
-    <div>
+    <form id="form1" runat="server">
+        <div>
             <div id="preloader"></div>
             <header>
                 <!-- header-area start -->
@@ -81,9 +80,10 @@
                                             <!-- <img src="img/logo.png" alt="" title=""> -->
                                         </a>
                                     </div>
+                                  
                                     <!-- Collect the nav links, forms, and other content for toggling -->
                                     <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
-                                         <ul class="nav navbar-nav navbar-right">
+                                        <ul class="nav navbar-nav navbar-right">
                                             <li>
                                                 <a class="page-scroll" href="Inicio5.aspx">Inicio</a>
                                             </li>
@@ -125,7 +125,7 @@
         </asp:ContentPlaceHolder>
         </div>
     </form>
-     <!--fin Var-->
+    <!--fin Var-->
     <!--Pie-->
     <div>
         <footer>
