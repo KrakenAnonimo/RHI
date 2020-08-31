@@ -71,6 +71,7 @@ public partial class TareaMtto : System.Web.UI.Page
 
     protected void Unnamed1_SelectedIndexChanged(object sender, EventArgs e)
     {
+        lblElemento.Text = gvElementos.SelectedRow.Cells[1].Text + " " + gvElementos.SelectedRow.Cells[2].Text;
         fila = gvElementos.SelectedRow.RowIndex;
 
         //clase Elemento

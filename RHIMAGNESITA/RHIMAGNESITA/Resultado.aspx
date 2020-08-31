@@ -14,12 +14,12 @@
         <asp:ImageButton ID="imgbtnAtras" runat="server" ImageUrl="~/Vista/Iconos/atras.png" OnClick="imgbtnAtras_Click" />
     </div>
     <div>
-        <div style="align-content: left; align-items: left; text-align: left;">
+        <div style="align-content: center; align-items: center; text-align: center;">
             <h2>LISTA SEGUIMIENTOS</h2>
         </div>
     </div>
     <br />
-    <div>
+    <div style="align-content: center; align-items: center; text-align: center;">
         <label for="SeguimientoP" class=" form-control-label">Seguimiento Preventivo</label>
     </div>
     <br />
@@ -67,7 +67,7 @@
         </asp:SqlDataSource>
     </div>
     <br />
-    <div>
+    <div style="align-content: center; align-items: center; text-align: center;">
         <label for="SeguimientoC" class=" form-control-label">Seguimiento Correctivo</label>
     </div>
     <br />

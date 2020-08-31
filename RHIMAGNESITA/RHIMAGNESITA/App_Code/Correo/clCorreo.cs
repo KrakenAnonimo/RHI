@@ -14,7 +14,7 @@ public class clCorreo
     String merror;
     public clCorreo(string destinatario, string asunto, string mensaje)
     {
-        string body ="Bienvenido a RHI-Magneista!   " +
+        string body ="Bienvenido a RHI-Magnesita!   " +
                "Querido Usuario, " +
                "Se registro correctamente en la plataforma!. ";
 

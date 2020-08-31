@@ -14,39 +14,6 @@
             top: -75px;
         }
 
-        .auto-style9 {
-            margin-bottom: 15px;
-            width: 262px;
-            height: 54px;
-        }
-
-        .auto-style10 {
-            display: block;
-            width: 74%;
-            height: 19px;
-            padding: 6px 12px;
-            font-size: 14px;
-            line-height: 1.42857143;
-            color: #555;
-            background-color: #fff;
-            background-image: none;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-            box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-            -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-            -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-            transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-            position: relative;
-            left: 204px;
-            top: 15px;
-        }
-
-        .auto-style11 {
-            position: relative;
-            left: 84px;
-            top: -24px;
-        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -84,14 +51,12 @@
                                     <div class="text-center">
                                         <label for="selectSm" class="form-control-label">Elemento</label>
                                     </div>
-                                    <div class="auto-style9">
-                                        <asp:TextBox ID="txtBuscarE" runat="server" placeholder="Buscar..." class="auto-style10"></asp:TextBox>
-                                    </div>
-                                    <div>
-                                        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-primary btn-sm" Style="position: relative; left: 111px; top: -58px" OnClick="btnBuscar_Click" />
+                                    <div style="align-content: center; align-items: center; text-align: center;">
+                                        <asp:TextBox ID="txtBuscarE" runat="server" placeholder="Buscar..."></asp:TextBox>
+                                        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-primary btn-sm" OnClick="btnBuscar_Click" />
                                     </div>
                                     <div class="text-center">
-                                        <asp:GridView runat="server" AutoGenerateColumns="False" DataKeyNames="IdElemento" DataSourceID="SqlDataSource2" EmptyDataText="No hay registros de datos para mostrar." class="auto-style11" AllowPaging="True" AllowSorting="True" PageSize="5" ID="gvElementos" OnSelectedIndexChanged="Unnamed1_SelectedIndexChanged">
+                                        <asp:GridView AlternatingRowStyle-HorizontalAlign="left" Width="50%" runat="server" AutoGenerateColumns="False" DataKeyNames="IdElemento" DataSourceID="SqlDataSource2" EmptyDataText="No hay registros de datos para mostrar." AllowPaging="True" AllowSorting="True" PageSize="5" ID="gvElementos" OnSelectedIndexChanged="Unnamed1_SelectedIndexChanged" SelectedRowStyle-HorizontalAlign="NotSet" HeaderStyle-HorizontalAlign="NotSet" FooterStyle-HorizontalAlign="NotSet" EmptyDataRowStyle-HorizontalAlign="NotSet" EditRowStyle-HorizontalAlign="NotSet" HorizontalAlign="NotSet" PagerStyle-HorizontalAlign="Center" RowStyle-HorizontalAlign="NotSet" SortedAscendingCellStyle-HorizontalAlign="NotSet" SortedAscendingHeaderStyle-HorizontalAlign="NotSet" SortedDescendingCellStyle-HorizontalAlign="NotSet" SortedDescendingHeaderStyle-HorizontalAlign="NotSet" HeaderStyle-VerticalAlign="Middle">
                                             <Columns>
                                                 <asp:BoundField DataField="IdElemento" HeaderText="IdElemento" ReadOnly="True" SortExpression="IdElemento" Visible="False"></asp:BoundField>
                                                 <asp:BoundField DataField="Codigo" HeaderText="Codigo" SortExpression="Codigo"></asp:BoundField>
@@ -101,6 +66,17 @@
                                                 <asp:BoundField DataField="IdArea" HeaderText="IdArea" SortExpression="IdArea" Visible="False"></asp:BoundField>
                                                 <asp:CommandField ShowSelectButton="True" />
                                             </Columns>
+                                            <EditRowStyle HorizontalAlign="Left" />
+                                            <EmptyDataRowStyle HorizontalAlign="Left" />
+                                            <FooterStyle BackColor="#ffffff" VerticalAlign="Middle" HorizontalAlign="Left" />
+                                            <HeaderStyle BackColor="#00BCD4" Font-Bold="True" ForeColor="White" Font-Overline="False" Font-Size="15px" HorizontalAlign="Center" Height="30px" />
+                                            <PagerStyle BackColor="#ffffff" ForeColor="Black" HorizontalAlign="center" />
+                                            <RowStyle BackColor="#ffffff" HorizontalAlign="Left" />
+                                            <SelectedRowStyle BackColor="#848384" Font-Bold="True" ForeColor="White" HorizontalAlign="Left" />
+                                            <SortedAscendingCellStyle BackColor="#848384" HorizontalAlign="Left" />
+                                            <SortedAscendingHeaderStyle BackColor="#848384" HorizontalAlign="Left" />
+                                            <SortedDescendingCellStyle BackColor="#848384" HorizontalAlign="Left" />
+                                            <SortedDescendingHeaderStyle BackColor="#00BCD4" HorizontalAlign="Left" />
                                         </asp:GridView>
                                         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" DeleteCommand="DELETE FROM [Elemento] WHERE [IdElemento] = @IdElemento" InsertCommand="INSERT INTO [Elemento] ([Codigo], [Nombre], [Descripcion], [Estado], [IdArea]) VALUES (@Codigo, @Nombre, @Descripcion, @Estado, @IdArea)" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT [IdElemento], [Codigo], [Nombre], [Descripcion], [Estado], [IdArea] FROM [Elemento]" UpdateCommand="UPDATE [Elemento] SET [Codigo] = @Codigo, [Nombre] = @Nombre, [Descripcion] = @Descripcion, [Estado] = @Estado, [IdArea] = @IdArea WHERE [IdElemento] = @IdElemento">
                                             <DeleteParameters>
@@ -123,13 +99,13 @@
                                             </UpdateParameters>
                                         </asp:SqlDataSource>
                                     </div>
-                                    <div style="width: 168px; position: absolute; top: 566px; left: 402px; z-index: 1; height: 44px">
+                                    <div style="align-content: center; align-items: center; text-align: center;" class="auto-style12">
                                         <asp:Label ID="lblQueElemento" runat="server" Text="Elemento Seleccionado: "></asp:Label>
                                         <br />
                                         <asp:Label ID="lblElemento" runat="server" Text=""></asp:Label>
                                     </div>
-                                    <div style="width: 234px; position: absolute; top: 625px; left: 403px; z-index: 2; height: 139px">
-                                        <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+                                    <div style="align-content: center; align-items: center; text-align: center;">
+                                        <asp:GridView ID="GridView1" runat="server" Visible="False"></asp:GridView>
                                     </div>
                                 </div>
                                 <div>

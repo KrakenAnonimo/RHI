@@ -7,15 +7,15 @@
         <div style="position: relative; top: -5px; left: 22px;">
             <div class="btn-toolbar" role="toolbar">
                 <button type="button" class="btn btn-default btn-lg" onclick="location.href='ResultadoEP.aspx'">
-                    <span class="glyphicon glyphicon-user"></span>Lista de Resultado Planificacion de Elemento
+                    <span class="glyphicon glyphicon-check"></span>Lista de Resultado Planificacion de Elemento
                 </button>
                 <div class="btn-toolbar" role="toolbar">
                     <button type="button" class="btn btn-default btn-lg" onclick="location.href='Resultado.aspx'">
-                        <span class="glyphicon glyphicon-tree-deciduous"></span>Lista de Resultado Seguimiento
+                        <span class="glyphicon glyphicon-check"></span>Lista de Resultado Seguimiento
                     </button>
                     <div class="btn-toolbar" role="toolbar">
-                        <button type="button" class="btn btn-default btn-lg" onclick="location.href='asdasd.aspx'">
-                            <span class="glyphicon glyphicon-leaf"></span>Lista de Resultado xxxx
+                        <button type="button" class="btn btn-default btn-lg" onclick="location.href='ReporteInventario.aspx'">
+                            <span class="glyphicon glyphicon-check"></span>Lista de Resultado del Inventario
                         </button>
                     </div>
                 </div>

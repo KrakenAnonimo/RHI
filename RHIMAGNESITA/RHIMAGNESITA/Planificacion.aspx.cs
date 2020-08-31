@@ -46,12 +46,12 @@ public partial class Planificacion : System.Web.UI.Page
         SqlDataSource1.DataBind();
         txtBuscarE.Text = "";
     }
-    public class clUsuarios
+    public class clTareaMttoEe
     {
-        //Atributos Tabla Usuarios
-        public int IdUsuario { get; set; }
-        public string Documento { get; set; }
-        public string Nombre { get; set; }
+        
+        //Atributos Tabla TareaMtto
+        public int IdTareaMtto { get; set; }
+        public string NombreTM { get; set; }
     }
     public class clElementop
     {
