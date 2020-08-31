@@ -11,7 +11,7 @@
     </div>
     <div>
         <div style="align-content: center; align-items: center; text-align: center;">
-            <h2>Reporte de inventario y herramientas</h2>
+            <h2>Lista del Reporte de inventario y/o herramientas en sus Areas</h2>
         </div>
     </div>
     <div style="align-content: center; align-items: center; text-align: center;">

@@ -17,6 +17,6 @@ public partial class ReporteInventario : System.Web.UI.Page
 
     protected void imgbtnAtras_Click(object sender, ImageClickEventArgs e)
     {
-        Response.Redirect("~/ListasGenerales.aspx");
+        Response.Redirect("~/ResultadosGenerales.aspx");
     }
 }
