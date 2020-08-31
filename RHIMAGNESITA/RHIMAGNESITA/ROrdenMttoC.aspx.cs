@@ -10,10 +10,10 @@ public partial class ROrdenMttoC : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Session["rol"].ToString() != "Tecnico" && Session["rol"].ToString() != "Soldador")
+        /*if (Session["rol"].ToString() != "Tecnico" && Session["rol"].ToString() != "Soldador")
         {
             Response.Redirect("~/ErrorTS.aspx");
-        }
+        }*/
     }
 
     protected void btnGuardar_Click(object sender, EventArgs e)
