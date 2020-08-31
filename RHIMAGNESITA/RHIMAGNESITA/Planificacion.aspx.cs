@@ -10,10 +10,10 @@ public partial class Planificacion : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Session["rol"].ToString() != "Admin" && Session["rol"].ToString() != "Supervisor" && Session["rol"].ToString() != "Planificador")
+       /* if (Session["rol"].ToString() != "Admin" && Session["rol"].ToString() != "Supervisor" && Session["rol"].ToString() != "Planificador")
         {
             Response.Redirect("~/ErrorASP.aspx");
-        }
+        }*/
     }
     protected void btnLimpiar_Click(object sender, EventArgs e)
     {
@@ -21,8 +21,6 @@ public partial class Planificacion : System.Web.UI.Page
         txtFechaP.Text = "";
         txtObservaciones.Text = "";
     }
-
-  
 
     int filas = 0;
     protected void gvElemento_SelectedIndexChanged(object sender, EventArgs e)

@@ -102,7 +102,6 @@ public partial class OrdenMttoC : System.Web.UI.Page
             Response.Write("<script>alert('Se registro una nueva Orden de Mantenimiento Correctiva correctamente!');window.location.href='OrdenMttoC.aspx'</script>");
             //Limpiar Campos de texto
             txtNumOrdenC.Text = "";
-            txtDisciplina.Text = "";
             txtFechaOI.Text = "";
             txtHoraI.Text = "";
             txtFechaOF.Text = "";
