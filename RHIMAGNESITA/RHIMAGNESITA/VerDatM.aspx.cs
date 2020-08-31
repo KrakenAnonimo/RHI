@@ -10,10 +10,10 @@ public partial class VerDatM : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Session["rol"].ToString() != "Admin" && Session["rol"].ToString() != "Supervisor" && Session["rol"].ToString() != "Planificador")
-        {
-            Response.Redirect("~/ErrorASP.aspx");
-        }
+       // if (Session["rol"].ToString() != "Admin" && Session["rol"].ToString() != "Supervisor" && Session["rol"].ToString() != "Planificador")
+        //{
+          //  Response.Redirect("~/ErrorASP.aspx");
+        //}
     }
     protected void Page_Init(object sender, EventArgs e)
     {
@@ -47,6 +47,21 @@ public partial class VerDatM : System.Web.UI.Page
         {
             //enviar mensaje 
             Response.Write("<script>alert('Datos actualizados del Material!.');window.location.href='ListaM.aspx'</script>");
+        }
+    }
+
+    protected void btnEliminar_Click(object sender, EventArgs e)
+    {
+        clMaterialE objMaterialE = new clMaterialE();
+        objMaterialE.Nombre = txtNombreM.Text;
+
+        clMaterial objMaterial = new clMaterial();
+        int resultsql = objMaterial.mtdEliminarMaterial(objMaterialE);
+
+        if (resultsql > 0)
+        {
+            //enviar mensaje 
+            Response.Write("<script>alert('Dato Eliminado correctamente!.');window.location.href='ListaM.aspx'</script>");
         }
     }
 }
