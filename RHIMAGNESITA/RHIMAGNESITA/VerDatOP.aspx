@@ -63,7 +63,7 @@
                     <td>
                        <asp:DropDownList ID="cmbEjecutadoP" runat="server">
                             <asp:ListItem>Sin Ejecutar</asp:ListItem>
-                            <asp:ListItem>Ejecutada</asp:ListItem>
+                            <asp:ListItem>Ejecutado</asp:ListItem>
                         </asp:DropDownList>
                     </td>
                 </tr>

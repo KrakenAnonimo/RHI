@@ -17,7 +17,7 @@
     </div>
     <div>
         <div style="align-content: center; align-items: center; text-align: center;">
-            <asp:Label>Buscar por fechas: </asp:Label>
+            <asp:Label runat="server" >Buscar por fechas: </asp:Label>
             <asp:TextBox ID="txtBuscar" runat="server" placeholder="Buscar..." class="auto-style13" TextMode="Date"></asp:TextBox>
             <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-primary btn-sm" OnClick="btnBuscar_Click" />
         </div>

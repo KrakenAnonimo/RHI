@@ -165,7 +165,7 @@
                                     <div class="text-center">
                                         <asp:DropDownList ID="cmbEjecucionOr" runat="server" class="form-control-sm form-control" Style="width: 97%; position: relative; left: 9px; top: 0px">
                                             <asp:ListItem>En Ejecucion</asp:ListItem>
-                                            <asp:ListItem>Ejecutada</asp:ListItem>
+                                            <asp:ListItem>Ejecutado</asp:ListItem>
                                         </asp:DropDownList>
                                     </div>
                                 </div>

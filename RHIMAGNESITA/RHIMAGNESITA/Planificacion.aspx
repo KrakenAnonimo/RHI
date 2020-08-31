@@ -193,7 +193,7 @@
                             <div style="align-content: center; align-items: center; text-align: center;">
                                 <asp:DropDownList ID="cmbEstado" runat="server" class="form-control">
                                     <asp:ListItem>Por Ejecutar</asp:ListItem>
-                                    <asp:ListItem>Ejecutada</asp:ListItem>
+                                    <asp:ListItem>Ejecutado</asp:ListItem>
                                 </asp:DropDownList>
                             </div>
                         </div>
