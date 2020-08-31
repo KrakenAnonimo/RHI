@@ -108,8 +108,11 @@
                                                     <li><a href="EjecucionM.aspx">Ejecucion Mantenimiento</a></li>
                                                 </ul>
                                             </li>
-                                            <li>
-                                                <a class="page-scroll" href="ListasGenerales.aspx">Listas</a>
+                                             <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Listas Generales<span class="caret"></span></a>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="ListasGenerales.aspx">Listas</a></li>
+                                                    <li><a href="ResultadosGenerales.aspx">Resultados</a></li>
+                                                </ul>
                                             </li>
                                             <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-sliders" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
