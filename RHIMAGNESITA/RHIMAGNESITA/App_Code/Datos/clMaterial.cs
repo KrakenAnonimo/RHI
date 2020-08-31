@@ -26,7 +26,7 @@ public class clMaterial
     //Metodo Eliminar Material
     public int mtdEliminarMaterial(clMaterialE objDatos)
     {
-        string consulta = "Delete from Material where Nombre = '" + objDatos.Nombre + "')";
+        string consulta = "Delete from Material where Nombre = '" + objDatos.Nombre + "'";
         clMetodoCN objMtdCN = new clMetodoCN();
         int result = objMtdCN.mtdConectado(consulta);
 
