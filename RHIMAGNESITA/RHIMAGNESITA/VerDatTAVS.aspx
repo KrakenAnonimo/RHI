@@ -1,8 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="VerDatTAVS.aspx.cs" Inherits="VerDatTAVS" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div style="width: 91px; position: relative; top: 0px; left: 40px">
         <asp:ImageButton ID="imgbtnAtras" runat="server" ImageUrl="~/Vista/Iconos/atras.png" OnClick="imgbtnAtras_Click" />
     </div>
@@ -25,19 +25,19 @@
                 <tr>
                     <th scope="row">Nombre de la Tarea:</th>
                     <td>
-                         <asp:TextBox ID="txtNombreTAVS" runat="server" Text=""></asp:TextBox>
+                        <asp:TextBox ID="txtNombreTAVS" runat="server" Text=""></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">Duracion:</th>
                     <td>
-                       <asp:TextBox runat="server" ID="txtDuracionTAVS" placeholder="Horas" class="form-control" TextMode="Number"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="txtDuracionTAVS" placeholder="Horas" class="form-control" TextMode="Number"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">Fecha de Ejecucion:</th>
                     <td>
-                         <asp:TextBox ID="txtFechaTAVS" runat="server" TextMode="Date"></asp:TextBox>
+                        <asp:TextBox ID="txtFechaTAVS" runat="server" TextMode="Date"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -57,7 +57,9 @@
     </div>
     <div class="auto-style7">
         <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" OnClick="btnGuardar_Click" />
-        <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-danger btn-sm"  />
+        <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-danger btn-sm" />
+        <asp:Button ID="btnDescargarExcel" runat="server" Text="Descargar Excel" class="btn btn-warning btn-sm" OnClick="btnDescargarExcel_Click" />
+        <asp:Button ID="btnDescargarPdf" runat="server" Text="Descargar PDF" class="btn btn-warning btn-sm" OnClick="btnDescargarPdf_Click" />
     </div>
     <div>
         <asp:SqlDataSource ID="SqldsTAVS" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT IdTareaAS, NombreAS, Duracion, FechaEjecucion, IdOrdenMttoP, IdOrdenMttoC FROM TareaAveriaServicio WHERE (IdTareaAS = @idTAVS)">

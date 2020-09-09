@@ -19,7 +19,7 @@
         <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-primary btn-sm" OnClick="btnBuscar_Click" />
     </div>
     <div style="align-content: center; align-items: center; text-align: center;">
-        <aps:label runat="server">Filtrar tabla por Rol:</aps:label>
+        <asp:Label ID="Label1" runat="server" Text="Filtrar tabla por Rol:"></asp:Label>
         <div style="align-content: center; align-items: center;">
             <asp:RadioButtonList ID="RadioButtonList1" runat="server" AutoPostBack="True" RepeatDirection="Horizontal" DataSourceID="SqldsRoles" DataTextField="Rol" DataValueField="IdRol" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged"></asp:RadioButtonList>
         </div>

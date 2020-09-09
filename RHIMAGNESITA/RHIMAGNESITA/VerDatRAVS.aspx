@@ -64,6 +64,8 @@
     <div class="auto-style7">
         <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" OnClick="btnGuardar_Click" />
         <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-danger btn-sm" />
+         <asp:Button ID="btnDescargarExcel" runat="server" Text="Descargar Excel" class="btn btn-warning btn-sm" OnClick="btnDescargarExcel_Click"/>
+         <asp:Button ID="btnDescargarPdf" runat="server" Text="Descargar PDF" class="btn btn-warning btn-sm" OnClick="btnDescargarPdf_Click"/>
     </div>
     <div>
         <asp:SqlDataSource ID="SqldsRAVS" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT IdReporteAS, NumReporte, Titulo, Descripcion, FechaReporte, IdElemento, IdUsuario FROM ReporteAveriaServicio WHERE (IdReporteAS = @idRAVS)">
