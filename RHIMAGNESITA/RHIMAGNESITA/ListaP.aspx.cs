@@ -19,18 +19,18 @@ public partial class ListaP : System.Web.UI.Page
         Response.Redirect("~/ListasGenerales.aspx");
     }
 
-    protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
-    {
-        int numFila = GridView1.SelectedRow.RowIndex;
-        Session["idPlanificacion"] = GridView1.DataKeys[numFila].Value;
-        Response.Redirect("~/VerDatP.aspx");
-    }
-
     protected void btnBuscar_Click(object sender, EventArgs e)
     {
         //Busqueda por fecha en la consulta
         SqlDataSource1.SelectCommand = SqlDataSource1.SelectCommand = "SELECT Planificacion.* FROM Planificacion WHERE Planificacion.FechaPlanificacion Like '%" + txtBuscar.Text + "%'";
         SqlDataSource1.DataBind();
         txtBuscar.Text = "";
+    }
+
+    protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+         int numFila = GridView1.SelectedRow.RowIndex;
+         Session["idPlanificacion"] = GridView1.DataKeys[numFila].Value;
+         Response.Redirect("~/VerDatP.aspx");
     }
 }
