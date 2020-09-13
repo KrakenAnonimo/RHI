@@ -26,12 +26,6 @@ public partial class ListaOC : System.Web.UI.Page
         Response.Redirect("~/VerDatOC.aspx");
     }
 
-    protected void RadioButtonList1_SelectedIndexChanged(object sender, EventArgs e)
-    {
-        //Busqueda por ejecucion en la consulta
-        SqlDataSource1.SelectCommand = SqlDataSource1.SelectCommand = "SELECT OrdenMttoCorrectivo.* FROM OrdenMttoCorrectivo WHERE OrdenMttoCorrectivo.Ejecutado Like '%" + RadioButtonList1.Text + "%'";
-        SqlDataSource1.DataBind();
-    }
     protected void btnBuscar_Click(object sender, EventArgs e)
     {
         //Busqueda por Disciplina en la consulta

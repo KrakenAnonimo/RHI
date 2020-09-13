@@ -41,7 +41,7 @@
                     <th scope="row">Estado:</th>
                     <td>
                         <asp:DropDownList ID="cmbEstadoP" runat="server">
-                            <asp:ListItem>Por Ejecutar</asp:ListItem>
+                            <asp:ListItem>Sin Ejecutar</asp:ListItem>
                             <asp:ListItem>Ejecutada</asp:ListItem>
                         </asp:DropDownList>
                     </td>
