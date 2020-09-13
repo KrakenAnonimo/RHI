@@ -28,7 +28,7 @@ public partial class VerDatP : System.Web.UI.Page
 
         lblIdP.Text = Session["idPlanificacion"].ToString();
         txtFechaP.Text = tblDatos.Rows[0][1].ToString();
-        lblObservaciones.Text = tblDatos.Rows[0][2].ToString();
+        txtObservaciones.Text = tblDatos.Rows[0][2].ToString();
         cmbEstadoP.Text = tblDatos.Rows[0][3].ToString();
         lblIdE.Text = tblDatos.Rows[0][4].ToString();
     }
@@ -43,6 +43,7 @@ public partial class VerDatP : System.Web.UI.Page
         clPlanificacionE objPlanificacionE = new clPlanificacionE();
         objPlanificacionE.IdPlanificacion = int.Parse(lblIdP.Text);
         objPlanificacionE.FechaPlanificacion = txtFechaP.Text;
+        objPlanificacionE.Observaciones = txtObservaciones.Text;
         objPlanificacionE.Estado = cmbEstadoP.Text;
 
         clPlanificacion objPlanificacion = new clPlanificacion();
@@ -131,7 +132,7 @@ public partial class VerDatP : System.Web.UI.Page
 
         lblIdP.Text = Session["idPlanificacion"].ToString();
         txtFechaP.Text = tblDatos.Rows[0][1].ToString();
-        lblObservaciones.Text = tblDatos.Rows[0][2].ToString();
+        txtObservaciones.Text = tblDatos.Rows[0][2].ToString();
         cmbEstadoP.Text = tblDatos.Rows[0][3].ToString();
         lblIdE.Text = tblDatos.Rows[0][4].ToString();
 
@@ -207,7 +208,7 @@ public partial class VerDatP : System.Web.UI.Page
 
         lblIdP.Text = Session["idPlanificacion"].ToString();
         txtFechaP.Text = tblDatosx.Rows[0][1].ToString();
-        lblObservaciones.Text = tblDatosx.Rows[0][2].ToString();
+        txtObservaciones.Text = tblDatosx.Rows[0][2].ToString();
         cmbEstadoP.Text = tblDatosx.Rows[0][3].ToString();
         lblIdE.Text = tblDatosx.Rows[0][4].ToString();
 
