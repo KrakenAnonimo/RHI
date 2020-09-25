@@ -9,10 +9,10 @@ public partial class Elemento : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Session["rol"].ToString() != "Admin" && Session["rol"].ToString() != "Supervisor" && Session["rol"].ToString() != "Planificador")
-        {
-            Response.Redirect("~/ErrorASP.aspx");
-        }
+      ////  if (Session["rol"].ToString() != "Admin" && Session["rol"].ToString() != "Supervisor" && Session["rol"].ToString() != "Planificador")
+      //  {
+         //   Response.Redirect("~/ErrorASP.aspx");
+      //  }
     }
     protected void Page_Init(object sender, EventArgs e)
     {
@@ -44,7 +44,7 @@ public partial class Elemento : System.Web.UI.Page
         if (resultsql > 0)
         {
             //enviar mensaje 
-            Response.Write("<script>alert('Se registro un nuevo Elemento correctamente!');window.location.href=Elemento.aspx''</script>");
+            Response.Write("<script>alert('Se registro un nuevo Elemento correctamente!');window.location.href='Elemento.aspx'</script>");
             //Limpiar Campos de texto
             txtCodigo.Text = "";
             txtNombre.Text = "";

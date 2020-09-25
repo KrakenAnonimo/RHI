@@ -31,17 +31,17 @@
                         <asp:TextBox ID="txtFechaP" runat="server" TextMode="Date"></asp:TextBox>
                     </td>
                 </tr>
-                <tr>
-                    <th scope="row">Observaciones:</th>
-                    <td>
-                        <asp:Label ID="lblObservaciones" runat="server" Text=""></asp:Label>
+               <tr>
+                    <th scope="row" class="auto-style7">Observaciones:</th>
+                    <td class="auto-style7">
+                        <asp:TextBox ID="txtObservaciones" runat="server" Text="" TextMode="MultiLine"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">Estado:</th>
                     <td>
                         <asp:DropDownList ID="cmbEstadoP" runat="server">
-                            <asp:ListItem>Por Ejecutar</asp:ListItem>
+                            <asp:ListItem>Sin Ejecutar</asp:ListItem>
                             <asp:ListItem>Ejecutada</asp:ListItem>
                         </asp:DropDownList>
                     </td>
