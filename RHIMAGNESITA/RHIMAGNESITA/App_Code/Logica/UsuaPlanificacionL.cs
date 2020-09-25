@@ -15,6 +15,13 @@ public class UsuaPlanificacionL
         int regi = objUsuaPlanificacionD.mtdRegistrarUsuaPlanificacion(objDatos);
         return regi;
     }
+    //Metodo Listar UsuaPlanificacion
+    public List<clUsuaPlanificacionE> mtdListarUsuaPlanificacion()
+    {
+        clUsuaPlanificacion objUsuaPlanificacion = new clUsuaPlanificacion();
+        List<clUsuaPlanificacionE> ListaUsuaPlanificacion = new List<clUsuaPlanificacionE>();
+        ListaUsuaPlanificacion = objUsuaPlanificacion.mtdListarUsuaPlanificacion();
+        return ListaUsuaPlanificacion;
+    }
 
-  
 }

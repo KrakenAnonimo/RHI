@@ -41,9 +41,10 @@
         <div class="col-sm-3">
             <!--left col-->
             <div class="text-center">
-                <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+                <asp:Image ID="ImagenPrev" runat="server" class="avatar img-circle img-thumbnail" />
                 <h6>Cargar una nueva foto...</h6>
-                <input type="file" class="text-center center-block file-upload">
+                <asp:FileUpload ID="fuploadImagen" runat="server" class="text-center center-block file-upload"/>
+                <asp:Button ID="btnCargarImagen" runat="server" Text="Cargar Imagen " class="btn btn-warning btn-sm" OnClick="btnCargarImagen_Click" />
             </div>
             <br>
             <ul class="list-group">
@@ -51,9 +52,9 @@
                 <li class="list-group-item text-right"><span class="pull-left"><strong>Id Rol:
                         <asp:Label ID="lblRol" runat="server" Text=""></asp:Label></strong></span>Id Usuario:
                         <asp:Label ID="lblidU" runat="server" Text=""></asp:Label></li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong>Ordenes</strong></span>O</li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong>Tareas</strong></span>T</li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong>Planificaciones</strong></span>P</li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong>Ordenes: <asp:Label ID="lblO" runat="server" Text=""></asp:Label></strong></span>O</li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong>Tareas: <asp:Label ID="lblT" runat="server" Text=""></asp:Label></strong></span>T</li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong>Planificaciones: <asp:Label ID="lblP" runat="server" Text=""></asp:Label></strong></span>P</li>
             </ul>
         </div>
     <!--/col-3-->
@@ -132,12 +133,16 @@
                     <div class="form-group">
                         <div class="col-xs-12">
                             <br>
-                            <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" />
-                            <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" class="btn btn-danger btn-sm" />
+                            <asp:Button ID="btnEditar" runat="server" Text="Editar Datos" class="btn btn-warning btn-sm" />
                         </div>
                         <asp:SqlDataSource ID="SqldsDatos" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT Rol.IdRol, Rol.Rol, Usuario.IdUsuario, Usuario.Documento, Usuario.Nombre, Usuario.Apellido, Usuario.Telefono, Usuario.Email, Usuario.Clave, Usuario.Ciudad, Usuario.Direccion, Usuario.IdRol AS Expr2, Usuario.IdUsuario AS Expr1 FROM Rol INNER JOIN Usuario ON Rol.IdRol = Usuario.IdRol WHERE (Usuario.Email = @correo)">
                             <SelectParameters>
                                 <asp:SessionParameter Name="correo" SessionField="Correo" />
+                            </SelectParameters>
+                        </asp:SqlDataSource>
+                        <asp:SqlDataSource ID="SqldsDatosNum" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT UsuaPlanificacion.IdPlanificacion, UsuaPlanificacion.IdUsuario, Usuario.Email FROM Planificacion INNER JOIN UsuaPlanificacion ON Planificacion.IdPlanificacion = UsuaPlanificacion.IdPlanificacion INNER JOIN Usuario ON UsuaPlanificacion.IdUsuario = Usuario.IdUsuario WHERE (Usuario.Email = @email)">
+                            <SelectParameters>
+                                <asp:SessionParameter Name="email" SessionField="Correo" />
                             </SelectParameters>
                         </asp:SqlDataSource>
                     </div>
