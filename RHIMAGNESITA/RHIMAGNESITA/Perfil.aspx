@@ -41,9 +41,9 @@
         <div class="col-sm-3">
             <!--left col-->
             <div class="text-center">
-                <asp:Image ID="ImagenPrev" runat="server" class="avatar img-circle img-thumbnail" />
+                <asp:Image ID="imgFoto" runat="server" class="avatar img-circle img-thumbnail" />
                 <h6>Cargar una nueva foto...</h6>
-                <asp:FileUpload ID="fuploadImagen" runat="server" class="text-center center-block file-upload"/>
+                <asp:FileUpload ID="fUploadImagen" runat="server" class="text-center center-block file-upload"/>
                 <asp:Button ID="btnCargarImagen" runat="server" Text="Cargar Imagen " class="btn btn-warning btn-sm" OnClick="btnCargarImagen_Click" />
             </div>
             <br>
@@ -140,10 +140,11 @@
                                 <asp:SessionParameter Name="correo" SessionField="Correo" />
                             </SelectParameters>
                         </asp:SqlDataSource>
-                        <asp:SqlDataSource ID="SqldsDatosNum" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT UsuaPlanificacion.IdPlanificacion, UsuaPlanificacion.IdUsuario, Usuario.Email FROM Planificacion INNER JOIN UsuaPlanificacion ON Planificacion.IdPlanificacion = UsuaPlanificacion.IdPlanificacion INNER JOIN Usuario ON UsuaPlanificacion.IdUsuario = Usuario.IdUsuario WHERE (Usuario.Email = @email)">
-                            <SelectParameters>
-                                <asp:SessionParameter Name="email" SessionField="Correo" />
-                            </SelectParameters>
+                        <asp:SqlDataSource ID="SqldsFoto" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" UpdateCommand="UPDATE Usuario SET Foto =, Email = WHERE (Foto = @foto) AND (Email = @correo)">
+                            <UpdateParameters>
+                                <asp:SessionParameter Name="foto" SessionField="foto" />
+                                <asp:SessionParameter Name="correo" SessionField="Correo" />
+                            </UpdateParameters>
                         </asp:SqlDataSource>
                     </div>
                 </form>

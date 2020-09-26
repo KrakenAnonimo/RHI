@@ -69,6 +69,9 @@
         Session["idOrdenMttoP"] = 0;
         Session["idOrdenMttoC"] = 0;
         Session["idArea"] = 0;
+
+        //Sesion de Foto de Perfil
+        Session["foto"] = "";
     }
 
     void Session_End(object sender, EventArgs e)
