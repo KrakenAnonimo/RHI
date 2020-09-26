@@ -41,5 +41,13 @@ public class clUsuarioL
         return Actualizar;
     }
 
+    //Metodo Actualizar Usuario
+    public int mtdActualizarUsuarioPerfil(clUsuarioE objDatos)
+    {
+        clUsuario objUsuarioP = new clUsuario();
+        int Actualizar = objUsuarioP.mtdActualizarUsuarioPerfil(objDatos);
+        return Actualizar;
+    }
+
 
 }
