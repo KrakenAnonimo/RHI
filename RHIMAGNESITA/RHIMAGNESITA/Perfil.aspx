@@ -159,6 +159,9 @@
                                     <div class="modal-body">
                                         <form id="formRegistro">
 
+                                             <div class="form-group">
+                                                <asp:Label ID="lblCorreoUs" runat="server" class="form-control" Visible="False"></asp:Label>
+                                            </div>
                                             <div class="form-group">
                                                 <label for="lblDocumento">Documento:</label>
                                                 <asp:TextBox ID="txtDocumento" runat="server" class="form-control"></asp:TextBox>

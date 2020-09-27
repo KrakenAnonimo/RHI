@@ -17,7 +17,7 @@
         <div style="align-content: center; align-items: center; text-align: center;">
             <label for="Ejecucion" class=" form-control-label">
                 Buscar por Ejecucion: 
-                <asp:RadioButtonList ID="RadioButtonList1" runat="server" AutoPostBack="True" RepeatDirection="Horizontal" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged" Height="22px" Width="193px">
+                <asp:RadioButtonList ID="RadioButtonList1" runat="server" AutoPostBack="True" RepeatDirection="Horizontal" Height="22px" Width="193px" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged">
                     <asp:ListItem>Ejecutada</asp:ListItem>
                     <asp:ListItem>Sin Ejecutar</asp:ListItem>
                 </asp:RadioButtonList>

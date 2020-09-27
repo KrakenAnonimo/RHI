@@ -113,10 +113,7 @@
         <div>
             <img src="Vista/PgPrin/img/xddx.jpg" width="100%" class="img-fluid" alt="Responsive image" />
         </div>
-        <div class="auto-style6">
-            <asp:Label ID="Label1" runat="server" Text="Usuario:"></asp:Label>
-            &nbsp;<asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
-        </div>
+      
         <p class="auto-style5"></p>
 
         <!-- header-area end -->

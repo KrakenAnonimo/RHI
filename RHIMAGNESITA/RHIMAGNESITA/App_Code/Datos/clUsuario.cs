@@ -72,7 +72,7 @@ public class clUsuario
     //Metodo Actualizar Usuario
     public int mtdActualizarUsuarioPerfil(clUsuarioE objDatos)
     {
-        string consulta = "Update Usuario set Documento = '" + objDatos.Documento + "', Nombre =  '" + objDatos.Nombre + "', Apellido = '" + objDatos.Apellido + "', Telefono = '" + objDatos.Telefono + "', Email = '" + objDatos.Email + "', Ciudad = '" + objDatos.Ciudad + "', Direccion = '" + objDatos.Direccion + "' where IdUsuario = '" + objDatos.IdUsuario + "'";
+        string consulta = "Update Usuario set Documento = '" + objDatos.Documento + "', Nombre =  '" + objDatos.Nombre + "', Clave =  '" + objDatos.Clave + "', Apellido = '" + objDatos.Apellido + "', Telefono = '" + objDatos.Telefono + "', Ciudad = '" + objDatos.Ciudad + "', Direccion = '" + objDatos.Direccion + "' where Email = '" + objDatos.Email + "'";
         clMetodoCN objMtdCN = new clMetodoCN();
         int regis = objMtdCN.mtdConectado(consulta);
         return regis;

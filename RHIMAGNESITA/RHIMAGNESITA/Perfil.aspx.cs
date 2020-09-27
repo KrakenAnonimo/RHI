@@ -10,22 +10,13 @@ public partial class Perfil : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        DataTable tblDatos = new DataTable();
-        tblDatos = ((DataView)SqldsDatos.Select(DataSourceSelectArguments.Empty)).Table;
-        txtDocumento.Text = tblDatos.Rows[0][3].ToString();
-        txtNombre.Text = tblDatos.Rows[0][4].ToString();
-        txtApellido.Text = tblDatos.Rows[0][5].ToString();
-        txtTelefono.Text = tblDatos.Rows[0][6].ToString();
-        txtEmail.Text = tblDatos.Rows[0][7].ToString();
-        txtClave.Text = tblDatos.Rows[0][8].ToString();
-        txtCiudad.Text = tblDatos.Rows[0][9].ToString();
-        txtDireccion.Text = tblDatos.Rows[0][10].ToString();
+       
     }
     protected void Page_Init(object sender, EventArgs e)
     {
         DataTable tblDatos = new DataTable();
         tblDatos = ((DataView)SqldsDatos.Select(DataSourceSelectArguments.Empty)).Table;
-        
+
         lblRol.Text = tblDatos.Rows[0][0].ToString();
         lblDocumento.Text = tblDatos.Rows[0][3].ToString();
         lblNombre.Text = tblDatos.Rows[0][4].ToString();
@@ -38,6 +29,16 @@ public partial class Perfil : System.Web.UI.Page
         imgFoto.ImageUrl = tblDatos.Rows[0][13].ToString();
         lblidU.Text = tblDatos.Rows[0][12].ToString();
 
+        lblCorreoUs.Text = Session["Correo"].ToString();
+        txtDocumento.Text = tblDatos.Rows[0][3].ToString();
+        txtNombre.Text = tblDatos.Rows[0][4].ToString();
+        txtApellido.Text = tblDatos.Rows[0][5].ToString();
+        txtTelefono.Text = tblDatos.Rows[0][6].ToString();
+        txtEmail.Text = tblDatos.Rows[0][7].ToString();
+        txtClave.Text = tblDatos.Rows[0][8].ToString();
+        txtCiudad.Text = tblDatos.Rows[0][9].ToString();
+        txtDireccion.Text = tblDatos.Rows[0][10].ToString();
+
     }
 
     protected void btnCargarImagen_Click(object sender, EventArgs e)
@@ -48,7 +49,7 @@ public partial class Perfil : System.Web.UI.Page
         {
             // Cartura la extension  del archivo 
             string extension = System.IO.Path.GetExtension(fUploadImagen.FileName);
-            if (extension==".png" || extension==".jpg" || extension == ".PNG" || extension == ".JPG")
+            if (extension == ".png" || extension == ".jpg" || extension == ".PNG" || extension == ".JPG")
             {
                 // Subir la imagen al servidor
                 fUploadImagen.SaveAs(Server.MapPath("~/Fotos/") + fUploadImagen.FileName);
@@ -69,14 +70,15 @@ public partial class Perfil : System.Web.UI.Page
 
     protected void btnEditar_Click(object sender, EventArgs e)
     {
-       
+
         clUsuarioE objUsuarioE = new clUsuarioE();
-        Session["idUsuario"] = lblidU.Text;
+        objUsuarioE.Email = lblCorreoUs.Text;
         objUsuarioE.Documento = txtDocumento.Text;
         objUsuarioE.Nombre = txtNombre.Text;
         objUsuarioE.Apellido = txtApellido.Text;
         objUsuarioE.Telefono = txtTelefono.Text;
         objUsuarioE.Email = txtEmail.Text;
+        objUsuarioE.Clave = txtClave.Text;
         objUsuarioE.Ciudad = txtCiudad.Text;
         objUsuarioE.Direccion = txtDireccion.Text;
 
