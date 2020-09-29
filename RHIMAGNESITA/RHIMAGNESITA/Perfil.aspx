@@ -42,10 +42,11 @@
             <ul class="list-group">
                 <li class="list-group-item text-muted">Actividad <i class="fa fa-dashboard fa-1x"></i></li>
                 <li class="list-group-item text-right"><span class="pull-left"><strong>Id Rol:
-                        <asp:Label ID="lblRol" runat="server" Text=""></asp:Label></strong></span>Id Usuario:
-                        <asp:Label ID="lblidU" runat="server" Text=""></asp:Label></li>
+                    
+                    <asp:Label ID="lblRol" runat="server" Text=""></asp:Label></strong></span>Id Usuario:
+                    <asp:Label ID="lblidU" runat="server" Text=""></asp:Label></li>
                 <li class="list-group-item text-right"><span class="pull-left"><strong>Ordenes:
-                    <asp:Label ID="lblO" runat="server" Text=""></asp:Label></strong></span>O</li>
+                    <asp:Button ID="btnOrdenes" runat="server" class="list-group-item text-muted" OnClick="btnOrdenes_Click"/></strong></span>O</li>
                 <li class="list-group-item text-right"><span class="pull-left"><strong>Tareas:
                     <asp:Label ID="lblT" runat="server" Text=""></asp:Label></strong></span>T</li>
                 <li class="list-group-item text-right"><span class="pull-left"><strong>Planificaciones:
@@ -159,7 +160,7 @@
                                     <div class="modal-body">
                                         <form id="formRegistro">
 
-                                             <div class="form-group">
+                                            <div class="form-group">
                                                 <asp:Label ID="lblCorreoUs" runat="server" class="form-control" Visible="False"></asp:Label>
                                             </div>
                                             <div class="form-group">
@@ -189,7 +190,7 @@
 
                                             <div class="form-group">
                                                 <label for="lblClave">Clave:</label>
-                                                <asp:TextBox type="password" ID="txtClave" runat="server" class="form-control" ></asp:TextBox>
+                                                <asp:TextBox type="password" ID="txtClave" runat="server" class="form-control"></asp:TextBox>
                                             </div>
 
                                             <div class="form-group">

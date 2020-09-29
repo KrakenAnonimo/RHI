@@ -91,4 +91,9 @@ public partial class Perfil : System.Web.UI.Page
             Response.Write("<script>alert('Sus datos se actualizaron correctamente!.');window.location.href='Perfil.aspx'</script>");
         }
     }
+
+    protected void btnOrdenes_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/ListaOrdenesAsignadas.aspx");
+    }
 }
