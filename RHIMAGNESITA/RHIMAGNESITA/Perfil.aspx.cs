@@ -14,6 +14,8 @@ public partial class Perfil : System.Web.UI.Page
     }
     protected void Page_Init(object sender, EventArgs e)
     {
+        Session["idUsuario"] = lblidU.Text;
+
         DataTable tblDatos = new DataTable();
         tblDatos = ((DataView)SqldsDatos.Select(DataSourceSelectArguments.Empty)).Table;
 
@@ -94,6 +96,6 @@ public partial class Perfil : System.Web.UI.Page
 
     protected void btnOrdenes_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/ListaOrdenesAsignadas.aspx");
+        Response.Redirect("~/ListasOrdenesAsignadas.aspx");
     }
 }

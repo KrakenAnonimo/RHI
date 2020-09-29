@@ -41,16 +41,18 @@
             <br>
             <ul class="list-group">
                 <li class="list-group-item text-muted">Actividad <i class="fa fa-dashboard fa-1x"></i></li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong>Id Rol:
+                <li class="list-group-item text-right"><span class="pull-left"><strong>Rol:
                     
-                    <asp:Label ID="lblRol" runat="server" Text=""></asp:Label></strong></span>Id Usuario:
+                    <asp:Label ID="lblRol" runat="server" Text=""></asp:Label></strong></span>Usuario:
                     <asp:Label ID="lblidU" runat="server" Text=""></asp:Label></li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong>Ordenes:
-                    <asp:Button ID="btnOrdenes" runat="server" class="list-group-item text-muted" OnClick="btnOrdenes_Click"/></strong></span>O</li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong>Tareas:
-                    <asp:Label ID="lblT" runat="server" Text=""></asp:Label></strong></span>T</li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong>Planificaciones:
-                    <asp:Label ID="lblP" runat="server" Text=""></asp:Label></strong></span>P</li>
+                 <li class="list-group-item text-right"><span class="pull-left"><strong>
+                    <asp:Label ID="lblMensaje" runat="server" Text="Trabajos Asignados" CssClass="text-info"></asp:Label></strong></span>.</li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong>
+                     <asp:Button ID="btnOrdenes" runat="server" Text="Ordenes de Mtto" class="list-group-item text-muted" OnClick="btnOrdenes_Click"></asp:Button></strong></span>O</li>
+                <li class="list-group-item text-right"><span class="pull-left" ><strong>
+                    <asp:Button ID="btnEjecucion" runat="server" Text="Ejecuciones de Mtto" class="list-group-item text-muted"></asp:Button></strong></span>E</li>
+                 <li class="list-group-item text-right"><span class="pull-left" ><strong>
+                 <asp:Label ID="Label1" runat="server" Text="----" CssClass="text-info" Visible="False"></asp:Label></strong></span>.</li>
             </ul>
         </div>
         <!--/col-3-->
