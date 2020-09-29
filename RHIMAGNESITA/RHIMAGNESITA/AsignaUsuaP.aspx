@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="AsignaUsuaP.aspx.cs" Inherits="AsignaUsuaP" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage2.master" AutoEventWireup="true" CodeFile="AsignaUsuaP.aspx.cs" Inherits="AsignaUsuaP" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <style type="text/css">
@@ -49,11 +49,14 @@
                             <div class="card-body card-block">
                                 <div class="row form-group">
                                     <div class="text-center">
-                                        <label for="selectSm" class="form-control-label">Asignar</label>
+                                        <label for="selectSm" class="form-control-label">Seleccione un rol para filtrar</label>
                                     </div>
                                     <div class="text-center">
                                         <asp:DropDownList ID="cmbUsP" runat="server" BackColor="White" DataSourceID="sqlRols" DataTextField="Rol" DataValueField="IdRol" ForeColor="Black" OnSelectedIndexChanged="cmbUsP_SelectedIndexChanged" AutoPostBack="True">
                                         </asp:DropDownList>
+                                        <div class="text-center">
+                                        <label for="selectSm" class="form-control-label">Seleccione un usuario y la planificacion a la cual se le asignara</label>
+                                    </div>
                                         <asp:SqlDataSource runat="server" ID="sqlRols" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT Rol.* FROM Rol"></asp:SqlDataSource>
                                     </div>
                                     <br />
@@ -137,7 +140,7 @@
                                             <SortedDescendingCellStyle BackColor="#848384" HorizontalAlign="Left" />
                                             <SortedDescendingHeaderStyle BackColor="#00BCD4" HorizontalAlign="Left" />
                                         </asp:GridView>
-                                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" DeleteCommand="DELETE FROM [Planificacion] WHERE [IdPlanificacion] = @IdPlanificacion" InsertCommand="INSERT INTO [Planificacion] ([FechaPlanificacion], [Observaciones], [Estado], [IdElemento]) VALUES (@FechaPlanificacion, @Observaciones, @Estado, @IdElemento)" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT [IdPlanificacion], [FechaPlanificacion], [Observaciones], [Estado], [IdElemento] FROM [Planificacion]" UpdateCommand="UPDATE [Planificacion] SET [FechaPlanificacion] = @FechaPlanificacion, [Observaciones] = @Observaciones, [Estado] = @Estado, [IdElemento] = @IdElemento WHERE [IdPlanificacion] = @IdPlanificacion">
+                                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" DeleteCommand="DELETE FROM [Planificacion] WHERE [IdPlanificacion] = @IdPlanificacion" InsertCommand="INSERT INTO [Planificacion] ([FechaPlanificacion], [Observaciones], [Estado], [IdElemento]) VALUES (@FechaPlanificacion, @Observaciones, @Estado, @IdElemento)" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT IdPlanificacion, FechaPlanificacion, Observaciones, Estado, IdElemento FROM Planificacion WHERE (Estado = @estado)" UpdateCommand="UPDATE [Planificacion] SET [FechaPlanificacion] = @FechaPlanificacion, [Observaciones] = @Observaciones, [Estado] = @Estado, [IdElemento] = @IdElemento WHERE [IdPlanificacion] = @IdPlanificacion">
                                             <DeleteParameters>
                                                 <asp:Parameter Name="IdPlanificacion" Type="Int32"></asp:Parameter>
                                             </DeleteParameters>
@@ -147,6 +150,9 @@
                                                 <asp:Parameter Name="Estado" Type="String"></asp:Parameter>
                                                 <asp:Parameter Name="IdElemento" Type="Int32"></asp:Parameter>
                                             </InsertParameters>
+                                            <SelectParameters>
+                                                <asp:Parameter DefaultValue="Sin Ejecutar" Name="estado" />
+                                            </SelectParameters>
                                             <UpdateParameters>
                                                 <asp:Parameter Name="FechaPlanificacion" Type="String"></asp:Parameter>
                                                 <asp:Parameter Name="Observaciones" Type="String"></asp:Parameter>
