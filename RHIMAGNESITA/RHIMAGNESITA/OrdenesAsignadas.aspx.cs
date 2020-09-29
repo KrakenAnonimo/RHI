@@ -11,4 +11,11 @@ public partial class OrdenesAsignadas : System.Web.UI.Page
     {
 
     }
+
+    protected void gvOrdenesA_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        int numerFila = gvOrdenesA.SelectedRow.RowIndex;
+        Session["idOrdenMttoP"] = gvOrdenesA.DataKeys[numerFila].Value;
+        Response.Redirect("~/ROrdenMttoP.aspx");
+    }
 }

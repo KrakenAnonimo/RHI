@@ -2,11 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <style type="text/css">
-        .auto-style3 {
-            margin-bottom: 15px;
-            text-align: center;
-        }
-
+        
         .auto-style7 {
             position: relative;
             min-height: 1px;
@@ -19,79 +15,7 @@
             top: -75px;
         }
 
-        .auto-style8 {
-            width: 97%;
-            position: relative;
-            left: 0px;
-            top: 1px;
-        }
-
-        .auto-style9 {
-            margin-bottom: 15px;
-            text-align: left;
-        }
-
-        .auto-style10 {
-            position: relative;
-            left: 392px;
-            top: -189px;
-        }
-
-        .auto-style15 {
-            position: relative;
-            left: 53px;
-            top: 4px;
-        }
-
-        .auto-style16 {
-            position: relative;
-            left: -7px;
-            top: -25px;
-        }
-
-        .auto-style17 {
-            position: relative;
-            left: 181px;
-            top: 9px;
-        }
-
-        .auto-style18 {
-            text-align: center;
-            height: 132px;
-            width: 306px;
-            position: relative;
-            top: 144px;
-            left: -15px;
-        }
-
-        .auto-style19 {
-            display: block;
-            width: 74%;
-            height: 19px;
-            padding: 6px 12px;
-            font-size: 14px;
-            line-height: 1.42857143;
-            color: #555;
-            background-color: #fff;
-            background-image: none;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-            box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-            -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-            -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-            transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-            position: relative;
-            left: 204px;
-            top: 15px;
-        }
-
-        .auto-style20 {
-            margin-bottom: 15px;
-            width: 262px;
-            height: 54px;
-        }
-    </style>
+        </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <!--No mover estos espacios-->
@@ -110,6 +34,7 @@
                             <div class="card-body card-block">
                                 <div class="row form-group">
                                     <div class="text-center">
+                                        <asp:Label runat="server" ID="lblIdOp" class="form-control" Visible="False"></asp:Label>
                                         <label for="selectSm" class="form-control-label">Reporte Averia Servicio</label>
                                     </div>
                                     <div class="text-center">
@@ -123,15 +48,6 @@
                                     <div>
                                         <asp:Label runat="server" Text="" ID="lblRPlanificicacion" class="form-control"></asp:Label>
 
-                                    </div>
-                                </div>
-                                <div class="row form-group">
-                                    <div class="text-center">
-                                        <label for="selectSm" class="form-control-label">Usuario Asigado:</label>
-                                        &nbsp;
-                                    </div>
-                                    <div>
-                                        <asp:Label runat="server" Text="" ID="lblUsuarioAsignado" class="form-control"></asp:Label>
                                     </div>
                                 </div>
                                 <div class="text-center">
@@ -164,6 +80,7 @@
                                     </div>
                                     <div class="text-center">
                                         <asp:DropDownList ID="cmbEjecucionOr" runat="server" class="form-control-sm form-control" Style="width: 97%; position: relative; left: 9px; top: 0px">
+                                            <asp:ListItem>Sin Ejecutar</asp:ListItem>
                                             <asp:ListItem>En Ejecucion</asp:ListItem>
                                             <asp:ListItem>Ejecutado</asp:ListItem>
                                         </asp:DropDownList>
@@ -197,6 +114,11 @@
                                     <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" OnClick="btnGuardar_Click" />
                                     <asp:Button ID="btnDescargarExcel" runat="server" Text="Descargar Excel" class="btn btn-warning btn-sm" OnClick="btnDescargarExcel_Click" />
                                     <asp:Button ID="btnDescargarPdf" runat="server" Text="Descargar PDF" class="btn btn-warning btn-sm" OnClick="btnDescargarPdf_Click" />
+                                    <asp:SqlDataSource ID="sqlOP" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT OrdenMttoPreventivo.IdOrdenMttoP, OrdenMttoPreventivo.NumOrden, OrdenMttoPreventivo.Disciplina, OrdenMttoPreventivo.FechaInicio, OrdenMttoPreventivo.HoraInicio, OrdenMttoPreventivo.FechaFinal, OrdenMttoPreventivo.HoraFinal, OrdenMttoPreventivo.Ejecutado, OrdenMttoPreventivo.TrabajoIE, OrdenMttoPreventivo.Observaciones, OrdenMttoPreventivo.Revisado, OrdenMttoPreventivo.IdPlanificacion, OrdenMttoPreventivo.IdReporteAS, OrdenMttoPreventivo.IdUsuario, ReporteAveriaServicio.NumReporte, Planificacion.FechaPlanificacion FROM OrdenMttoPreventivo INNER JOIN Planificacion ON OrdenMttoPreventivo.IdPlanificacion = Planificacion.IdPlanificacion INNER JOIN ReporteAveriaServicio ON OrdenMttoPreventivo.IdReporteAS = ReporteAveriaServicio.IdReporteAS WHERE (OrdenMttoPreventivo.IdOrdenMttoP = @orden)">
+                                        <SelectParameters>
+                                            <asp:SessionParameter Name="orden" SessionField="idOrdenMttoP" />
+                                        </SelectParameters>
+                                    </asp:SqlDataSource>
                                 </div>
                             </div>
                         </div>

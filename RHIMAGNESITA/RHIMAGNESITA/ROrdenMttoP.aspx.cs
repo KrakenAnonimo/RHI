@@ -23,7 +23,24 @@ public partial class ROrdenMttoP : System.Web.UI.Page
     }
     protected void Page_Init(object sender, EventArgs e)
     {
+        DataTable tblDatos = new DataTable();
+        tblDatos = ((DataView)sqlOP.Select(DataSourceSelectArguments.Empty)).Table;
 
+
+        lblIdOp.Text = Session["idOrdenMttoP"].ToString();
+        lblNumerodeOrden.Text = tblDatos.Rows[0][1].ToString();
+        lblDisciplinaR.Text = tblDatos.Rows[0][2].ToString();
+        lblFechaIn.Text = tblDatos.Rows[0][3].ToString();
+        lblHoraIn.Text = tblDatos.Rows[0][4].ToString();
+        lblFechaFn.Text = tblDatos.Rows[0][5].ToString();
+        lblHoraFn.Text = tblDatos.Rows[0][6].ToString();
+        cmbEjecucionOr.Text = tblDatos.Rows[0][7].ToString();
+        lblTrabajoIER.Text = tblDatos.Rows[0][8].ToString();
+        txtObservaciones.Text = tblDatos.Rows[0][9].ToString();
+        lblRevision.Text = tblDatos.Rows[0][10].ToString();
+        lblRPlanificicacion.Text = tblDatos.Rows[0][11].ToString();
+        lblReporteAVS.Text = tblDatos.Rows[0][12].ToString();
+    
     }
 
     protected void btnGuardar_Click(object sender, EventArgs e)

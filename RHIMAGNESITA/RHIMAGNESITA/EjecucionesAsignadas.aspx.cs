@@ -11,4 +11,13 @@ public partial class EjecucionesAsignadas : System.Web.UI.Page
     {
 
     }
+
+
+
+    protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        int numerFila = gvM.SelectedRow.RowIndex;
+        Session["idEjecucionM"] = gvM.DataKeys[numerFila].Value;
+        Response.Redirect("~/REjecucionM.aspx");
+    }
 }

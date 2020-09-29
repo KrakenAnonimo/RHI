@@ -33,6 +33,7 @@
                                 <label for="selectSm" class="form-control-label">Orden de Mantenimiento Preventiva</label>
                             </div>
                             <div class="text-center">
+                                <asp:Label ID="lblEjcM" runat="server" Text="" class="form-control" Visible="False"></asp:Label>
                                 <asp:Label ID="lblOrdenMttoP" runat="server" Text="" class="form-control"></asp:Label>
                             </div>
                         </div>
@@ -75,6 +76,11 @@
                             <asp:Button runat="server" Text="Guardar" class="btn btn-success btn-sm" ID="btnGuardar" OnClick="btnGuardar_Click" />
                             <asp:Button ID="btnDescargarExcel" runat="server" Text="Descargar Excel" class="btn btn-warning btn-sm" OnClick="btnDescargarExcel_Click" />
                             <asp:Button ID="btnDescargarPdf" runat="server" Text="Descargar PDF" class="btn btn-warning btn-sm" OnClick="btnDescargarPdf_Click" />
+                            <asp:SqlDataSource ID="sqlEM" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT EjecucionM.IdEjecucionM, EjecucionM.Estado, EjecucionM.FechaEjecucion, EjecucionM.Duracion, EjecucionM.Observaciones, EjecucionM.IdTareaMtto, EjecucionM.IdOrdenMttoP, TareaMtto.NombreTM, OrdenMttoPreventivo.NumOrden FROM EjecucionM INNER JOIN OrdenMttoPreventivo ON EjecucionM.IdOrdenMttoP = OrdenMttoPreventivo.IdOrdenMttoP INNER JOIN TareaMtto ON EjecucionM.IdTareaMtto = TareaMtto.IdTareaMtto WHERE (EjecucionM.IdEjecucionM = @ejecucion)">
+                                <SelectParameters>
+                                    <asp:SessionParameter Name="ejecucion" SessionField="idEjecucionM" />
+                                </SelectParameters>
+                            </asp:SqlDataSource>
                         </div>
                     </div>
                 </div>

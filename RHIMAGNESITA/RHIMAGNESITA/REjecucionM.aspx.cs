@@ -21,7 +21,22 @@ public partial class REjecucionM : System.Web.UI.Page
             Response.Redirect("~/ErrorTS.aspx");
         }*/
     }
+    protected void Page_Init(object sender, EventArgs e)
+    {
+        DataTable tblDatos = new DataTable();
+        tblDatos = ((DataView)sqlEM.Select(DataSourceSelectArguments.Empty)).Table;
 
+
+        lblEjcM.Text = Session["idEjecucionM"].ToString();
+        cmbEstado.Text = tblDatos.Rows[0][1].ToString();
+        lblFechaEjecucion.Text = tblDatos.Rows[0][2].ToString();
+        lblDuracion.Text = tblDatos.Rows[0][3].ToString();
+        txtObservaciones.Text = tblDatos.Rows[0][4].ToString();
+        lblTareaMtto.Text = tblDatos.Rows[0][5].ToString();
+        lblOrdenMttoP.Text= tblDatos.Rows[0][6].ToString();
+
+
+    }
     protected void btnGuardar_Click(object sender, EventArgs e)
     {
         clEjecucionME objEjcuacionEM = new clEjecucionME();
