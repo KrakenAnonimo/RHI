@@ -113,6 +113,7 @@
                                         <label for="selectSm" class="form-control-label">Reporte Averia Servicio</label>
                                     </div>
                                     <div class="text-center">
+                                        <asp:Label runat="server" Text="" ID="lblIdOrden" class="form-control" Visible="False"></asp:Label>
                                         <asp:Label runat="server" Text="" ID="lblReporteAVS" class="form-control"></asp:Label>
                                     </div>
                                 </div>
@@ -164,6 +165,7 @@
                                     </div>
                                     <div class="text-center">
                                         <asp:DropDownList ID="cmbEjecucionOr" runat="server" class="form-control-sm form-control" Style="width: 97%; position: relative; left: 9px; top: 0px">
+                                            <asp:ListItem>Sin Ejecutar</asp:ListItem>
                                             <asp:ListItem>En Ejecucion</asp:ListItem>
                                             <asp:ListItem>Ejecutado</asp:ListItem>
                                         </asp:DropDownList>
@@ -192,6 +194,13 @@
                                     <div class="text-center">
                                         <asp:Label runat="server" Text="" ID="lblRevision" class="form-control"></asp:Label>
                                     </div>
+                                </div>
+                                <div>
+                                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT IdReporteAS, IdPlanificacion, IdUsuario, NumOrden, Disciplina, FechaInicio, HoraInicio, FechaFinal, HoraFinal, Ejecutado, TrabajoIE, Observaciones, Revisado, IdOrdenMttoP FROM OrdenMttoPreventivo WHERE (IdOrdenMttoP = @idOrdenp)">
+                                        <SelectParameters>
+                                            <asp:SessionParameter Name="idOrdenp" SessionField="idOrdenMttoP" />
+                                        </SelectParameters>
+                                    </asp:SqlDataSource>
                                 </div>
                                 <div>
                                     <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success btn-sm" OnClick="btnGuardar_Click" />

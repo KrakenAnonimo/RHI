@@ -41,15 +41,18 @@
             <br>
             <ul class="list-group">
                 <li class="list-group-item text-muted">Actividad <i class="fa fa-dashboard fa-1x"></i></li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong>Id Rol:
-                        <asp:Label ID="lblRol" runat="server" Text=""></asp:Label></strong></span>Id Usuario:
-                        <asp:Label ID="lblidU" runat="server" Text=""></asp:Label></li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong>Ordenes:
-                    <asp:Label ID="lblO" runat="server" Text=""></asp:Label></strong></span>O</li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong>Tareas:
-                    <asp:Label ID="lblT" runat="server" Text=""></asp:Label></strong></span>T</li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong>Planificaciones:
-                    <asp:Label ID="lblP" runat="server" Text=""></asp:Label></strong></span>P</li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong>Rol:
+                    
+                    <asp:Label ID="lblRol" runat="server" Text=""></asp:Label></strong></span>Usuario:
+                    <asp:Label ID="lblidU" runat="server" Text=""></asp:Label></li>
+                 <li class="list-group-item text-right"><span class="pull-left"><strong>
+                    <asp:Label ID="lblMensaje" runat="server" Text="Trabajos Asignados" CssClass="text-info"></asp:Label></strong></span>.</li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong>
+                     <asp:Button ID="btnOrdenes" runat="server" Text="Ordenes de Mtto" class="list-group-item text-muted" OnClick="btnOrdenes_Click"></asp:Button></strong></span>O</li>
+                <li class="list-group-item text-right"><span class="pull-left" ><strong>
+                    <asp:Button ID="btnEjecucion" runat="server" Text="Ejecuciones de Mtto" class="list-group-item text-muted"></asp:Button></strong></span>E</li>
+                 <li class="list-group-item text-right"><span class="pull-left" ><strong>
+                 <asp:Label ID="Label1" runat="server" Text="----" CssClass="text-info" Visible="False"></asp:Label></strong></span>.</li>
             </ul>
         </div>
         <!--/col-3-->
@@ -159,7 +162,7 @@
                                     <div class="modal-body">
                                         <form id="formRegistro">
 
-                                             <div class="form-group">
+                                            <div class="form-group">
                                                 <asp:Label ID="lblCorreoUs" runat="server" class="form-control" Visible="False"></asp:Label>
                                             </div>
                                             <div class="form-group">
@@ -189,7 +192,7 @@
 
                                             <div class="form-group">
                                                 <label for="lblClave">Clave:</label>
-                                                <asp:TextBox type="password" ID="txtClave" runat="server" class="form-control" ></asp:TextBox>
+                                                <asp:TextBox type="password" ID="txtClave" runat="server" class="form-control"></asp:TextBox>
                                             </div>
 
                                             <div class="form-group">
