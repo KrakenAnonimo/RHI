@@ -49,7 +49,7 @@ public partial class Perfil : System.Web.UI.Page
         {
             // Cartura la extension  del archivo 
             string extension = System.IO.Path.GetExtension(fUploadImagen.FileName);
-            if (extension == ".png" || extension == ".jpg" || extension == ".PNG" || extension == ".JPG")
+            if (extension == ".png" || extension == ".jpg" || extension == ".PNG" || extension == ".JPG" || extension == ".jpeg" || extension == ".JPEG")
             {
                 // Subir la imagen al servidor
                 fUploadImagen.SaveAs(Server.MapPath("~/Fotos/") + fUploadImagen.FileName);

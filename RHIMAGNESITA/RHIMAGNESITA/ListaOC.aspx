@@ -18,7 +18,7 @@
             <label for="Ejecucion" class=" form-control-label">
                 Buscar por Ejecucion: 
                 <asp:RadioButtonList ID="RadioButtonList1" runat="server" AutoPostBack="True" RepeatDirection="Horizontal" Height="22px" Width="193px" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged">
-                    <asp:ListItem>Ejecutada</asp:ListItem>
+                    <asp:ListItem>Ejecutado</asp:ListItem>
                     <asp:ListItem>Sin Ejecutar</asp:ListItem>
                 </asp:RadioButtonList>
             </label>
