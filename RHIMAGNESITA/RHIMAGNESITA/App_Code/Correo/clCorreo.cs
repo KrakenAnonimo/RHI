@@ -14,7 +14,7 @@ public class clCorreo
     String merror;
     public clCorreo(string destinatario, string asunto, string mensaje)
     {
-        string body ="Bienvenido a RHI-Magnesita!   " +
+        string body = "Bienvenido a RHI-Magneista!   " +
                "Querido Usuario, " +
                "Se registro correctamente en la plataforma!. ";
 
@@ -37,7 +37,8 @@ public class clCorreo
         try
         {
             protocolo.Send(mail);
-        }catch(SmtpException error)
+        }
+        catch (SmtpException error)
         {
             estado = false;
             merror = error.Message.ToString();

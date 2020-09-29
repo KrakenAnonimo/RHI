@@ -75,7 +75,7 @@
                                             <span class="icon-bar"></span>
                                         </button>
                                         <!-- Brand -->
-                                        <a class="navbar-brand page-scroll sticky-logo" href="">
+                                        <a class="navbar-brand page-scroll sticky-logo" href="inicio3.aspx">
                                             <h1><span>RHI-</span>MAGNESITA</h1>
                                             <!-- Uncomment below if you prefer to use an image logo -->
                                             <!-- <img src="img/logo.png" alt="" title=""> -->
@@ -84,14 +84,12 @@
                                     <!-- Collect the nav links, forms, and other content for toggling -->
                                     <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
                                         <ul class="nav navbar-nav navbar-right">
-                                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Ordenes de Mtto<span class="caret"></span></a>
-                                                <ul class="dropdown-menu" role="menu">
-                                                    <li><a href="ROrdenMttoP.aspx">Orden Mtt Preventivo</a></li>
-                                                    <li><a href="ROrdenMttoC.aspx">Orden Mtt Correctivo</a></li>
-                                                </ul>
+                                            <li>
+                                                <a href="OrdenesAsignadas.aspx">Ordenes de Mtt Preventivo</a>
+
                                             </li>
                                             <li>
-                                                <a class="page-scroll" href="REjecucionM.aspx">Ejecucion Mtto</a>
+                                                <a class="page-scroll" href="EjecucionesAsignadas.aspx">Ejecuciones de Mtto</a>
                                             </li>
                                             <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-sliders" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -106,7 +104,6 @@
                                         </ul>
                                     </div>
                                 </nav>
-                                </ul>
                             </div>
                             <!-- navbar-collapse -->
                             </nav>
@@ -118,7 +115,7 @@
         <div>
             <img src="Vista/PgPrin/img/xddx.jpg" width="100%" class="img-fluid" alt="Responsive image" />
         </div>
-     
+
         <p class="auto-style5"></p>
 
         <!-- header-area end -->

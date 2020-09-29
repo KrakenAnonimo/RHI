@@ -1,9 +1,0 @@
-Pagina :      http://localhost:54775/ListaU.aspx
-Mensaje de Error : Etiqueta de servidor 'aps:label' desconocida.
-Mensaje interno  : System.Web.HttpParseException (0x80004005): Etiqueta de servidor 'aps:label' desconocida. ---> System.Web.HttpException (0x80004005): Etiqueta de servidor 'aps:label' desconocida.
-   en System.Web.UI.TemplateParser.ProcessError(String message)
-   en System.Web.UI.TemplateParser.ProcessBeginTag(Match match, String inputText)
-   en System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
-   en System.Web.UI.TemplateParser.ProcessException(Exception ex)
-   en System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
-   en System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)

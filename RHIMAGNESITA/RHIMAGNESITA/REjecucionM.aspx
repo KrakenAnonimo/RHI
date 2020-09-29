@@ -33,7 +33,6 @@
                                 <label for="selectSm" class="form-control-label">Orden de Mantenimiento Preventiva</label>
                             </div>
                             <div class="text-center">
-                                <asp:Label ID="lbldEjecucion" runat="server" Visible="False"></asp:Label>
                                 <asp:Label ID="lblOrdenMttoP" runat="server" Text="" class="form-control"></asp:Label>
                             </div>
                         </div>
@@ -51,9 +50,8 @@
                             </div>
                             <div class="text-center">
                                 <asp:DropDownList runat="server" ID="cmbEstado" class="form-control-sm form-control" Style="width: 97%; position: relative; left: 9px; top: 0px">
-                                    <asp:ListItem>Sin Ejecutar</asp:ListItem>
                                     <asp:ListItem>En Ejecucion</asp:ListItem>
-                                    <asp:ListItem>Ejecutado</asp:ListItem>
+                                    <asp:ListItem>Ejecutada</asp:ListItem>
                                 </asp:DropDownList>
                             </div>
                         </div>
@@ -74,11 +72,6 @@
                                     <asp:TextBox runat="server" Rows="9" placeholder="Observaciones..." class="form-control" ID="txtObservaciones" TextMode="MultiLine"></asp:TextBox>
                                 </div>
                             </div>
-                            <asp:SqlDataSource runat="server" ID="sqlEJM" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT IdEjecucionM, Estado, FechaEjecucion, Duracion, Observaciones, IdTareaMtto, IdOrdenMttoP FROM EjecucionM WHERE (IdEjecucionM = @ejecucionM)">
-                                <SelectParameters>
-                                    <asp:SessionParameter Name="ejecucionM" SessionField="idEjecucionM" />
-                                </SelectParameters>
-                            </asp:SqlDataSource>
                             <asp:Button runat="server" Text="Guardar" class="btn btn-success btn-sm" ID="btnGuardar" OnClick="btnGuardar_Click" />
                             <asp:Button ID="btnDescargarExcel" runat="server" Text="Descargar Excel" class="btn btn-warning btn-sm" OnClick="btnDescargarExcel_Click" />
                             <asp:Button ID="btnDescargarPdf" runat="server" Text="Descargar PDF" class="btn btn-warning btn-sm" OnClick="btnDescargarPdf_Click" />

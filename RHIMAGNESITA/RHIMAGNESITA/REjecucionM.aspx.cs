@@ -16,22 +16,10 @@ public partial class REjecucionM : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        /* if (Session["rol"].ToString() != "Tecnico" && Session["rol"].ToString() != "Soldador")
-         {
-             Response.Redirect("~/ErrorTS.aspx");
-         }*/
-
-        DataTable tblDatos = new DataTable();
-        tblDatos = ((DataView)sqlEJM.Select(DataSourceSelectArguments.Empty)).Table;
-
-        lbldEjecucion.Text = Session["idEjecucionM"].ToString();
-        lblFechaEjecucion.Text = tblDatos.Rows[0][2].ToString();
-        lblDuracion.Text = tblDatos.Rows[0][3].ToString();
-        txtObservaciones.Text = tblDatos.Rows[0][11].ToString();
-        lblTareaMtto.Text = tblDatos.Rows[0][12].ToString();
-        lblOrdenMttoP.Text = tblDatos.Rows[0][1].ToString();
-
-
+       /* if (Session["rol"].ToString() != "Tecnico" && Session["rol"].ToString() != "Soldador")
+        {
+            Response.Redirect("~/ErrorTS.aspx");
+        }*/
     }
 
     protected void btnGuardar_Click(object sender, EventArgs e)

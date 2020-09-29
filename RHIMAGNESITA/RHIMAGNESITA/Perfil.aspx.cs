@@ -14,8 +14,6 @@ public partial class Perfil : System.Web.UI.Page
     }
     protected void Page_Init(object sender, EventArgs e)
     {
-        Session["idUsuario"] = lblidU.Text;
-
         DataTable tblDatos = new DataTable();
         tblDatos = ((DataView)SqldsDatos.Select(DataSourceSelectArguments.Empty)).Table;
 
@@ -51,7 +49,7 @@ public partial class Perfil : System.Web.UI.Page
         {
             // Cartura la extension  del archivo 
             string extension = System.IO.Path.GetExtension(fUploadImagen.FileName);
-            if (extension == ".png" || extension == ".jpg" || extension == ".PNG" || extension == ".JPG" || extension == ".jpeg" || extension == ".JPEG")
+            if (extension == ".png" || extension == ".jpg" || extension == ".PNG" || extension == ".JPG" || extension == ".jpeg" || extension == ".JEPG")
             {
                 // Subir la imagen al servidor
                 fUploadImagen.SaveAs(Server.MapPath("~/Fotos/") + fUploadImagen.FileName);
@@ -94,8 +92,13 @@ public partial class Perfil : System.Web.UI.Page
         }
     }
 
-    protected void btnOrdenes_Click(object sender, EventArgs e)
+    protected void btnOrden_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/ListasOrdenesAsignadas.aspx");
+        Response.Redirect("~/OrdenesAsignadas.aspx");
+    }
+
+    protected void btnEjecucionM_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/EjecucionesAsignadas.aspx");
     }
 }

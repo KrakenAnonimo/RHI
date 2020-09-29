@@ -1,5 +1,5 @@
 Pagina :      http://localhost:54775/Perfil.aspx
-Mensaje de Error : Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'.
+Mensaje del Error : Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'.
 Mensaje interno  : System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting the varchar value 'CamilitoPerez@gmail.com' to data type int.
    en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
    en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
@@ -22,5 +22,5 @@ Mensaje interno  : System.Data.SqlClient.SqlException (0x80131904): Conversion f
    en System.Web.UI.Page.OnInit(EventArgs e)
    en System.Web.UI.Control.InitRecursive(Control namingContainer)
    en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-ClientConnectionId:d82ab89b-cf41-41aa-87dd-4c4f22d2f099
+ClientConnectionId:a3d1c072-cebe-4204-b7fa-a08dab80fd11
 Error Number:245,State:1,Class:16

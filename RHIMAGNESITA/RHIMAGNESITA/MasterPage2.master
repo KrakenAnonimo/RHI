@@ -4,8 +4,8 @@
 
 <html>
 <head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>RHI-MAGNESITA</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+   <title>RHI-MAGNESITA</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -56,7 +56,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+    <div>
             <div id="preloader"></div>
             <header>
                 <!-- header-area start -->
@@ -76,7 +76,7 @@
                                             <span class="icon-bar"></span>
                                         </button>
                                         <!-- Brand -->
-                                        <a class="navbar-brand page-scroll sticky-logo" href="">
+                                        <a class="navbar-brand page-scroll sticky-logo" href="inicio2.aspx">
                                             <h1><span>RHI-</span>MAGNESITA</h1>
                                             <!-- Uncomment below if you prefer to use an image logo -->
                                             <!-- <img src="img/logo.png" alt="" title=""> -->
@@ -85,7 +85,7 @@
                                     <!-- Collect the nav links, forms, and other content for toggling -->
                                     <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
                                         <ul class="nav navbar-nav navbar-right">
-                                            <li>
+                                             <li>
                                                 <a class="page-scroll" href="Usuario.aspx">Usuario</a>
                                             </li>
                                             <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Programacion<span class="caret"></span></a>
@@ -105,12 +105,10 @@
                                             <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Tareas y Ejecucion<span class="caret"></span></a>
                                                 <ul class="dropdown-menu" role="menu">
                                                     <li><a href="TareaMtto.aspx">Tarea Mtt </a></li>
-                                                    <li><a href="TareaAveriaServicio.aspx">Tarea Averia Servicio</a></li>
-                                                    <li><a href="ReporteAveriaServicio.aspx">Reporte Averia Servicio</a></li>
                                                     <li><a href="EjecucionM.aspx">Ejecucion Mantenimiento</a></li>
                                                 </ul>
                                             </li>
-                                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Listas Generales<span class="caret"></span></a>
+                                             <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Listas Generales<span class="caret"></span></a>
                                                 <ul class="dropdown-menu" role="menu">
                                                     <li><a href="ListasGenerales.aspx">Listas</a></li>
                                                     <li><a href="ResultadosGenerales.aspx">Resultados</a></li>
@@ -141,7 +139,7 @@
         <div>
             <img src="Vista/PgPrin/img/xddx.jpg" width="100%" class="img-fluid" alt="Responsive image" />
         </div>
-
+       
         <p class="auto-style5"></p>
 
         <!-- header-area end -->
@@ -151,7 +149,7 @@
         </asp:ContentPlaceHolder>
         </div>
     </form>
-    <!--fin Var-->
+     <!--fin Var-->
     <!--Pie-->
     <div>
         <footer>
