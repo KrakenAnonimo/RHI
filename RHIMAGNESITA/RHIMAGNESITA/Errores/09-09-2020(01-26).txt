@@ -1,0 +1,11 @@
+Pagina :      http://localhost:54775/VerDatOP.aspx
+Mensaje de Error : Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'.
+Mensaje interno  : System.IndexOutOfRangeException: No hay ninguna fila en la posición 0.
+   en System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   en System.Data.DataRowCollection.get_Item(Int32 index)
+   en VerDatOP.Page_Init(Object sender, EventArgs e) en c:\Users\andre\source\repos\KrakenAnonimo\RHI\RHIMAGNESITA\RHIMAGNESITA\VerDatOP.aspx.cs:línea 33
+   en System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   en System.Web.UI.Control.OnInit(EventArgs e)
+   en System.Web.UI.Page.OnInit(EventArgs e)
+   en System.Web.UI.Control.InitRecursive(Control namingContainer)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
