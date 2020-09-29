@@ -1,0 +1,15 @@
+Pagina :      http://localhost:54775/EjecucionesAsignadas.aspx
+Mensaje del Error : Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'.
+Mensaje interno  : System.ArgumentOutOfRangeException: El índice estaba fuera del intervalo. Debe ser un valor no negativo e inferior al tamaño de la colección.
+Nombre del parámetro: index
+   en System.Collections.ArrayList.get_Item(Int32 index)
+   en System.Web.UI.WebControls.DataKeyArray.get_Item(Int32 index)
+   en EjecucionesAsignadas.GridView1_SelectedIndexChanged(Object sender, EventArgs e) en c:\Users\Pc_Hp_06\source\repos\KrakenAnonimo\RHI\RHIMAGNESITA\RHIMAGNESITA\EjecucionesAsignadas.aspx.cs:línea 17
+   en System.Web.UI.WebControls.GridView.OnSelectedIndexChanged(EventArgs e)
+   en System.Web.UI.WebControls.GridView.HandleSelect(Int32 rowIndex)
+   en System.Web.UI.WebControls.GridView.HandleEvent(EventArgs e, Boolean causesValidation, String validationGroup)
+   en System.Web.UI.WebControls.GridView.RaisePostBackEvent(String eventArgument)
+   en System.Web.UI.WebControls.GridView.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   en System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   en System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)

@@ -21,6 +21,9 @@
     <!--No mover estos espacios-->
     <br />
     <!--No mover estos espacios-->
+    <div style="width: 91px; position: relative; top: 0px; left: 40px">
+        <asp:ImageButton ID="imgbtnAtras" runat="server" ImageUrl="~/Vista/Iconos/atras.png" OnClick="imgbtnAtras_Click" />
+    </div>
     <!--Resto del codigo-->
     <div class="jumbotron">
         <div class="content">

@@ -37,6 +37,10 @@ public partial class REjecucionM : System.Web.UI.Page
 
 
     }
+    protected void imgbtnAtras_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("~/EjecucionesAsignadas.aspx");
+    }
     protected void btnGuardar_Click(object sender, EventArgs e)
     {
         clEjecucionME objEjcuacionEM = new clEjecucionME();

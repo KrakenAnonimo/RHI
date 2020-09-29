@@ -19,6 +19,9 @@
     <!--No mover estos espacios-->
     <br />
     <!--No mover estos espacios-->
+     <div style="width: 91px; position: relative; top: 0px; left: 40px">
+        <asp:ImageButton ID="imgbtnAtras" runat="server" ImageUrl="~/Vista/Iconos/atras.png" OnClick="imgbtnAtras_Click" />
+    </div>
     <!--Resto del codigo-->
     <div class="jumbotron">
         <div class="animated fadeIn">
@@ -76,9 +79,9 @@
                             <asp:Button runat="server" Text="Guardar" class="btn btn-success btn-sm" ID="btnGuardar" OnClick="btnGuardar_Click" />
                             <asp:Button ID="btnDescargarExcel" runat="server" Text="Descargar Excel" class="btn btn-warning btn-sm" OnClick="btnDescargarExcel_Click" />
                             <asp:Button ID="btnDescargarPdf" runat="server" Text="Descargar PDF" class="btn btn-warning btn-sm" OnClick="btnDescargarPdf_Click" />
-                            <asp:SqlDataSource ID="sqlEM" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT EjecucionM.IdEjecucionM, EjecucionM.Estado, EjecucionM.FechaEjecucion, EjecucionM.Duracion, EjecucionM.Observaciones, EjecucionM.IdTareaMtto, EjecucionM.IdOrdenMttoP, TareaMtto.NombreTM, OrdenMttoPreventivo.NumOrden FROM EjecucionM INNER JOIN OrdenMttoPreventivo ON EjecucionM.IdOrdenMttoP = OrdenMttoPreventivo.IdOrdenMttoP INNER JOIN TareaMtto ON EjecucionM.IdTareaMtto = TareaMtto.IdTareaMtto WHERE (EjecucionM.IdEjecucionM = @ejecucion)">
+                            <asp:SqlDataSource ID="sqlEM" runat="server" ConnectionString="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1 %>" ProviderName="<%$ ConnectionStrings:dbSwafay-RIHConnectionString1.ProviderName %>" SelectCommand="SELECT EjecucionM.IdEjecucionM, EjecucionM.Estado, EjecucionM.FechaEjecucion, EjecucionM.Duracion, EjecucionM.Observaciones, EjecucionM.IdTareaMtto, EjecucionM.IdOrdenMttoP, OrdenMttoPreventivo.NumOrden, TareaMtto.NombreTM FROM EjecucionM INNER JOIN OrdenMttoPreventivo ON EjecucionM.IdOrdenMttoP = OrdenMttoPreventivo.IdOrdenMttoP INNER JOIN TareaMtto ON EjecucionM.IdTareaMtto = TareaMtto.IdTareaMtto WHERE (EjecucionM.IdEjecucionM = @idejecu)">
                                 <SelectParameters>
-                                    <asp:SessionParameter Name="ejecucion" SessionField="idEjecucionM" />
+                                    <asp:SessionParameter Name="idejecu" SessionField="idEjecucionM" />
                                 </SelectParameters>
                             </asp:SqlDataSource>
                         </div>

@@ -18,4 +18,8 @@ public partial class OrdenesAsignadas : System.Web.UI.Page
         Session["idOrdenMttoP"] = gvOrdenesA.DataKeys[numerFila].Value;
         Response.Redirect("~/ROrdenMttoP.aspx");
     }
+    protected void imgbtnAtras_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("~/Perfil.aspx");
+    }
 }

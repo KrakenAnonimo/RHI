@@ -5,7 +5,7 @@
     void Application_Start(object sender, EventArgs e)
     {
         // Código que se ejecuta al iniciarse la aplicación
-
+        
     }
 
     void Application_End(object sender, EventArgs e)
@@ -23,7 +23,7 @@
         var v = Server.GetLastError();
 
         var HttpEx = v as HttpException;
-        if (HttpEx != null && HttpEx.GetHttpCode() == 404 )
+        if (HttpEx != null && HttpEx.GetHttpCode() == 404)
         {
             //url invalida
             Server.Transfer("~/PageNotFound.aspx");
@@ -44,14 +44,14 @@
     }
 
     void Session_Start(object sender, EventArgs e)
-    {   
+    {
         //Sesion de roles de acceso
         Session["rol"] = "";
-        
+
         // Código que se ejecuta al iniciarse una nueva sesión
         Session["usuario"] = "NN";
         Session["idUsuario"] = 0;
-        
+
         //Sesion de correo y clave de acceso
         Session["Correo"] = 0;
         Session["Clave"] = 0;

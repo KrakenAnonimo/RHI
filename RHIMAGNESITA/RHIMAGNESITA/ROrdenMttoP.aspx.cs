@@ -42,7 +42,10 @@ public partial class ROrdenMttoP : System.Web.UI.Page
         lblReporteAVS.Text = tblDatos.Rows[0][12].ToString();
     
     }
-
+    protected void imgbtnAtras_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("~/OrdenesAsignadas.aspx");
+    }
     protected void btnGuardar_Click(object sender, EventArgs e)
     {
 
@@ -65,12 +68,12 @@ public partial class ROrdenMttoP : System.Web.UI.Page
     protected void btnDescargarExcel_Click(object sender, EventArgs e)
     {
         DataTable dt = new DataTable();
-        //dt = dtDatosROMPExcel();
+        dt = dtDatosOCExcel();
         Stream s = DataTableToExcel(dt);
         if (s != null)
         {
             MemoryStream ms = s as MemoryStream;
-            Response.AddHeader("Content-Disposition", string.Format("attachment;filename=" + HttpUtility.UrlEncode("Datos_Orden_Mantenimiento_Preventiva_Asignada") + ".xlsx"));
+            Response.AddHeader("Content-Disposition", string.Format("attachment;filename=" + HttpUtility.UrlEncode("Datos_Reporte_Orden_de_Mantenimiento_Preventiva") + ".xlsx"));
             Response.ContentType = "application/vnd.ms-excel";
             Response.AddHeader("Content-Length", ms.ToArray().Length.ToString());
             Response.BinaryWrite(ms.ToArray());
@@ -117,13 +120,35 @@ public partial class ROrdenMttoP : System.Web.UI.Page
         return ms;
     }
 
+    public DataTable dtDatosOCExcel()
+    {
+        DataTable tblDatos = new DataTable();
+        tblDatos = ((DataView)sqlOP.Select(DataSourceSelectArguments.Empty)).Table;
+
+        lblIdOp.Text = Session["idOrdenMttoP"].ToString();
+        lblNumerodeOrden.Text = tblDatos.Rows[0][1].ToString();
+        lblDisciplinaR.Text = tblDatos.Rows[0][2].ToString();
+        lblFechaIn.Text = tblDatos.Rows[0][3].ToString();
+        lblHoraIn.Text = tblDatos.Rows[0][4].ToString();
+        lblFechaFn.Text = tblDatos.Rows[0][5].ToString();
+        lblHoraFn.Text = tblDatos.Rows[0][6].ToString();
+        cmbEjecucionOr.Text = tblDatos.Rows[0][7].ToString();
+        lblTrabajoIER.Text = tblDatos.Rows[0][8].ToString();
+        txtObservaciones.Text = tblDatos.Rows[0][9].ToString();
+        lblRevision.Text = tblDatos.Rows[0][10].ToString();
+        lblRPlanificicacion.Text = tblDatos.Rows[0][11].ToString();
+        lblReporteAVS.Text = tblDatos.Rows[0][12].ToString();
+
+        return tblDatos;
+    }
+
 
     protected void btnDescargarPdf_Click(object sender, EventArgs e)
     {
         DataTable dt = new DataTable();
         Document document = new Document(PageSize.LETTER);
         PdfWriter writer = PdfWriter.GetInstance(document, HttpContext.Current.Response.OutputStream);
-        //dt = metododelatabla();
+        dt = dtDatosOCPDF();
         if (dt.Rows.Count > 0)
         {
             document.Open();
@@ -135,7 +160,7 @@ public partial class ROrdenMttoP : System.Web.UI.Page
             iTextSharp.text.Font _standardFont = new iTextSharp.text.Font(SourceSans, 8, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
 
             PdfPTable table = new PdfPTable(dt.Columns.Count);
-            document.Add(new Paragraph(15, "Datos de la Orden Mantenimiento Preventiva Asignada", fontTitle));
+            document.Add(new Paragraph(15, "Datos del Reporte de la Orden de Mantenimiento Preventiva", fontTitle));
             document.Add(new Chunk("\n"));
             Image logo = Image.GetInstance(System.Web.HttpContext.Current.Server.MapPath("~/Vista/PgPrin/img/apple-touch-icon.png"));
             logo.ScalePercent(24f);
@@ -173,9 +198,30 @@ public partial class ROrdenMttoP : System.Web.UI.Page
         document.Close();
 
         Response.ContentType = "application/pdf";
-        Response.AddHeader("content-disposition", "attachment;filename=Datos_Orden_Mantenimiento_Preventiva_Asignada" + ".pdf");
+        Response.AddHeader("content-disposition", "attachment;filename=Datos_Orden_de_Mantenimiento_Correctiva" + ".pdf");
         HttpContext.Current.Response.Write(document);
         Response.Flush();
         Response.End();
+    }
+    public DataTable dtDatosOCPDF()
+    {
+        DataTable tblDatos = new DataTable();
+        tblDatos = ((DataView)sqlOP.Select(DataSourceSelectArguments.Empty)).Table;
+
+        lblIdOp.Text = Session["idOrdenMttoP"].ToString();
+        lblNumerodeOrden.Text = tblDatos.Rows[0][1].ToString();
+        lblDisciplinaR.Text = tblDatos.Rows[0][2].ToString();
+        lblFechaIn.Text = tblDatos.Rows[0][3].ToString();
+        lblHoraIn.Text = tblDatos.Rows[0][4].ToString();
+        lblFechaFn.Text = tblDatos.Rows[0][5].ToString();
+        lblHoraFn.Text = tblDatos.Rows[0][6].ToString();
+        cmbEjecucionOr.Text = tblDatos.Rows[0][7].ToString();
+        lblTrabajoIER.Text = tblDatos.Rows[0][8].ToString();
+        txtObservaciones.Text = tblDatos.Rows[0][9].ToString();
+        lblRevision.Text = tblDatos.Rows[0][10].ToString();
+        lblRPlanificicacion.Text = tblDatos.Rows[0][11].ToString();
+        lblReporteAVS.Text = tblDatos.Rows[0][12].ToString();
+
+        return tblDatos;
     }
 }
